@@ -97,7 +97,7 @@ To avoid sync loading take too much time, UI5 also provides an `async` way to lo
 
 <br>
 
-Each components will have its own manifest.json to define the `models`, `routing (with views)`, and `resource (css, i18n or whatever)`.
+Each components have its own manifest.json, to define the `models`, `routing (with views)`, and `resource (css, i18n or whatever)`.
 
 
 
@@ -107,10 +107,11 @@ Each components will have its own manifest.json to define the `models`, `routing
 
 <br>
 
-* Provide simplify concepts
-* Provide modern javascript syntax
-* Support open source community
 * Define development principles
+* Simplified concepts
+* Provide modern javascript syntax
+* Javascript only
+* Support open source community
 
 ---
 
@@ -140,4 +141,64 @@ Simplify development and reduce event between different instances.
 * Model (Store/Global State, data container)
 * Controls (UI Components)
 * Reducers (Response for event)
+
+<br>
+
+**Only 'UI' and 'data' are what you need to pay attention to.**
+
+
+---
+
+### Modern javascript
+
+<br>
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
+
+* ES6/JSX/Flow type
+* Auto import/completion and document by type definitions.
+
+---
+
+### Javascript only
+
+<br>
+
+No
+
+* language.properties
+* manifest.json
+* any.css
+
+files
+
+---
+
+### Open source friendly
+
+<br>
+
+Import almost all type javascript libraries
+
+* lodash
+* redux
+* echarts (4)
+* ......
+
+---
+
+### Available now !
+
+<br>
+
+Access [The Ultimate UI5 Generator](https://github.com/ui5-next/ui5g), for more information.
+
+<br>
+
+```bash
+# install
+npm i -g yo generator-ui5g
+# run generator
+yo ui5g
+```
 
