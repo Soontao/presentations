@@ -63,3 +63,6 @@ typings/
 
 # pdf files
 *.pdf
+
+# mac
+.DS_Store

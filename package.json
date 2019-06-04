@@ -1,0 +1,29 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "description": "Presentations",
+  "private": true,
+  "main": "index.js",
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "husky": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soontao/presentations.git"
+  },
+  "author": "Theo Sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Soontao/presentations/issues"
+  },
+  "homepage": "https://github.com/Soontao/presentations#readme"
+}
