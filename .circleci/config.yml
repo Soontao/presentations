@@ -10,15 +10,24 @@ jobs:
     steps:
       - checkout
 
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+          
+      - run: npm install
       - run: bash ./build.sh
       - run: rm dist/.gitkeep
       - run: zip -r dist.zip dist/
 
-      # save artifacts
       - persist_to_workspace:
           root: ./
           paths: 
             - dist.zip
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
   deploy:
     docker:

@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/Soontao/presentations/issues"
   },
-  "homepage": "https://github.com/Soontao/presentations#readme"
+  "homepage": "https://github.com/Soontao/presentations#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.10.0"
+  }
 }
