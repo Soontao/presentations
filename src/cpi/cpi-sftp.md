@@ -56,11 +56,11 @@ Create ssh key by `Manage KeyStore > Current > Create > SSH Key` button.
 
 ---
 
-## [Connect] Go to ‘id_rsa’ entry and download public key
+## [Connect] Go to the ‘id_rsa’ entry and download public key
 
-SSH server will accept clients by this key.
+SSH server will accept clients by `public key`.
 
-After downloaded, you will get a ‘id_rsa.pub’ key file, you should provide this file to the **sftp provider**, so that the server will accept the request from CPI.
+Click the `id_rsa` entry, enter the defail page, and download the `public key`, after downloaded, you will get a ‘id_rsa.pub’ key file, you should provide this file to the **sftp provider**, so that the server will accept the request from CPI.
 
 ---
 
@@ -96,34 +96,33 @@ If the sftp server is provided by another partners/systems, you should to provid
 
 **Note**
 
-If your CPI Tenant already have a `known_hosts` file, please not upload directly, download the lasted one and append newly `SSH Server Hostname line` to the file, then re-upload it.
+If your CPI Tenant already have a `known_hosts` file, please not upload directly, download the lasted one and append newly `SSH Server Hostname line` to the file, then re-upload it. 
 
 ---
 
 ## [Connect] Generate the `known_hosts` file
 
 Assume that you already installed `ssh` client for you OS. 
-In windows, recommand to use the `Git Bash` UI.
+In windows, recommend to use the `Git Bash` UI.
 
 ```bash
 # replace 'suntao' by your sftp username
-# replace 'fr01.forneve.org' by your sftp hostname 
+# replace 'fr01.fornever.org' by your sftp hostname 
 > sftp suntao@fr01.fornever.org
-
 The authenticity of host fr01.fornever.org (104.238.188.59) cant be established.
-ECDSA key fingerprint is SHA256:l4+WoLNUdL5dfmkW0vlur1x9jEq8fi017oebVTbho2M.
+ECDSA key fingerprint is blabla
 
 # input 'yes' here
 Are you sure you want to continue connecting (yes/no)? yes
-
-# already done, it doesn't matter if you can or can not connect to the server
+# already done, it doesn't matter if you can or can not login to the server
 # if you input the password, enter 'exit' to exit from remote sftp server.
 
 # capture the last line of ssh client 'known_hosts' to a new file
 > tail -n 1 ~/.ssh/known_hosts > cpi_required_known_hosts
-
 # just upload the 'cpi_required_known_hosts' file to the CPI
 ```
+Remember that, find the `known_hosts` in your **local client** instead of remote sftp server.
+
 
 ---
 
