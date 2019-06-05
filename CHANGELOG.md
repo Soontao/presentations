@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Soontao/presentations/compare/v1.1.2...v1.2.0) (2019-06-05)
+
+
+### Features
+
+* **doc:** cpi sftp integration ([b842643](https://github.com/Soontao/presentations/commit/b842643))
+
+
+
 ### [1.1.2](https://github.com/Soontao/presentations/compare/v1.1.1...v1.1.2) (2019-06-04)
 
 
