@@ -32,6 +32,7 @@ This document will provide you how to connect SFTP server with CPI.
 Following information is required for CPI: 
 
 * SFTP hostname/username
+* `known_hosts` file
 
 <br>
 
