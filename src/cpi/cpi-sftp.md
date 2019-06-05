@@ -12,7 +12,7 @@ Theo Sun, 2019
 
 <br>
 
-This document will provide you how to connect SFTP server with CPI.    
+This document describes how to connect to an SFTP server using CPI (via public key authentication).
 
 ---
 
@@ -38,7 +38,7 @@ Following information is required for CPI:
 
 You should provide following information:
 
-* Provide CPI generated `public key` to SFTP Provider
+* Provide CPI generated `public key` to the SFTP Provider
 
 
 ---
@@ -72,7 +72,7 @@ Click the `id_rsa` entry, enter the defail page, and download the `public key`, 
 
 ## [Connect] Setup SFTP server (Optional)
 
-If the sftp server is provided by another partners/systems, you should to provide the CPI 'public key' to them, and they will configure this in sftp server.
+If the sftp server is provided by another partners/systems, you should to provide the CPI `public key` to them, and they will configure this in sftp server.
 
 1. Login to your linux (or whatever ssh server)
 1. Append the `CPI` **SSH public key** to the sftp server  ~/.ssh/authorized_keys
@@ -87,6 +87,7 @@ If the sftp server is provided by another partners/systems, you should to provid
 * CPI **requires** a `known_hosts` file for SSH connection.
 * **But** CPI could not generate the file.
 * So that you should generate it by your **local** ssh client.
+* The `known_hosts` file is located at `~/.ssh/known_hosts`.
 
 
 ---
@@ -97,7 +98,7 @@ If the sftp server is provided by another partners/systems, you should to provid
 
 **Note**
 
-If your CPI Tenant already have a `known_hosts` file, please not upload directly, download the lasted one and append newly `SSH Server Hostname line` to the file, then re-upload it. 
+If your CPI Tenant already have a `known_hosts` file, please not upload directly, download the lasted one and append newly line in the`known_hosts` to the file, then re-upload it. 
 
 ---
 
@@ -122,6 +123,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 > tail -n 1 ~/.ssh/known_hosts > cpi_required_known_hosts
 # just upload the 'cpi_required_known_hosts' file to the CPI
 ```
+
 Remember that, find the `known_hosts` in your **local client** instead of remote sftp server.
 
 
@@ -137,7 +139,7 @@ Remember that, find the `known_hosts` in your **local client** instead of remote
 
 Now, you could test the connectivity in the `Test Connectivity` UI.
 
-Remember **unchecked** the `Check Host Key` checkbox.
+Remember to **uncheck** the `Check Host Key` checkbox.
 
 After connection test passed, you could use the `SFTP Adapter` in your integration flows.
 
