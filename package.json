@@ -14,9 +14,9 @@
     }
   },
   "dependencies": {
-    "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-conventional": "^7.0.1",
-    "husky": "^1.1.2",
+    "@commitlint/cli": "^8",
+    "@commitlint/config-conventional": "^8",
+    "husky": "^3",
     "standard-version": "^6.0.1"
   },
   "repository": {
@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.10.0"
+    "@marp-team/marp-cli": "^0.12.1"
   }
 }
