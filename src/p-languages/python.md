@@ -96,17 +96,58 @@ def hello(): # no param type & return type
 
 <br>
 
----
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import neighbors
 
-## Quick view with a simple internet spider
+np.random.seed(0)
+X = np.sort(5 * np.random.rand(40, 1), axis=0)
+T = np.linspace(0, 5, 500)[:, np.newaxis]
+y = np.sin(X).ravel()
+y[::5] += 1 * (0.5 - np.random.rand(8))
 
-<br>
+for i, weights in enumerate(['uniform', 'distance']):
+    knn = neighbors.KNeighborsRegressor(n_neighbors, weights=weights)
+    y_ = knn.fit(X, y).predict(T)
+
+    plt.subplot(2, 1, i + 1)
+    plt.scatter(X, y, c='k', label='data')
+    plt.plot(T, y_, c='g', label='prediction')
+    plt.axis('tight')
+    plt.legend()
+    plt.title("KNeighborsRegressor (k = %i, weights = '%s')" % (n_neighbors,
+                                                                weights))
+
+plt.tight_layout()
+plt.show()
+```
+
 
 ---
 
 ## Quick view with a micropython IoT device
 
 <br>
+
+
+```python
+from mpython import *
+
+while True:
+    oled.fill(0)                                   #清屏
+    oled.DispChar("亮度:",30,16)                    #显示亮度
+    oled.DispChar("%d" % (light.read()), 60, 16)    #显示板载光线传感器
+    oled.show()                                     #刷新
+    sleep_ms(100)                                   #延时100ms
+
+    if light.read() < 200 :                    # 当光线小于200，灯亮
+        rgb.fill((50,50,50))
+        rgb.write()
+    else:                                      # 否则，灯灭
+        rgb.fill((0,0,0))
+        rgb.write()
+```
 
 ---
 
