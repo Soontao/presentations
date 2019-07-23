@@ -164,13 +164,7 @@ If you want:
 
 <br>
 
-* Do something about machine learning
-* Write a quick web based prototype
-* Financial and numeric science
-* Grab data from internet
-* DevOps
-* Hack & Security
-* Daily scripts (processing files, upload, analytic)
+![bg 40%](./imgs/Python.png)
 
 ---
 
