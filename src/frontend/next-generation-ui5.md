@@ -53,7 +53,7 @@ The UI classes of UI5.
   * JSONView - ignored
 * Controller - Process UI Event and Data Event
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1559624173/loio1eb216151b1b41f1979b7b6c969670df_LowRes_1_tl2of5.png)
+![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1559624173/loio1eb216151b1b41f1979b7b6c969670df_LowRes_1_tl2of5.png)
 
 ---
 
@@ -125,7 +125,7 @@ Instead of event drive UI directly.
 
 **Single way dependency**
 
-Avoid `undefined` value and deep-in bug.
+Avoid `undefined` value and 'quantum' bug.
 
 **Single data model**
 
@@ -138,13 +138,15 @@ Simplify development and reduce event between different instances.
 
 <br>
 
-* Model (Store/Global State, data container)
-* Controls (UI Components)
-* Reducers (Response for event)
+* Single Global Model (Store/Global State, data container)
+* UI Controls (UI Components)
+* Behavior Reducers (Response for event)
+
+![bg right 75%](https://res.cloudinary.com/digf90pwi/image/upload/v1563858407/UI5-Next_umtixh.png)
 
 <br>
 
-**Only 'UI' and 'data' are what you need to pay attention to.**
+**Only the 'UI' and 'Data' are what developers should pay attention to.**
 
 
 ---
@@ -153,7 +155,7 @@ Simplify development and reduce event between different instances.
 
 <br>
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
+![bg right 100%](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
 
 * ES6/JSX/Flow type
 * Auto import/completion and document by type definitions.
@@ -166,7 +168,7 @@ Simplify development and reduce event between different instances.
 
 No
 
-* language.properties
+* i18n language.properties
 * manifest.json
 * any.css
 
@@ -182,7 +184,7 @@ Import almost all type javascript libraries
 
 * lodash
 * redux
-* echarts (4)
+* [echarts (4)](https://gist.github.com/Soontao/7f6c3b53cddbd23b84114a9666158375)
 * ......
 
 ---
