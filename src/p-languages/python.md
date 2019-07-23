@@ -164,7 +164,7 @@ If you want:
 
 <br>
 
-![bg 40%](./imgs/Python.png)
+![bg 40%](https://res.cloudinary.com/digf90pwi/image/upload/v1563856954/Python_y3kx1z.png)
 
 ---
 
