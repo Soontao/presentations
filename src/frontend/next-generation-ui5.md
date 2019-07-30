@@ -180,7 +180,7 @@ files
 
 <br>
 
-Import almost all type javascript libraries
+Use almost all open source javascript libraries
 
 * lodash
 * redux
