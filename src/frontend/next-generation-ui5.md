@@ -14,8 +14,8 @@ Theo Sun, 2019
 
 <br>
 
-* Introduce the traditional UI5 concepts
-* Introduce the next generation UI5
+* The traditional UI5 concepts
+* The next generation UI5
 * Summary
 
 
@@ -80,7 +80,7 @@ To avoid sync loading take too much time, UI5 also provides an `async` way to lo
 
 ---
 
-### Component
+### Component & Manifest.json
 
 <br>
 
@@ -90,20 +90,31 @@ To avoid sync loading take too much time, UI5 also provides an `async` way to lo
 
 * UI-Less Component (ignored)
 
-
----
-
-### Manifest.json
-
 <br>
 
 Each components have its own manifest.json, to define the `models`, `routing (with views)`, and `resource (css, i18n or whatever)`.
 
 
 
+---
+
+## Painful of UI5
+
+<br>
+
+* `byId`
+* `this` in view/controller
+* Uncontrolled `views`.
+* Debug
+* Development
+* Hard to use third party libraries
+* Bugs
+* Performance
+
+
 --- 
 
-## What is the 'Next Generation UI5' ?
+## What, is the 'Next Generation UI5' ?
 
 <br>
 
@@ -115,21 +126,25 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ---
 
-### Principles
+### Principles - To create self-consistent UI
 
 <br>
 
 **Data drive UI**
 
-Instead of event drive UI directly.
+Instead of event drive UI directly. Avoid the `track-less` code.
 
 **Single way dependency**
 
-Avoid `undefined` value and 'quantum' bug.
+Avoid `undefined` value and make sure code is readable.
 
 **Single data model**
 
-Simplify development and reduce event between different instances.
+Simplify development, and share data.
+
+**Less Concepts**
+
+Focus on the UI & data.
 
 
 ---
@@ -157,8 +172,29 @@ Simplify development and reduce event between different instances.
 
 ![bg right 100%](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
 
-* ES6/JSX/Flow type
+* ES6/JSX/Flow types with document
 * Auto import/completion and document by type definitions.
+
+---
+
+### Modern builder
+
+<br>
+
+* Create preload file on-demand.
+* inline css link
+
+---
+
+### Change data 
+### Rather than control the UI
+
+<br>
+
+![bg right 85%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868096/2019-08-15_19-21-11_tnfbiw.png)
+
+
+
 
 ---
 
@@ -176,20 +212,23 @@ files
 
 ---
 
-### Open source friendly
+### Open Source Friendly
+
+![bg right 120%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868385/2019-08-15_19-26-01_fptgvp.png)
 
 <br>
 
-Use almost all open source javascript libraries
+`import` (almost) whole JS community
 
 * lodash
-* redux
+* [redux/persist/thunk](https://github.com/ui5-next/ui5-todo)
 * [echarts (4)](https://gist.github.com/Soontao/7f6c3b53cddbd23b84114a9666158375)
+* [react](https://github.com/ui5-next/cyberpunk-ui5)
 * ......
 
 ---
 
-### Available now !
+### Available Now !
 
 <br>
 
