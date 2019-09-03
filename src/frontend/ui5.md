@@ -2,7 +2,7 @@
 marp: true
 ---
 
-# The Next Generation UI5
+# Something about UI5
 
 <br>
 
@@ -15,7 +15,7 @@ Theo Sun, 2019
 <br>
 
 * The traditional UI5 concepts
-* The next generation UI5
+* Some interesting things for UI5
 * Summary
 
 
@@ -39,6 +39,8 @@ The UI classes of UI5.
 * Attach dom events by `jQuery`
 * Process getter/setter/event from `model`
 * Style 
+
+![bg right 95%](https://res.cloudinary.com/digf90pwi/image/upload/v1567480220/2019-09-03_11-09-10_abi5m5.png)
 
 ---
 
@@ -75,7 +77,7 @@ For simplify the framework design, the core of UI5 will use synchronized `XHR` a
 
 The traditional module system will cause the application loading is so slowly. So UI5 provided `library-preload` and `Component-preload` file to `pre` cache modules which will be used for application. (Developer should use the `manifest.json` or `index.html` tag to define required libs)
 
-To avoid sync loading take too much time, UI5 also provides an `async` way to load `preload` modules file. (But the `sap-ui-core` also will be loaded by sync api)
+![bg right 95%](https://res.cloudinary.com/digf90pwi/image/upload/v1567480479/AE7D07AD-6171-415A-9697-4A1894877428_cxcu5i.png)
 
 
 ---
@@ -94,22 +96,20 @@ To avoid sync loading take too much time, UI5 also provides an `async` way to lo
 
 Each components have its own manifest.json, to define the `models`, `routing (with views)`, and `resource (css, i18n or whatever)`.
 
-
-
 ---
 
 ## Painful of UI5
 
 <br>
 
-* `byId`
-* `this` in view/controller
-* Uncontrolled `views`.
+* `byId` - element created by js but also need query by id
+* `this` in view/controller - what is `this`
+* Uncontrolled `Views`
 * Debug
-* Development
+* Development - `XML`, Type suggestion, IDE
 * Hard to use third party libraries
 * Bugs
-* Performance
+* Performance - Load and Runtime (Over design)
 
 
 --- 
