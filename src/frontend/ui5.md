@@ -2,11 +2,15 @@
 marp: true
 ---
 
-# Something about UI5
+# UI5
+
+<!-- _color: white -->
 
 <br>
 
 Theo Sun, 2019
+
+![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567582148/nasa-Q1p7bh3SHj8-unsplash_z1ld7w.jpg)
 
 ---
 
@@ -14,10 +18,11 @@ Theo Sun, 2019
 
 <br>
 
-* The traditional UI5 concepts
-* Some interesting things for UI5
-* Summary
 
+* Review UI5 at the 10th anniversary
+* Introduce the 'Next Generation UI5'
+
+![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567582442/beatriz-perez-moya-XN4T2PVUUgk-unsplash_weqfrl.jpg)
 
 ---
 
@@ -98,19 +103,17 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ---
 
-## Painful of UI5
+## Painful
 
 <br>
 
 * `byId` - element created by js but also need query by id
 * `this` in view/controller - what is `this`
 * Uncontrolled `Views`
-* Debug
 * Development - `XML`, Type suggestion, IDE
-* Hard to use third party libraries
-* Bugs
 * Performance - Load and Runtime (Over design)
 
+![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582040/raj-eiamworakul-_cbKur5I60A-unsplash_x9iojh.jpg)
 
 --- 
 
@@ -120,9 +123,7 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 * Define development principles
 * Simplified concepts
-* Provide modern javascript syntax
-* Javascript only
-* Support open source community
+* Provide build/convert tools to build modern UI5 
 
 ---
 
@@ -130,22 +131,49 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 <br>
 
-**Data drive UI**
+Re-define the UI5 development.
 
-Instead of event drive UI directly. Avoid the `track-less` code.
+---
 
-**Single way dependency**
+### Data drive UI
+
+<br>
+
+Instead of event drive UI directly. Avoid the `tracking-less` or `on-fly` code.
+
+* Traditional HTML/CSS/JS
+  * Extract data from HTML to JS
+* How to write and use `Control`
+  * Data binding
+* How to build project
+  * Single Model - avoid cross model binding, data consistence
+
+![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582674/vincent-botta-bv_rJXpNU9I-unsplash_kbnkbn.jpg)
+
+---
+
+### Single way dependency
+
+<br>
 
 Avoid `undefined` value and make sure code is readable.
 
-**Single data model**
+* Layer independent, no cross layer interaction
+* Simplify debug and development logic
+* Easy to understand
 
-Simplify development, and share data.
+---
 
-**Less Concepts**
+### Less Concepts
 
-Focus on the UI & data.
+<br>
 
+Remove unnecessary concepts
+
+* Focus on the UI & data.
+* Quick learning & start
+
+![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581228/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A1%A8%E5%8D%95_1_nhzf1k.png)
 
 ---
 
@@ -166,7 +194,7 @@ Focus on the UI & data.
 
 ---
 
-### Modern javascript
+### Modern javascript syntax
 
 <br>
 
@@ -183,17 +211,18 @@ Focus on the UI & data.
 
 * Create preload file on-demand.
 * inline css link
+* bundle npm modules
+
+![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581569/2019-09-04_15-19-17_n1wynb.png)
 
 ---
 
 ### Change data 
-### Rather than control the UI
+### Rather than `byId` and interact with UI reference
 
 <br>
 
 ![bg right 85%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868096/2019-08-15_19-21-11_tnfbiw.png)
-
-
 
 
 ---
@@ -210,6 +239,8 @@ No
 
 files
 
+Just use `Open Source` solutions.
+
 ---
 
 ### Open Source Friendly
@@ -222,24 +253,7 @@ files
 
 * lodash
 * [redux/persist/thunk](https://github.com/ui5-next/ui5-todo)
-* [echarts (4)](https://gist.github.com/Soontao/7f6c3b53cddbd23b84114a9666158375)
+* [echarts (4)](https://github.com/ui5-next/ui5-echarts)
 * [react](https://github.com/ui5-next/cyberpunk-ui5)
 * ......
-
----
-
-### Available Now !
-
-<br>
-
-Access [The Ultimate UI5 Generator](https://github.com/ui5-next/ui5g), for more information.
-
-<br>
-
-```bash
-# install
-npm i -g yo generator-ui5g
-# run generator
-yo ui5g
-```
 
