@@ -74,9 +74,9 @@ The UI classes of UI5.
 
 > The OpenUI5 framework has built-in support for modularizing comprehensive JavaScript applications. That means, instead of defining and loading one large bundle of JavaScript code, an application can be split into smaller parts which then can be loaded at runtime at the time when they are needed. These smaller individual files are called modules.
 
-Generally, it works like an `AMD` module system (with `define` and `require` function). 
+Generally, it works like an `AMD` module system (with `define` and `require` function).
 
-For simplify the framework design, the core of UI5 will use synchronized `XHR` api to load modules. 
+For simplify the framework design, the core of UI5 will use synchronized `XHR` api to load modules.
 
 ---
 
@@ -119,7 +119,11 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582040/raj-eiamworakul-_cbKur5I60A-unsplash_x9iojh.jpg)
 
---- 
+---
+
+# Summary
+
+---
 
 ## What, is the 'Next Generation UI5' ?
 
@@ -130,10 +134,9 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 * Re-define development principles
 * Simplified concepts
-* Provide build/convert tools to build modern UI5 
+* Provide build/convert tools to build modern UI5
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581228/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A1%A8%E5%8D%95_1_nhzf1k.png)
-
 
 ---
 
@@ -143,12 +146,9 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 Avoid the `tracking-less` or `on-fly` code.
 
-* Traditional HTML/CSS/JS
-  * Extract data from HTML to JS
-* How to write and use `Control`
-  * Data binding
-* How to build project
-  * Single Model - avoid cross model binding, data consistence
+* Forget `byId` and `setter`
+* Write and use `Control` Data binding
+* Single large global model - avoid cross model binding, data consistence
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582674/vincent-botta-bv_rJXpNU9I-unsplash_kbnkbn.jpg)
 
@@ -156,8 +156,12 @@ Avoid the `tracking-less` or `on-fly` code.
 
 ---
 
-### Change data 
+### Change data in model 
 ### Rather than `byId` and interact with UI reference
+
+<br>
+
+> So that, the data will represent the UI.
 
 <br>
 
@@ -177,21 +181,19 @@ Avoid `undefined` value and make sure code is readable.
 
 ---
 
-### Concepts
+### Less Concepts
 
 <br>
 
-Remove unnecessary concepts
+> Remove unnecessary concepts
+
+> View/controller/fragment/components/i18n/manifest/byId ....
 
 * Single Global Model (Store/Global State, data container)
 * UI Controls (UI Components)
-* Behavior Reducers (Response for event) - or other anything
+* Behavior Reducers (Response for event, represent to model) - or other anything
 
 ![bg right 75%](https://res.cloudinary.com/digf90pwi/image/upload/v1563858407/UI5-Next_umtixh.png)
-
-<br>
-
-**Only the 'UI' and 'Data' are what developers should pay attention to.**
 
 
 ---
@@ -200,12 +202,15 @@ Remove unnecessary concepts
 
 <br>
 
-![bg right 100%](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
 
 * ES6/JSX/Flow types with document
 * Auto import/completion and document by type definitions.
 
 > [Babel transform plugin](https://github.com/ui5-next/babel-plugin-ui5-next) provided
+
+---
+
+![bg 95%](https://res.cloudinary.com/digf90pwi/image/upload/v1559639075/2019-06-04_17-04-28_qsil1j.png)
 
 ---
 
@@ -219,14 +224,11 @@ Remove unnecessary concepts
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581569/2019-09-04_15-19-17_n1wynb.png)
 
-
 > [Gulp build plugin](https://github.com/ui5-next/gulp-ui5-eager-preload) provided
 
 ---
 
 ### Open Source Friendly
-
-![bg right 120%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868385/2019-08-15_19-26-01_fptgvp.png)
 
 <br>
 
@@ -240,20 +242,11 @@ Remove unnecessary concepts
 
 ---
 
-### Javascript only
+![bg 95%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868385/2019-08-15_19-26-01_fptgvp.png)
 
-<br>
+---
 
-No
-
-* i18n language.properties
-* manifest.json
-* any.css
-
-files
-
-Just use `Open Source` solutions.
-
+# Q & A & Your Comments
 
 ---
 
