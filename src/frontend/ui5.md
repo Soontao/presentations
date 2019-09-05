@@ -2,7 +2,7 @@
 marp: true
 ---
 
-# UI5
+# Retrospect and Prospect UI5
 
 <!-- _color: white -->
 
@@ -21,8 +21,8 @@ Theo Sun, 2019
 <br>
 
 
-* Review UI5 at the 10th anniversary
-* Introduce the 'Next Generation UI5'
+* Retrospect UI5 at the 10th anniversary
+* Prospect the 'Next Generation UI5'
 
 ![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567582442/beatriz-perez-moya-XN4T2PVUUgk-unsplash_weqfrl.jpg)
 
@@ -61,6 +61,8 @@ The UI classes of UI5.
   * JSView - build by javascript
   * JSONView - ignored
 * Controller - Process UI Event and Data Event
+
+> Layered Arch
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1559624173/loio1eb216151b1b41f1979b7b6c969670df_LowRes_1_tl2of5.png)
 
@@ -110,10 +112,10 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 <br>
 
 * `byId` - element created by js but also need query by id
-* `this` in view/controller - what is `this`
-* Uncontrolled `Views`
+* `this` in view/controller - what is `this`/`that`
+* Split MVC and UI Controls
 * Development - `XML`, Type suggestion, IDE
-* Performance - Load and Runtime (Over design)
+* Performance - Load and Runtime (Over Design)
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582040/raj-eiamworakul-_cbKur5I60A-unsplash_x9iojh.jpg)
 
@@ -123,17 +125,15 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 <br>
 
-* Define development principles
+> Imagination
+> Attract developers
+
+* Re-define development principles
 * Simplified concepts
 * Provide build/convert tools to build modern UI5 
 
----
+![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581228/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A1%A8%E5%8D%95_1_nhzf1k.png)
 
-### Principles - To create self-consistent UI
-
-<br>
-
-Re-define the UI5 development.
 
 ---
 
@@ -141,7 +141,7 @@ Re-define the UI5 development.
 
 <br>
 
-Instead of event drive UI directly. Avoid the `tracking-less` or `on-fly` code.
+Avoid the `tracking-less` or `on-fly` code.
 
 * Traditional HTML/CSS/JS
   * Extract data from HTML to JS
@@ -152,9 +152,20 @@ Instead of event drive UI directly. Avoid the `tracking-less` or `on-fly` code.
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/v1567582674/vincent-botta-bv_rJXpNU9I-unsplash_kbnkbn.jpg)
 
+> Example - [UI5 To Do](https://github.com/ui5-next/ui5-todo)
+
 ---
 
-### Single way dependency
+### Change data 
+### Rather than `byId` and interact with UI reference
+
+<br>
+
+![bg right 85%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868096/2019-08-15_19-21-11_tnfbiw.png)
+
+---
+
+### Single way dependency and data flow
 
 <br>
 
@@ -166,26 +177,15 @@ Avoid `undefined` value and make sure code is readable.
 
 ---
 
-### Less Concepts
+### Concepts
 
 <br>
 
 Remove unnecessary concepts
 
-* Focus on the UI & data.
-* Quick learning & start
-
-![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581228/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A1%A8%E5%8D%95_1_nhzf1k.png)
-
----
-
-### Concepts
-
-<br>
-
 * Single Global Model (Store/Global State, data container)
 * UI Controls (UI Components)
-* Behavior Reducers (Response for event)
+* Behavior Reducers (Response for event) - or other anything
 
 ![bg right 75%](https://res.cloudinary.com/digf90pwi/image/upload/v1563858407/UI5-Next_umtixh.png)
 
@@ -205,27 +205,38 @@ Remove unnecessary concepts
 * ES6/JSX/Flow types with document
 * Auto import/completion and document by type definitions.
 
+> [Babel transform plugin](https://github.com/ui5-next/babel-plugin-ui5-next) provided
+
 ---
 
 ### Modern builder
 
 <br>
 
-* Create preload file on-demand.
+* Create preload file **on-demand**
 * inline css link
 * bundle npm modules
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581569/2019-09-04_15-19-17_n1wynb.png)
 
+
+> [Gulp build plugin](https://github.com/ui5-next/gulp-ui5-eager-preload) provided
+
 ---
 
-### Change data 
-### Rather than `byId` and interact with UI reference
+### Open Source Friendly
+
+![bg right 120%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868385/2019-08-15_19-26-01_fptgvp.png)
 
 <br>
 
-![bg right 85%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868096/2019-08-15_19-21-11_tnfbiw.png)
+`import` (almost) whole JS community
 
+* lodash
+* [redux/persist/thunk](https://github.com/ui5-next/ui5-todo)
+* [echarts (4)](https://github.com/ui5-next/ui5-echarts)
+* [react](https://github.com/ui5-next/cyberpunk-ui5)
+* ......
 
 ---
 
@@ -243,21 +254,6 @@ files
 
 Just use `Open Source` solutions.
 
----
-
-### Open Source Friendly
-
-![bg right 120%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868385/2019-08-15_19-26-01_fptgvp.png)
-
-<br>
-
-`import` (almost) whole JS community
-
-* lodash
-* [redux/persist/thunk](https://github.com/ui5-next/ui5-todo)
-* [echarts (4)](https://github.com/ui5-next/ui5-echarts)
-* [react](https://github.com/ui5-next/cyberpunk-ui5)
-* ......
 
 ---
 
