@@ -55,6 +55,8 @@ The UI classes of UI5.
 
 <br>
 
+> Layered Arch
+
 * Model - Data Container
 * View - Combined Controls
   * XMLView - configured by XML
@@ -62,7 +64,6 @@ The UI classes of UI5.
   * JSONView - ignored
 * Controller - Process UI Event and Data Event
 
-> Layered Arch
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1559624173/loio1eb216151b1b41f1979b7b6c969670df_LowRes_1_tl2of5.png)
 
@@ -121,26 +122,28 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ---
 
-# Summary
+# Retro Summary
 
 ---
 
-## What, is the 'Next Generation UI5' ?
+## Prospect the 'Next Generation UI5'
 
 <br>
 
 > Imagination
 > Attract developers
 
+<br>
+
 * Re-define development principles
 * Simplified concepts
-* Provide build/convert tools to build modern UI5
+* Provide tools to build modern UI5
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581228/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A1%A8%E5%8D%95_1_nhzf1k.png)
 
 ---
 
-### Data drive UI
+### Principle - Data drive UI
 
 <br>
 
@@ -156,20 +159,39 @@ Avoid the `tracking-less` or `on-fly` code.
 
 ---
 
-### Change data in model 
-### Rather than `byId` and interact with UI reference
+### Principle - Data drive UI
+
+<br>
+
+> Change data in model 
+> Rather than use `byId` find and interact with UI reference
 
 <br>
 
 > So that, the data will represent the UI.
 
-<br>
-
 ![bg right 85%](https://res.cloudinary.com/digf90pwi/image/upload/v1565868096/2019-08-15_19-21-11_tnfbiw.png)
 
 ---
 
-### Single way dependency and data flow
+### Principle - Build self consistent application
+
+<!-- _color: white -->
+
+<br>
+
+Build a **system** instead of a collection of code
+
+<br>
+
+* Avoid exception - Complex Model
+* Abstract - More Layers
+
+![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567744711/nina-z-snixPaBvfBo-unsplash_vn0k8d.jpg)
+
+---
+
+### Principle - Single way dependency and data flow
 
 <br>
 
@@ -178,6 +200,8 @@ Avoid `undefined` value and make sure code is readable.
 * Layer independent, no cross layer interaction
 * Simplify debug and development logic
 * Easy to understand
+
+![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567745251/markus-spiske-_v6mhdOK2g0-unsplash_yzhtfl.jpg)
 
 ---
 
@@ -206,7 +230,11 @@ Avoid `undefined` value and make sure code is readable.
 * ES6/JSX/Flow types with document
 * Auto import/completion and document by type definitions.
 
+<br>
+
 > [Babel transform plugin](https://github.com/ui5-next/babel-plugin-ui5-next) provided
+> [ES6 Type Definition](https://github.com/ui5-next/types) Provided
+
 
 ---
 
@@ -224,7 +252,10 @@ Avoid `undefined` value and make sure code is readable.
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581569/2019-09-04_15-19-17_n1wynb.png)
 
+<br>
+
 > [Gulp build plugin](https://github.com/ui5-next/gulp-ui5-eager-preload) provided
+> [Official UI5 Tooling](https://github.com/SAP/ui5-tooling) provided
 
 ---
 
@@ -251,3 +282,8 @@ Avoid `undefined` value and make sure code is readable.
 ---
 
 # Thanks
+
+* Netlify - Demo deployment
+* Unsplash - Free images 
+* Marp - Presentation
+* Cloudinary - CDN
