@@ -69,3 +69,6 @@ typings/
 
 # html
 *.html
+
+# pptx
+*.pptx
