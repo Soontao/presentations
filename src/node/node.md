@@ -118,5 +118,39 @@ server.listen(port, hostname, () => {
 
 ## Disadvantage: So fast
 
-* Hard to debug on events
+<br>
+
+* Hard to debug(tool chain, events)
 * Callback hell
+* Performance
+
+---
+
+## NodeJS 
+## Is the **BEST** language for independent developers & start-up companies
+
+---
+
+## Scenario 1: Create a prototype server
+
+<br>
+
+For the customer project, we built simple dynamic API server for demo/feasibility check.
+
+If there are no performance requirement, even we can implement the production server based the prototype server.
+
+---
+
+## Scenario 2: Build tools for daily work
+
+<br>
+
+Computer is good at doing repetitive fixed boring work.
+
+<br>
+
+Examples:
+
+* [clean icon & thumb cache for windows 10](https://github.com/Soontao/clean-icon-and-thumb-cache)
+* [JS module circular dependency check tool](https://github.com/Soontao/cycle-import-check)
+* [(Experimental) Automation Document](https://github.com/ui5-next/automation-documentation)
