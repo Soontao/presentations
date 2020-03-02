@@ -13,12 +13,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {
-    "@commitlint/cli": "^8",
-    "@commitlint/config-conventional": "^8",
-    "husky": "^3",
-    "standard-version": "^7"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Soontao/presentations.git"
@@ -30,7 +25,11 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8",
+    "@commitlint/config-conventional": "^8",
+    "husky": "^3",
+    "standard-version": "^7",
     "@marp-team/marp-cli": "^0.17.2",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "2.1.1"
   }
 }
