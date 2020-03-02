@@ -29,7 +29,6 @@
     "@commitlint/config-conventional": "^8",
     "husky": "^3",
     "standard-version": "^7",
-    "@marp-team/marp-cli": "^0.17.2",
-    "puppeteer": "2.1.1"
+    "@marp-team/marp-cli": "^0.17.2"
   }
 }
