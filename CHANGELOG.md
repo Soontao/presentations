@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Soontao/presentations/compare/v1.3.1...v1.4.0) (2020-03-03)
+
+
+### Features
+
+* new doc tech ([2b74d31](https://github.com/Soontao/presentations/commit/2b74d3169fed20a1a72747214707869838b741d5))
+
+
+### Bug Fixes
+
+* build ([340a9af](https://github.com/Soontao/presentations/commit/340a9af380474294573d5c28d9cc4399b0185e2b))
+* build ([18c1285](https://github.com/Soontao/presentations/commit/18c12853b1cb30aa6765be1c7b323b4587f112b7))
+
 ### [1.3.1](https://github.com/Soontao/presentations/compare/v1.3.0...v1.3.1) (2019-09-06)
 
 
