@@ -57,7 +57,7 @@ var handle = getRandom(); // non-blocking, spend ~1ms, and go to next statement
 
 for(;;) { // forever loop
   print("hello my friend, I'm still working")
-  if(handle.code == "FINISHED") { // after 500ms, the handle said it's 'finished'
+  if(handle.state == "FINISHED") { // after 500ms, the handle said it's 'finished'
     var pass2 = handle.getValue()
     break // remember break forever loop
   }
@@ -112,16 +112,17 @@ server.listen(port, hostname, () => {
 
 * learn (few, simple, clear API)
 * write (less code, less effort)
-* build (no build, just run)
+* build (no build, no build system, just run)
 
 ---
 
-## Disadvantage: So fast
+## Disadvantage: Too fast
 
 <br>
 
-* Hard to debug(tool chain, events)
-* Callback hell
+* Type Less, Design Lost
+* Type Less, Bug More
+* Callback hell/Async function chain
 * Performance
 
 ---
@@ -141,7 +142,7 @@ If there are no performance requirement, even we can implement the production se
 
 ---
 
-## Scenario 2: Build tools for daily work
+## Scenario 2: Build tools for your daily work
 
 <br>
 
@@ -151,6 +152,21 @@ Computer is good at doing repetitive fixed boring work.
 
 Examples:
 
-* [clean icon & thumb cache for windows 10](https://github.com/Soontao/clean-icon-and-thumb-cache)
-* [JS module circular dependency check tool](https://github.com/Soontao/cycle-import-check)
-* [(Experimental) Automation Document](https://github.com/ui5-next/automation-documentation)
+* [System Tool](https://github.com/Soontao/clean-icon-and-thumb-cache)
+* [Javascript Static Analyse Tool](https://github.com/Soontao/cycle-import-check)
+* [Documentation Tool](https://github.com/ui5-next/automation-documentation)
+* [Project Generator](https://github.com/ui5-next/ui5g)
+
+--- 
+
+## Scenario 3: Build the presentation layer
+
+<br>
+
+With Server-Side Rendering technology, server could send the end-user direct html page instead of a SPA launcher.
+
+<br>
+
+* Native JS frameworks (React/Vue) integration
+* Stateless, easy to scale
+* Easy to learn/use by frontend developers
