@@ -6,7 +6,7 @@ marp: true
 
 <br>
 
-# <!-- fit --> Node JS Basics: just do what you want.
+# Node JS Basics: just do what you want.
 
 ---
 
