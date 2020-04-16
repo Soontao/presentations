@@ -18,6 +18,17 @@ Node.js is an open-source, cross-platform, JavaScript runtime environment that e
 
 ---
 
+## Quick View
+
+<br>
+
+* created by Ryan Dahl
+* integrate v8, libuv, openssl, zlib ...
+* single (js) thread
+* running runtime
+
+---
+
 ## Concepts: Sync & Async (**In Parallel Programming**)
 
 <br>
@@ -68,11 +79,56 @@ for(;;) { // forever loop
 
 ---
 
-## Discussing: Why we need the parallel programming ?
+## Concepts: Package Manager
+
+<br>
+
+* Central package registry - npmjs.com
+* Support version
+* `npm` or `yarn`
+
 
 ---
 
-## For totally fully use the whole CPU(s) resource.
+## Concepts: Single Thread & Performance
+
+<br>
+
+* Just write code efficient (as you can)
+* Less concurrent programming design
+* Scale instance to process high
+
+<br>
+
+DO NOT WRITE CODE LIKE:
+
+```javascript
+for(;;) {
+  checkSomeThing()
+}
+```
+
+<br>
+
+reference [this document](https://nodejs.org/en/docs/guides/dont-block-the-event-loop)
+
+---
+
+## Concepts: Native Libraries
+
+<br>
+
+* integrate `nodejs` with `cpp`
+* `node-gyp` (old) or `N-API` (new)
+* accelerate application (`crypto`, `zlib`, `url parsing`)
+
+
+---
+
+## Concepts: Node Version
+
+* LTS - 4, 6, 8, 10, 12 ...
+* Current - other
 
 ---
 
@@ -139,6 +195,12 @@ server.listen(port, hostname, () => {
 For the customer project, we built simple dynamic API server for demo/feasibility check.
 
 If there are no performance requirement, even we can implement the production server based the prototype server.
+
+<br>
+
+Examples: 
+
+* TCC DataV Report Server (Phase 0)
 
 ---
 
