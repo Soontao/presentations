@@ -19,8 +19,8 @@ marp: true
   * datatype
   * variable
   * object
-  * condition
-  * loop
+  * expression & operator
+  * condition & loop statement
   * function (basic, arrow & async)
   * prototype
 * Homework introduction
@@ -161,4 +161,233 @@ ob1[pName] == 3
 pName = "d"
 ob1[pName] = 4
 // ob1 == { a: 1, b: 2, c: 3, d: 4 }
+```
+
+---
+
+## Object - useful scripts snippets
+
+> foreach object
+
+```js
+const obj = { a: 1, b: 2 }
+const keys = Object.keys(obj)
+// keys == [ 'a', 'b' ]
+const values = Object.values(obj)
+// values == [ 1, 2 ]
+for (const key in obj) {
+  if (obj.hasOwnProperty(key)) {
+    const value = obj[key];
+    // key value
+  }
+}
+```
+
+---
+
+## Operators - Numeric
+
+<br>
+
+* \+
+* \-
+* \*
+* \/
+* \*\*
+* \%
+
+
+---
+
+## Operators - Numeric
+
+<br>
+
+```js
+1 + 2 // 3
+1 - 2 // -1
+1 * 2 // 2
+1 / 2 // 0.5
+3 ** 2 // 9
+3 % 2 // 1
+```
+
+---
+
+## Operators - Comparison
+
+<br>
+
+* ==
+* ===
+* !=
+* !==
+* >=
+* <=
+
+---
+
+## Operators - Comparison
+
+<br>
+
+```js
+"1" == 1 // true
+"1" === 1 // false
+```
+
+---
+
+## Operators - Bit
+
+> In fact, you don't need these
+
+```js
+1 & 2 // 01 & 10 => 00
+1 | 2 // 01 | 10 => 11
+1 ^ 2 // 01 | 10 => 11
+1 << 2 // 01 << 2 => 100
+9 >> 2 // 1001 >> 0010 => 10
+```
+
+---
+
+## Operators - Logical
+
+<br>
+
+```js
+var a1 =  true && true;     // t && t returns true
+var a2 =  true && false;    // t && f returns false
+var a3 = false && true;     // f && t returns false
+var a4 = false && (3 == 4); // f && f returns false
+var a5 = 'Cat' && 'Dog';    // t && t returns Dog
+var a6 = false && 'Cat';    // f && t returns false
+var a7 = 'Cat' && false;    // t && f returns false
+```
+
+---
+
+## Operators - Logical
+
+<br>
+
+```js
+var o1 =  true || true;     // t || t returns true
+var o2 = false || true;     // f || t returns true
+var o3 =  true || false;    // t || f returns true
+var o4 = false || (3 == 4); // f || f returns false
+var o5 = 'Cat' || 'Dog';    // t || t returns Cat
+var o6 = false || 'Cat';    // f || t returns Cat
+var o7 = 'Cat' || false;    // t || f returns Cat
+```
+
+---
+
+## Operators - Others
+
+<br>
+
+
+```js
+var one = new Number(1)
+one instanceof Number // check object type
+
+typeof one // 'object', in fact, you don't need this
+
+"toFixed" in one // true, check object properties
+
+delete objectName;
+delete objectName.property;
+delete arrayName[index];
+delete variable; 
+```
+
+---
+
+## Condition Statement
+
+<br>
+
+```js
+var a = { b: 1, c: 2, d: 0 }
+if (a.b) {
+  // will run
+}
+if (a.d) {
+  // not run
+} else {
+  // will run
+}
+```
+
+---
+
+## Condition Statement
+
+<br>
+
+```js
+var a = { b: 1, c: 2, d: 0 }
+if (a.b) {
+  // will run
+}
+if (a.d) {
+  // not run
+} else {
+  // will run
+}
+if (true) {
+  // will run
+}
+```
+
+---
+
+## Condition Check
+
+<br>
+
+```js
+Boolean(0) // false
+Boolean(1) // true
+Boolean(-1) // true
+Boolean(undefined) // false
+Boolean(null) // false
+Boolean(NaN) // false
+Boolean({a:1}) // true
+Boolean(new Date())
+Boolean([]) // true
+Boolean([1]) // true
+Boolean("") // false
+Boolean("1") // true
+```
+
+
+---
+
+## Loop
+
+<br>
+
+```js
+var arr1 = [1, 2, 3]
+
+for (let idx = 0; idx < arr1.length; idx++) {
+  const ele = arr1[idx];
+  
+}
+
+// or
+arr1.forEach((ele, idx) => {
+
+})
+```
+
+---
+
+## Function
+
+```js
+
 ```

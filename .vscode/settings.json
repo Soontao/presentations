@@ -8,5 +8,6 @@
     "gitkeep",
     "graphviz",
     "marp"
-  ]
+  ],
+  "editor.formatOnSave": true
 }

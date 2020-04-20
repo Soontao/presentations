@@ -2,9 +2,9 @@
 marp: true
 ---
 
-# Session List
+# CIM Session List
 
-Training Session List
+CIM Training Session List
 
 ---
 
@@ -22,10 +22,10 @@ Training Session List
 
 ## Session 2 - ES6 & More
 
-* ECMA Script standards introduction
+* ECMA script standards introduction
 * Block scoping
 * Collections
-* Classes
+* Classes & `this`
 * Promises
 * Template strings
 * Arrow Functions
@@ -37,13 +37,13 @@ Training Session List
 
 * Map
 * Set
-* Array
+* Array, foreach/map/reduce
 * Number
 * Boolean
 * String
 * Regexp
-* Promise
-* Buffer
+* Promise, async
+* Buffer, binary
 
 ---
 
