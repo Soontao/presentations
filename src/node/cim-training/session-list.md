@@ -2,9 +2,7 @@
 marp: true
 ---
 
-# CIM Session List
-
-CIM Training Session List
+# CIM Training Session List
 
 ---
 
@@ -56,6 +54,7 @@ CIM Training Session List
   * os
   * path
   * net/http
+  * event
 * Callback & Async
 
 ---
@@ -64,6 +63,7 @@ CIM Training Session List
 
 * Event Loop
 * Express http server with sqlite
+* **TBD**
 * Debug & Test
 * Open Source & Security
 

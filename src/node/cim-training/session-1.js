@@ -70,3 +70,17 @@ for (let idx = 0; idx < arr1.length; idx++) {
 arr1.forEach((ele, idx) => {
 
 })
+
+function f1(p1, p2 = 3) {
+  const { a, b } = p1 // de-construct
+}
+
+// arrow function, no context
+const f2 = ({ a, b }, p2) => { // de-construct parameter
+
+}
+
+async function f3() { // async function, execute it will return Promise object
+  return await 1; // you can use other function
+}
+

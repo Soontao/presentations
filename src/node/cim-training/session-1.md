@@ -388,6 +388,65 @@ arr1.forEach((ele, idx) => {
 
 ## Function
 
-```js
+<br>
 
+```js
+function f1(p1, p2 = 3) { // traditional function
+  const { a, b } = p1 // de-construct
+}
+
+// arrow function, no context
+const f2 = ({ a, b }, p2) => { // de-construct parameter
+
+}
+
+async function f3() { // async function, execute it will return Promise object
+  return await 1; // you can use other function
+}
 ```
+
+---
+
+## Prototype
+
+> generally, you don't need this
+
+```js
+var Person = function(name) {
+  this.name = name;
+  this.canTalk = true;
+};
+
+// `new` will create a object, execute Person func on it, and return the object.
+var p = new Person("alice") // Person { name: 'alice', canTalk: true }
+"greet" in p // false
+Person.prototype.greet = function() {}; // attach a function to the prototype
+"greet" in p // true
+```
+
+---
+
+## Homework
+
+<br>
+
+* Public Github User
+* Git
+* VSCode
+* NodeJS
+
+---
+
+## Homework
+
+<br>
+
+* For the project [nodejs-training](https://github.com/Soontao/nodejs-training)
+* Edit the `training.config.json`
+* `npm install`
+* `npm run download` (daily)
+* `npm run test`
+* update unit test code in `src/cases`
+* `npm run test`
+* commit & push
+* check github workflow status
