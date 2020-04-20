@@ -145,7 +145,7 @@ o1.a != a
 const a = {a:1,b:2,c:3}
 const b = {d:4,e:5}
 const c = Object.assign(a,b)
-// c == { a: 1, b: 2, c: 3, d: 4, e: 5 }
+// a == c == { a: 1, b: 2, c: 3, d: 4, e: 5 }
 ```
 
 ---
