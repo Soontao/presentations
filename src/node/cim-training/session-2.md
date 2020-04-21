@@ -17,10 +17,10 @@ marp: true
 * ECMAScript standards introduction
 * Block & Closure
 * Class & `this`
-* Promises
+* Promise
 * Template strings
-* Arrow Functions
 * Async Functions
+* Arrow Functions
 
 ---
 
@@ -36,7 +36,7 @@ marp: true
 
 ---
 
-## Block
+## block
 
 <br>
 
@@ -59,7 +59,7 @@ console.log(y);
 ---
 
 
-## Closure
+## closure
 
 > access variable outside current scope
 
@@ -74,10 +74,46 @@ var f = () => {
 
 f() // output: ?
 ```
+---
+
+## Function
+
+<br>
+
+```js
+// arguments
+function hello() {
+  console.log(`hello ${arguments[0]}`)
+}
+
+hello("alice") // hello alice
+hello() // hello undefined
+
+// function parameter de-construct
+function hello2(...params) {
+  console.log(params[0])
+}
+
+hello2("alice") // alice
+```
 
 ---
 
-## class
+## Function
+
+<br>
+
+```js
+function hello() {
+  console.log(`hello ${this.name}`) // use `this`
+}
+
+hello.call({ name: "alice" })  // hello alice
+hello() // hello undefined
+```
+---
+
+## class (old)
 
 > what is class ? what is `this` ?
 
@@ -91,38 +127,13 @@ function People(name) {
 // custom New
 function New(clazz, ...params) {
   const obj = {}
-  obj.constructor = clazz
-  clazz.call(obj, ...params) // run constructor with obj as context
+  obj.__proto__ = clazz.prototype
+  clazz.call(obj, ...params)
   return obj
 }
 
 New(People, "admin").name == (new People("admin")).name
 
-```
-
----
-
-## call/apply/bind & `this`
-
-> `this` is `context`
-
-```js
-function People(name) {
-  this.name = name // access context
-}
-
-var obj = {}  // new context
-var obj1 = {} // new context
-var obj2 = {} // new context
-
-People.apply(obj, ["hello"])
-
-People.call(obj1, "hello")
-
-var People2 = People.bind(obj2)
-People2("hello")
-
-obj.name == obj1.name == obj2.name
 ```
 
 ---
@@ -151,4 +162,209 @@ const People2 = class extends People {
 }
 
 new People2("admin") // People2 { name: 'admin1' }
+```
+
+--- 
+
+## class (old) `this` issue
+
+<br>
+
+```js
+function People(name) {
+  this.name = name
+}
+
+People.prototype.getName = function () {
+  return this.name
+}
+
+function People3(name, p) {
+  this.name = name
+  this.getName = p.getName
+}
+
+console.log(new People3("people3", new People("people1")).getName())
+// output: ?
+```
+
+---
+
+## call/apply/bind & `this`
+
+> `this` is `context`
+
+```js
+function People(name) {
+  this.name = name // access context
+}
+
+var obj = {}  // new context
+var obj1 = {} // new context
+var obj2 = {} // new context
+
+People.apply(obj, ["hello"])
+
+People.call(obj1, "hello")
+
+var People2 = People.bind(obj2)
+People2("hello")
+
+obj.name == obj1.name == obj2.name
+```
+
+--- 
+
+## class (old) bind `this`
+
+> PLEASE remember `this` is not secure
+
+```js
+function People(name) {
+  this.name = name
+}
+
+People.prototype.getName = function () {
+  return this.name
+}
+
+function People3(name, p) {
+  this.name = name
+  this.getName = p.getName.bind(p)
+}
+
+console.log(new People3("people3", new People("people1")).getName())
+// output: ?
+```
+
+---
+
+## Promise (ES6)
+
+> async handle
+
+```js
+const promise1 = new Promise(function(resolve, reject) {
+  setTimeout(function() {
+    resolve('foo');
+  }, 300);
+});
+
+promise1.then(function(value) {
+  console.log(value);
+  // expected output: "foo"
+});
+
+console.log(promise1);
+// expected output: [object Promise]
+```
+
+---
+
+## Promise (ES6) - error
+
+```js
+// some times, this function will be network API or network based API
+const createAsyncValue = function (value) {
+  return new Promise(function (resolve, reject) {
+    if (value instanceof Error) {
+      reject(value)
+    } else {
+      resolve(value)
+    }
+  })
+}
+
+createAsyncValue("hello promise").then(console.log)
+createAsyncValue(new Error("hello promise")).catch(console.error)
+createAsyncValue("hello")
+  .then(result => createAsyncValue(result + " promise chain"))
+  .then(console.log)
+
+createAsyncValue("hello")
+  .then(result =>
+    createAsyncValue(new Error(result + " promise error chain"))
+      .catch(e => console.error(`internal process ${e.message}`))
+  )
+  .then(console.log)
+  .catch(e => console.error(`external process ${e.message}`))
+```
+
+---
+
+## Promise (ES6) - sync
+
+> send multi async requests, and wait they ALL finished 
+
+```js
+Promise
+  .all([createAsyncValue("run1"), createAsyncValue("run2")])
+  .then(console.log) // [ 'run1', 'run2' ]
+
+Promise
+  .all([createAsyncValue("run1"), createAsyncValue(new Error("error1"))])
+  .then(console.log) // no here
+  .catch(console.error) // only here
+```
+
+---
+
+## template string
+
+> Developers love this feature
+
+```js
+var person = "alice"
+var hello_person_1 = "hello " + alice + ".";
+var hello_person_2 = "hello ".concat(person).concat(".")
+var hello_person_3 = `hello ${person}.`
+
+var long_text = `Dear ${person}
+
+I'm ....
+
+
+...
+`
+// Dear alice\n\nI'm ....\n\n\n...\n
+
+```
+
+---
+
+## Async Function (ES2018)
+
+> make code beautiful
+
+```js
+async function run() {
+  const hello = await createAsyncValue("hello")
+  try {
+    await createAsyncValue(new Error("error"))
+  } catch (error) {
+    // error
+  }
+}
+```
+
+---
+
+## Arrow Function (ES2015)
+
+<br>
+
+```js
+const f1 = () => { return "f1" }
+const f2 = () => "f2"
+const f3 = value => `hello ${value}`
+const f4 = ({ name }, ...rest) => `hello ${name}`
+const f5 = () => `hello ${arguments[0]}`
+const f6 = () => `hello ${this.name}`
+
+f1() // => 'f1'
+f2() // => 'f2'
+f3("alice") // => 'hello alice'
+f4({ name: "alice", age: 1000 }) // => 'hello alice'
+f5("alice") // Uncaught ReferenceError: arguments is not defined
+f6.call({ name: "alice" }) // => 'hello undefined'
 ```

@@ -4,13 +4,18 @@ var f = () => {
   console.log(a)
 }
 
+function People(name) {
+  this.name = name
+}
 
 function New(clazz, ...params) {
   const obj = {}
-  obj.constructor = clazz
+  obj.__proto__ = clazz.prototype
   clazz.call(obj, ...params)
   return obj
 }
+
+New(People, "alice")
 
 class People {
   constructor(name) {
@@ -19,9 +24,6 @@ class People {
 }
 
 
-function People(name) {
-  this.name = name
-}
 
 People.prototype.getName = function () {
   return this.name
@@ -38,18 +40,84 @@ const People2 = class extends People {
   }
 }
 
-var p2 = new People2("admin") // People2 { name: 'admin1' }
+function People(name) {
+  this.name = name
+}
 
-var c2 = new class {
-  constructor(p, name = "whatever") {
-    this.name = name
-    this.p = p
-  }
-  print() {
-    console.log(this.p.getName())
-    var f = this.p.getName
-    console.log(f())
-  }
-}(new People("admin3"))
+People.prototype.getName = function () {
+  return this.name
+}
 
-c2.print()
+
+function People3(name, p) {
+  this.name = name
+  this.getName = p.getName
+}
+
+console.log(new People3("people3", new People("people1")).getName())
+
+const createAsyncValue = function (value) {
+  return new Promise(function (resolve, reject) {
+    if (value instanceof Error) {
+      reject(value)
+    } else {
+      resolve(value)
+    }
+  })
+}
+
+createAsyncValue("hello promise").then(console.log)
+createAsyncValue(new Error("hello promise")).catch(console.error)
+createAsyncValue("hello")
+  .then(result => createAsyncValue(result + " promise chain"))
+  .then(console.log)
+
+createAsyncValue("hello")
+  .then(result =>
+    createAsyncValue(new Error(result + " promise error chain"))
+      .catch(e => console.error(`internal process ${e.message}`))
+  )
+  .then(console.log)
+  .catch(e => console.error(`external process ${e.message}`))
+
+
+async function run() {
+  const hello = await createAsyncValue("hello")
+  try {
+    await createAsyncValue(new Error("error"))
+  } catch (error) {
+    // error
+  }
+}
+
+function hello() {
+  console.log(arguments[0])
+}
+
+hello("alice")
+
+function hello() {
+  console.log(`hello ${this.name}`)
+}
+
+hello.call({ name: "alice" })  // hello alice
+
+function hello2(...params) {
+  console.log(params[0])
+}
+
+hello2("alice") // alice
+
+const f1 = () => { return "f1" }
+const f2 = () => "f2"
+const f3 = value => `hello ${value}`
+const f4 = ({ name }, ...rest) => `hello ${name}`
+const f5 = () => `hello ${arguments[0]}`
+const f6 = () => `hello ${this.name}`
+
+f1() // => 'f1'
+f2() // => 'f2'
+f3("alice") // => 'hello alice'
+f4({ name: "alice", age: 1000 }) // => 'hello alice'
+f5("alice") // Uncaught ReferenceError: arguments is not defined
+f6.call({ name: "alice" }) // 'hello undefined'
