@@ -9,8 +9,7 @@ function People(name) {
 }
 
 function New(clazz, ...params) {
-  const obj = {}
-  obj.__proto__ = clazz.prototype
+  const obj = Object.create(clazz.prototype)
   clazz.call(obj, ...params)
   return obj
 }

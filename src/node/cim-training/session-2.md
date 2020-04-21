@@ -126,8 +126,7 @@ function People(name) {
 
 // custom New
 function New(clazz, ...params) {
-  const obj = {}
-  obj.__proto__ = clazz.prototype
+  const obj = Object.create(clazz.prototype)
   clazz.call(obj, ...params)
   return obj
 }
@@ -135,6 +134,10 @@ function New(clazz, ...params) {
 New(People, "admin").name == (new People("admin")).name
 
 ```
+
+---
+
+## [prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 ---
 
