@@ -132,3 +132,21 @@ f3("alice") // => 'hello alice'
 f4({ name: "alice", age: 1000 }) // => 'hello alice'
 f5("alice") // Uncaught ReferenceError: arguments is not defined
 f6.call({ name: "alice" }) // 'hello undefined'
+
+var a = 1;
+
+var f2 = () => {
+  a = 3;
+  console.log(a);
+}
+
+f2() // output: ?
+
+var a = 1;
+
+var f3 = () => {
+  var a = 3;
+  console.log(a);
+}
+
+f3() // output: ?

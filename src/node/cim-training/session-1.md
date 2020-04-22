@@ -303,23 +303,6 @@ delete arrayName[index];
 delete variable; 
 ```
 
----
-
-## Condition Statement
-
-<br>
-
-```js
-var a = { b: 1, c: 2, d: 0 }
-if (a.b) {
-  // will run
-}
-if (a.d) {
-  // not run
-} else {
-  // will run
-}
-```
 
 ---
 

@@ -63,8 +63,6 @@ console.log(y);
 
 > access variable outside current scope
 
-<br>
-
 ```js
 var a = 1;
 
@@ -76,6 +74,43 @@ f() // output: ?
 ```
 ---
 
+## closure
+
+> access variable outside current scope
+
+```js
+var a = 1;
+
+var f2 = () => {
+  a = 3;
+  console.log(a);
+}
+
+f2() // output: ?
+a // ?
+```
+
+---
+
+## closure
+
+> access variable outside current scope
+
+
+```js
+var a = 1;
+
+var f3 = () => {
+  var a = 3;
+  console.log(a);
+}
+
+f3() // output: ?
+a // ?
+```
+
+---
+
 ## Function
 
 <br>
@@ -85,7 +120,7 @@ f() // output: ?
 function hello() {
   console.log(`hello ${arguments[0]}`)
 }
-
+// no arguments check in fact
 hello("alice") // hello alice
 hello() // hello undefined
 
@@ -364,6 +399,7 @@ I'm ....
 `
 // Dear alice\n\nI'm ....\n\n\n...\n
 
+`${whatever}` // Uncaught ReferenceError
 ```
 
 ---
