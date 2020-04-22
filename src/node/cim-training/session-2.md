@@ -111,6 +111,24 @@ a // ?
 
 ---
 
+## closure
+
+> access variable outside current scope
+
+```js
+let a = 1;
+
+let f4 = () => {
+  let a = 3;
+  console.log(a);
+}
+
+f4() // output: ?
+a // ?
+```
+
+---
+
 ## Function
 
 <br>
