@@ -134,6 +134,10 @@ a // ?
 <br>
 
 ```js
+function hello(arg1 = "alice") { // default value
+  console.log(`hello ${arg1}`)
+}
+
 // arguments
 function hello() {
   console.log(`hello ${arguments[0]}`)
@@ -148,6 +152,7 @@ function hello2(...params) {
 }
 
 hello2("alice") // alice
+
 ```
 
 ---
@@ -182,6 +187,7 @@ function New(clazz, ...params) {
   // create `new` object with `__proto__`
   const obj = Object.create(clazz.prototype)
   clazz.call(obj, ...params)
+  // obj almost = { name, __proto__ }
   return obj
 }
 

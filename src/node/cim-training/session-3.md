@@ -103,10 +103,77 @@ Array.from(s2) // [ 1, '1', 2 ]
 
 ## Array - map
 
-> mapping
+> mapping value (transform, extract ... )
 
 ```js
-var a1 = [1, 2, 3]
-var a2 = a1.map(v => "" + v) // [ '1', '2', '3' ]
-a1 != a2
+const a1 = [1, 2, 3]
+const a2 = a1.map(v => "" + v) // [ '1', '2', '3' ]
+a1 != a2 // new array
 ```
+
+---
+
+## Array - reduce
+
+> reduce dimension
+
+```js
+const a1 = [1, 2, 3]
+const sum = a1.reduce((acc, cur) => acc + cur, 0) 
+// 6
+```
+
+---
+
+## Array - filter
+
+> filter value
+
+```js
+const a3 = [
+  { name: "a", enabled: true },
+  { name: "b", enabled: true },
+  { name: "c", enabled: false }
+]
+
+const enabledNames = a3.filter(item => item.enabled).map(item => item.name)
+// [ 'a', 'b' ]
+```
+
+---
+
+## Number
+
+<br>
+
+```js
+Number.parseFloat("1.23")      
+Number.parseInt("123")
+```
+
+---
+
+## Boolean
+
+<br>
+
+```js
+Boolean(0) // false
+Boolean(1) // true
+Boolean(-1) // true
+Boolean(undefined) // false
+Boolean(null) // false
+Boolean(NaN) // false
+Boolean({a:1}) // true
+Boolean(new Date())
+Boolean([]) // true
+Boolean([1]) // true
+Boolean("") // false
+Boolean("1") // true
+```
+
+---
+
+## String
+
+<br>
