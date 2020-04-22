@@ -124,8 +124,9 @@ function People(name) {
   this.name = name // access context
 }
 
-// custom New
+// function New
 function New(clazz, ...params) {
+  // create `new` object with `__proto__`
   const obj = Object.create(clazz.prototype)
   clazz.call(obj, ...params)
   return obj
@@ -138,6 +139,38 @@ New(People, "admin").name == (new People("admin")).name
 ---
 
 ## [prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
+<br>
+
+> object has `__proto__` property
+> function has `prototype` property
+> function with `new` keyword is `constructor`
+> the returned instance object.`__proto__` is the function.`prototype`
+> javascript runtime check attr by object `__proto__`
+
+---
+
+## prototype
+
+<br>
+
+```js
+function People(name) { this.name = name }
+var p = new People();
+p.__proto__ == People.prototype; // true
+
+// instance method
+People.prototype.getName = function () { return this.name; }
+
+"getName" in p; // true
+"getName" in People; // false
+
+People.type = "china"; // class property/method, if you want
+
+"type" in p; // false
+"type" in People; // true
+```
+
 
 ---
 

@@ -22,6 +22,18 @@ class People {
   }
 }
 
+function People(name) { this.name = name }
+var p = new People();
+p.__proto__ == People.prototype; // true
+
+People.prototype.getName = function () { return this.name; }
+"getName" in p; // true
+"getName" in People; // true
+
+People.type = "china"; // class property/method, if you want
+
+"type" in p; // false
+"type" in People; // true
 
 
 People.prototype.getName = function () {
