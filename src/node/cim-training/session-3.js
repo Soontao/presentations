@@ -29,3 +29,32 @@ const a3 = [
 
 // [ 'a', 'b' ]
 const enabledNames = a3.filter(item => item.enabled).map(item => item.name)
+
+
+["1", 2, "3"].join(",")
+
+
+const map1 = new Map();
+
+map1.set('0', 'foo');
+map1.set(1, 'bar');
+
+for (const v of map1.entries()) {
+  console.log(v)
+}
+
+map1.forEach((value, key) => {
+  console.log(value, key)
+})
+
+map1.keys() // all keys
+map1.values() // all values
+
+
+var result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
+
+
+var obj = { a: 1, b: 2, c: { d: 3 } }
+Object.keys(obj) // [ 'a', 'b', 'c' ]
+Object.values(obj) //[ 1, 2, { d: 3 } ]
+Object.assign(obj, { a: 11 }, { a: 13, b: 4 }) // { a: 13, b: 4, c: { d: 3 } }

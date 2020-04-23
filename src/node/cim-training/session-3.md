@@ -12,8 +12,6 @@ marp: true
 
 ## Agenda - Core Classes
 
-<br>
-
 * Map
 * Set
 * Array, foreach/map/reduce
@@ -21,8 +19,8 @@ marp: true
 * Boolean
 * String
 * Regexp
-* Promise, async
-* Buffer, binary
+* Date
+* Object
 
 ---
 
@@ -48,8 +46,32 @@ myMap.size; // 3
 myMap.get(keyString);    // "和键'a string'关联的值"
 myMap.get(keyObj);       // "和键keyObj关联的值"
 myMap.get(keyFunc);      // "和键keyFunc关联的值"
- 
 ```
+
+---
+
+## Map
+
+> Traverse
+
+```js
+const map1 = new Map();
+
+map1.set('0', 'foo');
+map1.set(1, 'bar');
+
+map1.keys() // all keys
+map1.values() // all values
+
+for (const v of map1.entries()) {
+  console.log(v)
+}
+
+map1.forEach((value, key) => {
+  console.log(value, key)
+})
+```
+
 
 ---
 
@@ -77,6 +99,7 @@ s2.add("1")
 s2.add(2)
 s2.add(2)
 s2.has(2) // true
+
 Array.from(s2) // [ 1, '1', 2 ]
 ```
 
@@ -147,8 +170,9 @@ const enabledNames = a3.filter(item => item.enabled).map(item => item.name)
 <br>
 
 ```js
-Number.parseFloat("1.23")      
-Number.parseInt("123")
+Number.parseFloat("1.23") // 1.23
+Number.parseInt("123", 10) // 123
+Number.parseInt("101", 2) // 5
 ```
 
 ---
@@ -179,6 +203,85 @@ Boolean("1") // true
 <br>
 
 ```js
+"1" + '.' // '1.'
+
 "123".split("") // [ '1', '2', '3' ]
 
+["1", 2, "3"].join(",") // '1,2,3'
+
+["1", 2, "3"].join(",").split(",") // [ '1', '2', '3' ]
+
+"abcd"[2] // c  
+
+'   Hello world!   '.trim() // 'Hello world!'
+
+```
+
+---
+
+## String
+
+<br>
+
+```js
+"https://domain.com:3333".match(/([a-z]+)\:\/\/(.*)(\:\d+)/) 
+// [
+//   'https://domain.com:3333',
+//   'https',
+//   'domain.com',
+//   ':3333',
+//   index: 0,
+//   input: 'https://domain.com:3333',
+//   groups: undefined
+// ]
+
+// if not match, will return null
+```
+
+---
+
+## [Regexp](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+<br>
+
+```js
+const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
+```
+
+<br>
+
+[regexp test tool](https://regex101.com/)
+
+---
+
+## Date
+
+<br>
+
+```js
+const d = new Date()
+d.toISOString() // '2020-04-23T02:28:56.507Z'
+d.getTime() // 1587608936507 unix time
+
+new Date(1587608936507)
+new Date("2020-04-23T02:28:56.507Z")
+```
+
+<br>
+
+[library -- momentjs](https://momentjs.com/docs/)
+
+---
+
+## Object
+
+<br>
+
+```js
+var obj = { a: 1, b: 2, c: { d: 3 } }
+
+Object.keys(obj) // [ 'a', 'b', 'c' ]
+Object.values(obj) // [ 1, 2, { d: 3 } ]
+Object.entries(obj) // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', { d: 3 } ] ]
+Object.assign(obj, { a: 11 }, { a: 13, b: 4 }) // { a: 13, b: 4, c: { d: 3 } }
 ```
