@@ -58,3 +58,28 @@ var obj = { a: 1, b: 2, c: { d: 3 } }
 Object.keys(obj) // [ 'a', 'b', 'c' ]
 Object.values(obj) //[ 1, 2, { d: 3 } ]
 Object.assign(obj, { a: 11 }, { a: 13, b: 4 }) // { a: 13, b: 4, c: { d: 3 } }
+
+/**
+ * @param m {Map<any, string>}
+ */
+module.exports = function mapReadWrite(m) {
+
+
+  return m
+};
+
+
+/**
+ * @param s {string}
+ * @returns {{id:number,name:string,username:string,date:string}}
+ */
+module.exports = function parse(s = "") {
+
+
+  return {
+    id: 1,
+    name: "Alice",
+    username: "ALICE001",
+    date: "20202020"
+  }
+};

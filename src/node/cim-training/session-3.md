@@ -263,8 +263,8 @@ const d = new Date()
 d.toISOString() // '2020-04-23T02:28:56.507Z'
 d.getTime() // 1587608936507 unix time
 
-new Date(1587608936507)
-new Date("2020-04-23T02:28:56.507Z")
+new Date(1587608936507) // parse from unix timestamp
+new Date("2020-04-23T02:28:56.507Z") // parse from ISO
 ```
 
 <br>
