@@ -61,3 +61,6 @@ module.exports = { readFileString }
 ## [File System](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html)
 
 > provide local file system access
+
+---
+
