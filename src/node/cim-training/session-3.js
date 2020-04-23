@@ -1,3 +1,69 @@
+const a3 = [
+  { name: "a", enabled: true },
+  { name: "b", enabled: true },
+  { name: "c", enabled: false }
+]
+
+console.log(a3.filter(item => item.enabled).map(item => item.name))
+
+a3.filter(item => item.enabled).forEach(enabledUser => {
+  // 
+})
+
+const a1 = [6, 1, 4]
+const sum = a1.reduce((acc, cur) => acc + cur, 0)
+//  loop,   acc cur,      result
+//  1       0   6 (a1[1]) 0 + 6 (go to next loop)
+//  2       6   1 (a1[2]) 6 + 1 
+//  3       7   4         7 + 4
+//  sum 11
+console.log(sum)
+//  6
+
+const a2 = ["1", "2", "3"]
+console.log(a2.reduce((acc, cur) => acc + cur), "")
+
+
+
+const a1 = [1, 2, 3] // order list
+const a2 = a1.map(processOrder) // transformed order list 
+console.log(a1)
+console.log(a2)
+
+a2 // persist
+
+function processOrder(order) {
+  // ....
+
+  return {}
+}
+
+
+const array = [1, 2, 3]
+const a = []
+array.forEach(value => {
+  if (value > 2) {
+    a.push(value)
+  }
+  console.log(value)
+})
+// 
+console.log("finished")
+
+const fs = require("fs")
+
+fs.readFile("./session-1.js", (err, data) => {
+  console.log("in fact, finished at here")
+})
+
+console.log("finished")
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+
+}
+
+
 
 
 const s = new Set([1, 2, 3, 3])
@@ -59,6 +125,12 @@ Object.keys(obj) // [ 'a', 'b', 'c' ]
 Object.values(obj) //[ 1, 2, { d: 3 } ]
 Object.assign(obj, { a: 11 }, { a: 13, b: 4 }) // { a: 13, b: 4, c: { d: 3 } }
 
+const obj = { a: 1, b: 2, c: { d: 3 } }
+console.log(
+  Object.assign(obj, { a: 11 }, { a: 13, b: 4 }, { a: 14 })
+)
+
+
 /**
  * @param m {Map<any, string>}
  */
@@ -83,3 +155,16 @@ module.exports = function parse(s = "") {
     date: "20202020"
   }
 };
+
+class People {
+  constructor(name) {
+    this.name = name
+  }
+  static createNewPeople(name) {
+    return new People(name)
+  }
+}
+
+People.createNewPeople = (name) => {
+  return
+}
