@@ -13,8 +13,11 @@ http.createServer(function (request, response) {
         d += data.toString()
       })
       request.on("end", () => {
+        // server logic 
         response.writeHead(200, { 'Content-Type': 'application/json' });
-        response.end(JSON.stringify({ "content": d }));
+        response.end(JSON.stringify({
+          "content": parseInt(JSON.parse(d).sum, 10)
+        }));
       })
       break
     default:

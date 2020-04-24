@@ -13,7 +13,7 @@ bus.on('add', function (a) {
   this.value += a
 });
 
-bus.on('add', function (a, b) {
+bus.on('add', function (a) {
   console.log(`after add: ${this.value}`);
 });
 

@@ -1,11 +1,15 @@
 var http = require('http');
 
+const indexAPI = (req, res) => {
+  req.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ "server": "nodejs" }));
+}
+
 http.createServer(function (request, response) {
 
   switch (request.url) { // dispatch
     case "/":
-      response.writeHead(200, { 'Content-Type': 'application/json' });
-      response.end(JSON.stringify({ "server": "nodejs" }));
+      indexAPI(request, response)
       break;
     default:
       response.writeHead(404, { 'Content-Type': 'text/plain' });
