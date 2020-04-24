@@ -20,7 +20,6 @@ marp: true
   * process
   * os
   * net/http
-* Callback & Async
 
 ---
 
