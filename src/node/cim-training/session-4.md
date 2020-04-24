@@ -14,12 +14,12 @@ marp: true
 
 * Module system
 * Core modules
+  * event
   * fs
   * path
   * process
   * os
   * net/http
-  * event
 * Callback & Async
 
 ---
@@ -95,6 +95,74 @@ require(X) from module at path Y
 4. LOAD_NODE_MODULES(X, dirname(Y))
 5. THROW "not found"
 ```
+
+---
+
+## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
+
+```js
+const { EventEmitter } = require("events")
+
+const Service = class extends EventEmitter {
+  constructor(...args) {
+    super(...args)
+    this.value = 0;
+  }
+}
+
+const bus = new Service();
+
+bus.on('add', function (a) {
+  this.value += a
+});
+
+bus.on('add', function (a, b) {
+  console.log(`after add: ${this.value}`);
+});
+
+bus.emit("add", 10)
+bus.emit("add", 10)
+```
+
+---
+
+## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
+
+```js
+const { EventEmitter } = require("events")
+
+const Service = class extends EventEmitter {
+  constructor(...args) {
+    super(...args)
+    this.value = 0;
+    this.on("add", this.onAdd.bind(this))
+    this.on("add", this.onAfterAdd.bind(this))
+  }
+  onAdd(v) {
+    this.value += v
+  }
+  onAfterAdd(v) {
+    console.log(`after add: ${this.value}`);
+  }
+}
+
+const bus = new Service();
+
+bus.emit("add", 10)
+bus.emit("add", 10)
+```
+
+---
+
+## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
+
+
+<br>
+
+* EventEmitter.prototype.once
+* EventEmitter.prototype.removeListener
+* EventEmitter.prototype.removeAllListeners
+
 
 ---
 
@@ -268,3 +336,26 @@ http.createServer(function (request, response) {
   }
 }).listen(8888);
 ```
+
+---
+
+## [http](https://nodejs.org/dist/latest-v10.x/docs/api/http.html) - client
+
+> http client
+
+```js
+const http = require("http")
+const opt = { method: "POST", headers: { "Content-Type": "application/json" } }
+
+const req = http.request("http://postman-echo.com/post", opt, (res) => {
+  let body = ""
+  res.on("data", data => body += data.toString())
+  res.on("end", () => console.log(body))
+})
+
+req.write(Buffer.from(JSON.stringify({ "client": "native nodejs client request" })))
+
+req.end()
+```
+
+
