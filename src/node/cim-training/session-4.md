@@ -203,6 +203,23 @@ process.on("SIGINT", async () => { // interrupt
    process.exit();
 });
 ```
+
+---
+
+## Process -- parse cli argv
+
+<br>
+
+```js
+console.log(process.argv);
+// [ 'node',
+//   '/argv.js',
+//   'one',
+//   'two',
+//   'three',
+//   'four',
+//   'five' ]
+```
 ---
 
 ## [path](https://nodejs.org/dist/latest-v10.x/docs/api/path.html)
