@@ -6,7 +6,7 @@ marp: true
 
 <br>
 
-# Node JS Training: Session 1
+# Node JS Training: Session 1 - Javascript Basics
 
 ---
 

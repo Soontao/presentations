@@ -1,8 +1,9 @@
 const glob = require("fast-glob");
-const fs = require("fs");
+const fs = require("fs").promises;
 const { parse } = require("@textlint/markdown-to-ast");
-const { get, find, trimEnd, trimStart } = require("lodash");
+const { get, find } = require("lodash");
 const path = require("path");
+const pretty = require("pretty")
 
 const findTitleForMarkdown = (content) => {
   const ast = parse(content);
@@ -12,8 +13,8 @@ const findTitleForMarkdown = (content) => {
   return firstTitleName
 };
 
-const formatPresentationName = s => {
-  return `${trimStart(trimEnd(s, ".md"), "src/")}.html`
+const formatPresentationName = (s = "") => {
+  return `${s.substring(4, s.length - 3)}.html`
 };
 
 
@@ -40,7 +41,7 @@ const generateIndexHtml = (f) => `
 
 <script>
   sap.ui.getCore().attachInit(function () {
-    const navData = ${JSON.stringify(f)}
+    const navData = ${JSON.stringify(f, undefined, 2)}
     const list = new sap.m.SelectList({
       items: {
         path: "/",
@@ -61,21 +62,20 @@ const generateIndexHtml = (f) => `
 </html>
 `
 
-const readFile = file => fs.readFileSync(file, { encoding: "UTF-8" });
-
+const readFile = file => fs.readFile(file, { encoding: "UTF-8" });
 
 (
   async () => {
 
     const files = await glob("src/**/*.md", {})
     const presentations = await Promise.all(files.map(async file => {
-      const content = readFile(file)
+      const content = await readFile(file)
       return { title: findTitleForMarkdown(content), path: formatPresentationName(file), }
     }))
 
-    fs.writeFileSync(
+    await fs.writeFile(
       path.join(__dirname, "../dist/index.html"),
-      generateIndexHtml(presentations),
+      pretty(generateIndexHtml(presentations)),
       { encoding: "UTF-8" }
     )
 

@@ -6,7 +6,7 @@ marp: true
 
 <br>
 
-# Node JS Training: Session 3
+# Node JS Training: Session 3 - Core API
 
 ---
 
