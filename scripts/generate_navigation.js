@@ -27,11 +27,12 @@ const generateIndexHtml = (f) => `
   <script 
     id="sap-ui-bootstrap" 
     src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_belize" 
+    data-sap-ui-theme="sap_fiori_3" 
     data-sap-ui-libs="sap.m" 
     data-sap-ui-resourceroots='{"index": "./"}'
     data-sap-ui-async="true"
     displayBlock="true"
+    data-sap-ui-xx-waitfortheme="true"
   >
   </script>
 </head>
@@ -54,8 +55,17 @@ const generateIndexHtml = (f) => `
         window.open(presentationPath)
       }
     })
+
     list.setModel(new sap.ui.model.json.JSONModel(navData))
-    list.placeAt("content")
+
+    const app = new sap.m.App({
+      pages: new sap.m.Page({
+        title: "Presentation List",
+        content: [list]
+      })
+    })
+
+    app.placeAt("content")
   });
 </script>
 
