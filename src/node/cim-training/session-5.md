@@ -19,7 +19,7 @@ marp: true
 * Cluster
 * Debug & Unit Test Debug
 * JSDoc
-* Open Source & Security
+* NPM & Open Source & Security
 
 ---
 
@@ -171,13 +171,31 @@ if (cluster.isMaster) {
 
 ## JSDoc
 
+<br>
+
 > Add necessary JSDoc for type reference
+
+<br>
+
+```js
+/**
+ * @param {{a:string,b:{c:number}}[]} arr 
+ */
+const f2 = (arr = []) => {
+    arr[0].b.c.toFixed(2)
+}
+```
 
 ---
 
-## Open Source & Security
+## NPM & Open Source & Security
+
+<br>
 
 > Check security with tools
 
+<br>
+
+* npm registry
 * npm audit
 * whitesource
