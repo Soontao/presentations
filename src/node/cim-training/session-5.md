@@ -169,7 +169,7 @@ if (cluster.isMaster) {
 
 ---
 
-## JSDoc
+## [JSDoc](https://jsdoc.app)
 
 <br>
 
