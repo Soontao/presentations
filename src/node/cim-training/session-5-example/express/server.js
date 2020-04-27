@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.use(require("./database").withSqlite())
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
@@ -46,6 +48,8 @@ app.get("/api/v2/user/:user", req => {
 app.use("/api/v3", require("./api_v3"))
 
 app.use("/api/v4", require("./api_v4"))
+
+app.use("/api/user", require("./api_user"))
 
 const NotFoundError = class extends Error { }
 
