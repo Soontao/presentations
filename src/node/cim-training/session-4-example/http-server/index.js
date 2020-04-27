@@ -5,7 +5,7 @@ const indexAPI = (req, res) => {
   res.end(JSON.stringify({ "server": "nodejs" }));
 }
 
-http.createServer(function (request, response) {
+http.createServer(async function (request, response) {
 
   switch (request.url) { // dispatch
     case "/":

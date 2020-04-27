@@ -3,7 +3,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get("/add", req => {
+app.post("/add", req => {
   const { v1, v2 } = req.body
   req.res.json({ result: v1 + v2 })
 })

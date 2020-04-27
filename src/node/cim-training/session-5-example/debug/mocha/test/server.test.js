@@ -3,7 +3,6 @@ const fetch = require("node-fetch")
 const app = require("../app/server")
 const process = require("process")
 
-
 describe('server', function () {
 
   const port = process.env.PORT || "3000"

@@ -3,6 +3,7 @@ var cluster = require('cluster')
 var coreCount = require('os').cpus().length;
 
 if (cluster.isMaster) {
+
     console.log("starting...");
 
     for (var i = 0; i < coreCount; i++) {
@@ -19,5 +20,7 @@ if (cluster.isMaster) {
     });
 
 } else {
+
     app.listen(3000, () => { });
+
 }

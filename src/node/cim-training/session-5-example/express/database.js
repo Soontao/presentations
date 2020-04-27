@@ -14,9 +14,9 @@ const setupDatabase = () => {
 
 const withSqlite = () => {
   const db = setupDatabase()
-  return req => {
+  return (req, res, next) => {
     req.db = db
-    req.next()
+    req.next() // go to next handler
   }
 }
 

@@ -15,6 +15,9 @@
         "--colors",
         "${workspaceFolder}/test"
       ],
+      "env": {
+        "PORT":"39999"
+      },
       "internalConsoleOptions": "openOnSessionStart",
       "skipFiles": [
         "<node_internals>/**"
