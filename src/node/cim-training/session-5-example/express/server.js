@@ -2,10 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.use(express.json()) // parse application/json body
+
 app.use(require("./database").withSqlite())
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
+})
+
+app.use('/body-echo', req => {
+    req.res.json(req.body)
 })
 
 app.get('/resend', (req, res) => {
@@ -71,7 +77,6 @@ app.use((err, req, res, next) => {
         })
     }
 })
-
 
 if (require.main == module) {
     app.listen(port, () => console.log(`started`))
