@@ -14,7 +14,7 @@ marp: true
 
 * Event Loop
 * ExpressJS
-* Memory Inspect
+* Memory
 * Stream
 * Cluster
 * Debug & Unit Test Debug
@@ -196,6 +196,9 @@ const f2 = (arr = []) => {
 
 <br>
 
-* npm registry
+* npm
+    * registry
+    * install (dev/default)
+    * run (script name)
 * npm audit
 * whitesource
