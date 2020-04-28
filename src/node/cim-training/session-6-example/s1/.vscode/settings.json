@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/.gitignore": true,
+    "**/.git": true,
+    "**/.vscode": true
+  }
+}

@@ -6,14 +6,13 @@ marp: true
 
 <br>
 
-# Node JS Training: Session 5 - Node Advanced & CAP Framework Basics
+# Node JS Training: Session 5 - CAP Framework Basics
 
 ---
 
-## Agenda - Node Advanced & CAP Framework
+## Agenda - CAP Framework Basics
 
-* Generator
-* Async Function Advanced
+* Q & A
 * CAP
   * introduction
   * Environment Setup
@@ -23,24 +22,19 @@ marp: true
 
 ---
 
-## [Generator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+## [CAP Framework](https://cap.cloud.sap/docs/about/)
 
-> Generate Values
+<br>
 
-```js
-function* fibo() {
-  let v1 = 1;
-  let v2 = 2;
-  while (true) {
-    const tmp = v1 + v2
-    v1 = v2
-    v2 = tmp
-    yield v2
-  }
-}
+The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
 
-const g = fibo()
+---
 
-console.log(g.next()) // 3
-console.log(g.next()) // 5
-```
+## Links
+
+<br>
+
+* [CAP Framework Organization](https://github.wdf.sap.corp/cap)
+* [Roadmap](https://github.wdf.sap.corp/cap/matters/projects/33#card-138161)
+* [CAP Issues](https://github.wdf.sap.corp/cap/issues/issues)
+* [Setup Environment](https://cap.cloud.sap/docs/get-started/)

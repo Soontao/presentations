@@ -18,9 +18,11 @@ console.log(g.next()) // 5
 
 
 function* createAsyncValue(value, timeout = 1000) {
-  setTimeout(() => {
-    yield value
-  }, 1000)
+  yield new Promise(resolve => {
+    setTimeout(() => {
+      resolve(value)
+    }, 1000)
+  })
 }
 
 const g = createAsyncValue()
