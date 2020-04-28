@@ -7,7 +7,11 @@ using {cuid} from '@sap/cds/common';
 // many to many association seems have some problem
 // https://github.wdf.sap.corp/cap/matters/issues/670
 
-entity Student : cuid {
+abstract entity SeqID {
+  key ID : Integer;
+}
+
+entity Student : SeqID {
 
   name : String;
   age  : Integer;
@@ -17,7 +21,7 @@ entity Student : cuid {
 
 }
 
-entity Class : cuid {
+entity Class : SeqID {
   name    : String;
   teacher : Association to Teacher;
 // students : Association to many Student
@@ -25,7 +29,7 @@ entity Class : cuid {
 
 }
 
-entity Teacher : cuid {
+entity Teacher : SeqID {
 
   name    : String;
 
