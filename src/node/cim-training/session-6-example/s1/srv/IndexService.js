@@ -5,7 +5,6 @@ module.exports = class IndexService {
     return { "service": "CDS" }
   }
   /**
-   * 
    * @param {import("express").Request} req 
    */
   metric2(req) {
