@@ -17,6 +17,8 @@ abstract entity SeqID : managed {
 
 entity Student : SeqID {
   name : training.PeopleName;
+
+  @Capabilities.SearchRestrictions.Searchable
   age  : Integer default 18;
 // classes : Association to many Class
 //             on classes.students = $self;
