@@ -1,0 +1,8 @@
+---
+applications:
+- name: cap-01
+  memory: 350MB
+  random-route: true
+  disk_quota: 500MB
+  services:
+    - cap-01

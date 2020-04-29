@@ -1,10 +1,14 @@
 {
-  "name": "s1",
+  "name": "cap-01",
   "version": "1.0.0",
   "description": "s1.",
   "dependencies": {
     "@sap/cds": "^3",
+    "@sap/hana-client": "^2",
     "express": "^4"
+  },
+  "engines": {
+    "node": "10"
   },
   "scripts": {
     "start": "cds run"
@@ -17,6 +21,16 @@
       "db": {
         "kind": "sql"
       }
+    },
+    "[development]": {
+      "requires": {
+        "db": {
+          "kind": "sql"
+        }
+      }
+    },
+    "odata": {
+      "version": "v4"
     }
   }
 }

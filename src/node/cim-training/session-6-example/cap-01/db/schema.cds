@@ -1,28 +1,30 @@
 namespace sap.training;
 
-using {cuid} from '@sap/cds/common';
+using {
+  cuid,
+  managed
+} from '@sap/cds/common';
+using {sap.training} from './common';
 
 // if you have multi entities (with relationship), please define them in single file
 
 // many to many association seems have some problem
 // https://github.wdf.sap.corp/cap/matters/issues/670
 
-abstract entity SeqID {
-  key ID : Integer;
+abstract entity SeqID : managed {
+  key id : Integer;
 }
 
 entity Student : SeqID {
-
-  name : String;
-  age  : Integer;
-
+  name : training.PeopleName;
+  age  : Integer default 18;
 // classes : Association to many Class
 //             on classes.students = $self;
 
 }
 
 entity Class : SeqID {
-  name    : String;
+  name    : localized String;
   teacher : Association to Teacher;
 // students : Association to many Student
 //              on students.classes = $self
@@ -30,10 +32,13 @@ entity Class : SeqID {
 }
 
 entity Teacher : SeqID {
-
-  name    : String;
-
+  name    : training.PeopleName;
   classes : Association to many Class
               on classes.teacher = $self
+}
 
+@Common.Readonly
+entity Count : SeqID {
+  count          : Integer default 0;
+  virtual count2 : Integer default 0;
 }
