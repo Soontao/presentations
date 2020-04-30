@@ -9,15 +9,21 @@ module.exports = (srv) => {
 
   const { Counts: CountsTable } = srv.entities // Counts view are defined in Service, so access it by service
 
+  srv.before("CREATE", ctx => {
+    // console.log("before create") for all entities
+  })
+
   // error http://localhost:4004/other/Counts(1)
   // computed value http://localhost:4004/other/Counts(2)
+  // in fact, you don't need this feature, computed field could be implemented in frontend/client
   srv.after("READ", CountsTable, items => {
     if (items && items.length == 1) {
 
       items.forEach(item => {
         const { id, count } = item
         if (id == 1) {
-          throw new Error("business error") // don't do this in READ
+          // don't do this in READ, clients can not get any information from server
+          throw new Error("business error")
         } else {
           item.count2 = count + 1
         }
@@ -44,7 +50,7 @@ module.exports = (srv) => {
    * reuseable functions
    */
   const readTotalRowCount = () => cds.run( // convert query to promise
-    SELECT.from(CountTable, ["count(1) as total_count"]) // query definition
+    SELECT.from(CountsTable, ["count(1) as total_count"]) // query definition
   );
 
   // error 
@@ -56,9 +62,9 @@ module.exports = (srv) => {
   srv.before("CREATE", CountsTable, async ctx => {
     const { count } = ctx.data
     if (count < 100) {
-      throw Error("count must >= 100")
+      throw new Error("count must >= 100")
     }
-    const [{ total_count }] = await readTotalRowCount() // remember try catch here
+    const [{ total_count }] = await readTotalRowCount() // try catch if necessary
     if (total_count > 10) {
       throw new Error("record limit")
     }
@@ -69,9 +75,21 @@ module.exports = (srv) => {
     ctx.data.sCount = count.toString()
   })
 
+  srv.before("SAVE", CountsTable, ctx => { // after on-create, save it
+    const { event, method } = ctx // access event/HTTP method
+    // console.log("before save") // but not commit
+  })
+
+
 
   srv.on("SAVE", CountsTable, ctx => { // after on-create, save it
-    // console.log("created") // but not commit
+    const { event, method } = ctx // access event/HTTP method
+    // console.log("before save") // but not commit
+  })
+
+  srv.after("SAVE", CountsTable, ctx => { // after on-create, save it
+    const { event, method } = ctx // access event/HTTP method
+    // console.log("after save") // but not commit
   })
 
   // read only in fact
@@ -80,17 +98,29 @@ module.exports = (srv) => {
     // do nothing
     const { id, count } = item
     if (id == 15) {
-      throw new Error(`record with id: 15 is not accepted`) // error throw, transaction will rollback
+      throw new Error(`record with id: 15 is not accepted`) // throw error, transaction will rollback
     } else {
       item.count2 = count + 1
     }
   })
 
   srv.on("COMMIT", CountsTable, ctx => {
-    // console.log("commit")
+    console.log("commit")
   })
 
   srv.on("ROLLBACK", CountsTable, ctx => {
     // console.log("rollback")
   })
+
+  // actions
+
+  const selectCountByID = (id = 0) => cds.run(SELECT.from(CountsTable).where({ "ID": id }))
+  const updateCountFor = (id = 0, count = 0) => cds.run(UPDATE(CountsTable).where('ID = ', id).set('count += ', count))
+
+  srv.on("plus", async ctx => {
+    const { ID, Count } = ctx.data.body
+    const affectedRows = await updateCountFor(ID, Count)
+    return await selectCountByID(ID)
+  })
+
 }

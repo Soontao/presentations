@@ -12,6 +12,8 @@ marp: true
 
 ## Agenda - CAP Framework Basics
 
+<br>
+
 * Q & A
   * type definition
   * homework answers
@@ -30,6 +32,15 @@ marp: true
 
 The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
 
+--- 
+
+## ABBR.
+
+<br>
+
+* CAP - Cloud Application Programming
+* CDS - Core Data Service
+
 ---
 
 ## Links
@@ -43,7 +54,7 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 
 ---
 
-## Modeling
+## [Modeling](https://cap.cloud.sap/docs/guides/domain-models#about-domain-models)
 
 <br>
 
@@ -52,6 +63,7 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
   * csv data import
 * service
   * service entity
+  * service impl
 
 ---
 
@@ -69,6 +81,10 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 
 ---
 
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588225889/CAP-Events-Lifecycle_1_ji8huo.png)
+
+---
+
 ## Events
 
 <br>
@@ -78,6 +94,58 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 * automatic transaction rollback
 * careful check your code. [error dump logic](https://github.wdf.sap.corp/cdx/cds-services/blob/master/lib/adapter/odata-v4/handlers/error.js#L3), [config](https://github.wdf.sap.corp/CentralInvoices/workflow-service/blob/e2960467efc81687451f35b68e2b1229d52837e8/workflow-service/srv/WorkflowService.js#L113)
 
+---
+
+## Service Impl -- class
+
+<br>
+
+```js
+module.exports = class IndexService {
+
+  metric() {
+    return { "service": "CDS" }
+  }
+
+  metric2(req) {
+    const { name } = req.data // get data from context
+    return { "service": `hello ${name}` }
+  }
+
+}
+```
+
+---
+
+## Service Impl -- programming
+
+<br>
+
+```js
+module.exports = (srv) => {
+
+  srv.on("metric", () => {
+    return { "service": "CDS" }
+  })
+
+  const handler = (req) => {
+    const { name } = req.data // get data from context
+    return { "service": `hello ${name}` }
+  }
+
+  srv.on("metric2", handler)
+
+}
+```
+
+---
+
+## Service Impl -- others
+
+<br>
+
+* events life-cycle
+* [transaction](https://cap.cloud.sap/docs/node.js/api#cds-transaction)
 
 ---
 
@@ -86,6 +154,7 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 <br>
 
 * [SAP OData UI Annotation](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/UI.md)
+* [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
 
 --- 
 
@@ -123,4 +192,5 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 * please remember to add the mandatory columns to the initialize CSV file(e.g. PK)
 * maybe there are some issues in the `CDS deploy` now.
 * use fixed `@sap/cds` version.
+* `debug` if you don't know.
 
