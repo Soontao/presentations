@@ -81,7 +81,7 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 
 ---
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588225889/CAP-Events-Lifecycle_1_ji8huo.png)
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588229662/CAP-Events-Lifecycle_2_pxphpm.png)
 
 ---
 
