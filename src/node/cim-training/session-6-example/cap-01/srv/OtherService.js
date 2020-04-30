@@ -81,11 +81,12 @@ module.exports = (srv) => {
   })
 
 
-
   srv.on("SAVE", CountsTable, ctx => { // after on-create, save it
     const { event, method } = ctx // access event/HTTP method
     // console.log("before save") // but not commit
   })
+
+  // run sql
 
   srv.after("SAVE", CountsTable, ctx => { // after on-create, save it
     const { event, method } = ctx // access event/HTTP method
@@ -105,8 +106,10 @@ module.exports = (srv) => {
   })
 
   srv.on("COMMIT", CountsTable, ctx => {
-    console.log("commit")
+    // console.log("commit")
   })
+
+  // run sql
 
   srv.on("ROLLBACK", CountsTable, ctx => {
     // console.log("rollback")
