@@ -47,10 +47,11 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 
 <br>
 
-* type
-* aspect
+* type & aspect
 * (`abstract`) entity
+  * csv data import
 * service
+  * service entity
 
 ---
 

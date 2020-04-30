@@ -45,3 +45,11 @@ entity Count : SeqID {
   sCount         : String(16);
   virtual count2 : Integer default 0;
 }
+
+entity Table1 : cuid {
+  c1 : Integer;
+}
+
+entity Table2 : Table1 {
+  c2 : Integer;
+}

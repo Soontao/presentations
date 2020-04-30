@@ -69,6 +69,11 @@ module.exports = (srv) => {
     ctx.data.sCount = count.toString()
   })
 
+
+  srv.on("SAVE", CountsTable, ctx => { // after on-create, save it
+    // console.log("created") // but not commit
+  })
+
   // read only in fact
   srv.after("CREATE", CountsTable, item => { // here is item/ or items? i'm not sure in batch mode
     // ctx.a = 1 // reference error
@@ -81,12 +86,11 @@ module.exports = (srv) => {
     }
   })
 
-  srv.on("ROLLBACK", CountsTable, ctx => {
-    console.log("rollback")
-  })
-
   srv.on("COMMIT", CountsTable, ctx => {
-    console.log("commit")
+    // console.log("commit")
   })
 
+  srv.on("ROLLBACK", CountsTable, ctx => {
+    // console.log("rollback")
+  })
 }
