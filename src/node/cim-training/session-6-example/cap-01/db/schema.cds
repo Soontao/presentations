@@ -42,5 +42,6 @@ entity Teacher : SeqID {
 @Common.Readonly
 entity Count : SeqID {
   count          : Integer default 0;
+  sCount         : String(16);
   virtual count2 : Integer default 0;
 }
