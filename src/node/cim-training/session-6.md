@@ -15,10 +15,13 @@ marp: true
 <br>
 
 * Q & A
-  * type definition
+  * problems
+    * type definition
+    * packaged node_modules
+    * express path match
   * homework answers
 * CAP
-  * introduction
+  * Introduction
   * Environment Setup
   * Basic demo
   * Deployment
