@@ -105,11 +105,9 @@ blockquote {
   * Common CRUD methods: `CREATE`, `READ`, `UPDATE`, `UPSERT`, `DELETE`
   * Common REST methods: `POST`, `GET`, `PUT`, `PATCH`, `DELETE`
   * Custom-defined actions and functions 
-* ~~Asynchronous Event Messsages received thru message brokers:~~
+* [Asynchronous Event Messsages](https://github.wdf.sap.corp/cap/issues/issues/4665?email_source=notifications&email_token=AAAFI7G4LUUNI6YQV4Z3QOLRPZVORA5CNFSM4ABNMMMKYY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOAAQKM6Y#issuecomment-2139771) received thru message brokers:
   * ~~Common entity-level events: `CREATED`, `CHANGED`~~
   * ~~Custom-defined events and message topics~~
-
-> document about `async events` is lost 
 
 ---
 
