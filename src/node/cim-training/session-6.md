@@ -2,15 +2,14 @@
 marp: true
 ---
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+![blur bg 80% left](https://res.cloudinary.com/digf90pwi/image/upload/v1588561749/2020-05-04_11-07-32_njf7kw.png)
 
-# Node JS Training: Session 6 - CAP Framework Basics
+# Node JS Training: Session 6 - CAP Framework
 
 ---
 
-## Agenda - CAP Framework Basics
+## Agenda - CAP Framework
 
 * Q & A
   * problems
