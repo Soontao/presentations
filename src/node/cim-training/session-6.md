@@ -2,14 +2,19 @@
 marp: true
 ---
 
+![bg](black)
+![](white)
 
-![blur bg 80% left](https://res.cloudinary.com/digf90pwi/image/upload/v1588561749/2020-05-04_11-07-32_njf7kw.png)
+![blur bg 80% left](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
 
 # Node JS Training: Session 6 - CAP Framework
 
 ---
 
-## Agenda - CAP Framework
+![bg](black)
+![](white)
+
+## Agenda - CAP Framework Basics
 
 * Q & A
   * problems
@@ -26,25 +31,24 @@ marp: true
 
 ---
 
+![bg](black)
+![](white)
+
 ## [CAP Framework](https://cap.cloud.sap/docs/about/)
 
 <br>
 
-The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
-
---- 
-
-## ABBR.
-
-<br>
+> The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
 
 * CAP - Cloud Application Programming
 * CDS - Core Data Service
 
+
 ---
 
 ## Links
-
+![bg](black)
+![](white)
 <br>
 
 * [CAP Framework Organization](https://github.wdf.sap.corp/cap)
@@ -53,7 +57,8 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 * [Setup Environment](https://cap.cloud.sap/docs/get-started/)
 
 ---
-
+![bg](black)
+![](white)
 ## [Modeling](https://cap.cloud.sap/docs/guides/domain-models#about-domain-models)
 
 > declare database model/service interface & other metadata in `cds` syntax file
@@ -66,7 +71,8 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
   * service impl
 
 ---
-
+![bg](black)
+![](white)
 ## [Events](https://cap.cloud.sap/docs/guides/providing-services#handling-events)
 
 > implement the service interface by `javascirpt` code, with `event` concepts
@@ -83,9 +89,15 @@ The SAP Cloud Application Programming Model is an open and opinionated, framewor
 
 ---
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588559223/CAP-Events-Lifecycle_4_qkmiug.png)
+![bg](black)
+![](white)
+
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588566477/CAP-Events-Lifecycle_3_g1srxl.svg)
 
 ---
+
+![bg](black)
+![](white)
 
 ## Events
 
@@ -146,6 +158,9 @@ module.exports = (srv) => {
 
 ---
 
+![bg](black)
+![](white)
+
 ## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
 
 <br>
@@ -157,6 +172,9 @@ module.exports = (srv) => {
 
  
 
+![bg](black)
+![](white)
+
 ## CAP Application Necessary
 
 <br>
@@ -166,6 +184,9 @@ module.exports = (srv) => {
 * entity & service implementation
 
 ---
+
+![bg](black)
+![](white)
 
 ## Deployment
 
@@ -177,6 +198,9 @@ module.exports = (srv) => {
 * `cds build`
 
 ---
+
+![bg](black)
+![](white)
 
 ## Tips
 
