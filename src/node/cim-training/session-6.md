@@ -2,22 +2,37 @@
 marp: true
 ---
 <style>
-code {
-  background-color: rgba(246, 136, 180, 1)
+
+section {
+  background-color: black;
+  color: white;
 }
+
+h1 {
+  color: white;
+}
+
+code {
+  background-color: rgba(246, 136, 180, 1);
+  color: white;
+}
+
+code span {
+  color: black;
+}
+
+blockquote {
+  color: rgba(192, 192, 192, 1);
+}
+
 </style>
 
-![bg](black)
-![](white)
 
 ![blur bg 80% left](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
 
 # Node JS Training: Session 6 - CAP Framework
 
 ---
-
-![bg](black)
-![](white)
 
 ## Agenda - CAP Framework Basics
 
@@ -36,8 +51,8 @@ code {
 
 ---
 
-![bg](black)
-![](white)
+
+
 
 ## [CAP Framework](https://cap.cloud.sap/docs/about/)
 
@@ -52,8 +67,8 @@ code {
 ---
 
 ## Links
-![bg](black)
-![](white)
+
+
 <br>
 
 * [CAP Framework Organization](https://github.wdf.sap.corp/cap)
@@ -62,8 +77,8 @@ code {
 * [Setup Environment](https://cap.cloud.sap/docs/get-started/)
 
 ---
-![bg](black)
-![](white)
+
+
 ## [Modeling](https://cap.cloud.sap/docs/guides/domain-models#about-domain-models)
 
 > declare database model/service interface & other metadata in `cds` syntax file
@@ -76,8 +91,8 @@ code {
   * service impl
 
 ---
-![bg](black)
-![](white)
+
+
 ## [Events](https://cap.cloud.sap/docs/guides/providing-services#handling-events)
 
 > implement the service interface by `javascirpt` code, with `event` concepts
@@ -94,15 +109,9 @@ code {
 
 ---
 
-![bg](black)
-![](white)
-
 ![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588566758/CAP-Events-Lifecycle_6_lxcd62.png)
 
 ---
-
-![bg](black)
-![](white)
 
 ## Events
 
@@ -163,8 +172,8 @@ module.exports = (srv) => {
 
 ---
 
-![bg](black)
-![](white)
+
+
 
 ## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
 
@@ -174,11 +183,6 @@ module.exports = (srv) => {
 * [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
 
 --- 
-
- 
-
-![bg](black)
-![](white)
 
 ## CAP Application Necessary
 
@@ -190,9 +194,6 @@ module.exports = (srv) => {
 
 ---
 
-![bg](black)
-![](white)
-
 ## Deployment
 
 > if you are using the `cap-01` template project, please remember CHANGE the `directory name` & `package.json.name` 
@@ -203,9 +204,6 @@ module.exports = (srv) => {
 * `cds build` project
 
 ---
-
-![bg](black)
-![](white)
 
 ## Tips
 
