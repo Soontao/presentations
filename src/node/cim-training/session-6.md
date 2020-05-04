@@ -1,6 +1,11 @@
 ---
 marp: true
 ---
+<style>
+code {
+  background-color: rgba(246, 136, 180, 1)
+}
+</style>
 
 ![bg](black)
 ![](white)
@@ -85,14 +90,14 @@ marp: true
   * ~~Common entity-level events: `CREATED`, `CHANGED`~~
   * ~~Custom-defined events and message topics~~
 
-> document about async events is lost 
+> document about `async events` is lost 
 
 ---
 
 ![bg](black)
 ![](white)
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588566477/CAP-Events-Lifecycle_3_g1srxl.svg)
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588566758/CAP-Events-Lifecycle_6_lxcd62.png)
 
 ---
 
@@ -109,7 +114,7 @@ marp: true
 * register single event for single entity only **ONCE**
 * careful to process `before/after` (it also will trigger `ROLLBACK`)
 * async processing with `async` function
-* standalone transaction or join request context transaction
+* using standalone transaction or join request context transaction
 * careful check your code. [error dump logic](https://github.wdf.sap.corp/cdx/cds-services/blob/master/lib/adapter/odata-v4/handlers/error.js#L3), [config](https://github.wdf.sap.corp/CentralInvoices/workflow-service/blob/e2960467efc81687451f35b68e2b1229d52837e8/workflow-service/srv/WorkflowService.js#L113)
 
 ---
@@ -180,7 +185,7 @@ module.exports = (srv) => {
 <br>
 
 * cds & sap-hana & sqlite dependency
-* cds configuration (in `package.json` or `.cdsrc`)
+* cds configuration (in the `package.json` or `.cdsrc` file)
 * entity & service implementation
 
 ---
@@ -195,7 +200,7 @@ module.exports = (srv) => {
 * cloud foundry & cf cli & quota
 * application source code
 * hana instance
-* `cds build`
+* `cds build` project
 
 ---
 
@@ -206,13 +211,13 @@ module.exports = (srv) => {
 
 <br>
 
-* `many-2-many` association is not released until 2020 Q4
-* custom `action` to `WRITE`
-* custom `function` to `QUERY`
+* **many-2-many** association is not released until 2020 Q4
+* custom **action** is used to `WRITE`
+* custom **function** is used to `QUERY`
 * use `NODE_ENV` control the CAP running profile (local sqlite/remote hana).
 * directory name/package name/service name should be same.
-* please remember to add the mandatory columns to the initialize CSV file(e.g. PK)
+* remember to add the mandatory columns to the initialize CSV file(e.g. PK)
 * maybe there are some issues in the `CDS deploy` now.
 * use fixed `@sap/cds` version.
-* `debug` if you don't know.
+* `debug` server if you don't know the object detail.
 
