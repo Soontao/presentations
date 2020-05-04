@@ -113,7 +113,7 @@ blockquote {
 
 ---
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588566758/CAP-Events-Lifecycle_6_lxcd62.png)
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588570700/CAP-Events-Lifecycle_7_vm6xrg.png)
 
 ---
 
