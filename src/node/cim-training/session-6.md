@@ -8,12 +8,16 @@ section {
   color: white;
 }
 
+a {
+  color: #3e9ce0;
+}
+
 h1 {
   color: white;
 }
 
 code {
-  background-color: rgba(246, 136, 180, 1);
+  background-color: rgba(51, 154, 243, 1);
   color: white;
 }
 
