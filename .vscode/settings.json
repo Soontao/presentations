@@ -7,6 +7,7 @@
     "echarts",
     "gitkeep",
     "graphviz",
+    "hana",
     "marp"
   ],
   "editor.formatOnSave": true

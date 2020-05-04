@@ -44,7 +44,7 @@ app.use('/body-echo', req => { // for all method
 })
 
 app.use("/resend", (req, res) => {
-    // 
+    // do something here
 })
 
 app.get('/resend',

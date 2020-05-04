@@ -25,7 +25,7 @@ module.exports = (srv) => {
           // don't do this in READ, clients can not get any information from server
           throw new Error("business error")
         } else {
-          item.count2 = count + 1
+          // item.count2 = count + 1
         }
       })
 
