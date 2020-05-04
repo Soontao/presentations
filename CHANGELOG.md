@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Soontao/presentations/compare/v1.4.0...v1.5.0) (2020-05-04)
+
+
+### Features
+
+* [#1](https://github.com/Soontao/presentations/issues/1) navigation list ([079c91e](https://github.com/Soontao/presentations/commit/079c91eafddfd144d3b04c8f7325a53fe08c8e2b))
+* session 5 ([c20cdd3](https://github.com/Soontao/presentations/commit/c20cdd36ffe694c73997aed04dda662df6db9c07))
+
+
+### Bug Fixes
+
+* circle ci ([1b836d0](https://github.com/Soontao/presentations/commit/1b836d0961ad0cb82ba0928018cbef1caa408fcf))
+* index html path ([81823b5](https://github.com/Soontao/presentations/commit/81823b56740453c09dfc6103007dea3d1f2ec105))
+
 ## [1.4.0](https://github.com/Soontao/presentations/compare/v1.3.1...v1.4.0) (2020-03-03)
 
 
