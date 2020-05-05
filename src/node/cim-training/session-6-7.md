@@ -239,6 +239,7 @@ module.exports = (srv) => {
 1. expose db schema as odata in `svc` directory
 1. enhance your odata CRUD logic with javascript
 1. build `db` & `srv` package for deployment
+1. install `cf cli` (for deployment)
 1. prepare cloud foundry database and other dependencies
 1. deploy database
 1. deploy service
