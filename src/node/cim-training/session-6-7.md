@@ -17,7 +17,7 @@ h1 {
 }
 
 code {
-  background-color: rgba(51, 154, 243, 1);
+  background-color: #3e9ce0;
   color: white;
 }
 
@@ -34,7 +34,7 @@ blockquote {
 
 ![blur bg 80% left](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
 
-# Node JS Training: Session 6 - CAP Framework
+# Node JS Training: Session 6/7 - CAP Framework
 
 ---
 
@@ -171,11 +171,16 @@ module.exports = (srv) => {
 
 }
 ```
-
 ---
 
+## Events - custom event
 
+<br>
 
+* Action - `WRITE` - `POST`
+* Function - `READ` - `GET`
+
+---
 
 ## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
 
@@ -221,3 +226,19 @@ module.exports = (srv) => {
 * use fixed `@sap/cds` version.
 * `debug` server if you don't know the object detail.
 
+
+--- 
+
+## Hands On
+
+<br>
+
+1. install `nodejs`, `git`, `@sap/cds-dk`
+1. init project by `cds init`
+1. define database schema in `db` directory
+1. expose db schema as odata in `svc` directory
+1. enhance your odata CRUD logic with javascript
+1. build `db` & `srv` package for deployment
+1. prepare cloud foundry database and other dependencies
+1. deploy database
+1. deploy service
