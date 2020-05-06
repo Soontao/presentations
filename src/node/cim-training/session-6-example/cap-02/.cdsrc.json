@@ -1,0 +1,13 @@
+{
+  "requires": {
+    "db": {
+      "kind": "sql"
+    },
+    "uaa": {
+      "kind": "xsuaa"
+    }
+  },
+  "odata": {
+    "version": "v4"
+  }
+}

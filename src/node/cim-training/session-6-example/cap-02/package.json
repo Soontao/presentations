@@ -1,0 +1,20 @@
+{
+  "name": "cap-02",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/audit-logging": "^3.1.0",
+    "@sap/cds": "^3.34.1",
+    "@sap/hana-client": "^2.4.195",
+    "@sap/xsenv": "^2.2.0",
+    "@sap/xssec": "^2.2.5",
+    "express": "^4",
+    "passport": "^0.4.1"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^1.8.0",
+    "sqlite3": "^4.2.0"
+  }
+}

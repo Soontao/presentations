@@ -1,0 +1,13 @@
+{
+  "name": "cap-02-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@sap/approuter": "^7.1.1"
+  }
+}

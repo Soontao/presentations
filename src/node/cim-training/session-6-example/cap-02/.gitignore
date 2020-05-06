@@ -1,4 +1,4 @@
-# CAP s1
+# CAP cap-02
 _out
 *.db
 connection.properties
@@ -21,4 +21,3 @@ mta_archives/
 .DS_Store
 *.orig
 *.log
-xs-security.json

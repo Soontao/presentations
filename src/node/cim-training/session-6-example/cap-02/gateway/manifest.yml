@@ -1,0 +1,7 @@
+---
+applications:
+- name: cap-02-gateway
+  path: .
+  memory: 128M
+  services:
+  - cap-02-uaa
