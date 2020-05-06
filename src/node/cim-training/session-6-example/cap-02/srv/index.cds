@@ -4,7 +4,10 @@ type MetricResponse {
   User    : String(500);
 }
 
-@(requires : 'authenticated-user')
+@requires : 'authenticated-user'
 service IndexService {
   function metric() returns MetricResponse;
+
+  @requires : 'admin_user'
+  function limit() returns MetricResponse;
 }
