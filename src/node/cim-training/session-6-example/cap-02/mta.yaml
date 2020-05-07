@@ -1,7 +1,6 @@
 ## Generated mta.yaml based on template version 0.2.0
 ## appName = cap-02
 ## language=nodejs; multiTenant=false
-## approuter=
 _schema-version: '3.1'
 ID: cap-02
 version: 1.0.0
@@ -19,32 +18,34 @@ build-parameters:
 
 modules:
  # --------------------- SERVER MODULE ------------------------
- - name: cap-02-srv
+ -  name: cap-02-srv
  # ------------------------------------------------------------
-   type: nodejs
-   path: gen/srv
-   properties:
-     EXIT: 1  # required by deploy.js task to terminate 
-   requires:
-    # Resources extracted from CAP configuration
-    - name: cap-02-db
-    - name: cap-02-uaa
-   provides:
-    - name: srv-binding      # required by consumers of CAP services (e.g. approuter)
-      properties:
-        srv-url: ${default-url}
+    type: nodejs
+    path: gen/srv
+    parameters:
+        app-name: ${app-name}-srv
+    properties:
+        EXIT: 1  # required by deploy.js task to terminate 
+    requires:
+      # Resources extracted from CAP configuration
+        - name: cap-02-db
+        - name: cap-02-uaa
+    provides:
+        - name: srv-binding      # required by consumers of CAP services (e.g. approuter)
+          properties:
+            srv-url: ${default-url}
 
  # -------------------- SIDECAR MODULE ------------------------
- - name: db
+ -  name: db
  # ------------------------------------------------------------
-   type: hdb
-   path: gen/db  
-   parameters:
-     app-name: cap-02-db
-   requires:
-    # 'hana' and 'xsuaa' resources extracted from CAP configuration
-    - name: cap-02-db
-    - name: cap-02-uaa
+    type: hdb
+    path: gen/db  
+    parameters:
+      app-name: ${app-name}-db
+    requires:
+      # 'hana' and 'xsuaa' resources extracted from CAP configuration
+      - name: cap-02-db
+      - name: cap-02-uaa
 
  # -------------------- GATEWAY ------------------------
  - name: cap-02-gateway
@@ -52,33 +53,31 @@ modules:
    type: nodejs
    path: gateway
    parameters:
-     app-name: cap-02-gateway
+      app-name: ${app-name}-gateway
    requires:
     - name: cap-02-db
     - name: cap-02-uaa
+    - name: srv-binding # provides by cap-02-srv
+      group: destinations
+      properties:
+        name: srv_api
+        url: ~{srv-url}
+        forwardAuthToken: true
 
 resources:
 # ------------------------------------------------------------
- - name: cap-02-db
+ -  name: cap-02-db
 # ------------------------------------------------------------
-   type: com.sap.xs.hdi-container
-   parameters:
-     service: hana
-     service-plan: hdi-shared
-   properties:
-     hdi-service-name: ${service-name}
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+      service-name: ${app-name}-db
+    properties:
+      hdi-service-name: ${service-name}
 
-# ------------------------------------------------------------
  - name: cap-02-uaa
-# ------------------------------------------------------------
-   type: org.cloudfoundry.managed-service
+   type: com.sap.xs.uaa
    parameters:
-     service: xsuaa
-     service-plan: application 
-     path: ./xs-security.json
-     config:
-       xsappname: -${space}    #  name + space dependency
-       tenant-mode: dedicated
-    
-
+      config-path: xs-security.json
 

@@ -76,3 +76,4 @@ typings/
 # archive
 *.zip
 xs-security.json
+*.mta
