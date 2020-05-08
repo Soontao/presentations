@@ -1,5 +1,5 @@
 {
-  "name": "cap-02",
+  "name": "cap-uaa",
   "version": "1.0.0",
   "dependencies": {
     "@sap/audit-logging": "^3.1.0",

@@ -2,9 +2,9 @@
 ## appName = cap-02
 ## language=nodejs; multiTenant=false
 _schema-version: '3.1'
-ID: cap-02
+ID: cap-uaa
 version: 1.0.0
-description: "cap-02"
+description: "cap-uaa-demo-project"
 parameters:
   enable-parallel-deployments: true
   
@@ -18,66 +18,68 @@ build-parameters:
 
 modules:
  # --------------------- SERVER MODULE ------------------------
- -  name: cap-02-srv
+ -  name: srv
  # ------------------------------------------------------------
     type: nodejs
     path: gen/srv
     parameters:
-        app-name: ${app-name}-srv
+      memory: 128M
+      app-name: uaa-demo-srv
     properties:
-        EXIT: 1  # required by deploy.js task to terminate 
+      EXIT: 1  # required by deploy.js task to terminate 
     requires:
       # Resources extracted from CAP configuration
-        - name: cap-02-db
-        - name: cap-02-uaa
+      - name: uaa-schema
+      - name: uaa
     provides:
-        - name: srv-binding      # required by consumers of CAP services (e.g. approuter)
-          properties:
-            srv-url: ${default-url}
+      - name: srv-binding      # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
 
  # -------------------- SIDECAR MODULE ------------------------
- -  name: db
+ -  name: db-deployer
  # ------------------------------------------------------------
     type: hdb
     path: gen/db  
     parameters:
-      app-name: ${app-name}-db
+      app-name: uaa-demo-db-deployer
+      memory: 128M
     requires:
       # 'hana' and 'xsuaa' resources extracted from CAP configuration
-      - name: cap-02-db
-      - name: cap-02-uaa
+      - name: uaa-schema
 
  # -------------------- GATEWAY ------------------------
- - name: cap-02-gateway
+ -  name: gateway
  # ------------------------------------------------------------
-   type: nodejs
-   path: gateway
-   parameters:
-      app-name: ${app-name}-gateway
-   requires:
-    - name: cap-02-db
-    - name: cap-02-uaa
-    - name: srv-binding # provides by cap-02-srv
-      group: destinations
-      properties:
-        name: srv_api
-        url: ~{srv-url}
-        forwardAuthToken: true
+    type: nodejs
+    path: gateway
+    parameters:
+      app-name: uaa-demo-gateway
+      memory: 128M
+    requires:
+      - name: uaa-schema
+      - name: uaa
+      - name: srv
+      - name: srv-binding # provides by srv
+        group: destinations
+        properties:
+          name: srv_api
+          url: ~{srv-url}
+          forwardAuthToken: true
 
 resources:
 # ------------------------------------------------------------
- -  name: cap-02-db
+ -  name: uaa-schema
 # ------------------------------------------------------------
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
+      service-name: uaa-demo-schema-instance
       service-plan: hdi-shared
-      service-name: ${app-name}-db
-    properties:
-      hdi-service-name: ${service-name}
 
- - name: cap-02-uaa
-   type: com.sap.xs.uaa
+ - name: uaa
+   type: com.sap.xs.uaa-application
    parameters:
-      config-path: xs-security.json
+      service-name: uaa-demo-uaa-instance
+      config-path: ./xs-security.json
 
