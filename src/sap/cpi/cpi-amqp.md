@@ -26,7 +26,7 @@ blockquote {
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588658713/amqp-logo_eu8lfd.png)
 
-# Connect AMQP Server with CPI
+# Connect AMQP Service with CPI
 
 <br>
 
@@ -35,6 +35,10 @@ Theo Sun, 2020
 ---
 
 ## Context
+
+<br>
+
+CPI now provide the [AMQP adapter](https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/en-US/5cc1a71231cb4cbfbfedb0cdc63e1488.html), so the users can connect SAP system with external system in async mode.
 
 ---
 
