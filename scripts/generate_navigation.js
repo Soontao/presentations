@@ -1,7 +1,7 @@
 const glob = require("fast-glob");
 const fs = require("fs").promises;
 const { parse } = require("@textlint/markdown-to-ast");
-const { get, find } = require("lodash");
+const { get, find } = require("@newdash/newdash-node");
 const path = require("path");
 const pretty = require("pretty")
 
