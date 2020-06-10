@@ -26,7 +26,7 @@ blockquote {
 </style>
 
 
-# Questions for `microservice`
+# Questions for microservice
 
 Some questions for microservice presentation
 
@@ -34,38 +34,38 @@ Some questions for microservice presentation
 
 ## Why integration over the network is a challenge ?
 
-- network (ip, network, traffic)
-- performance (in-memory (μs) <-> cross host (ms))
+* network (ip, dns, network, traffic)
+* performance (in-memory (`μs`) <-> cross host (`ms`), framework)
 
 ---
 
 
 ## Why releases become less risky in `microservice` ?
 
-- little single feature(s) change on each release
-- blue/green deployment, multi version
+* little single feature(s) change on each release
+* blue/green deployment, multi version
+* just partial service unavailable
 
 ---
 
 ## Why we use the `message queue` (MQ, async message) in cloud application ?
 
-- de-couple
-- for peak demands
-- isolation
-- resilience for consumers (when they are down)
+* de-couple
+* for peak demands
+* isolation
+* resilience for consumers (when they are down)
 
 ---
 
 ## Why the observability of `microservice` is so important ?
 
-* monitor issues
-* restart services
-* upgrade/deployment
+* monitor issues, analysis problems, upgrade/degrade
+* manually scale when system load changed
 
 --- 
 
-## Why the ATO office recommends using a separate database per service ?
+## Why the ATO office recommends using separate databases `per` service ?
 
-* isolation when database down/overflow
-* performance
-* isolation for business
+* isolation when database down, memory overflow, query timeout
+* performance (resource isolation, simple business)
+* isolation for business (domain bounded context)
