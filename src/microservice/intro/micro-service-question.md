@@ -47,7 +47,7 @@ Some questions for microservice presentation
 
 ---
 
-## Why we use the message queue (MQ, async message) in cloud application ?
+## Why we use the `message queue` (MQ, async message) in cloud application ?
 
 - de-couple
 - for peak demands
@@ -56,7 +56,7 @@ Some questions for microservice presentation
 
 ---
 
-## Why the observability of microservice is so important ?
+## Why the observability of `microservice` is so important ?
 
 * monitor issues
 * restart services
