@@ -30,6 +30,12 @@ blockquote {
 
 Some questions for microservice presentation
 
+--- 
+
+## More benefits of `microservice` ?
+
+* `Micro` - easy to maintain for single service
+
 ---
 
 ## Why integration over the network is a challenge ?
@@ -61,6 +67,12 @@ Some questions for microservice presentation
 
 * monitor issues, analysis problems, upgrade/degrade
 * manually scale when system load changed
+
+---
+
+## Why `redundancy` is not enough ?
+
+* anything maybe broken in anytime
 
 --- 
 
