@@ -38,21 +38,31 @@ Some questions for Resilience presentation
 
 ## Why we need to limit the capacity of a queue ?
 
-* type of principle ?
+---
+
+## List the hardware failures you know.
 
 ---
 
 ## When hardware fail happened, what type redundancy will work ?
 
-- load balance
-- multi-zone deployment
-- multi-region deployment
+- client offline data model
+- secondary database
+- multi-instance deployment - L4/L7 load balance
+- multi-zone deployment - DNS load balance
+- multi-region deployment - DNS load balance
 
 <br>
 
-- virtual machine disk exceed
-- host unavailable (cpu/memory/disk/network/power failure)
-- regional network issue
-- big earthquake
+- database offline/restart/out-of-memory
+- host/vm failure (cpu/memory/disk/network/power failure)
+- air conditioner broken
+- earthquake/flood
 
+---
 
+## List all patterns that restrict user resource consumption
+
+---
+
+## For rate limit pattern, should we count failed requests ?
