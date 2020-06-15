@@ -1,28 +1,36 @@
 ---
 marp: true
 ---
+
 <style>
+
 section {
   background-color: black;
   color: white;
 }
+
 a {
   color: #3e9ce0;
 }
+
 h1, h2 {
   color: white;
   padding-bottom: 50px;
 }
+
 code {
   background-color: #3e9ce0;
   color: white;
 }
+
 code span {
   color: black;
 }
+
 blockquote {
   color: rgba(192, 192, 192, 1);
 }
+
 </style>
 
 
@@ -65,4 +73,8 @@ Some questions for Resilience presentation
 
 ---
 
-## For rate limit pattern, should we count failed requests ?
+## Why do the rate-limit? We should try our best to serve all requests !
+
+---
+
+![bg 100%](https://res.cloudinary.com/digf90pwi/image/upload/v1592190227/ESPM-CN_rgq7lf.png)
