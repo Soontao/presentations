@@ -74,8 +74,8 @@ resources:
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
-      service-name: uaa-demo-schema-instance
       service-plan: hdi-shared
+      service-name: uaa-demo-schema-instance
 
  - name: uaa
    type: com.sap.xs.uaa-application
