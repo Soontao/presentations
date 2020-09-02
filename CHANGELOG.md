@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Soontao/presentations/compare/v1.5.0...v1.6.0) (2020-09-02)
+
+
+### Features
+
+* **nosql:** init presentation ([967c056](https://github.com/Soontao/presentations/commit/967c056f4f0ffc32bd354073ab4e67d9b2735df3))
+* new doc about AMQP integration ([844081e](https://github.com/Soontao/presentations/commit/844081e84d1f1c9acfa185a3df509c3e962439a7))
+* update session 6 ([80407f7](https://github.com/Soontao/presentations/commit/80407f7525d5797b8c18fdbcc7f962b11cad05fc))
+
 ## [1.5.0](https://github.com/Soontao/presentations/compare/v1.4.0...v1.5.0) (2020-05-04)
 
 
