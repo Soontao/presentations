@@ -124,13 +124,22 @@ Each `Sub Account` will have its own `UAA` tenant.
 
 <br>
 
-- Role (create or generated from `Role Templates`)
+- Role (create or generated from `Role Templates`, if role defined `attributes`, user could input value or mapped from IDP)
 - Role Collection (with multi `Roles`, Assign to user)
 
 <br>
 
 > Each `Sub Account` has its own UAA tenant, so that each `Sub Account` could configure its own authorization (in theory).
 
+---
+
+## XSUAA - Permission Check in Application
+
+<br>
+
+- scope (application defined, static)
+- attributes (application defined, sub account UAA configured)
+- role collection (sub account UAA defined)
 
 --- 
 
