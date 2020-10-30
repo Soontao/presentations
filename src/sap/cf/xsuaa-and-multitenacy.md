@@ -62,7 +62,7 @@ Theo Sun
 
 <br>
 
-Trust a SAML IDP Provider, and all user/credential is from that.
+Trust a SAML IDP, and all user/credential is from that.
 
 <br>
 
