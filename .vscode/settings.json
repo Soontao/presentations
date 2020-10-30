@@ -4,11 +4,13 @@
     "Netlify",
     "Preload",
     "Theo",
+    "XSUAA",
     "echarts",
     "gitkeep",
     "graphviz",
     "hana",
-    "marp"
+    "marp",
+    "multitenant"
   ],
   "editor.formatOnSave": true
 }
