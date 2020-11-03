@@ -91,7 +91,7 @@ Trust a SAML IDP, and all user/credential is from that.
 
 <br>
 
-> microservice could use jwt to authentication request (no status).
+> microservice could use jwt to authentication request (no status/no remote call).
 
 ---
 
@@ -145,6 +145,17 @@ Each `Sub Account` will have its own `UAA` tenant.
 
 --- 
 
+## XSUAA - Others
+
+<br>
+
+* `UAA` use a private key sign the `JWT`, client could not generate a valid `JWT` - how to pass parameters (like feature toggles) with `JWT` ? 
+* expiration about `JWT` - how to process it in application ?
+* API Authentication ?
+
+
+---
+
 ## [SaaS Provision](https://pages.github.tools.sap/kernelservices/services/subscription-management-service)
 
 <br>
@@ -157,8 +168,8 @@ Each `Sub Account` will have its own `UAA` tenant.
 
 <br>
 
-- `SaaS Provision`: create a `service` in `subscription` tab in same `Global Account`
-- `User`: when other `sub account` under the `Global Account` click the `subscribe` button.
+- `SaaS Provision`: create a `service` in `subscription` tab.
+- `User` (another `sub account admin`): click the `subscribe` button.
 - `SaaS Provision`: send a http request to SaaS application, with metadata
 - `SaaS`: receive subscription information, initialize the database/job/url, and response a `tenant url`.
 - `SaaS Provision`: refresh status, `subscribed`
@@ -170,7 +181,27 @@ Each `Sub Account` will have its own `UAA` tenant.
 
 <br>
 
-- Login with Browser - SaaS will extract a tenant id from `tenant url` to redirect to the correct UAA instance, and the correct UAA tenant will response correct user information.
-- Login with JWT - SaaS could use the `jku` in JWT to retrieve public key (trust SAP host), then verify the `jwt`.
+- Login with `Browser` - SaaS will extract a tenant id from `tenant url` to redirect to the correct UAA instance, and the correct UAA tenant will response correct user information.
+- Login with `JWT` - SaaS could use the `jku` in JWT to retrieve the signature public key of UAA (trust SAP host), then verify the `jwt`.
 - Sub Account UAA - Each `sub account` will have its own `UAA` instance, and `sub account admin` could configure the UAA tenant.
 - Access Token - generated/signed by UAA, and it will attach the `Authorization` & `Tenant` information.
+
+---
+
+## SaaS Provision - Others
+
+<br>
+
+- SAP & Business Partners' commercial products could be available cross `Global Account`, and customers services will be limited in the same `Global Account`.
+- SaaS Application should build the metering/dashboard and other features about subscription/multitenancy.
+
+
+---
+
+## Related SAP Programming Components
+
+<br>
+
+* [sap-cloud-security-xsuaa-integration (java)](https://github.com/SAP/cloud-security-xsuaa-integration)
+* [@sap/xssec (nodejs)](https://github.wdf.sap.corp/CPSecurity/node-xs2sec)
+* [approuter (gateway)](https://github.wdf.sap.corp/xs2/approuter.js)
