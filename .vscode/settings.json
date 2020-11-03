@@ -12,5 +12,9 @@
     "marp",
     "multitenant"
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "markdown.marp.themes": [
+    "theme/dracula.css",
+    "theme/dark.css"
+  ]
 }

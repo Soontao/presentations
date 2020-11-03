@@ -151,8 +151,8 @@ Each `Sub Account` will have its own `UAA` tenant.
 
 * `UAA` use a private key sign the `JWT`, client could not generate a valid `JWT` - how to pass parameters (like feature toggles) with `JWT` ? 
 * expiration about `JWT` - how to process it in application ?
+* `Create Shadow Users During Logon`
 * API Authentication ?
-
 
 ---
 

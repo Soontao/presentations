@@ -1,0 +1,306 @@
+/*!
+ * Marp dark theme.
+ * @theme dark
+ * @author Theo Sun
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+ :root {
+  --atheme-background: black;
+  --atheme-current-line: #44475a;
+  --atheme-foreground: #f8f8f2;
+  --atheme-comment: #6272a4;
+  --atheme-cyan: #8be9fd;
+  --atheme-green: #50fa7b;
+  --atheme-orange: #ffb86c;
+  --atheme-pink: #ff79c6;
+  --atheme-purple:#bd93f9;
+  --atheme-red: #ff5555;
+  --atheme-yellow: #f1fa8c;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: black
+}
+
+/* atheme Foreground */
+.hljs,
+.hljs-subst,
+.hljs-typing,
+.hljs-variable,
+.hljs-template-variable {
+    color: white
+}
+
+/* atheme Comment */
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+    color: grey
+}
+
+/* atheme Cyan */
+.hljs-meta .hljs-doctag,
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link,
+.hljs-class {
+    color: cyan
+}
+
+
+/* atheme Green */
+.hljs-title {
+    color: green
+}
+
+/* atheme Orange */
+.hljs-params {
+    color: orange
+}
+
+/* atheme Pink */
+.hljs-keyword {
+    color: pink
+}
+
+/* atheme Purple */
+.hljs-literal,
+.hljs-number {
+    color: palevioletred
+}
+
+/* atheme Red */
+.hljs-regexp {
+    color: red
+}
+
+/* atheme Yellow */
+.hljs-string,
+.hljs-name,
+.hljs-type,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-template-tag {
+    color:yellow
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-params,
+.hljs-emphasis {
+ font-style: italic;
+}
+
+svg[data-marp-fitting=svg] {
+  max-height: 580px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+p,
+blockquote {
+  margin: 1em 0 0 0;
+}
+
+ul > li,
+ol > li {
+  color:  white
+}
+
+code {
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
+  color: var(--atheme-green);
+}
+
+pre {
+  display: block;
+  margin: 1em 0 0 0;
+  min-height: 1em;
+  overflow: visible;
+
+}
+pre code {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 100%;
+  padding: 0.5em;
+  font-size: 0.7em;
+  border: white;
+  border-style: dashed;
+  border-width: 3px;
+}
+
+pre code svg[data-marp-fitting=svg] {
+  max-height: calc(580px - 1em);
+
+}
+
+blockquote {
+  color: rgba(192, 192, 192, 1);
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0 0 0;
+}
+table th,
+table td {
+  padding: 0.2em 0.4em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+section {
+  font-size: 35px;
+  line-height: 1.35;
+  letter-spacing: 1.25px;
+  padding: 70px;
+  color: var(--atheme-foreground);
+  background-color: var(--atheme-background);
+}
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+section a,
+section mark {
+  color: #3e9ce0;
+}
+section p {
+  color: white;
+}
+section code {
+  background: #3e9ce0;
+  color: white;
+  font-weight: bold;
+}
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+  color: var(--atheme-current-line);
+}
+section pre > code {
+  background: var(--atheme-current-line);
+}
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+  color: var(--atheme-comment);
+}
+section table th,
+section table td {
+  border-color:  var(--atheme-current-line);
+}
+section table thead th {
+  background: var(--atheme-current-line);
+  color: var(--atheme-yellow);
+}
+section table tbody > tr:nth-child(even) td,
+section table tbody > tr:nth-child(even) th {
+  background: var(--atheme-current-line);
+}
+
+header,
+footer,
+section::after {
+  box-sizing: border-box;
+  font-size: 66%;
+  height: 70px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: absolute;
+  color: var(--atheme-comment);
+}
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section::after {
+  right: 0;
+  bottom: 0;
+  font-size: 80%;
+}
