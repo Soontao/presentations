@@ -50,7 +50,7 @@ Theo Sun
 
 ---
 
-## Hands On 01 - Run a simple web server
+## Hands On - 01 - Run a simple web server
 
 <br>
 
@@ -62,6 +62,6 @@ Theo Sun
 
 ```bash
 ssh user@host # login to server
-docker pull theosun/hello-docker@0.0.1 # pull image
-docker run # create a instance
+docker pull theosun/hello-web-server@0.0.1 # pull image
+docker run -d --restart=always --name hello-web-server-$USER theosun/hello-web-server@0.0.1 # create a instance
 ```

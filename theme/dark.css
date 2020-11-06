@@ -4,8 +4,8 @@
  * @author Theo Sun
  *
  * @auto-scaling true
- * @size 4:3 960px 720px
- * @size 16:9 1280px 720px
+ * @size 4:3 2000px 1500px
+ * @size 16:9 1920px 1080px
  */
 
  :root {
@@ -134,10 +134,12 @@ h6 strong {
 
 h1 {
   font-size: 1.8em;
+  padding-top: 15%;
 }
 
 h2 {
   font-size: 1.5em;
+  padding-bottom: 5%;
 }
 
 h3 {
@@ -159,6 +161,12 @@ h6 {
 p,
 blockquote {
   margin: 1em 0 0 0;
+}
+
+blockquote p {
+  color: lightgrey;
+  font-weight: bold;
+  font-style: italic;
 }
 
 ul > li,

@@ -10,6 +10,7 @@
     "graphviz",
     "hana",
     "marp",
+    "microservices",
     "multitenant"
   ],
   "editor.formatOnSave": true,
