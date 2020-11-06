@@ -167,7 +167,8 @@ h6 {
 }
 
 blockquote p {
-  color: gray
+  color: gray;
+  font-size: 1.2em;
 }
 
 ul > li,

@@ -41,7 +41,7 @@ Trust a SAML IDP, and all user/credential is from that.
 
 - json web token
 - environment
-- how to verify
+- verify
 
 > microservices could use jwt to authentication request (no status/no remote call).
 
@@ -54,7 +54,7 @@ Trust a SAML IDP, and all user/credential is from that.
 
 --- 
 
-## XSUAA - [Service Definition](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.04/en-US/6d3ed64092f748cbac691abc5fe52985.html)
+## XSUAA - Authorization - [Service Definition](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.04/en-US/6d3ed64092f748cbac691abc5fe52985.html)
 
 - Tenant Mode
 - Scopes (`Local` or Foreign)
@@ -64,25 +64,25 @@ Trust a SAML IDP, and all user/credential is from that.
 
 ---
 
-## XSUAA - Runtime
+## XSUAA - Authorization - Runtime
 
 
 
 - Role (create or generated from `Role Templates`, if role defined `attributes`, user could input value or mapped from IDP)
 - Role Collection (with multi `Roles`, Assign to user)
 
-
-
-> Each `Sub Account` has its own UAA tenant, so that each `Sub Account` could configure its own authorization (in theory).
+> Each `Sub Account` has its own UAA tenant, so that each `Sub Account` could configure its own authorization.
 
 ---
 
-## XSUAA - Permission Check in Application
+## XSUAA - Runtime - Permission Check
 
+> prefer use scope to check permission
 
 - scope (application defined, static)
 - attributes (application defined, sub account UAA configured)
 - role collection (sub account UAA defined)
+
 
 ---
 
@@ -92,17 +92,17 @@ Trust a SAML IDP, and all user/credential is from that.
 - act as `SAML` service provider.
 - act as `OAuth2` server, provide authentication & authorization features.
 - each `Sub Account` will have its own `UAA` tenant.
+- for the `End Users`, they don't know the `scope` concepts.
 
 --- 
 
 ## XSUAA - Others
 
 
-- `Shadow` user configuration ?
 - Multi IDP configuration ?
-- `UAA` use a private key sign the `JWT`, client could not generate a valid `JWT` - how to pass parameters (like feature toggles) with `JWT` ? 
+- `UAA` use a private key sign the `JWT`, client could not generate a valid `JWT` - how to pass parameters (like feature flags) with `JWT` ? 
 - expiration about `JWT` - how to process it in application ?
-- `Create Shadow Users During Logon`
+- `Create Shadow Users During Logon` ?
 - API Authentication ?
 
 
@@ -118,15 +118,11 @@ Trust a SAML IDP, and all user/credential is from that.
 
 - `SaaS Provision`: create a `service` in `subscription` tab.
 - `User` (another `sub account admin`): click the `subscribe` button.
-
----
-
-## SaaS Provision - how it works ?
-
 - `SaaS Provision`: send a http request to SaaS application, with metadata
 - `SaaS`: receive subscription information, initialize the database/job/url, and response a `tenant url`.
 - `SaaS Provision`: refresh status, `subscribed`
 - `User`: access the SaaS with `tenant` url.
+
 
 ---
 
@@ -134,12 +130,6 @@ Trust a SAML IDP, and all user/credential is from that.
 
 - Login with `Browser` - SaaS will extract a tenant id from `tenant url` to redirect to the correct UAA instance, and the correct UAA tenant will response correct user information.
 - Login with `JWT` - SaaS could use the `jku` in JWT to retrieve the signature public key of UAA (trust SAP host), then verify the `jwt`.
-
----
-
-## SaaS Provision - how it works with UAA?
-
-
 - Sub Account UAA - Each `sub account` will have its own `UAA` instance, and `sub account admin` could configure the UAA tenant.
 - Access Token - generated/signed by UAA, and it will attach the `Authorization` & `Tenant` information.
 
@@ -148,7 +138,7 @@ Trust a SAML IDP, and all user/credential is from that.
 ## SaaS Provision - Key Points
 
 - provide UI to other user to subscribe custom service/product
-- define the subscription APIs
+- define the standard subscription APIs
 
 ---
 
