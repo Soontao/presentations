@@ -12,8 +12,6 @@ Theo Sun
 
 ## [XSUAA](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/6373bb7a96114d619bfdfdc6f505d1b9.html)
 
-
-
 > The User Account and Authentication service (UAA) is the central infrastructure component of the Cloud Foundry environment at SAP Cloud Platform for user authentication and authorization.
 
 ---
@@ -57,8 +55,6 @@ Trust a SAML IDP, and all user/credential is from that.
 --- 
 
 ## XSUAA - [Service Definition](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.04/en-US/6d3ed64092f748cbac691abc5fe52985.html)
-
-
 
 - Tenant Mode
 - Scopes (`Local` or Foreign)
@@ -146,6 +142,13 @@ Trust a SAML IDP, and all user/credential is from that.
 
 - Sub Account UAA - Each `sub account` will have its own `UAA` instance, and `sub account admin` could configure the UAA tenant.
 - Access Token - generated/signed by UAA, and it will attach the `Authorization` & `Tenant` information.
+
+---
+
+## SaaS Provision - Key Points
+
+- provide UI to other user to subscribe custom service/product
+- define the subscription APIs
 
 ---
 

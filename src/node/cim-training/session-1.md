@@ -1,12 +1,15 @@
 ---
 marp: true
+theme: dark
 ---
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+# Node JS Training: Session 1
+# Javascript Basics
 
-# Node JS Training: Session 1 - Javascript Basics
+
+Theo Sun
+2020
 
 ---
 
@@ -38,8 +41,6 @@ marp: true
 
 ## Overview language introduction
 
-<br>
-
 ```javascript
 
 const api1 = require("./api1") // module system
@@ -60,7 +61,6 @@ server.route("/api/v1/what", (req) => { // arrow function
 
 ## NodeJS project structure
 
-<br>
 
 * package.json & lock & `node_modules`
 * scripts in `package.json`
@@ -73,7 +73,7 @@ server.route("/api/v1/what", (req) => { // arrow function
 
 ## Data Type
 
-<br>
+
 
 * Boolean `true`
 * Null `null`
@@ -100,7 +100,7 @@ foo = true;  // foo is a Boolean now
 
 ## Variables
 
-<br>
+
 
 ```javascript
 var a = 1; // traditional 
@@ -187,7 +187,7 @@ for (const key in obj) {
 
 ## Operators - Numeric
 
-<br>
+
 
 * \+
 * \-
@@ -201,7 +201,7 @@ for (const key in obj) {
 
 ## Operators - Numeric
 
-<br>
+
 
 ```js
 1 + 2 // 3
@@ -216,7 +216,7 @@ for (const key in obj) {
 
 ## Operators - Comparison
 
-<br>
+
 
 * ==
 * ===
@@ -229,7 +229,7 @@ for (const key in obj) {
 
 ## Operators - Comparison
 
-<br>
+
 
 ```js
 "1" == 1 // true
@@ -254,7 +254,7 @@ for (const key in obj) {
 
 ## Operators - Logical
 
-<br>
+
 
 ```js
 var a1 =  true && true;     // t && t returns true
@@ -270,8 +270,6 @@ var a7 = 'Cat' && false;    // t && f returns false
 
 ## Operators - Logical
 
-<br>
-
 ```js
 var o1 =  true || true;     // t || t returns true
 var o2 = false || true;     // f || t returns true
@@ -285,8 +283,6 @@ var o7 = 'Cat' || false;    // t || f returns Cat
 ---
 
 ## Operators - Others
-
-<br>
 
 
 ```js
@@ -308,7 +304,7 @@ delete variable;
 
 ## Condition Statement
 
-<br>
+
 
 ```js
 var a = { b: 1, c: 2, d: 0 }
@@ -329,7 +325,7 @@ if (true) {
 
 ## Condition Check
 
-<br>
+
 
 ```js
 Boolean(0) // false
@@ -351,7 +347,7 @@ Boolean("1") // true
 
 ## Loop
 
-<br>
+
 
 ```js
 var arr1 = [1, 2, 3]
@@ -371,7 +367,7 @@ arr1.forEach((ele, idx) => {
 
 ## Function
 
-<br>
+
 
 ```js
 function f1(p1, p2 = 3) { // traditional function
@@ -411,7 +407,7 @@ Person.prototype.greet = function() {}; // attach a function to the prototype
 
 ## Homework
 
-<br>
+
 
 * Public Github User
 * Git
@@ -422,7 +418,7 @@ Person.prototype.greet = function() {}; // attach a function to the prototype
 
 ## Homework
 
-<br>
+
 
 * For the project [nodejs-training](https://github.com/Soontao/nodejs-training)
 * Edit the `training.config.json`
