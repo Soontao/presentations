@@ -114,7 +114,7 @@ Trust a SAML IDP, and all user/credential is from that.
 
 ---
 
-## SaaS Provision - how it works ?
+## SaaS Provision - How it works ?
 
 - `SaaS Provision`: create a `service` in `subscription` tab.
 - `User` (another `sub account admin`): click the `subscribe` button.
@@ -126,10 +126,10 @@ Trust a SAML IDP, and all user/credential is from that.
 
 ---
 
-## SaaS Provision - how it works with UAA?
+## SaaS Provision - How it works with UAA?
 
-- Login with `Browser` - SaaS will extract a tenant id from `tenant url` to redirect to the correct UAA instance, and the correct UAA tenant will response correct user information.
-- Login with `JWT` - SaaS could use the `jku` in JWT to retrieve the signature public key of UAA (trust SAP host), then verify the `jwt`.
+- Authenticate with `Browser` - SaaS will extract a tenant id from `tenant url` to redirect to the correct UAA instance, and the correct UAA tenant will response correct user information.
+- Authenticate with `JWT` - SaaS could use the `jku` in JWT to retrieve the signature public key of UAA (trust SAP host), then verify the `jwt`.
 - Sub Account UAA - Each `sub account` will have its own `UAA` instance, and `sub account admin` could configure the UAA tenant.
 - Access Token - generated/signed by UAA, and it will attach the `Authorization` & `Tenant` information.
 
@@ -137,18 +137,11 @@ Trust a SAML IDP, and all user/credential is from that.
 
 ## SaaS Provision - Key Points
 
-- provide UI to other user to subscribe custom service/product
+- provide subscription UI to other users
 - define the standard subscription APIs
-
----
-
-## SaaS Provision - Others
-
-
-
-- SAP & Business Partners' commercial products could be available cross `Global Account`, and customers services will be limited in the same `Global Account`.
-- SaaS Application should build the metering/dashboard and other features about subscription/multitenancy.
-
+- SaaS Application should build the metering/dashboard and other features about subscription/multitenancy
+- SAP & Business Partners' commercial products could be available cross `Global Account`, and customers services will be limited in the same `Global Account`
+- limited in single CF region
 
 ---
 
@@ -156,4 +149,16 @@ Trust a SAML IDP, and all user/credential is from that.
 
 - [sap-cloud-security-xsuaa-integration (java)](https://github.com/SAP/cloud-security-xsuaa-integration)
 - [@sap/xssec (nodejs)](https://github.wdf.sap.corp/CPSecurity/node-xs2sec)
-- [approuter (gateway)](https://github.wdf.sap.corp/xs2/approuter.js)
+- [@sap/approuter (gateway)](https://github.wdf.sap.corp/xs2/approuter.js)
+- [Official Multitenant Development Guide](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5e8a2b74e4f2442b8257c850ed912f48.html)
+
+--- 
+
+## Demo Project Resource
+
+> The demo project is `not` based on SAP standard components so I can share more tech detail for you.
+
+
+- [MT Server Starter](https://github.com/Soontao/server-starter/tree/20201106)
+- [XSUAA Configuration](https://gist.github.com/Soontao/0f239a4116c4ddfd772f1da293d0c9c5)
+- [SaaS Provision Configuration](https://gist.github.com/Soontao/851abfd70f999334392c43f204ddfa20)
