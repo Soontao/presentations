@@ -12,15 +12,11 @@ Theo Sun
 
 ## Quickly Introduction
 
-<br>
-
-> Docker is a set of platform as a service (PaaS) products that use `OS-level virtualization` to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and therefore use fewer resources than virtual machines.
+> Docker is a set of platform as a service (PaaS) products that use `OS-level virtualization` to deliver software in packages called containers. `Containers` are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a `single operating system kernel` and therefore use fewer resources than virtual machines.
 
 ---
 
 ## Key Points
-
-<br>
 
 - Linux core support
 - Golang based
@@ -30,7 +26,7 @@ Theo Sun
 
 ## Docker Components
 
-<br>
+
 
 - Docker Daemon
 - Docker Cli
@@ -41,8 +37,6 @@ Theo Sun
 
 ## Core Concepts
 
-<br>
-
 - Image (Template)
 - Container (Running instance)
 - Volume (Storage of container)
@@ -52,16 +46,25 @@ Theo Sun
 
 ## Hands On - 01 - Run a simple web server
 
-<br>
-
 - host:
 - user:
 - password:
 
-<br>
-
 ```bash
-ssh user@host # login to server
-docker pull theosun/hello-web-server@0.0.1 # pull image
-docker run -d --restart=always --name hello-web-server-$USER theosun/hello-web-server@0.0.1 # create a instance
+# login to server
+ssh user@host 
+# pull image
+docker pull theosun/hello-web-server@0.0.1 
+# create a instance
+docker run -d --restart=always --name hello-web-server-$USER theosun/hello-web-server@0.0.1
+```
+
+---
+
+## Hands On - 02 - Build a new image based on existed one
+
+
+
+```Dockerfile
+FROM thedockerimages/hello-web-server:0.0.1
 ```
