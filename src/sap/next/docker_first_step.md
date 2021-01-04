@@ -55,11 +55,22 @@ Theo Sun
 ```bash
 # login to server
 ssh user@host 
-# pull image
+# pull image with version
 docker pull theosun/hello-web-server@0.0.1 
 # create a instance
 docker run -d --restart=always --name hello-web-server-$USER theosun/hello-web-server@0.0.1
 ```
+
+---
+
+## Useable Docker Commands
+
+- docker ps `list all running container`
+- docker ps --all `list all container`
+- docker run `create a new container instance`
+- docker stop `stop a container`
+- docker pull `pull images from registry`
+- docker exec -it [container_name] /bin/bash `run shell in container`
 
 ---
 
@@ -72,7 +83,26 @@ ENV SERVICE_NAME yourname-web-server
 
 ---
 
+## Dockerfile quick guide
+
+[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+
+
+```dockerfile
+FROM base-image:version
+RUN command
+EXPOSE port
+ENV env_key=env_value
+CMD ["node", "lib"]
+```
+
+---
+
 ## Demo - 03 - Publish your image (to public registry)
+
+- registry
+- build image
+- docker push
 
 ```bash
 docker login
@@ -81,7 +111,41 @@ docker push
 
 ---
 
+## Hands On - 04 - Create an app and run it in docker
+
+- create an application
+- create `Dockerfile`
+- docker build
+- docker run
+
+---
+
 ## Optimize Docker Image Size
 
 * Docker Ignore
-* Base Image
+* Staged Build
+
+---
+
+## Hands On - 05 - try to reduce your image size
+
+- `.dockerignore`
+- remove build dependencies
+- multi stage build
+
+---
+
+## Accelerate Docker Build
+
+* Install dependency firstly
+* Cache built artifacts
+* Install binary dependency
+* Use proper base image
+
+---
+
+# Hands On - 06 - accelerate your build
+
+---
+
+# Thank You
