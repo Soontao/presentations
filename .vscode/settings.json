@@ -11,7 +11,9 @@
     "hana",
     "marp",
     "microservices",
-    "multitenant"
+    "multitenant",
+    "thedockerimages",
+    "theosun"
   ],
   "editor.formatOnSave": true,
   "markdown.marp.themes": [
