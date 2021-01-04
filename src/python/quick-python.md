@@ -4,7 +4,7 @@ marp: true
 
 # Introduction for python
 
-<br>
+
 
 Theo Sun
 2019
@@ -13,7 +13,7 @@ Theo Sun
 
 ## Keywords
 
-<br>
+
 
 * Since 1991
 * Programming paradigm: OOP, FOP
@@ -24,7 +24,7 @@ Theo Sun
 
 ## Concepts
 
-<br>
+
 
 * CPython & IronPython & Jython
 * Cython
@@ -36,15 +36,15 @@ Theo Sun
 
 ## Global Interpreter Lock
 
-<br>
+
 
 > In CPython, the global interpreter lock, or GIL, is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. This lock is necessary mainly because CPython's memory management is not thread-safe. (However, since the GIL exists, other features have grown to depend on the guarantees that it enforces.)
 
-<br>
+
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1563180809/GIL_2cpu_x2quuq.png)
 
-<br>
+
 
 So that `multiprocessing` is used in python web framework.
 
@@ -82,7 +82,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ## IDEs
 
-<br>
+
 
 * VSCode with extension
 * Sublime
@@ -92,7 +92,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ## Libraries
 
-<br>
+
 
 * [Numpy](https://www.numpy.org) Statistics & Machine Learning
 * [Micro Python](https://micropython.org) Internet of Things
@@ -181,11 +181,11 @@ while True:
 
 ## Choose python
 
-<br>
+
 
 If you want:
 
-<br>
+
 
 ![bg 40%](https://res.cloudinary.com/digf90pwi/image/upload/v1563856954/Python_y3kx1z.png)
 
@@ -193,11 +193,11 @@ If you want:
 
 ## DONT choose python
 
-<br>
+
 
 If you want:
 
-<br>
+
 
 * Impl high performance core service
 * Create meaningful UI

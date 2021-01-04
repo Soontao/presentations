@@ -60,7 +60,7 @@ Some questions for Resilience presentation
 - multi-zone deployment - DNS load balance
 - multi-region deployment - DNS load balance
 
-<br>
+
 
 - database offline/restart/out-of-memory
 - host/vm failure (cpu/memory/disk/network/power failure)

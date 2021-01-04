@@ -4,7 +4,7 @@ marp: true
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+
 
 # Node JS Training: Session 4 - NodeJS Basics
 
@@ -25,7 +25,7 @@ marp: true
 
 ## Module System - [CommonJS](https://zh.wikipedia.org/wiki/CommonJS)
 
-<br>
+
 
 ```js
 const fs = require("fs") // load module
@@ -39,7 +39,7 @@ module.exports = { readFileString }
 // module.exports.readFileString = readFileString // almost same
 ```
 
-<br>
+
 
 [nodejs module document](https://nodejs.org/dist/latest-v10.x/docs/api/modules.html)
 
@@ -156,7 +156,7 @@ bus.emit("add", 10)
 ## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
 
 
-<br>
+
 
 * EventEmitter.prototype.once
 * EventEmitter.prototype.removeListener
@@ -194,7 +194,7 @@ process.env.PATH
 
 ## Process -- custom exit logic
 
-<br>
+
 
 ```js
 process.on("SIGINT", async () => { // interrupt
@@ -208,7 +208,7 @@ process.on("SIGINT", async () => { // interrupt
 
 ## Process -- parse cli argv
 
-<br>
+
 
 ```js
 console.log(process.argv);
@@ -246,7 +246,7 @@ path.join(__dirname, "./../cim-training/session-1.js") // even you are in window
 
 ## [os](https://nodejs.org/dist/latest-v10.x/docs/api/os.html)
 
-<br>
+
 
 ```js
 os.homedir() // user home

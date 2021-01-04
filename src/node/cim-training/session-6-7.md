@@ -60,7 +60,7 @@ blockquote {
 
 ## [CAP Framework](https://cap.cloud.sap/docs/about/)
 
-<br>
+
 
 > The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
 
@@ -73,7 +73,7 @@ blockquote {
 ## Links
 
 
-<br>
+
 
 * [CAP Framework Organization](https://github.wdf.sap.corp/cap)
 * [Roadmap](https://github.wdf.sap.corp/cap/matters/projects/33#card-138161)
@@ -117,7 +117,7 @@ blockquote {
 
 ## Events
 
-<br>
+
 
 * focus on the `on` event
 * use `before` hook do the input validation
@@ -153,7 +153,7 @@ module.exports = class IndexService {
 
 ## Service Impl -- programming
 
-<br>
+
 
 ```js
 module.exports = (srv) => {
@@ -175,7 +175,7 @@ module.exports = (srv) => {
 
 ## Events - custom event
 
-<br>
+
 
 * Action - `WRITE` - `POST`
 * Function - `READ` - `GET`
@@ -184,7 +184,7 @@ module.exports = (srv) => {
 
 ## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
 
-<br>
+
 
 * [SAP OData UI Annotation](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/UI.md)
 * [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
@@ -193,7 +193,7 @@ module.exports = (srv) => {
 
 ## CAP Application Necessary
 
-<br>
+
 
 * cds & sap-hana & sqlite dependency
 * cds configuration (in the `package.json` or `.cdsrc` file)
@@ -214,7 +214,7 @@ module.exports = (srv) => {
 
 ## Tips
 
-<br>
+
 
 * **many-2-many** association is not released until 2020 Q4
 * custom **action** is used to `WRITE`
@@ -231,7 +231,7 @@ module.exports = (srv) => {
 
 ## Hands On
 
-<br>
+
 
 1. install `nodejs`, `git`, `@sap/cds-dk`
 1. init project by `cds init`

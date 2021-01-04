@@ -4,7 +4,7 @@ marp: true
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+
 
 # Node JS Training: Session 2 - ES6 & More
 
@@ -12,7 +12,7 @@ marp: true
 
 ## Agenda
 
-<br>
+
 
 * ECMAScript standards introduction
 * Block & Closure
@@ -26,7 +26,7 @@ marp: true
 
 ## ECMAScript
 
-<br>
+
 
 * ES5 (old)
 * ES6 - ES2015 (many many APIs)
@@ -38,7 +38,7 @@ marp: true
 
 ## block
 
-<br>
+
 
 ```js
 var x = 1;
@@ -131,7 +131,7 @@ a // ?
 
 ## Function
 
-<br>
+
 
 ```js
 function hello(arg1 = "alice") { // default value
@@ -159,7 +159,7 @@ hello2("alice") // alice
 
 ## Function
 
-<br>
+
 
 ```js
 function hello() {
@@ -199,7 +199,7 @@ New(People, "admin").name == (new People("admin")).name
 
 ## [prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-<br>
+
 
 > object has `__proto__` property
 > function has `prototype` property
@@ -211,7 +211,7 @@ New(People, "admin").name == (new People("admin")).name
 
 ## prototype
 
-<br>
+
 
 ```js
 function People(name) { this.name = name }
@@ -236,7 +236,7 @@ People.type = "china"; // class property/method, if you want
 
 ## class (ES6)
 
-<br>
+
 
 ```js
 class People {
@@ -263,7 +263,7 @@ new People2("admin") // People2 { name: 'admin1' }
 
 ## class (old) `this` issue
 
-<br>
+
 
 ```js
 function People(name) {
@@ -447,7 +447,7 @@ async function run() {
 
 ## Arrow Function (ES2015)
 
-<br>
+
 
 ```js
 const f1 = () => { return "f1" }

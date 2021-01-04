@@ -3,10 +3,8 @@ marp: true
 theme: dark
 ---
 
-
 # Node JS Training: Session 1
 # Javascript Basics
-
 
 Theo Sun
 2020
@@ -196,7 +194,6 @@ for (const key in obj) {
 * \*\*
 * \%
 
-
 ---
 
 ## Operators - Numeric
@@ -222,14 +219,12 @@ for (const key in obj) {
 * ===
 * !=
 * !==
-* >=
+* \>=
 * <=
 
 ---
 
 ## Operators - Comparison
-
-
 
 ```js
 "1" == 1 // true

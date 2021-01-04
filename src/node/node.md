@@ -1,18 +1,15 @@
 ---
 marp: true
+theme: dark
 ---
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
+# Node JS Basics 
 
-<br>
-
-# Node JS Basics: just do what you want.
+> just do what you want in simplest way.
 
 ---
 
 ## Introduction
-
-<br>
 
 Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single language, rather than different languages for server- and client-side scripts.
 
@@ -20,22 +17,20 @@ Node.js is an open-source, cross-platform, JavaScript runtime environment that e
 
 ## Quick View
 
-<br>
-
-* created by Ryan Dahl
-* integrate v8, libuv, openssl, zlib ...
-* single (js) thread
-* running runtime
+- created by `Ryan Dahl`
+- integrate v8, libuv, openssl, zlib ...
+- single (js) thread
+- running runtime
 
 ---
 
 ## Concepts: Sync & Async (**In Parallel Programming**)
 
-<br>
+
 
 What is `a·syn·chronous` ? `A - not, Syn - co, Chronus - time`
 
-* synchronous - run sequential
+- synchronous - run sequential
 
 ```java
 class Runner {
@@ -43,7 +38,7 @@ class Runner {
 }
 ```
 
-* asynchronous - run parallel
+- asynchronous - run parallel
 
 ```js
 const req1 = (async () => {})() // new async function and execute it immediately
@@ -56,11 +51,8 @@ await getAllInformationHandle // sync, run next statement when all requests fini
 
 ## Concepts: Blocking & Non-blocking (**In Single Thread**)
 
-<br>
 
 What is `blocking` ?
-
-<br>
 
 ```js
 var pass = getRandomBlocking() // blocking, spend 500ms, and go to next statement
@@ -81,26 +73,22 @@ for(;;) { // forever loop
 
 ## Concepts: Package Manager
 
-<br>
 
-* Central package registry - npmjs.com
-* Support version
-* `npm` or `yarn`
+
+- Central package registry - npmjs.com
+- Support version
+- `npm` or `yarn`
 
 
 ---
 
 ## Concepts: Single Thread & Performance
 
-<br>
+- Just write code efficient (as you can)
+- Less concurrent programming design
+- Scale instance to process high
 
-* Just write code efficient (as you can)
-* Less concurrent programming design
-* Scale instance to process high
-
-<br>
-
-DO NOT WRITE CODE LIKE:
+DO **NOT** WRITE CODE LIKE:
 
 ```javascript
 for(;;) {
@@ -108,33 +96,28 @@ for(;;) {
 }
 ```
 
-<br>
-
 reference [this document](https://nodejs.org/en/docs/guides/dont-block-the-event-loop)
 
 ---
 
 ## Concepts: Native Libraries
 
-<br>
-
-* integrate `nodejs` with `cpp`
-* `node-gyp` (old) or `N-API` (new)
-* accelerate application (`crypto`, `zlib`, `url parsing`)
+- integrate `nodejs` with `cpp`
+- `node-gyp` (old) or `N-API` (new)
+- accelerate application (`crypto`, `zlib`, `url parsing`)
 
 
 ---
 
 ## Concepts: Node Version
 
-* LTS - 4, 6, 8, 10, 12 ...
-* Current - other
+- LTS - 4, 6, 8, 10, 12 ...
+- Current - other
 
 ---
 
 ## Okay, everything is here, just enjoy the nodejs.
 
-<br>
 
 ```js
 const http = require('http'); // module system
@@ -160,75 +143,70 @@ server.listen(port, hostname, () => {
 
 ## Advantage: Fast
 
-<br>
 
-**Easy** to
+**Easy*- to
 
-<br>
-
-* learn (few, simple, clear API)
-* write (less code, less effort)
-* build (no build, no build system, just run)
+- learn (few, simple, clear API)
+- write (less code, less effort)
+- build (no build, no build system, just run)
 
 ---
 
 ## Disadvantage: Too fast
 
-<br>
-
-* Type Less, Design Lost
-* Type Less, Bug More
-* Callback hell/Async function chain
-* Performance
+- Type Less, Design Lost
+- Type Less, Bug More
+- Callback hell/Async function chain
+- Performance
 
 ---
 
 ## NodeJS 
-## Is the **BEST** language for independent developers & start-up companies
+## Is the **BEST*- language for independent developers & start-up companies
 
 ---
 
 ## Scenario 1: Create a prototype server
 
-<br>
+
 
 For the customer project, we built simple dynamic API server for demo/feasibility check.
 
 If there are no performance requirement, even we can implement the production server based the prototype server.
 
-<br>
+
 
 Examples: 
 
-* TCC DataV Report Server (Phase 0)
+- TCC DataV Report Server (Phase 0)
 
 ---
 
 ## Scenario 2: Build tools for your daily work
 
-<br>
+
 
 Computer is good at doing repetitive fixed boring work.
 
-<br>
+
 
 Examples:
 
-* [System Tool](https://github.com/Soontao/clean-icon-and-thumb-cache)
-* [Javascript Static Analyse Tool](https://github.com/Soontao/cycle-import-check)
-* [Documentation Tool](https://github.com/ui5-next/automation-documentation)
-* [Project Generator](https://github.com/ui5-next/ui5g)
+- [System Tool](https://github.com/Soontao/clean-icon-and-thumb-cache)
+- [Javascript Static Analyse Tool](https://github.com/Soontao/cycle-import-check)
+- [Documentation Tool](https://github.com/ui5-next/automation-documentation)
+- [Project Generator](https://github.com/ui5-next/ui5g)
 
 --- 
 
 ## Scenario 3: Build the presentation layer
 
-<br>
+
 
 With Server-Side Rendering technology, server could send the end-user direct html page instead of a SPA launcher.
 
-<br>
 
-* Native JS frameworks (React/Vue) integration
-* Stateless, easy to scale
-* Easy to learn/use by frontend developers
+
+- Native JS frameworks (React/Vue) integration
+- Stateless, easy to scale
+- Easy to learn/use by frontend developers

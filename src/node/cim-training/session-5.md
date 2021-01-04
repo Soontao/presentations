@@ -4,7 +4,7 @@ marp: true
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+
 
 # Node JS Training: Session 5 - Advanced NodeJS
 
@@ -25,12 +25,12 @@ marp: true
 
 ## Event Loop - Core of NodeJS
 
-<br>
+
 
 * Event
 * Callback
 
-<br>
+
 
 * [nodejs official event loop doc](https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/)
 * [libuv event loop reference](http://docs.libuv.org/en/v1.x/loop.html)
@@ -64,7 +64,7 @@ marp: true
 
 ## Event Loop
 
-<br>
+
 
 * No thread context switch
 * No thread level lock
@@ -104,7 +104,7 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ## [ExpressJS](https://expressjs.com/) - Examples
 
-<br>
+
 
 * App
 * Chain
@@ -117,7 +117,7 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ## Memory
 
-<br>
+
 
 * V8 js engine gc
 * [nodejs gc options](https://gist.github.com/listochkin/10973974)
@@ -171,11 +171,11 @@ if (cluster.isMaster) {
 
 ## [JSDoc](https://jsdoc.app)
 
-<br>
+
 
 > Add necessary JSDoc for type reference
 
-<br>
+
 
 ```js
 /**
@@ -190,11 +190,11 @@ const f2 = (arr = []) => {
 
 ## NPM & Open Source & Security
 
-<br>
+
 
 > Check security with tools
 
-<br>
+
 
 * npm
     * registry

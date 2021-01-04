@@ -10,7 +10,7 @@ Theo Sun, 2019
 
 ## Agenda
 
-<br>
+
 
 This document describes how to connect to an SFTP server using CPI (via public key authentication).
 
@@ -18,7 +18,7 @@ This document describes how to connect to an SFTP server using CPI (via public k
 
 ## Concepts
 
-<br>
+
 
 > In computing, the SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream. It was designed by the Internet Engineering Task Force (IETF) as an extension of the Secure Shell protocol (SSH) version 2.0 to provide secure file transfer capabilities. 
 
@@ -27,14 +27,14 @@ This document describes how to connect to an SFTP server using CPI (via public k
 
 ## Connect to SFTP (with public key authentication)
 
-<br>
+
 
 Following information is required for CPI: 
 
 * SFTP hostname/username
 * `known_hosts` file
 
-<br>
+
 
 You should provide following information:
 
@@ -82,7 +82,7 @@ If the sftp server is provided by another partners/systems, you should to provid
 
 ## [Connect] The `known_hosts` file
 
-<br>
+
 
 * CPI **requires** a `known_hosts` file for SSH connection.
 * **But** CPI could not generate the file.
@@ -94,7 +94,7 @@ If the sftp server is provided by another partners/systems, you should to provid
 
 ## [Connect] The `known_hosts` file
 
-<br>
+
 
 **Note**
 
@@ -135,7 +135,7 @@ Remember that, find the `known_hosts` in your **local client** instead of remote
 
 ## Test Connectivity
 
-<br>
+
 
 Now, you could test the connectivity in the `Test Connectivity` UI.
 

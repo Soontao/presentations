@@ -23,7 +23,7 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, 'Microsoft YaHei', 'Consolas', sans-serif;
 }
 
 .hljs {
@@ -231,7 +231,7 @@ table td {
 }
 
 section {
-  font-size: 35px;
+  font-size: 2.1em;
   line-height: 1.35;
   letter-spacing: 1.25px;
   padding: 70px;

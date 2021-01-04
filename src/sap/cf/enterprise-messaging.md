@@ -26,7 +26,7 @@ blockquote {
 
 # Enterprise Messaging on SAP Cloud Foundry
 
-<br>
+
 
 Theo Sun
 2020

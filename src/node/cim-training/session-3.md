@@ -4,7 +4,7 @@ marp: true
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
 
-<br>
+
 
 # Node JS Training: Session 3 - Core API
 
@@ -77,7 +77,7 @@ map1.forEach((value, key) => {
 
 ## WeakMap
 
-<br>
+
 
 > Key Weak Reference Map
 > Limit key type - only `object`
@@ -87,7 +87,7 @@ map1.forEach((value, key) => {
 
 ## Set
 
-<br>
+
 
 ```js
 const s = new Set([1, 2, 3, 3])
@@ -114,7 +114,7 @@ Array.from(s2) // [ 1, '1', 2 ]
 
 ## Array - foreach item
 
-<br>
+
 
 ```js
 [1, 2, 3].forEach((value, index, array) => {
@@ -167,7 +167,7 @@ const enabledNames = a3.filter(item => item.enabled).map(item => item.name)
 
 ## Number
 
-<br>
+
 
 ```js
 Number.parseFloat("1.23") // 1.23
@@ -179,7 +179,7 @@ Number.parseInt("101", 2) // 5
 
 ## Boolean
 
-<br>
+
 
 ```js
 Boolean(0) // false
@@ -200,7 +200,7 @@ Boolean("1") // true
 
 ## String
 
-<br>
+
 
 ```js
 "1" + '.' // '1.'
@@ -221,7 +221,7 @@ Boolean("1") // true
 
 ## String
 
-<br>
+
 
 ```js
 "https://domain.com:3333".match(/([a-z]+)\:\/\/(.*)(\:\d+)/) 
@@ -242,13 +242,13 @@ Boolean("1") // true
 
 ## [Regexp](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-<br>
+
 
 ```js
 const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
 ```
 
-<br>
+
 
 [regexp test tool](https://regex101.com/)
 
@@ -256,7 +256,7 @@ const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
 
 ## Date
 
-<br>
+
 
 ```js
 const d = new Date()
@@ -267,7 +267,7 @@ new Date(1587608936507) // parse from unix timestamp
 new Date("2020-04-23T02:28:56.507Z") // parse from ISO
 ```
 
-<br>
+
 
 [library -- momentjs](https://momentjs.com/docs/)
 
@@ -275,7 +275,7 @@ new Date("2020-04-23T02:28:56.507Z") // parse from ISO
 
 ## Object
 
-<br>
+
 
 ```js
 var obj = { a: 1, b: 2, c: { d: 3 } }

@@ -26,9 +26,9 @@ blockquote {
 
 # New Topics about SAP Cloud Platform
 
-<br>
-<br>
-<br>
+
+
+
 
 Theo Sun, 2020
 
@@ -44,7 +44,7 @@ Theo Sun, 2020
 
 ## SCP [North Star](https://jam4.sapjam.com/groups/eopqUq5S182gY7JFrbdwis/documents/JAUOawjNR9Gtc1KH8HHxqe/slide_viewer)
 
-<br>
+
 
 > To describe the SAP Cloud Platform Architecture of the main constituting components and services as it is implemented today and how it will look like in the next `six` to `twelve` months. 
 
@@ -52,7 +52,7 @@ Theo Sun, 2020
 
 ## CPF - [CP Foundation](https://wiki.wdf.sap.corp/wiki/display/CPC15N/%5B8%5D+Architecture) & [Kernel Services](https://pages.github.tools.sap/kernelservices/)
 
-<br>
+
 
 * [ONE INBOX](https://pages.github.tools.sap/kernelservices/services/one-inbox) - centralized inbox for all sap products, [video](https://sap.sharepoint.com/teams/Nucleus491/Shared%20Documents/Forms/AllItems.aspx?id=%2Fteams%2FNucleus491%2FShared%20Documents%2FGeneral%2FEnablement%2FServices%2FOne%20Inbox%2FOne%5FInbox%5F20190529%2Emp4&parent=%2Fteams%2FNucleus491%2FShared%20Documents%2FGeneral%2FEnablement%2FServices%2FOne%20Inbox&p=true&originalPath=aHR0cHM6Ly9zYXAuc2hhcmVwb2ludC5jb20vOnY6L3QvTnVjbGV1czQ5MS9FVjBDNXdrS1prWkZpUktIZENqblY4Y0JyWDI1SG9MQktOaDhGLVVGS0lodTJnP3J0aW1lPUZUQ0NXNlp4MkVn)
 * [DATA PRIVACY INTEGRATION](https://pages.github.tools.sap/kernelservices/services/data-privacy-integration) [video](https://web.microsoftstream.com/video/5d9b856f-1120-4e38-bf7f-87c9a7456414)
@@ -65,7 +65,7 @@ Theo Sun, 2020
 
 ## [SCP Essential Services](https://jam4.sapjam.com/groups/eopqUq5S182gY7JFrbdwis/documents/RBxbQ8sVXypSikB4GCRue2/slide_viewer)
 
-<br>
+
 
 * Internal MUST have - Redis/MongoDB
 * Internal MUST have - Kafka/RabbitMQ
@@ -74,7 +74,7 @@ Theo Sun, 2020
 
 ## [Kyma](https://jam4.sapjam.com/groups/QrsMLb8Me6YjlNkgcm5Ku4/overview_page/tLlAcv2d7pnec96CnnHPjV)
 
-<br>
+
 
 > SAP Cloud Platform Extension Factory, Kyma runtime has been renamed to `SAP Cloud Platform, Kyma runtime`. This new naming is now in line with the naming guidelines for other services and runtimes of Cloud Platform, like `SAP Cloud Platform Cloud Foundry runtime`, `SAP Cloud Platform ABAP runtime`, etc.
 
@@ -84,11 +84,11 @@ Theo Sun, 2020
 
 ## [SAP Gardener](https://wiki.wdf.sap.corp/wiki/display/Kubernetes/Roadmap)
 
-<br>
+
 
 > Kubernetes-as-a-Service, manage k8s cluster.
 
-<br>
+
 
 Operation Team Tool, [Internal Demo System](https://dashboard.canary.gardener.cloud.sap/)
 
@@ -96,17 +96,17 @@ Operation Team Tool, [Internal Demo System](https://dashboard.canary.gardener.cl
 
 ## New [Embedded Steampunk](https://wiki.wdf.sap.corp/wiki/display/A4C/Embedded+Steampunk) for S/4 Extension
 
-<br>
+
 
 > SAP Cloud Platform, ABAP environment (aka `Steampunk`).
 
 > In short, `Steampunk` features modern technology with a retro look.
 
-<br>
+
 
 Provide the `STABLE` `LIMITED` API to `embedded steampunk` to extension.
 
-<br>
+
 
 [Use Cases](https://wiki.wdf.sap.corp/wiki/display/A4C/Embedded+Steampunk+-+Use+cases)
 
@@ -120,7 +120,7 @@ Provide the `STABLE` `LIMITED` API to `embedded steampunk` to extension.
 
 ## Resilience/Elasticity/Multi-Tenant Isolation
 
-<br>
+
 
 Improve **`Availability`**, we are delivering cloud service.
 
@@ -128,7 +128,7 @@ Improve **`Availability`**, we are delivering cloud service.
 
 ## UI5 Evolve
 
-<br>
+
 
 * [UI5 Tooling](https://sap.github.io/ui5-tooling/)
 * [Fundamental](https://sap.github.io/fundamental-react/)
@@ -141,7 +141,7 @@ Improve **`Availability`**, we are delivering cloud service.
 
 ## SAP Graph
 
-<br>
+
 
 Next Generation API Hub, standardize API development experience (Public), [Beta System](https://beta.graph.sap/).
 
@@ -149,7 +149,7 @@ Next Generation API Hub, standardize API development experience (Public), [Beta 
 
 ## Edge LM - [Edge Lifecycle Management](https://sap.sharepoint.com/:w:/s/123236/edge/EcVMxlPveblMq525BqsbIf0BdEb8PuNZTxY__VGeq9YkJA?e=9zSTKW)
 
-<br>
+
 
 * Edge software components must be `containerized` and need to run on K8s.
 * K8S based infra (Edge side).
@@ -158,7 +158,7 @@ Next Generation API Hub, standardize API development experience (Public), [Beta 
 
 ## [Replacement Terms](https://help.sap.com/doc/b0322267728e48a28b0c8ee7dd1ab4c7/1.0/en-US/Inclusive%20Language%20Guidelines.pdf)
 
-<br>
+
 
 * master/feature -> main/feature
 * master/slave -> leader/follower, leading/replica
@@ -169,6 +169,6 @@ Next Generation API Hub, standardize API development experience (Public), [Beta 
 
 ## [Technology Guidelines](https://github.tools.sap/CentralEngineering/TechnologyGuidelines)
 
-<br>
+
 
 > Technology Guidelines ensure out-of-the-box integration, modularity, ease of extension, and consistent experience across the Intelligent Enterprise business processes.

@@ -6,7 +6,7 @@ marp: true
 
 <!-- _color: white -->
 
-<br>
+
 
 Theo Sun, 2019
 
@@ -18,7 +18,7 @@ Theo Sun, 2019
 
 <!-- _color: black -->
 
-<br>
+
 
 
 * Retrospect UI5 at the 10th anniversary
@@ -30,7 +30,7 @@ Theo Sun, 2019
 
 ## What is UI5 ?
 
-<br>
+
 
 > OpenUI5 is a JavaScript application framework designed to build cross-platform, responsive, enterprise-ready applications. It is an open-source project maintained by SAP SE available under the Apache 2.0 license and open to contributions. OpenUI5's core is based on JavaScript, **jQuery**, and LESS. The library's feature set includes model–view–controller patterns, data binding, its own UI-element library, and internationalization support
 
@@ -38,7 +38,7 @@ Theo Sun, 2019
 
 ### Controls
 
-<br>
+
 
 The UI classes of UI5. 
 
@@ -53,7 +53,7 @@ The UI classes of UI5.
 
 ### MVC Pattern
 
-<br>
+
 
 > Layered Arch
 
@@ -71,7 +71,7 @@ The UI classes of UI5.
 
 ### Module System
 
-<br>
+
 
 > The OpenUI5 framework has built-in support for modularizing comprehensive JavaScript applications. That means, instead of defining and loading one large bundle of JavaScript code, an application can be split into smaller parts which then can be loaded at runtime at the time when they are needed. These smaller individual files are called modules.
 
@@ -83,7 +83,7 @@ For simplify the framework design, the core of UI5 will use synchronized `XHR` a
 
 ### Preload
 
-<br>
+
 
 The traditional module system will cause the application loading is so slowly. So UI5 provided `library-preload` and `Component-preload` file to `pre` cache modules which will be used for application. (Developer should use the `manifest.json` or `index.html` tag to define required libs)
 
@@ -94,7 +94,7 @@ The traditional module system will cause the application loading is so slowly. S
 
 ### Component & Manifest.json
 
-<br>
+
 
 > Components are independent and reusable parts used in OpenUI5 applications.
 
@@ -102,7 +102,7 @@ The traditional module system will cause the application loading is so slowly. S
 
 * UI-Less Component (ignored)
 
-<br>
+
 
 Each components have its own manifest.json, to define the `models`, `routing (with views)`, and `resource (css, i18n or whatever)`.
 
@@ -110,7 +110,7 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ## Painful
 
-<br>
+
 
 * `byId` - element created by js but also need query by id
 * `this` in view/controller - what is `this`/`that`
@@ -128,12 +128,12 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ## Prospect the 'Next Generation UI5'
 
-<br>
+
 
 > Imagination
 > Attract developers
 
-<br>
+
 
 * Re-define development principles
 * Simplified concepts
@@ -145,7 +145,7 @@ Each components have its own manifest.json, to define the `models`, `routing (wi
 
 ### Principle - Data drive UI
 
-<br>
+
 
 Avoid the `tracking-less` or `on-fly` code.
 
@@ -161,12 +161,12 @@ Avoid the `tracking-less` or `on-fly` code.
 
 ### Principle - Data drive UI
 
-<br>
+
 
 > Change data in model 
 > Rather than use `byId` find and interact with UI reference
 
-<br>
+
 
 > So that, the data will represent the UI.
 
@@ -178,11 +178,11 @@ Avoid the `tracking-less` or `on-fly` code.
 
 <!-- _color: white -->
 
-<br>
+
 
 Build a **system** instead of a collection of code
 
-<br>
+
 
 * Avoid exception - Complex Model
 * Abstract - More Layers
@@ -193,7 +193,7 @@ Build a **system** instead of a collection of code
 
 ### Principle - Single way dependency and data flow
 
-<br>
+
 
 Avoid `undefined` value and make sure code is readable.
 
@@ -207,7 +207,7 @@ Avoid `undefined` value and make sure code is readable.
 
 ### Less Concepts
 
-<br>
+
 
 > Remove unnecessary concepts
 
@@ -224,13 +224,13 @@ Avoid `undefined` value and make sure code is readable.
 
 ### Modern javascript syntax
 
-<br>
+
 
 
 * ES6/JSX/Flow types with document
 * Auto import/completion and document by type definitions.
 
-<br>
+
 
 > [Babel transform plugin](https://github.com/ui5-next/babel-plugin-ui5-next) provided
 > [ES6 Type Definition](https://github.com/ui5-next/types) Provided
@@ -244,7 +244,7 @@ Avoid `undefined` value and make sure code is readable.
 
 ### Modern builder
 
-<br>
+
 
 * Create preload file **on-demand**
 * inline css link
@@ -252,7 +252,7 @@ Avoid `undefined` value and make sure code is readable.
 
 ![bg right 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1567581569/2019-09-04_15-19-17_n1wynb.png)
 
-<br>
+
 
 > [Gulp build plugin](https://github.com/ui5-next/gulp-ui5-eager-preload) provided
 > [Official UI5 Tooling](https://github.com/SAP/ui5-tooling) provided
@@ -261,7 +261,7 @@ Avoid `undefined` value and make sure code is readable.
 
 ### Open Source Friendly
 
-<br>
+
 
 `import` (almost) whole JS community
 

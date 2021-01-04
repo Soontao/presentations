@@ -6,7 +6,7 @@ marp: true
 
 <!-- _color: white -->
 
-<br>
+
 
 Theo Sun, 2019
 
@@ -20,7 +20,7 @@ Theo Sun, 2019
 
 ## Artifacts in software development.
 
-<br>
+
 
 * Requirement documents/UX design/JIRA issues
 * Design documents
@@ -31,7 +31,7 @@ Theo Sun, 2019
 
 ## How to ensure consistence between the implementation and the requirement?
 
-<br>
+
 
 * Code is document.
   * comment is document.
