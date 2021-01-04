@@ -5,12 +5,14 @@ theme: dark
 
 # Docker, First Step
 
+> basically introduce `docker` technology
+
 Theo Sun
-2020
+2021
 
 ---
 
-## Quickly Introduction
+## Introduction
 
 > `Docker` is a set of platform as a service (PaaS) products that use `OS-level virtualization` to deliver software in packages called containers. `Containers` are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a `single operating system kernel` and therefore use fewer resources than virtual machines.
 
@@ -37,7 +39,7 @@ Theo Sun
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1609739230/docker-lifecycle_c0b9ia.png)
 
-- Image (Template, like `ubuntu`/`alpine`/`openjdk8`)
+- Image (Template, like `alpine`/`openjdk8`/`custom-java-app`)
 - Container (Running instance, like `custom-java-app-01`)
 - Volume (Storage of container)
 - Network (Private network of many containers)
