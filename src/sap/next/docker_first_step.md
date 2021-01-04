@@ -139,7 +139,9 @@ docker push
 
 ## Volume
 
-- Persisted storage cross containers
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1609748522/docker-volume_3_mt0mnn.png)
+
+- Persisted storage cross container instances
 
 ---
 
