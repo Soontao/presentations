@@ -3,7 +3,7 @@
 
 <head>
   <title>Presentation List</title>
-  <script id="sap-ui-bootstrap" src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+  <script id="sap-ui-bootstrap" src="https://openui5.hana.ondemand.com/1.78.15/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3" data-sap-ui-libs="sap.m" data-sap-ui-resourceroots='{"index": "./"}'
     data-sap-ui-async="true" displayBlock="true" data-sap-ui-xx-waitfortheme="true">
     </script>
@@ -14,6 +14,7 @@
 
 <script>
   sap.ui.getCore().attachInit(function () {
+
     const model = new sap.ui.model.json.JSONModel([])
     const list = new sap.m.SelectList({
       items: {
@@ -24,7 +25,7 @@
       },
       itemPress: event => {
         const presentationPath = event.getParameter("item").getBindingContext().getObject("path")
-        window.open(presentationPath)
+        window.open(presentationPath, "_blank").focus()
       }
     })
 
@@ -36,8 +37,8 @@
       pages: new sap.m.Page({
         content: [list],
         customHeader: new sap.m.Bar({
-          contentLeft: sap.m.Title({ text: "Theo's Presentation List" }),
-          contentRight: sap.m.Button({
+          contentLeft: new sap.m.Title({ text: "Theo's Presentation List" }),
+          contentRight: new sap.m.Button({
             icon: "sap-icon://source-code",
             text: "Source Code",
             press: () => {
@@ -48,11 +49,10 @@
       })
     })
 
-    const shell = new sap.m.Shell({
-      app
-    })
+    const shell = new sap.m.Shell({ app })
 
     shell.placeAt("content")
+
   });
 </script>
 
