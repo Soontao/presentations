@@ -40,3 +40,6 @@ Theo Sun
 
 ## Unit Test
 
+---
+
+## Typescript
