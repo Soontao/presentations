@@ -14,32 +14,42 @@ Theo Sun
 
 * empty lines
 * ID ignore
+* local deploy flow (quick check with hana issue)
 
 ---
 
-## Change Query
+## Interact with CQN (Query)
 
 * grant
 * req.query
+* dynamic change query by other parameters
+
+-- 
+
+## DEBUG
+
+* local debug
+* local debug with xsuaa
+* remote debug
 
 ---
 
 ## ODATA V2
 
-
 ---
 
 ## Transaction
-
 
 ---
 
 ## Logging
 
+---
+
+## Cluster
+
+* cf-nodejs-logging-support
+
 --- 
 
 ## Unit Test
-
----
-
-## Typescript
