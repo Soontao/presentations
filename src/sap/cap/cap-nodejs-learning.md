@@ -12,37 +12,37 @@ Theo Sun
 
 ## HANA CSV import issues
 
-* empty lines
-* ID ignore
-* local deploy flow (quick check with hana issue)
+- empty lines
+- ID ignore
+- local deploy flow (quick check with hana issue)
 
 ---
 
 ## Interact with CQN (Query)
 
-* grant
-* req.query
-* dynamic change query by other parameters
+- grant
+- req.query
+- dynamic change query by other parameters
 
--- 
+---
 
 ## DEBUG
 
-* local debug
-* local debug with xsuaa
-* remote debug
+- local debug
+- local debug with xsuaa
+- remote debug
 
 ---
 
 ## ODATA V2
 
-* remember defined `key`
+- remember defined `key`
 
 ---
 
 ## Transaction
 
-* remember what is `transaction`
+- remember what is `transaction`
 
 ---
 
@@ -52,7 +52,7 @@ Theo Sun
 
 ## Cluster
 
-* cf-nodejs-logging-support
+- cf-nodejs-logging-support
 
 --- 
 
