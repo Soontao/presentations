@@ -36,9 +36,13 @@ Theo Sun
 
 ## ODATA V2
 
+* remember defined `key`
+
 ---
 
 ## Transaction
+
+* remember what is `transaction`
 
 ---
 
