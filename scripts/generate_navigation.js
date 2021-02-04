@@ -21,7 +21,7 @@ const readFile = file => fs.readFile(file, { encoding: "UTF-8" });
 (
   async () => {
 
-    const files = await glob(["src/**/*.md", "!src/**/node_modules/**"], {})
+    const files = await glob(["src/**/*.md", "!src/**/node_modules/**", "!src/**/*example*/**"], {})
     const presentations = await Promise.all(files.map(async file => {
       const content = await readFile(file)
       return { title: findTitleForMarkdown(content), path: formatPresentationName(file), }

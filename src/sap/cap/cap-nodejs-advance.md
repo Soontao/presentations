@@ -26,7 +26,7 @@ Theo Sun
 
 ---
 
-## DEBUG
+## Debug
 
 - local debug
 - local debug with xsuaa
@@ -34,9 +34,10 @@ Theo Sun
 
 ---
 
-## ODATA V2
+## OData V2 Support
 
-- remember defined `key`
+- use [cds-odata-v2-adapter-proxy](https://www.npmjs.com/package/@sap/cds-odata-v2-adapter-proxy)
+- remember defined the `key` for view/query, because the adapter is not support the collection without key
 
 ---
 
@@ -48,12 +49,18 @@ Theo Sun
 
 ## Logging
 
+> integrate with `application-logging`
+
+- cf-nodejs-logging-support
+
 ---
 
 ## Cluster
 
-- cf-nodejs-logging-support
+- [example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
 
 --- 
 
 ## Unit Test
+
+- [cap-unit-test-example](https://github.com/Soontao/cap-unit-test-example)

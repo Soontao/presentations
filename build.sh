@@ -1,7 +1,7 @@
 #!/bin/bash
 # CI build script
 
-for f in `find ./src -type f -not -path "*node_modules*" -name "*.md"`
+for f in `find ./src -type f -not -path "*node_modules*" -not -path "*example*" -name "*.md"`
 do 
   fb="${f%.*}"; 
   # generate pdf

@@ -1,38 +1,7 @@
 ---
 marp: true
+theme: dark
 ---
-
-<style>
-
-section {
-  background-color: black;
-  color: white;
-}
-
-a {
-  color: #3e9ce0;
-}
-
-h1, h2 {
-  color: white;
-  padding-bottom: 50px;
-}
-
-code {
-  background-color: #3e9ce0;
-  color: white;
-}
-
-code span {
-  color: black;
-}
-
-blockquote {
-  color: rgba(192, 192, 192, 1);
-}
-
-</style>
-
 
 # Questions for Resilience
 
