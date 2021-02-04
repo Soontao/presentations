@@ -26,6 +26,14 @@ Theo Sun
 
 ---
 
+## Authorization Expert on CDS
+
+- `grant` with sub query
+- **multi** `grant` with fallback
+- `system-user`
+
+---
+
 ## Debug
 
 - local debug
