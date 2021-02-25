@@ -152,7 +152,13 @@ describe('Any Service Test Suite', () => {
 
 ## Uncaught Exception
 
+cds nodejs runtime defined the [default behavior](https://github.wdf.sap.corp/cdx/cds/blob/1176cba8e1469e56073b15398e3d9681f01aa29e/bin/cds.js#L55) when the uncaught exception happened.
 
-
-
-
+```js
+module.exports = srv => {
+    srv.on("queryAny", async () => {
+        // an example will cause server down
+        new Promise((resolve, reject) => { reject(new Error()) })
+    })
+}
+```
