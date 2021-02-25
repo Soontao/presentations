@@ -12,9 +12,21 @@ Theo Sun
 
 ## HANA CSV import issues
 
-- empty lines
-- ID ignore
-- local deploy flow (quick check with hana issue)
+- CSV will deploy failed when includes empty lines
+- CSV will deploy failed when `ID` field lost
+- CSV deploy will **ERASE** DB table if content changed 
+- deploy at local (quick check hana issues)
+
+---
+
+### HANA Deploy - deploy at local
+
+> deploy the `db` module is slowly
+
+* [enable hana cloud remote access](https://gist.github.com/Soontao/2d39877071ed0574377fcdb68a1c58df)
+* `cds build`, build the hana artifacts
+* create `default-env.json` to `gen/db`, includes the hana connection information.
+* `npm install & npm start` at `gen/db`.
 
 ---
 
@@ -26,7 +38,7 @@ Theo Sun
 
 ---
 
-## Authorization Expert on CDS
+## CDS Authorization Advance
 
 - `grant` with sub query
 - **multi** `grant` with fallback
@@ -38,7 +50,34 @@ Theo Sun
 
 - local debug
 - local debug with xsuaa
-- remote debug
+- remote debug (online)
+
+---
+
+### Remote Debug
+
+> more steps ref [this documents](https://github.com/Soontao/cf-node-debug-example)
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "debug remote server",
+      "address": "127.0.0.1",
+      "port": 39999,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/home/vcap/app",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+  ]
+}
+```
+
 
 ---
 
@@ -58,12 +97,15 @@ Theo Sun
 ## Logging
 
 > integrate with `application-logging`
+> built-in integration is in-progress
 
 - cf-nodejs-logging-support
 
 ---
 
 ## Cluster
+
+> enable cluster to automatic restart server on failure (fast than cloud foundry)
 
 - [example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
 
