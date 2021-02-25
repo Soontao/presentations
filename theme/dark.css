@@ -8,7 +8,7 @@
  * @size 16:9 1920px 1080px
  */
 
- :root {
+:root {
   --atheme-background: black;
   --atheme-current-line: #44475a;
   --atheme-foreground: #f8f8f2;
@@ -17,105 +17,94 @@
   --atheme-green: #50fa7b;
   --atheme-orange: #ffb86c;
   --atheme-pink: #ff79c6;
-  --atheme-purple:#bd93f9;
+  --atheme-purple: #bd93f9;
   --atheme-red: #ff5555;
   --atheme-yellow: #f1fa8c;
 }
 
 html {
-  font-family: Helvetica, 'Microsoft YaHei', 'Consolas', sans-serif;
+  font-family: Helvetica, "Microsoft YaHei", "Consolas", sans-serif;
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: black
+  background: #23241f;
 }
 
-/* atheme Foreground */
 .hljs,
-.hljs-subst,
-.hljs-typing,
-.hljs-variable,
-.hljs-template-variable {
-    color: white
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
 }
 
-/* atheme Comment */
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion {
-    color: grey
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
 }
 
-/* atheme Cyan */
-.hljs-meta .hljs-doctag,
-.hljs-built_in,
-.hljs-selector-tag,
-.hljs-section,
-.hljs-link,
-.hljs-class {
-    color: cyan
-}
-
-
-/* atheme Green */
-.hljs-title {
-    color: green
-}
-
-/* atheme Orange */
-.hljs-params {
-    color: orange
-}
-
-/* atheme Pink */
-.hljs-keyword {
-    color: pink
-}
-
-/* atheme Purple */
-.hljs-literal,
-.hljs-number {
-    color: palevioletred
-}
-
-/* atheme Red */
-.hljs-regexp {
-    color: red
-}
-
-/* atheme Yellow */
-.hljs-string,
-.hljs-name,
-.hljs-type,
-.hljs-attr,
-.hljs-symbol,
 .hljs-bullet,
-.hljs-addition,
-.hljs-template-tag {
-    color:yellow
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
+.hljs-code,
 .hljs-title,
 .hljs-section,
-.hljs-doctag,
-.hljs-type,
-.hljs-name,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
 .hljs-strong {
   font-weight: bold;
 }
 
-.hljs-params,
 .hljs-emphasis {
- font-style: italic;
+  font-style: italic;
 }
 
-svg[data-marp-fitting=svg] {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+svg[data-marp-fitting="svg"] {
   max-height: 580px;
 }
 
@@ -126,7 +115,8 @@ h4,
 h5,
 h6 {
   color: white;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 h1 strong,
 h2 strong,
@@ -173,7 +163,7 @@ blockquote p {
 
 ul > li,
 ol > li {
-  color:  white;
+  color: white;
   font-size: 1.1em;
 }
 
@@ -202,12 +192,11 @@ pre code {
   font-size: 0.7em;
   border: white;
   border-style: dashed;
-  border-width: 3px;
+  border-width: 1px;
 }
 
-pre code svg[data-marp-fitting=svg] {
+pre code svg[data-marp-fitting="svg"] {
   max-height: calc(580px - 1em);
-
 }
 
 blockquote {
@@ -248,7 +237,6 @@ section mark {
 }
 section p {
   color: white;
-
 }
 section code {
   background: #3e9ce0;
@@ -264,7 +252,7 @@ section h6 strong {
   color: var(--atheme-current-line);
 }
 section pre > code {
-  background: var(--atheme-current-line);
+  background: rgb(46, 45, 45);
 }
 section header,
 section footer,
@@ -275,7 +263,7 @@ section blockquote::after {
 }
 section table th,
 section table td {
-  border-color:  var(--atheme-current-line);
+  border-color: var(--atheme-current-line);
 }
 section table thead th {
   background: var(--atheme-current-line);

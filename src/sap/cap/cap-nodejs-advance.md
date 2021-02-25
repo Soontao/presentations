@@ -14,7 +14,7 @@ Theo Sun
 
 - CSV will deploy failed when includes empty lines
 - CSV will deploy failed when `ID` field lost
-- CSV deploy will **ERASE** DB table if content changed 
+- [CSV deploy will **ERASE** DB table if content changed ](https://cap.cloud.sap/docs/guides/databases#providing-initial-data)
 - deploy at local (quick check hana issues)
 
 ---
@@ -114,3 +114,19 @@ Theo Sun
 ## Unit Test
 
 - [cap-unit-test-example](https://github.com/Soontao/cap-unit-test-example)
+
+
+```js
+const cds = require("@sap/cds")
+
+const server = cds.test('.').in(__dirname, "..")
+
+describe('Any Service Test Suite', () => {
+
+    it('should support query', async () => {
+        const response = await server.GET("/any/Peoples")
+        expect(response.data.value.length).toBe(0)
+    });
+
+});
+```
