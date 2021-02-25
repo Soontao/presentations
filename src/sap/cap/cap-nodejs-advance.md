@@ -116,13 +116,6 @@ Theo Sun
 
 - cf-nodejs-logging-support
 
----
-
-## Cluster
-
-> enable cluster to automatic restart server on failure (fast than cloud foundry)
-
-- [example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
 
 --- 
 
@@ -131,20 +124,18 @@ Theo Sun
 > use SAP internal API to perform tests
 
 - [Example](https://github.com/Soontao/cap-unit-test-example)
+- [Complex Example](https://github.com/Soontao/cds-mysql/blob/main/test/integration.test.ts)
 
 
 ```js
 const cds = require("@sap/cds")
-
 const server = cds.test('.').in(__dirname, "..")
 
 describe('Any Service Test Suite', () => {
-
     it('should support query', async () => {
         const response = await server.GET("/any/Peoples")
         expect(response.data.value.length).toBe(0)
     });
-
 });
 ```
 
@@ -162,3 +153,11 @@ module.exports = srv => {
     })
 }
 ```
+
+---
+
+## Cluster
+
+> enable cluster to automatic restart server on failure (fast than cloud foundry)
+
+- [Cluster Example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
