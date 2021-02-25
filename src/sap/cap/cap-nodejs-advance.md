@@ -33,7 +33,7 @@ Theo Sun
 ## Interact with CQN (Query)
 
 - grant
-- req.query
+- req.query (`CSN`)
 - dynamic change query by other parameters
 
 ---
@@ -51,6 +51,27 @@ Theo Sun
 - local debug
 - local debug with xsuaa
 - remote debug (online)
+
+---
+
+### Debug with user information
+
+> debug with [mock user](https://cap.cloud.sap/docs/node.js/authentication#-configuring-specific-users)
+
+```json
+{ "cds":
+  { "[development]": // development only
+    { "auth":
+      { "passport":
+        { "strategy":"mock",
+          "users": 
+            { "admin@aiib.mock.com": // req.user.id
+              { "roles":[
+                // uaa scope
+                "FullReportAccess"
+              ]
+}}}}}}}
+```
 
 ---
 
@@ -88,12 +109,6 @@ Theo Sun
 
 ---
 
-## Transaction
-
-- remember what is `transaction`
-
----
-
 ## Logging
 
 > integrate with `application-logging`
@@ -113,7 +128,9 @@ Theo Sun
 
 ## Unit Test
 
-- [cap-unit-test-example](https://github.com/Soontao/cap-unit-test-example)
+> use SAP internal API to perform tests
+
+- [Example](https://github.com/Soontao/cap-unit-test-example)
 
 
 ```js
@@ -130,3 +147,12 @@ describe('Any Service Test Suite', () => {
 
 });
 ```
+
+---
+
+## Uncaught Exception
+
+
+
+
+
