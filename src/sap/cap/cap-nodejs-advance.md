@@ -204,7 +204,7 @@ const { Mutex } = require("@newdash/newdash/functional/Semaphore")
 > integrate with `application-logging`
 > built-in integration is in-progress
 
-- cf-nodejs-logging-support
+- [cf-nodejs-logging-support](https://github.com/SAP/cf-nodejs-logging-support)
 
 --- 
 
@@ -243,6 +243,8 @@ module.exports = srv => {
 }
 ```
 
+[Github Issue](https://github.wdf.sap.corp/cap/issues/issues/7396)
+
 ---
 
 ## Cluster
@@ -250,3 +252,17 @@ module.exports = srv => {
 > enable cluster to automatic restart server on failure (fast than cloud foundry)
 
 - [Cluster Example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
+
+---
+
+## Links
+
+- [CAP Github Issue](https://github.wdf.sap.corp/cap/issues/issues)
+- [CAP Internal Documentation](https://github.wdf.sap.corp/pages/cap/)
+- [HDI Deploy](https://www.npmjs.com/package/@sap/hdi-deploy)
+- [cds-mysql](https://github.com/Soontao/cds-mysql) and [cds-pg](https://github.com/sapmentors/cds-pg)
+
+
+---
+
+# Thanks :)
