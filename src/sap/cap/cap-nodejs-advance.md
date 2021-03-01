@@ -153,6 +153,40 @@ ORDER BY id ASC limit 1000 []
 }
 ```
 
+---
+
+## Cache
+
+> Simply cache not-frequent-changed items to improve the performance, use `@newdash/newdash/cacheProvider` or `node-cache` is enough
+
+```js
+const { TTLCacheProvider } = require("@newdash/newdash/cacheProvider");
+
+const user_cache_by_user_id = new TTLCacheProvider(DEFAULT_CACHE_SECONDS);
+
+async function queryCurrentUser (srv, req) {
+    const userId = req.user.id;
+    return user_cache_by_user_id.getOrCreate(userId, async () => {
+        const { Users } = srv.entities(NAMESPACE.employee);
+        const user = await srv.run(SELECT.one.from(Users).where({ email_add: userId }));
+        return user;
+    });
+}
+```
+
+---
+
+
+## Concurrency
+
+> `lock` and `sync`, though the `nodejs` is `single thread`, use [`Mutex`](https://newdash.netlify.fornever.org/classes/mutex.html) or [`Semaphore`](https://newdash.netlify.fornever.org/classes/semaphore.html) to keep your code only run once in async operations.
+
+```js
+const { Mutex } = require("@newdash/newdash/functional/Semaphore")
+```
+
+[An Example (only presenter can open it)](https://github.wdf.sap.corp/AIIB-Project/CAS/blob/408725bf78916ea06a5670e80a6421d16ea22d27/srv/util/oauth-client.js#L73)
+
 
 ---
 
