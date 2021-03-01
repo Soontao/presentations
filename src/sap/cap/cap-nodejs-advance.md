@@ -23,10 +23,10 @@ Theo Sun
 
 > deploy the `db` module is slowly
 
-* [enable hana cloud remote access](https://gist.github.com/Soontao/2d39877071ed0574377fcdb68a1c58df)
-* `cds build`, build the hana artifacts
-* create `default-env.json` to `gen/db`, includes the hana connection information.
-* `npm install & npm start` at `gen/db`.
+- [enable hana cloud remote access](https://gist.github.com/Soontao/2d39877071ed0574377fcdb68a1c58df)
+- `cds build`, build the `SAP HANA` artifacts
+- create `default-env.json` to `gen/db`, includes the hana connection information
+- `npm install & npm start` at `gen/db`
 
 ---
 
@@ -38,15 +38,69 @@ Theo Sun
 
 ---
 
+### Interact with CQN (grant)
+
+> declarative grant & limit query
+
+```js
+entity limitedEntity @(restrict : [
+  {
+    grant : 'READ',
+    to    : [
+      'system-user', // client_credentials token
+      'FullReportAccess' // business user with 'FullReportAccess' scope
+    ]
+  },
+  {
+    // fallback
+    grant : 'READ',
+    where : 'fullEntity.column in (select value from authAssign where employee_email = $user)'
+  }
+]) as select from fullEntity;
+```
+
+---
+
+### Interact with CQN (`req.query`) (for nodejs)
+
+> programable limit query, [CAP Java Runtime link](https://cap.cloud.sap/docs/java/query-introspection)
+
+```js
+// really simple event handler
+srv.before("READ", "Peoples", async (req) => {
+  /** @type {import("@sap/cds/apis/ql").SELECT} */
+  const query = req.query
+  query.where({ Age: { ">": 99 } })
+})
+```
+
+```sql
+-- generated SQL
+SELECT   id, createdat, createdby, modifiedat, 
+         modifiedby, NAME, age, date 
+FROM     custom_a_srv_anyservice_peoples ALIAS_1 
+WHERE    age > 99 
+ORDER BY id ASC limit 1000 []
+```
+
+---
+
 ## CDS Authorization Advance
+
+> some topics about authorization
 
 - `grant` with sub query
 - **multi** `grant` with fallback
-- `system-user`
+- `system-user`/`authenticated-user`
+- application just check the **SCOPE** instead of **UAA ROLE**
+
+> keep declarative authorization annotations **simple**.
 
 ---
 
 ## Debug
+
+> aha, **DEBUG** is important
 
 - local debug
 - local debug with xsuaa
@@ -67,8 +121,8 @@ Theo Sun
           "users": 
             { "admin@aiib.mock.com": // req.user.id
               { "roles":[
-                // uaa scope
-                "FullReportAccess"
+                  // uaa scope
+                  "FullReportAccess"
               ]
 }}}}}}}
 ```
@@ -104,6 +158,8 @@ Theo Sun
 
 ## OData V2 Support
 
+> IF YOU WANT.
+
 - use [cds-odata-v2-adapter-proxy](https://www.npmjs.com/package/@sap/cds-odata-v2-adapter-proxy)
 - remember defined the `key` for view/query, because the adapter is not support the collection without key
 
@@ -116,12 +172,11 @@ Theo Sun
 
 - cf-nodejs-logging-support
 
-
 --- 
 
 ## Unit Test
 
-> use SAP internal API to perform tests
+> use SAP internal API to perform unit tests
 
 - [Example](https://github.com/Soontao/cap-unit-test-example)
 - [Complex Example](https://github.com/Soontao/cds-mysql/blob/main/test/integration.test.ts)
@@ -147,10 +202,10 @@ cds nodejs runtime defined the [default behavior](https://github.wdf.sap.corp/cd
 
 ```js
 module.exports = srv => {
-    srv.on("queryAny", async () => {
-        // an example will cause server down
-        new Promise((resolve, reject) => { reject(new Error()) })
-    })
+  srv.on("queryAny", async () => {
+    // an example will cause server down
+    new Promise((resolve, reject) => { reject(new Error()) })
+  })
 }
 ```
 
