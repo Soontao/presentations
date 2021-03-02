@@ -3,7 +3,9 @@ marp: true
 theme: dark
 ---
 
-# CAP NodeJS Runtime Advance
+![bg 50%](https://cap.cloud.sap/docs/assets/logos/cap.svg)
+
+# CAP NodeJS Runtime Advance 
 
 Theo Sun
 2021
@@ -27,6 +29,40 @@ Theo Sun
 - `cds build`, build the `SAP HANA` artifacts
 - create `default-env.json` to `gen/db`, includes the hana connection information
 - `npm install & npm start` at `gen/db`
+
+> or
+
+- simply use `cds deploy -2 hana`
+
+---
+
+### HDB Table Data Issue
+
+> How it works ?
+
+ERASE DATA ON (by default):
+
+- schema change -- `OVERWRITE` with CSV
+- csv content change -- `OVERWRITE` with CSV
+- hdi undeploy -- `CLEAN` ALL DATA
+
+---
+
+### HDB Table Data Issue Links
+
+- [Data lost for table even after updating in undeploy.json](https://github.wdf.sap.corp/cap/issues/issues/6735)
+- [CSV un-deployment is executed multiple times and deletes all custom data from the table](https://github.wdf.sap.corp/xs2/hdideploy.js/issues/764)
+- [Table Data (.hdbtabledata)](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US/35c4dd829d2046f29fc741505302f74d.html)
+
+---
+
+### HDB Table Data Issue
+
+> How to solve ?
+
+- [`include_filter`](https://gist.github.com/Soontao/b18044f11e77f057ff9b7f7d6af58469#file-custom_a_db_people-hdbtabledata-json-L22) - where **predefined** == true, it will deploy & undeploy with filter
+- **BACKUP** is important
+- DO NOT use `.hdbtabledata` anymore
 
 ---
 
@@ -260,6 +296,7 @@ module.exports = srv => {
 - [CAP Github Issue](https://github.wdf.sap.corp/cap/issues/issues)
 - [CAP Internal Documentation](https://github.wdf.sap.corp/pages/cap/)
 - [HDI Deploy](https://www.npmjs.com/package/@sap/hdi-deploy)
+- [SAP JSON Schema](https://marketplace.visualstudio.com/items?itemName=TheoSun.sap-json-schemas)
 - [cds-mysql](https://github.com/Soontao/cds-mysql) and [cds-pg](https://github.com/sapmentors/cds-pg)
 
 
