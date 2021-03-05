@@ -99,7 +99,7 @@ entity limitedEntity @(restrict : [
 
 ### Interact with CQN (`req.query`) (for nodejs)
 
-> programable limit query, [CAP Java Runtime link](https://cap.cloud.sap/docs/java/query-introspection)
+> programable `query` modification, [CAP Java Runtime link](https://cap.cloud.sap/docs/java/query-introspection)
 
 ```js
 // really simple event handler
