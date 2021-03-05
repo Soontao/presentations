@@ -23,7 +23,7 @@ Theo Sun
 
 ### HANA Deploy - deploy at local
 
-> deploy the `db` module is slowly
+> save your time
 
 - [enable hana cloud remote access](https://gist.github.com/Soontao/2d39877071ed0574377fcdb68a1c58df)
 - `cds build`, build the `SAP HANA` artifacts
@@ -63,20 +63,27 @@ ERASE DATA ON (by default):
 - [`include_filter`](https://gist.github.com/Soontao/b18044f11e77f057ff9b7f7d6af58469#file-custom_a_db_people-hdbtabledata-json-L22) - where **predefined** == true, it will deploy & undeploy with filter
 - **BACKUP** is important
 - DO NOT use `.hdbtabledata` anymore
+- or build [a simply CSV migration script](https://github.com/Soontao/cds-mysql/blob/main/bin/cds-mysql-deploy.js#L91-L170) with primary keys verification for initial data provision
 
 ---
 
-## Interact with CQN (Query)
+## CDS Authorization Advance
 
-- grant
-- req.query (`CSN`)
-- dynamic change query by other parameters
+> some topics about authorization
+
+- `grant` with sub query
+- **multi** `grant` with fallback
+- modify `req.query` ([CQN](https://cap.cloud.sap/docs/cds/cqn)) with programming API
+- `system-user`/`authenticated-user`
+- application just check the **SCOPE** instead of **UAA ROLE**
+
+> keep declarative authorization annotations **simple**.
 
 ---
 
-### Interact with CQN (grant)
+### Declarative `grant` advance
 
-> declarative grant & limit query
+> fallback & sub query in `grant`
 
 ```js
 entity limitedEntity @(restrict : [
@@ -88,7 +95,7 @@ entity limitedEntity @(restrict : [
     ]
   },
   {
-    // fallback
+    // fallback for normal user
     grant : 'READ',
     where : 'fullEntity.column in (select value from authAssign where employee_email = $user)'
   }
@@ -99,7 +106,7 @@ entity limitedEntity @(restrict : [
 
 ### Interact with CQN (`req.query`) (for nodejs)
 
-> programable `query` modification, [CAP Java Runtime link](https://cap.cloud.sap/docs/java/query-introspection)
+> programable `query` modification, [CAP Java Runtime API link](https://cap.cloud.sap/docs/java/query-introspection)
 
 ```js
 // really simple event handler
@@ -119,18 +126,17 @@ WHERE    age > 99
 ORDER BY id ASC limit 1000 []
 ```
 
+
 ---
 
-## CDS Authorization Advance
+## Configuration Files
 
-> some topics about authorization
+> some configuration file in `CAP`
 
-- `grant` with sub query
-- **multi** `grant` with fallback
-- `system-user`/`authenticated-user`
-- application just check the **SCOPE** instead of **UAA ROLE**
-
-> keep declarative authorization annotations **simple**.
+- `package.json` -> `cds`
+- `default-env.json`
+- `.env`
+- `.vscode/settings.json`
 
 ---
 
@@ -139,12 +145,12 @@ ORDER BY id ASC limit 1000 []
 > aha, **DEBUG** is important
 
 - local debug
-- local debug with xsuaa
+- local debug with xsuaa/hana
 - remote debug (online)
 
 ---
 
-### Debug with user information
+### Debug with mock user information
 
 > debug with [mock user](https://cap.cloud.sap/docs/node.js/authentication#-configuring-specific-users)
 
@@ -161,6 +167,52 @@ ORDER BY id ASC limit 1000 []
                   "FullReportAccess"
               ]
 }}}}}}}
+```
+
+---
+
+### Debug with HANA & XSUAA
+
+> set `NODE_ENV` to `production`
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debug server (production)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/@sap/cds/bin/cds.js",
+      "args": [ "run" ],
+      "env": { "NODE_ENV": "production" },
+      "skipFiles": [ "<node_internals>/**" ]
+    },
+  ]
+}
+```
+
+---
+
+### Debug with HANA only
+
+> set `NODE_ENV` to `local-hana`, `production` will disable mock users
+
+```json
+{
+  "cds": {
+    "[local-hana]": {
+      "requires": {
+        "db": { "kind": "hana" }
+      },
+      "auth": {
+        "passport": { "strategy": "mock" }
+      }
+    }
+  }
+}
+
 ```
 
 ---
@@ -257,10 +309,10 @@ const cds = require("@sap/cds")
 const server = cds.test('.').in(__dirname, "..")
 
 describe('Any Service Test Suite', () => {
-    it('should support query', async () => {
-        const response = await server.GET("/any/Peoples")
-        expect(response.data.value.length).toBe(0)
-    });
+  it('should support query', async () => {
+    const response = await server.GET("/any/Peoples")
+    expect(response.data.value.length).toBe(0)
+  });
 });
 ```
 
@@ -283,11 +335,38 @@ module.exports = srv => {
 
 ---
 
-## Cluster
+### Uncaught Exception Cluster
 
 > enable cluster to automatic restart server on failure (fast than cloud foundry)
 
-- [Cluster Example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
+- [CAP Cluster Example](https://gist.github.com/Soontao/8e63daa8cae5d03af1ebd182c143115b)
+
+---
+
+## Security Topics
+
+> To solve problems from pentest 
+
+- `CSRF` protection is fulfilled by `approuter` 
+- `Host`/`X-Forwarded-Host` injection
+
+--- 
+
+## Security Topics - `Host`/`X-Forwarded-Host` injection
+
+> example snippet in `server.js`
+
+```js
+app.use(req => {
+  const hostname = req.hostname
+  if (ALLOWED_HOSTNAME.includes(hostname)) {
+    req.next()
+  } else {
+    req.res.status(400)
+    req.next(new Error(`not allowed hostname ${hostname}`))
+  }
+})
+```
 
 ---
 
@@ -298,7 +377,6 @@ module.exports = srv => {
 - [HDI Deploy](https://www.npmjs.com/package/@sap/hdi-deploy)
 - [SAP JSON Schema](https://marketplace.visualstudio.com/items?itemName=TheoSun.sap-json-schemas)
 - [cds-mysql](https://github.com/Soontao/cds-mysql) and [cds-pg](https://github.com/sapmentors/cds-pg)
-
 
 ---
 
