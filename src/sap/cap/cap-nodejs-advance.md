@@ -219,7 +219,7 @@ ORDER BY id ASC limit 1000 []
 
 ### Remote Debug
 
-> more steps ref [this documents](https://github.com/Soontao/cf-node-debug-example)
+> check more details in [this documents](https://github.com/Soontao/cf-node-debug-example), also, there is a [document](https://community.pivotal.io/s/article/How-to-Remotely-Debug-Java-Applications-on-Cloud-Foundry?language=en_US) for java/spring
 
 ```json
 {
@@ -233,9 +233,7 @@ ORDER BY id ASC limit 1000 []
       "port": 39999,
       "localRoot": "${workspaceFolder}",
       "remoteRoot": "/home/vcap/app",
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "skipFiles": [ "<node_internals>/**" ]
     },
   ]
 }
@@ -267,7 +265,7 @@ async function queryCurrentUser (srv, req) {
 
 ## Concurrency
 
-> `lock` and `sync`, though the `nodejs` is `single thread`, use [`Mutex`](https://newdash.netlify.fornever.org/classes/mutex.html) or [`Semaphore`](https://newdash.netlify.fornever.org/classes/semaphore.html) to keep your code only run once in async operations.
+> `lock` and `sync`, though the `nodejs` is `single thread`, use [`Mutex`](https://newdash.netlify.fornever.org/classes/mutex.html) or [`Semaphore`](https://newdash.netlify.fornever.org/classes/semaphore.html) to make the async operations are executed synchronized.
 
 ```js
 const { Mutex } = require("@newdash/newdash/functional/Semaphore")
@@ -318,7 +316,7 @@ describe('Any Service Test Suite', () => {
 
 ---
 
-## Uncaught Exception
+## Uncaught Exception in NodeJS
 
 cds nodejs runtime defined the [default behavior](https://github.wdf.sap.corp/cdx/cds/blob/1176cba8e1469e56073b15398e3d9681f01aa29e/bin/cds.js#L55) when the uncaught exception happened.
 
@@ -335,7 +333,7 @@ module.exports = srv => {
 
 ---
 
-### Uncaught Exception Cluster
+### Uncaught Exception - use `Cluster`
 
 > enable cluster to automatic restart server on failure (fast than cloud foundry)
 
@@ -367,6 +365,14 @@ app.use(req => {
   }
 })
 ```
+
+---
+
+## MTA Topics
+
+- `cf deploy` alert `memory quota exceed`, reduce `app-deployer` `db-deployer` memory to `256M`
+- `xsuaa` `api-access` plan DO NOT support `update configuration` -> existing-service
+- `IDP_ORIGIN` is different from `ADFS` tenants -> set it to mta properties (CF Environment Variables)
 
 ---
 

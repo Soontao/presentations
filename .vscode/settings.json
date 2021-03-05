@@ -14,7 +14,8 @@
     "microservices",
     "multitenant",
     "thedockerimages",
-    "theosun"
+    "theosun",
+    "vcap"
   ],
   "editor.formatOnSave": true,
   "markdown.marp.themes": [
