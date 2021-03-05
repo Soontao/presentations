@@ -3,7 +3,7 @@ marp: true
 theme: dark
 ---
 
-![bg 50%](https://cap.cloud.sap/docs/assets/logos/cap.svg)
+![blur bg 50%](https://cap.cloud.sap/docs/assets/logos/cap.svg)
 
 # CAP NodeJS Runtime Advance 
 
