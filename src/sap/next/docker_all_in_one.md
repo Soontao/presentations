@@ -3,9 +3,9 @@ marp: true
 theme: dark
 ---
 
-# Docker, First Step
+# Docker, All in One
 
-> basically introduce `docker` technology
+> ALL in ONE session about docker
 
 Theo Sun
 2021
@@ -23,6 +23,36 @@ Theo Sun
 - `Linux` kernel support
 - Golang based
 - Uniform standards (Linux, AMD64)
+
+---
+
+## Linux Control Group
+
+
+---
+
+## CGroup Example for Example
+
+---
+
+
+## Linux Mount Namespace
+
+---
+
+## Mount FS Example
+
+---
+
+## ROOT FS
+
+[Reference](https://www.jianshu.com/p/4dab04e6d1e4)
+
+---
+
+## Docker Architecture
+
+
 
 ---
 
