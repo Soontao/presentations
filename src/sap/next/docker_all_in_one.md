@@ -69,6 +69,8 @@ Theo Sun
 
 ## Hands On - Run a simple web server
 
+> Environment Introduction
+
 - host:
 - user:
 - password:
@@ -78,7 +80,7 @@ Theo Sun
 ssh user@host 
 # pull image with version
 docker pull thedockerimages/hello-web-server:0.0.2
-# create a new instance with image 'thedockerimages/hello-web-server@0.0.2'
+# create a new running container with image 'thedockerimages/hello-web-server@0.0.2'
 docker run -d --restart=always -P --name hello-web-server-$USER thedockerimages/hello-web-server:0.0.2
 # show your container information
 docker ps | grep hello-web-server-$USER
