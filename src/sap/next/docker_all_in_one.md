@@ -21,38 +21,29 @@ Theo Sun
 ## Key Points
 
 - `Linux` kernel support
-- Golang based
+- Golang based (simply C lang API integration)
 - Uniform standards (Linux, AMD64)
 
 ---
 
-## Linux Control Group
+## Control Group - Resource Limit
 
-
----
-
-## CGroup Example for Example
-
----
-
-
-## Linux Mount Namespace
+- Since 2007 (v1)
+- Features
+  - Resource Limiting - cpu/memory
+  - Prioritization
+  - Accounting - measures a group's resource usage
+  - Process Control - checkpoint and restarting
+- Commands: `cgcreate`, [`cgexec`](https://linux.die.net/man/1/cgexec)
 
 ---
 
-## Mount FS Example
+## Linux Namespace - Isolation
 
----
+> Namespaces are a feature of the Linux kernel that partitions kernel resources such that one set of processes sees one set of resources while another set of processes sees a different set of resources. 
 
-## ROOT FS
-
-[Reference](https://www.jianshu.com/p/4dab04e6d1e4)
-
----
-
-## Docker Architecture
-
-
+- Kinds: mount(`fs`)/process(`pid`)/net(`private network`)/user id/control group(resource)
+- Commands: [`unshare`](https://man7.org/linux/man-pages/man1/unshare.1.html)
 
 ---
 
@@ -124,10 +115,20 @@ docker rm hello-web-server-$USER # remove container, you can not restart it agai
 
 ## Hands On - Build a new image based on existed one
 
+- create a new `Dockerfile` in a directory
+- copy and edit the content, remember to replace the `YOURNAME` to your name
+
 ```Dockerfile
 FROM thedockerimages/hello-web-server:0.0.2
-ENV SERVICE_NAME yourname-web-server
+ENV SERVICE_NAME YOURNAME-web-service
 ```
+
+- run `docker build -t "$USER-web-server" .` to build your image
+- run `docker run -d -P "$USER-web-server"` to automatically expose service
+- run `docker run -d -p "$(id -u $USER):3000" "$USER-web-server"` to expose the service to the specific port (your uid in linux system)
+- run `docker ps | grep "$USER-web-server"` to list all running containers
+- run `docker stop GUID` to stop the specific container
+
 
 ---
 
@@ -228,6 +229,14 @@ docker push
 ---
 
 # Hands On - accelerate your build
+
+---
+
+# Reference Documents
+
+- [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
+- [Root FS](https://www.jianshu.com/p/4dab04e6d1e4)
+
 
 ---
 
