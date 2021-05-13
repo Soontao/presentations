@@ -131,6 +131,14 @@ ENV SERVICE_NAME YOURNAME-web-service
 - run `docker ps | grep "$USER-web-server"` to list all running containers
 - run `docker stop GUID` to stop the specific container
 
+---
+
+## Hands On - Create an app and run it in docker
+
+- create an application
+- create `Dockerfile` for application
+- docker build to create image
+- docker run to create container
 
 ---
 
@@ -158,15 +166,6 @@ CMD ["node", "lib"]
 docker login
 docker push
 ```
-
----
-
-## Hands On - Create an app and run it in docker
-
-- create an application
-- create `Dockerfile`
-- docker build
-- docker run
 
 ---
 
