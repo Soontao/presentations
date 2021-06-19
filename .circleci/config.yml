@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10-browsers
+      - image: circleci/node:14-browsers
 
     working_directory: ~/repo
 
@@ -13,7 +13,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
-          
+
       - run: npm install
       - run: bash ./build.sh
       - run: rm dist/.gitkeep
@@ -21,7 +21,7 @@ jobs:
 
       - persist_to_workspace:
           root: ./
-          paths: 
+          paths:
             - dist.zip
 
       - save_cache:
@@ -41,7 +41,6 @@ jobs:
             VERSION=${CIRCLE_TAG}
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ~/artifacts/dist.zip
 
-            
 workflows:
   version: 2
   main:
