@@ -26,7 +26,7 @@ Theo Sun
 
 ---
 
-## Control Group - Resource Limit
+## Fundamental - Control Group - Resource Limit
 
 - Since 2007 (v1)
 - Features
@@ -38,7 +38,7 @@ Theo Sun
 
 ---
 
-## Linux Namespace - Isolation
+## Fundamental - Linux Namespace - Isolation
 
 > Namespaces are a feature of the Linux kernel that partitions kernel resources such that one set of processes sees one set of resources while another set of processes sees a different set of resources. 
 
@@ -47,16 +47,7 @@ Theo Sun
 
 ---
 
-## Docker Components
-
-- Docker Daemon
-- Docker Cli
-- Docker Swarm
-- Docker Registry
-
----
-
-## Core Concepts
+## Docker Core Concepts
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1609739230/docker-lifecycle_c0b9ia.png)
 
@@ -64,9 +55,14 @@ Theo Sun
 - Container (Running instance, like `custom-java-app-01`)
 - Volume (Storage of container)
 - Network (Private network of many containers)
-
 ---
 
+# Docker Storage Concept
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1624080670/container-layers_fc3uwp.jpg)
+
+---
+ 
 ## Hands On - Run a simple web server
 
 > Environment Introduction
@@ -222,10 +218,10 @@ docker push
 
 ## Accelerate Docker Build
 
-* Install dependency firstly
-* Cache built artifacts
-* Install binary dependency
-* Use proper base image
+- Install dependency firstly
+- Cache built artifacts
+- Install binary dependency
+- Use proper base image
 
 ---
 

@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "JIRA",
+    "Kyma",
     "Netlify",
     "Preload",
     "Theo",
@@ -10,6 +11,7 @@
     "gitkeep",
     "graphviz",
     "hana",
+    "kubectl",
     "marp",
     "microservices",
     "multitenant",
