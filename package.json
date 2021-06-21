@@ -4,6 +4,10 @@
   "description": "Presentations",
   "private": true,
   "main": "index.js",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
   "scripts": {
     "server": "marp -p --server ./src",
     "release": "standard-version --commit-all --no-verify && git push --follow-tags origin master"
