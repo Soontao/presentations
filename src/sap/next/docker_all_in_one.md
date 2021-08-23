@@ -57,7 +57,7 @@ Theo Sun
 - Network (Private network of many containers)
 ---
 
-# Docker Storage Concept
+## Docker Storage Concept
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1624080670/container-layers_fc3uwp.jpg)
 
@@ -225,15 +225,25 @@ docker push
 
 ---
 
-# Hands On - accelerate your build
+## Hands On - accelerate your build
 
+> using `RSSHub` project as example
+
+```bash
+docker build -t basic.rsshub -f ./basic-rsshub.Dockerfile .
+docker build -t optimized.rsshub -f ./optmized-rsshub.Dockerfile .
+
+docker images | grep rsshub
+optimized.rsshub                   latest       1127ed603946   About a minute ago   291MB
+basic.rsshub                       latest       e4780855d313   8 minutes ago        467MB
+```
 ---
 
 # Reference Documents
 
 - [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
 - [Root FS](https://www.jianshu.com/p/4dab04e6d1e4)
-
+- [Dive](https://github.com/wagoodman/dive)
 
 ---
 
