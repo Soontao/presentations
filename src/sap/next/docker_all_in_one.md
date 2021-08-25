@@ -55,17 +55,9 @@ Theo Sun
 
 ---
  
-## Demo- Run a simple web server
-
-> Environment Introduction
-
-- host:
-- user:
-- password:
+## Demo - Run a simple web server
 
 ```bash
-# login to server
-ssh user@host 
 # pull image with version
 docker pull thedockerimages/hello-web-server:0.0.2
 # create a new running container with image 'thedockerimages/hello-web-server@0.0.2'
@@ -165,42 +157,6 @@ docker push
 
 ---
 
-## Volume
-
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1609748522/docker-volume_3_mt0mnn.png)
-
-- Persisted storage cross container instances
-
----
-
-## Demo - Bind Volume
-
-- create a volume
-- create a container bind with volume 
-- change the resource
-- destroy the container
-- create a new container bind with volume
-- access the resource
-
----
-
-## Network
-
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1609749292/Docker-Network_3_pskrqn.png)
-
-- Isolation
-- Security
-
----
-
-## Demo - Bind Network
-
-- create a new network
-- create two services
-- call a service API with cascade API call
-
----
-
 ## Optimize Docker Image Size
 
 - Ignore Unused Files (docs/images/tests)
@@ -251,6 +207,35 @@ docker buildx build \
   --file ./Dockerfile --push .
 ```
 
+
+---
+
+## Volume
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1609748522/docker-volume_3_mt0mnn.png)
+
+- Persisted storage cross container instances (upgrade/multi instances)
+
+---
+
+## Network
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1609749292/Docker-Network_3_pskrqn.png)
+
+- Isolation
+- Security
+- Convenience
+
+---
+
+## Network Tasks
+
+* [bridge](https://docs.docker.com/network/bridge/) (default) & host network
+* create network
+* connect network
+* communication with different containers in same network
+
+
 ---
 
 ## Why we use docker (container) ?
@@ -284,6 +269,7 @@ docker buildx build \
 ```bash
 cf push theo-hello-web-server --docker-image thedockerimages/hello-web-server:latest
 ```
+
 
 ---
 
