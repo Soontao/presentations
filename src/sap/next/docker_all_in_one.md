@@ -5,7 +5,7 @@ theme: dark
 
 # Docker, All in One
 
-> ALL in ONE session about docker
+> ALL in ONE session about `docker`
 
 Theo Sun
 2021
@@ -14,15 +14,7 @@ Theo Sun
 
 ## Introduction
 
-> `Docker` is a set of platform as a service (PaaS) products that use `OS-level virtualization` to deliver software in packages called containers. `Containers` are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a `single operating system kernel` and therefore use fewer resources than virtual machines.
-
----
-
-## Key Points
-
-- `Linux` kernel support
-- Golang based (simply C lang API integration)
-- Uniform standards (Linux, AMD64)
+> `Docker` is a set of platform as a service (PaaS) products that use [`OS-level virtualization`](https://en.wikipedia.org/wiki/OS-level_virtualization) to deliver software in packages called containers. `Containers` are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a `single operating system kernel` and therefore use fewer resources than virtual machines.
 
 ---
 
@@ -63,7 +55,7 @@ Theo Sun
 
 ---
  
-## Hands On - Run a simple web server
+## Demo- Run a simple web server
 
 > Environment Introduction
 
@@ -97,7 +89,7 @@ docker ps | grep hello-web-server-$USER
 
 ---
 
-## Hands On - Inspect/Change a running container
+## Demo - Inspect/Change a running container
 
 ```bash
 docker exec -it hello-web-server-$USER sh # run a shell into container
@@ -111,7 +103,7 @@ docker rm hello-web-server-$USER # remove container, you can not restart it agai
 
 ---
 
-## Hands On - Build a new image based on existed one
+## Demo- Build a new image based on existed one
 
 - create a new `Dockerfile` in a directory
 - copy and edit the content, remember to replace the `YOURNAME` to your name
@@ -129,7 +121,7 @@ ENV SERVICE_NAME YOURNAME-web-service
 
 ---
 
-## Hands On - Create an app and run it in docker
+## Demo- Create an app and run it in docker
 
 - create an application
 - create `Dockerfile` for application
@@ -173,7 +165,7 @@ docker push
 
 ---
 
-## Hands On - Bind Volume
+## Demo- Bind Volume
 
 - create a volume
 - create a container bind with volume 
@@ -193,7 +185,7 @@ docker push
 
 ---
 
-## Hands On - Bind Network
+## Demo- Bind Network
 
 - create a new network
 - create two services
@@ -208,9 +200,9 @@ docker push
 
 ---
 
-## Hands On - try to reduce your image size
+## Demo - try to reduce your image size
 
-- `.dockerignore`
+- [`.dockerignore`](https://docs.docker.com/engine/reference/builder/#dockerignore-file)
 - remove build dependencies
 - multi stage build
 
@@ -225,18 +217,66 @@ docker push
 
 ---
 
-## Hands On - accelerate your build
+## Demo
 
 > using `RSSHub` project as example
 
 ```bash
 docker build -t basic.rsshub -f ./basic-rsshub.Dockerfile .
-docker build -t optimized.rsshub -f ./optmized-rsshub.Dockerfile .
+docker build -t optimized.rsshub -f  ./rsshub-optmized.Dockerfile .
 
 docker images | grep rsshub
 optimized.rsshub                   latest       1127ed603946   About a minute ago   291MB
 basic.rsshub                       latest       e4780855d313   8 minutes ago        467MB
 ```
+
+---
+
+## Cross Build
+
+> Using docker [buildx](https://docs.docker.com/buildx/working-with-buildx/) to build images cross CPU/OS arch
+
+```bash
+docker buildx build \ 
+  --tag example/imagename:latest \
+  --platform linux/amd64,linux/arm/v7,linux/arm64 \
+  --file ./Dockerfile --push .
+```
+
+---
+
+## Why we use docker (container) ?
+
+* Build and archive software artifacts with dependencies
+  * executable software
+  * native c API lib, binaries & other environments
+* Resource control & Isolation for multi container in single server
+
+---
+
+## Open Container Initiative - OCI
+
+* Docker is a private company
+* Docker hub is controlled by Docker company
+* established in June 2015 by Docker
+* define the standard of container/image
+
+---
+
+## Kyma, Kubernates and Docker
+
+- Kyma runs on Kubernates
+- Kubernates runs on Docker (or other supported [runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/))
+- Docker runs on Linux
+
+---
+
+## Bonus Demo - Run a container on Cloud Foundry
+
+```bash
+cf push theo-hello-web-server --docker-image thedockerimages/hello-web-server:latest
+```
+
 ---
 
 # Reference Documents
@@ -244,6 +284,7 @@ basic.rsshub                       latest       e4780855d313   8 minutes ago    
 - [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
 - [Root FS](https://www.jianshu.com/p/4dab04e6d1e4)
 - [Dive](https://github.com/wagoodman/dive)
+- [Deploying an App with Docker](https://docs.cloudfoundry.org/devguide/deploy-apps/push-docker.html)
 
 ---
 
