@@ -103,7 +103,7 @@ docker rm hello-web-server-$USER # remove container, you can not restart it agai
 
 ---
 
-## Demo- Build a new image based on existed one
+## Demo - Build a new image based on existed one
 
 - create a new `Dockerfile` in a directory
 - copy and edit the content, remember to replace the `YOURNAME` to your name
@@ -121,7 +121,7 @@ ENV SERVICE_NAME YOURNAME-web-service
 
 ---
 
-## Demo- Create an app and run it in docker
+## Demo - Create an app and run it in docker
 
 - create an application
 - create `Dockerfile` for application
@@ -144,7 +144,7 @@ CMD ["node", "lib"]
 
 ---
 
-## Demo - Publish your image (to public registry)
+## Demo - Publish your image (to DockerHub registry)
 
 - registry
 - build image
@@ -154,6 +154,14 @@ CMD ["node", "lib"]
 docker login
 docker push
 ```
+
+--- 
+
+## Registry
+
+- Public Registry - [Docker Hub](https://hub.docker.com/)
+- [Quay.io](http://quay.io/)
+- Amazon [ECR](https://aws.amazon.com/ecr)
 
 ---
 
@@ -165,7 +173,7 @@ docker push
 
 ---
 
-## Demo- Bind Volume
+## Demo - Bind Volume
 
 - create a volume
 - create a container bind with volume 
@@ -185,7 +193,7 @@ docker push
 
 ---
 
-## Demo- Bind Network
+## Demo - Bind Network
 
 - create a new network
 - create two services
