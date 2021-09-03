@@ -210,7 +210,7 @@ docker buildx build --platform linux/arm64 .
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1609748522/docker-volume_3_mt0mnn.png)
 
-- Persisted storage cross container instances (upgrade/multi instances)
+- persisted storage cross container instances (upgrade/multi instances)
 - support different drivers (include NFS or iSCSI network drivers)
 
 ---
@@ -250,10 +250,10 @@ cat /app/data
 
 ## Network Tasks
 
-* [bridge](https://docs.docker.com/network/bridge/) (default) & host network
-* create network
-* connect network
-* communication with different containers in same network
+- [bridge](https://docs.docker.com/network/bridge/) (default) & host network
+- create network
+- connect network
+- communication with different containers in same network
 
 ---
 
