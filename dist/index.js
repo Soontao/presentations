@@ -1,7 +1,17 @@
 
 sap.ui.getCore().attachInit(function () {
 
-  const model = new sap.ui.model.json.JSONModel([])
+  const previewContent = new sap.ui.model.json.JSONModel({ content: "<div></div>" })
+
+  const previewHtml = new sap.ui.core.HTML({
+    id: "previewHtml",
+    content: `{/content}`,
+    sanitizeContent: true
+  })
+
+  previewHtml.setModel(previewContent)
+
+  const presentationList = new sap.ui.model.json.JSONModel([])
   const list = new sap.m.SelectList({
     items: {
       path: "/",
@@ -10,50 +20,76 @@ sap.ui.getCore().attachInit(function () {
       })
     },
     itemPress: event => {
-      const presentationPath = event.getParameter("item").getBindingContext().getObject("path")
-      window.open(presentationPath, "_blank").focus()
+      const presentationPath = event
+        .getParameter("item")
+        .getBindingContext()
+        .getObject("path")
+
+      previewContent.setProperty(
+        "/content",
+        `<iframe src="${presentationPath}"></iframe>`
+      )
+
     }
   })
 
-  model.loadData("./presentations.json")
+  presentationList.loadData("./presentations.json")
 
-  list.setModel(model)
+  list.setModel(presentationList)
 
-  const app = new sap.m.App({
-    pages: new sap.m.Page({
-      content: [list],
-      customHeader: new sap.m.Bar({
-        contentLeft: [
-          new sap.m.Title({ text: "Theo's Presentation List" }),
-        ],
-        contentMiddle: [
-          (
-            new sap.m.SearchField({
-              liveChange: (event) => {
-                const value = event.getParameter("newValue")
-                const binding = list.getBinding("items")
-                binding.filter([
-                  new sap.ui.model.Filter({
-                    path: "title",
-                    operator: sap.ui.model.FilterOperator.Contains,
-                    value1: value,
-                  })
-                ])
-              },
-            })
-          ).addStyleClass("sapUiHideOnPhone")
-        ],
-        contentRight: [
-          new sap.m.Button({
-            icon: "sap-icon://source-code",
-            text: "Source Code",
-            press: () => {
-              window.open("https://github.com/Soontao/presentations", "_blank").focus()
-            }
-          }),
-        ]
+  const app = new sap.m.SplitApp({
+    id: "mainApp",
+    initialMaster: "initMaster",
+    initialDetail: "initDetail",
+    detailPages: [
+      new sap.m.Page({
+        id: "initDetail",
+        customHeader: new sap.m.Bar({
+          contentLeft: [
+            new sap.m.Title({ text: "Theo's Presentation List" }),
+          ],
+          contentRight: [
+            new sap.m.Button({
+              icon: "sap-icon://source-code",
+              text: "Source Code",
+              press: () => {
+                window.open("https://github.com/Soontao/presentations", "_blank").focus()
+              }
+            }),
+          ]
+        }),
+        content: [previewHtml]
+      }),
+
+    ],
+    masterPages: [
+      new sap.m.Page({
+        id: "initMaster",
+        content: [list],
+        customHeader: new sap.m.Bar({
+          contentLeft: [
+            (
+              new sap.m.SearchField({
+                placeholder: "Search 🚀",
+                liveChange: (event) => {
+                  const value = event.getParameter("newValue")
+                  const binding = list.getBinding("items")
+                  binding.filter([
+                    new sap.ui.model.Filter({
+                      path: "title",
+                      operator: sap.ui.model.FilterOperator.Contains,
+                      value1: value,
+                    })
+                  ])
+                },
+              })
+            ).addStyleClass("sapUiHideOnPhone"),
+            // new sap.m.Title({ text: "Theo's Presentation List" }),
+          ],
+
+        })
       })
-    })
+    ]
   })
 
   const shell = new sap.m.Shell({ app })
