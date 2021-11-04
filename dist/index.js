@@ -68,23 +68,20 @@ sap.ui.getCore().attachInit(function () {
         content: [list],
         customHeader: new sap.m.Bar({
           contentLeft: [
-            (
-              new sap.m.SearchField({
-                placeholder: "Search 🚀",
-                liveChange: (event) => {
-                  const value = event.getParameter("newValue")
-                  const binding = list.getBinding("items")
-                  binding.filter([
-                    new sap.ui.model.Filter({
-                      path: "title",
-                      operator: sap.ui.model.FilterOperator.Contains,
-                      value1: value,
-                    })
-                  ])
-                },
-              })
-            ).addStyleClass("sapUiHideOnPhone"),
-            // new sap.m.Title({ text: "Theo's Presentation List" }),
+            new sap.m.SearchField({
+              placeholder: "Search 🚀",
+              liveChange: (event) => {
+                const value = event.getParameter("newValue")
+                const binding = list.getBinding("items")
+                binding.filter([
+                  new sap.ui.model.Filter({
+                    path: "title",
+                    operator: sap.ui.model.FilterOperator.Contains,
+                    value1: value,
+                  })
+                ])
+              },
+            })
           ],
 
         })
