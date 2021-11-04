@@ -198,15 +198,11 @@ basic.rsshub                       latest       e4780855d313   8 minutes ago    
 
 ## Cross Build
 
-> Using docker [buildx](https://docs.docker.com/buildx/working-with-buildx/) to build images cross CPU/OS arch
+> Using docker [buildx](https://docs.docker.com/buildx/working-with-buildx/) to build images cross different CPU/OS arch
 
 ```bash
-docker buildx build \ 
-  --tag example/imagename:latest \
-  --platform linux/amd64,linux/arm/v7,linux/arm64 \
-  --file ./Dockerfile --push .
+docker buildx build --platform linux/arm64 .
 ```
-
 
 ---
 
@@ -214,8 +210,32 @@ docker buildx build \
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1609748522/docker-volume_3_mt0mnn.png)
 
-- Persisted storage cross container instances (upgrade/multi instances)
+- persisted storage cross container instances (upgrade/multi instances)
+- support different drivers (include NFS or iSCSI network drivers)
 
+---
+
+## Demo - Volume Mount
+
+```bash
+docker volume create v1
+docker run -d --name r1 -v v1:/persist-data theosun-web-server:latest
+docker exec -it r1 ash
+# create data file
+echo 'hello volume' > /persist-data/hello-volume
+echo 'hello container local data' > /app/data
+# inspect data
+docker volume inspect v1
+cat /var/lib/docker/volumes/v1/_data/test
+# destroy r1 container
+docker rm -f r1
+
+# create another container
+docker run -d --name r2 -v v1:/persist-data theosun-web-server:latest
+docker exec -it r2 ash
+cat /persist-data/hello-volume
+cat /app/data
+```
 ---
 
 ## Network
@@ -230,11 +250,26 @@ docker buildx build \
 
 ## Network Tasks
 
-* [bridge](https://docs.docker.com/network/bridge/) (default) & host network
-* create network
-* connect network
-* communication with different containers in same network
+- [bridge](https://docs.docker.com/network/bridge/) (default) & host network
+- create network
+- connect network
+- communication with different containers in same network
 
+---
+
+## Demo - Bridge Network
+
+```bash
+docker run -d --name r1 theosun-web-server:latest
+docker run -d --name r2 theosun-web-server:latest
+docker exec -it r1 ash
+ping r2
+docker network create n1
+docker network connect n1 r1
+docker network connect n1 r2
+docker exec -it r1 ash
+ping r2
+```
 
 ---
 
@@ -243,6 +278,7 @@ docker buildx build \
 * Build and archive software artifacts with dependencies
   * executable software
   * native c API lib, binaries & other environments
+  * offline delivery (without maven/npm and other package manager)
 * Resource control & Isolation for multi container in single server
 
 ---
