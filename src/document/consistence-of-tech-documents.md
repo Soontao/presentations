@@ -2,11 +2,9 @@
 marp: true
 ---
 
-# Consistence of technical documents.
+# Consistence of technical documents
 
 <!-- _color: white -->
-
-
 
 Theo Sun, 2019
 
