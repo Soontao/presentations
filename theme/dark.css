@@ -162,8 +162,9 @@ h6 {
 }
 
 blockquote p {
-  color: gray;
+  color: rgba(154, 247, 249, 0.726);
   font-size: 1.2em;
+  margin: 0;
 }
 
 ul > li,
@@ -206,6 +207,7 @@ pre code svg[data-marp-fitting="svg"] {
 }
 
 blockquote {
+  margin: 0;
   color: rgba(192, 192, 192, 1);
 }
 
