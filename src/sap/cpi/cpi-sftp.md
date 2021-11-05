@@ -1,5 +1,6 @@
 ---
 marp: true
+theme: dark
 ---
 
 # Connect SFTP with CPI
