@@ -9,11 +9,11 @@
  */
 
 :root {
-  --atheme-background: black;
+  --atheme-background: rgba(28, 30, 39, 0.651);
   --atheme-current-line: #4eb6e7;
-  --atheme-foreground: #f8f8f2e0;
-  --atheme-comment: #007e9e;
-  --atheme-cyan: #8be9fd;
+  --atheme-foreground: #f8f8f2ca;
+  --atheme-comment: #3dbfe0a9;
+  --atheme-cyan: #8be8fdce;
   --atheme-green: #50fa7b;
   --atheme-orange: #ffb86c;
   --atheme-pink: #ff79c6;
@@ -114,7 +114,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: var(--atheme-foreground);
   font-family: sans-serif;
 }
 
