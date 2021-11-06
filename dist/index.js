@@ -50,6 +50,7 @@ sap.ui.getCore().attachInit(function () {
     detailPages: [
       new sap.m.Page({
         id: "initDetail",
+        enableScrolling: false,
         customHeader: new sap.m.Bar({
           contentLeft: [
             new sap.m.Title({ text: "Theo's Presentation List" }),
