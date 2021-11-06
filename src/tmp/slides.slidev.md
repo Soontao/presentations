@@ -3,7 +3,6 @@ theme: seriph
 highlighter: shiki
 drawings:
   persist: false
-monaco: true 
 ---
 
 # Slidev Demo
@@ -56,18 +55,8 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 Use code snippets and get the highlighting directly![^1]
 
 ```ts {monaco}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
+import "colors"
+console.log("hello slidev".green)
 ```
 
 ---
