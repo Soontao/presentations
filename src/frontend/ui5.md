@@ -5,9 +5,6 @@ theme: dark
 
 # Retrospect and Prospect UI5
 
-<!-- _color: white -->
-
-
 
 Theo Sun, 2019
 
@@ -17,15 +14,8 @@ Theo Sun, 2019
 
 ## Agenda
 
-<!-- _color: black -->
-
-
-
-
 * Retrospect UI5 at the 10th anniversary
 * Prospect the 'Next Generation UI5'
-
-![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567582442/beatriz-perez-moya-XN4T2PVUUgk-unsplash_weqfrl.jpg)
 
 ---
 
@@ -202,7 +192,6 @@ Avoid `undefined` value and make sure code is readable.
 * Simplify debug and development logic
 * Easy to understand
 
-![bg](https://res.cloudinary.com/digf90pwi/image/upload/v1567745251/markus-spiske-_v6mhdOK2g0-unsplash_yzhtfl.jpg)
 
 ---
 
