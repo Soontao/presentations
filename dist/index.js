@@ -34,6 +34,12 @@ sap.ui.getCore().attachInit(function () {
   })
 
   presentationList.loadData("./presentations.json")
+  presentationList.dataLoaded().then(() => {
+    previewContent.setProperty(
+      "/content",
+      `<iframe src="${presentationList.getData()[0].path}"></iframe>`
+    )
+  })
 
   list.setModel(presentationList)
 

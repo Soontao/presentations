@@ -78,3 +78,7 @@ presentations.json
 *.zip
 xs-security.json
 *.mta
+
+# slidev
+assets
+_redirects
