@@ -37,7 +37,7 @@
     "@marp-team/marp-core": "^2.3.0",
     "@marp-team/marpit": "^2.2.0",
     "@newdash/newdash": "^5.20.0",
-    "@slidev/cli": "^0.27.18",
+    "@slidev/cli": "0.27.10",
     "@slidev/theme-default": "~0.21.1",
     "@slidev/theme-seriph": "~0.21.1",
     "@textlint/markdown-to-ast": "^12.1.0",
