@@ -1,9 +1,9 @@
 ---
 marp: true
+theme: dark
 ---
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
-
 
 
 # Node JS Training: Session 2 - ES6 & More
@@ -11,8 +11,6 @@ marp: true
 ---
 
 ## Agenda
-
-
 
 * ECMAScript standards introduction
 * Block & Closure
@@ -28,11 +26,11 @@ marp: true
 
 
 
-* ES5 (old)
-* ES6 - ES2015 (many many APIs)
-* ES7 - ES2016 (**)
-* ES8 - ES2017 (async)
-* ...
+- ES5 (old)
+- ES6 - ES2015 (many many APIs)
+- ES7 - ES2016 (**)
+- ES8 - ES2017 (async)
+- ...
 
 ---
 
@@ -130,8 +128,6 @@ a // ?
 ---
 
 ## Function
-
-
 
 ```js
 function hello(arg1 = "alice") { // default value

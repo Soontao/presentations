@@ -1,10 +1,7 @@
 ---
 marp: true
+theme: dark
 ---
-
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
-
-
 
 # Node JS Training: Session 3 - Core API
 
@@ -12,15 +9,15 @@ marp: true
 
 ## Agenda - Core Classes
 
-* Map
-* Set
-* Array, foreach/map/reduce
-* Number
-* Boolean
-* String
-* Regexp
-* Date
-* Object
+- Map
+- Set
+- Array, foreach/map/reduce
+- Number
+- Boolean
+- String
+- Regexp
+- Date
+- Object
 
 ---
 

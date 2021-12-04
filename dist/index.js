@@ -1,48 +1,40 @@
 
 sap.ui.getCore().attachInit(function () {
 
-  const previewContent = new sap.ui.model.json.JSONModel({ content: "<div></div>" })
-
-  const previewHtml = new sap.ui.core.HTML({
-    id: "previewHtml",
-    content: `{/content}`,
-    sanitizeContent: true
-  })
-
-  previewHtml.setModel(previewContent)
-
-  const presentationList = new sap.ui.model.json.JSONModel([])
-  const list = new sap.m.SelectList({
-    items: {
-      path: "/",
-      template: new sap.ui.core.ListItem({
-        text: "{title}"
-      })
-    },
-    itemPress: event => {
-      const presentationPath = event
-        .getParameter("item")
-        .getBindingContext()
-        .getObject("path")
-
-      previewContent.setProperty(
-        "/content",
-        `<iframe src="${presentationPath}"></iframe>`
-      )
-
+  /**
+   * global shared model, contains all data
+   */
+  const viewModel = new sap.ui.model.json.JSONModel({
+    selectedKey: "",
+    presentationList: [],
+    main: {
+      title: "Theo's Presentation List",
+      content: "<div></div>",
     }
-  })
+  });
 
-  presentationList.loadData("./presentations.json")
-  presentationList.dataLoaded().then(() => {
-    previewContent.setProperty(
-      "/content",
-      `<iframe src="${presentationList.getData()[0].path}"></iframe>`
-    )
-  })
 
-  list.setModel(presentationList)
+  // data initialize
+  fetch("./presentations.json")
+    .then(res => res.json())
+    .then(data => {
+      viewModel.setProperty("/presentationList", data)
+      if (location.hash.length > 0) {
+        const hash = location.hash.substring(1)
+        const item = data.find(({ path }) => path === hash)
+        if (item !== undefined) {
+          viewModel.setProperty("/selectedKey", item.path)
+          viewModel.setProperty("/main/title", item.title)
+          viewModel.setProperty("/main/content", `<iframe src="${item.path}"></iframe>`);
+        } else {
+          // not existed file, reset
+          location.path = ''
+        }
+      }
+    });
 
+
+  // application main
   const app = new sap.m.SplitApp({
     id: "mainApp",
     initialMaster: "initMaster",
@@ -51,9 +43,23 @@ sap.ui.getCore().attachInit(function () {
       new sap.m.Page({
         id: "initDetail",
         enableScrolling: false,
+        footer: new sap.m.Toolbar({
+          style: "Standard",
+          content: [
+            new sap.m.ToolbarSpacer(),
+            new sap.m.Button({
+              text: "Open in Single Page",
+              press: () => {
+                const selectedKey = viewModel.getProperty("/selectedKey")
+                window.open(selectedKey, "_blank").focus()
+              },
+              type: "Transparent"
+            }),
+          ]
+        }),
         customHeader: new sap.m.Bar({
           contentLeft: [
-            new sap.m.Title({ text: "Theo's Presentation List" }),
+            new sap.m.Title({ text: "{/main/title}" })
           ],
           contentRight: [
             new sap.m.Button({
@@ -65,14 +71,47 @@ sap.ui.getCore().attachInit(function () {
             }),
           ]
         }),
-        content: [previewHtml]
+        content: [
+          new sap.ui.core.HTML({
+            id: "previewHtml",
+            content: `{/main/content}`,
+            sanitizeContent: true
+          })
+        ]
       }),
-
     ],
     masterPages: [
       new sap.m.Page({
         id: "initMaster",
-        content: [list],
+        content: [
+          new sap.m.SelectList({
+            selectedKey: "{/selectedKey}",
+            items: {
+              path: "/presentationList",
+              template: new sap.ui.core.ListItem({
+                key: "{path}",
+                text: "{title}"
+              })
+            },
+            itemPress: event => {
+              const bindingItem = event
+                .getParameter("item")
+                .getBindingContext()
+
+              viewModel.setProperty(
+                "/main/title",
+                bindingItem.getObject("title")
+              );
+              const path = bindingItem.getObject("path");
+              location.hash = path
+              viewModel.setProperty(
+                "/main/content",
+                `<iframe src="${path}"></iframe>`
+              );
+
+            }
+          })
+        ],
         customHeader: new sap.m.Bar({
           contentLeft: [
             new sap.m.SearchField({
@@ -98,6 +137,7 @@ sap.ui.getCore().attachInit(function () {
 
   const shell = new sap.m.Shell({ app })
 
+  shell.setModel(viewModel)
   shell.placeAt("content")
 
 });

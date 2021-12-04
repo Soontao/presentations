@@ -1,10 +1,7 @@
 ---
 marp: true
+theme: dark
 ---
-
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
-
-
 
 # Node JS Training: Session 4 - NodeJS Basics
 
@@ -12,14 +9,14 @@ marp: true
 
 ## Agenda - NodeJS Basics
 
-* Module system
-* Core modules
-  * event
-  * fs
-  * path
-  * process
-  * os
-  * net/http
+- Module system
+- core modules
+  - event
+  - fs
+  - path
+  - process
+  - os
+  - net/http
 
 ---
 
