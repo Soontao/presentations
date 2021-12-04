@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Set git to use LF to checkout
@@ -37,9 +37,9 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          key: npm-cache-${{ hashFiles('**/package-lock.json') }}
 
-      - name: npm install, build, and test
+      - name: npm install, build
         run: |
           npm install
           bash ./build.sh
