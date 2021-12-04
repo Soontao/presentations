@@ -26,10 +26,17 @@ sap.ui.getCore().attachInit(function () {
           viewModel.setProperty("/selectedKey", item.path)
           viewModel.setProperty("/main/title", item.title)
           viewModel.setProperty("/main/content", `<iframe src="${item.path}"></iframe>`);
+          location.hash = item.path
         } else {
           // not existed file, reset
           location.path = ''
         }
+      } else {
+        const item = data[0]
+        viewModel.setProperty("/selectedKey", item.path)
+        viewModel.setProperty("/main/title", item.title)
+        viewModel.setProperty("/main/content", `<iframe src="${item.path}"></iframe>`);
+        location.hash = item.path
       }
     });
 

@@ -10,10 +10,10 @@
 
 :root {
   --atheme-background: rgba(28, 30, 39, 0.651);
-  --atheme-current-line: #4eb6e7;
+  --atheme-current-line: #0095da;
   --atheme-foreground: #f8f8f2ca;
-  --atheme-comment: #3dbfe0a9;
-  --atheme-cyan: #8be8fdce;
+  --atheme-comment: #b7c3cea9;
+  --atheme-cyan: #bdf7ffce;
   --atheme-green: #50fa7b;
   --atheme-orange: #ffb86c;
   --atheme-pink: #ff79c6;
@@ -22,8 +22,15 @@
   --atheme-yellow: #f1fa8c;
 }
 
-html {
-  font-family: sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hljs {
@@ -101,7 +108,7 @@ html {
 .hljs-comment,
 .hljs-deletion,
 .hljs-meta {
-  color:var(--atheme-comment);
+  color: var(--atheme-comment);
 }
 
 svg[data-marp-fitting="svg"] {
@@ -115,7 +122,6 @@ h4,
 h5,
 h6 {
   color: var(--atheme-foreground);
-  font-family: sans-serif;
 }
 
 h1 strong,
@@ -170,7 +176,8 @@ ol > li {
 }
 
 code {
-  font-family: sans-serif;
+  font-family: Consolas, sans-serif;
+  line-height: 1.25;
   display: inline-block;
   font-size: 0.9em;
   letter-spacing: 0;
@@ -281,7 +288,7 @@ section table tbody > tr:nth-child(even) td,
 section table tbody > tr:nth-child(even) th {
   background: var(--atheme-current-line);
 }
- 
+
 header,
 footer,
 section::after {
