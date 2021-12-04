@@ -287,10 +287,14 @@ const { Mutex } = require("@newdash/newdash/functional/Semaphore")
 
 ## Logging
 
-> integrate with `application-logging`
-> built-in integration is in-progress
+> new built-in log layer: [Minimalistic Logging Facade](https://cap.cloud.sap/docs/node.js/cds-log)
 
-- [cf-nodejs-logging-support](https://github.com/SAP/cf-nodejs-logging-support)
+
+```js
+const logger = cds.log("BusinessService")
+logger.info("call service with", param0, "is ok")
+```
+
 
 --- 
 
