@@ -3,7 +3,7 @@ marp: true
 theme: dark
 ---
 
-![blur bg 50%](https://cap.cloud.sap/docs/assets/logos/cap.svg)
+![blur bg 50% right](https://cap.cloud.sap/docs/assets/logos/cap.svg)
 
 # CAP NodeJS Runtime Advance 
 
@@ -287,16 +287,20 @@ const { Mutex } = require("@newdash/newdash/functional/Semaphore")
 
 ## Logging
 
-> integrate with `application-logging`
+> integrate with `application-logging`/`CLS`
 > built-in integration is in-progress
 
-- [cf-nodejs-logging-support](https://github.com/SAP/cf-nodejs-logging-support)
+~~- [cf-nodejs-logging-support](https://github.com/SAP/cf-nodejs-logging-support)~~
+
+- [Kibana-Friendly Formatter](https://cap.cloud.sap/docs/node.js/cds-log#cds-log-ootb-formatting-kibana)
+
+
 
 --- 
 
 ## Unit Test
 
-> use SAP internal API to perform unit tests
+> use [CAP Test API](https://cap.cloud.sap/docs/node.js/cds-test) to perform unit tests
 
 - [Example](https://github.com/Soontao/cap-unit-test-example)
 - [Complex Example](https://github.com/Soontao/cds-mysql/blob/main/test/integration.test.ts)

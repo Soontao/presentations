@@ -1,10 +1,9 @@
 ---
+theme: dark
 marp: true
 ---
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1582530996/Nodejs-banner-1_dx6z63.jpg)
-
-
+![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
 # Node JS Training: Session 2 - ES6 & More
 

@@ -3,6 +3,8 @@ marp: true
 theme: dark
 ---
 
+![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
+
 # Node JS Basics 
 
 > just do what you want in simplest way.
