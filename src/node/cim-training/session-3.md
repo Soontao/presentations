@@ -11,15 +11,15 @@ theme: dark
 
 ## Agenda - Core Classes
 
-* Map
-* Set
-* Array, foreach/map/reduce
-* Number
-* Boolean
-* String
-* Regexp
-* Date
-* Object
+- Map
+- Set
+- Array, foreach/map/reduce
+- Number
+- Boolean
+- String
+- Regexp
+- Date
+- Object
 
 ---
 

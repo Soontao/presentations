@@ -146,7 +146,7 @@ server.listen(port, hostname, () => {
 ## Advantage: Fast
 
 
-**Easy*- to
+**Easy** to
 
 - learn (few, simple, clear API)
 - write (less code, less effort)
@@ -164,7 +164,7 @@ server.listen(port, hostname, () => {
 ---
 
 ## NodeJS 
-## Is the **BEST*- language for independent developers & start-up companies
+## Is the **BEST** language for independent developers & start-up companies
 
 ---
 

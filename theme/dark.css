@@ -8,27 +8,31 @@
  * @size 16:9 1920px 1080px
  */
 
-@font-face {
-  font-family: 'Source Code Pro', monospace;
-  src: url('SourceCodePro-Medium.ttf') format('truetype');
-}  
-
 :root {
-  --atheme-background: black;
-  --atheme-current-line: #44475a;
-  --atheme-foreground: #f8f8f2;
-  --atheme-comment: #6272a4;
-  --atheme-cyan: #8be9fd;
+  --atheme-background: rgba(28, 30, 39, 0.651);
+  --atheme-current-line: #0095da;
+  --atheme-foreground: #f8f8f2ca;
+  --atheme-comment: #b7c3cea9;
+  --atheme-cyan: #bdf7ffce;
   --atheme-green: #50fa7b;
   --atheme-orange: #ffb86c;
   --atheme-pink: #ff79c6;
   --atheme-purple: #bd93f9;
-  --atheme-red: #ff5555;
+  --atheme-red: #ff5555d2;
   --atheme-yellow: #f1fa8c;
 }
 
-html {
-  font-family: sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section,
+li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .hljs {
@@ -55,7 +59,7 @@ html {
 .hljs-regexp,
 .hljs-literal,
 .hljs-link {
-  color: #ae81ff;
+  color: #ad81ffd7;
 }
 
 .hljs-code,
@@ -77,7 +81,7 @@ html {
 .hljs-selector-tag,
 .hljs-name,
 .hljs-attr {
-  color: #f92672;
+  color: var(--atheme-red);
 }
 
 .hljs-symbol,
@@ -100,13 +104,13 @@ html {
 .hljs-addition,
 .hljs-variable,
 .hljs-template-variable {
-  color: #e6db74;
+  color: var(--atheme-yellow);
 }
 
 .hljs-comment,
 .hljs-deletion,
 .hljs-meta {
-  color: #75715e;
+  color: var(--atheme-comment);
 }
 
 svg[data-marp-fitting="svg"] {
@@ -119,8 +123,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
-  font-family: sans-serif;
+  color: var(--atheme-foreground);
 }
 
 h1 strong,
@@ -162,7 +165,8 @@ h6 {
 }
 
 blockquote p {
-  color: rgba(154, 247, 249, 0.726);
+  color: var(--atheme-comment);
+  font-weight: bolder;
   font-size: 1.2em;
   margin: 0;
 }
@@ -174,19 +178,19 @@ ol > li {
 }
 
 code {
-  font-family: "Source Code Pro", monospace;
+  font-family: Consolas, sans-serif;
+  line-height: 1.25;
   display: inline-block;
   font-size: 0.9em;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
   padding: 0.1em 0.2em;
   vertical-align: baseline;
-  color: var(--atheme-green);
 }
 
 pre {
   display: block;
-  margin: 1em 0 0 0;
+  margin: 1em;
   min-height: 1em;
   overflow: visible;
 }
@@ -199,7 +203,8 @@ pre code {
   font-size: 0.7em;
   border: white;
   border-style: dashed;
-  border-width: 1px;
+  border-width: 0.5px;
+  color: var(--atheme-foreground);
 }
 
 pre code svg[data-marp-fitting="svg"] {
@@ -248,11 +253,11 @@ section mark {
   color: #3e9ce0;
 }
 section p {
-  color: white;
+  color: var(--atheme-foreground);
 }
 section code {
-  background: #3e9ce0;
-  color: white;
+  background: var(--atheme-cyan);
+  color: rgba(2, 7, 26, 0.801);
   font-weight: bold;
 }
 section h1 strong,
@@ -285,7 +290,7 @@ section table tbody > tr:nth-child(even) td,
 section table tbody > tr:nth-child(even) th {
   background: var(--atheme-current-line);
 }
- 
+
 header,
 footer,
 section::after {
@@ -315,4 +320,9 @@ section::after {
   right: 0;
   bottom: 0;
   font-size: 80%;
+}
+
+a {
+  color: var(--atheme-cyan);
+  text-decoration: none;
 }

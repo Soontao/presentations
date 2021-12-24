@@ -11,14 +11,14 @@ theme: dark
 
 ## Agenda - NodeJS Basics
 
-* Module system
-* Core modules
-  * event
-  * fs
-  * path
-  * process
-  * os
-  * net/http
+- Module system
+- core modules
+  - event
+  - fs
+  - path
+  - process
+  - os
+  - net/http
 
 ---
 

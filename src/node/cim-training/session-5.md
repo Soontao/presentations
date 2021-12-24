@@ -11,14 +11,14 @@ theme: dark
 
 ## Agenda - Advanced NodeJS
 
-* Event Loop
-* ExpressJS
-* Memory
-* Stream
-* Cluster
-* Debug & Unit Test Debug
-* JSDoc
-* NPM & Open Source & Security
+- Event Loop
+- ExpressJS
+- Memory
+- Stream
+- Cluster
+- Debug & Unit Test Debug
+- JSDoc
+- NPM & Open Source & Security
 
 ---
 
@@ -26,13 +26,13 @@ theme: dark
 
 
 
-* Event
-* Callback
+- Event
+- Callback
 
 
 
-* [nodejs official event loop doc](https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/)
-* [libuv event loop reference](http://docs.libuv.org/en/v1.x/loop.html)
+- [nodejs official event loop doc](https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/)
+- [libuv event loop reference](http://docs.libuv.org/en/v1.x/loop.html)
 
 ---
 
@@ -65,8 +65,8 @@ theme: dark
 
 
 
-* No thread context switch
-* No thread level lock
+- No thread context switch
+- No thread level lock
 
 ---
 
@@ -88,16 +88,16 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ## [ExpressJS](https://expressjs.com/) - Handler
 
-* [Request](https://expressjs.com/en/4x/api.html#req)
-    * get - HTTP request header
-    * body - HTTP body
-    * query - uri query
-    * params - path
-* [Response](https://expressjs.com/en/4x/api.html#res)
-    * status, set - HTTP response header
-    * redirect
-    * json, render, send - HTTP response body
-* NextFunction - go to next handler
+- [Request](https://expressjs.com/en/4x/api.html#req)
+    - get - HTTP request header
+    - body - HTTP body
+    - query - uri query
+    - params - path
+- [Response](https://expressjs.com/en/4x/api.html#res)
+    - status, set - HTTP response header
+    - redirect
+    - json, render, send - HTTP response body
+- NextFunction - go to next handler
 
 ---
 
@@ -105,12 +105,12 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 
 
-* App
-* Chain
-* Router
-* Fallback
-* Error handler
-* Typical issues
+- App
+- Chain
+- Router
+- Fallback
+- Error handler
+- Typical issues
 
 ---
 
@@ -118,9 +118,9 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 
 
-* V8 js engine gc
-* [nodejs gc options](https://gist.github.com/listochkin/10973974)
-* Node inspect with Chrome, `chrome://inspect`, dump heap
+- V8 js engine gc
+- [nodejs gc options](https://gist.github.com/listochkin/10973974)
+- Node inspect with Chrome, `chrome://inspect`, dump heap
 
 ---
 
@@ -178,7 +178,7 @@ if (cluster.isMaster) {
 
 ```js
 /**
- * @param {{a:string,b:{c:number}}[]} arr 
+ - @param {{a:string,b:{c:number}}[]} arr 
  */
 const f2 = (arr = []) => {
     arr[0].b.c.toFixed(2)
@@ -195,9 +195,9 @@ const f2 = (arr = []) => {
 
 
 
-* npm
-    * registry
-    * install (dev/default)
-    * run (script name)
-* npm audit
-* whitesource
+- npm
+    - registry
+    - install (dev/default)
+    - run (script name)
+- npm audit
+- whitesource

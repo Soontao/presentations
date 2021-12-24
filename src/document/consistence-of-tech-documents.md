@@ -1,5 +1,6 @@
 ---
 marp: true
+theme: dark
 ---
 
 # Consistence of technical documents

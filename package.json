@@ -17,7 +17,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Soontao/presentations.git"
@@ -34,19 +33,23 @@
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
-    "@marp-team/marp-cli": "^1.4.1",
-    "@marp-team/marp-core": "^2.2.0",
-    "@marp-team/marpit": "^2.1.2",
+    "@marp-team/marp-cli": "^1.5.0",
+    "@marp-team/marp-core": "^2.3.0",
+    "@marp-team/marpit": "^2.2.0",
     "@newdash/newdash": "^5.20.0",
-    "@textlint/markdown-to-ast": "^12.0.2",
+    "@slidev/cli": "0.27.10",
+    "@slidev/theme-default": "~0.21.1",
+    "@slidev/theme-seriph": "~0.21.1",
+    "@textlint/markdown-to-ast": "^12.1.0",
+    "@types/debug": "^4.1.7",
+    "colors": "^1.4.0",
+    "debug": "^4.3.3",
     "fast-glob": "^3.2.7",
-    "husky": "^4.3.6",
-    "isomorphic-git": "^1.10.0",
+    "husky": "^4.3.8",
+    "isomorphic-git": "^1.10.1",
+    "mkdirp": "^1.0.4",
     "pretty": "^2.0.0",
     "standard-version": "^9.3.2",
-    "textlint": "^12.0.2",
-    "@slidev/cli": "^0.20.5",
-    "@slidev/theme-default": "^0.19.1",
-    "@slidev/theme-seriph": "^0.19.1"
+    "textlint": "^12.1.0"
   }
 }

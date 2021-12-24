@@ -1,10 +1,15 @@
 ---
 marp: true
+theme: dark
 ---
 
+<style>
+pre code {
+  font-size: 0.5em;
+}
+</style>
+
 # Introduction for python
-
-
 
 Theo Sun
 2019
@@ -52,6 +57,7 @@ So that `multiprocessing` is used in python web framework.
 
 
 ## Zen of python
+
 
 ```python
 >>> import this

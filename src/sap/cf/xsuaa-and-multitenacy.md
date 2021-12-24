@@ -3,7 +3,7 @@ marp: true
 theme: dark
 ---
 
-# XSUAA and Multitenancy
+# XSUAA and Multi-Tenancy
 
 Theo Sun
 2020

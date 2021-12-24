@@ -294,6 +294,13 @@ const { Mutex } = require("@newdash/newdash/functional/Semaphore")
 
 - [Kibana-Friendly Formatter](https://cap.cloud.sap/docs/node.js/cds-log#cds-log-ootb-formatting-kibana)
 
+> new built-in log layer: [Minimalistic Logging Facade](https://cap.cloud.sap/docs/node.js/cds-log)
+
+
+```js
+const logger = cds.log("BusinessService")
+logger.info("call service with", param0, "is ok")
+```
 
 
 --- 

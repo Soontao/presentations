@@ -154,6 +154,7 @@ docker push
 - Public Registry - [Docker Hub](https://hub.docker.com/)
 - [Quay.io](http://quay.io/)
 - Amazon [ECR](https://aws.amazon.com/ecr)
+- Artifactory
 
 ---
 

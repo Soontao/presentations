@@ -15,18 +15,18 @@ Theo Sun
 
 ## Agenda
 
-* Installation - Git, VSCode & NodeJS (nvm)
-* Overview language introduction
-* NodeJS project structure
-* Javascript basics
-  * datatype
-  * variable
-  * object
-  * expression & operator
-  * condition & loop statement
-  * function (basic, arrow & async)
-  * prototype
-* Homework introduction
+- Installation - Git, VSCode & NodeJS (nvm)
+- Overview language introduction
+- NodeJS project structure
+- Javascript basics
+  - datatype
+  - variable
+  - object
+  - expression & operator
+  - condition & loop statement
+  - function (basic, arrow & async)
+  - prototype
+- Homework introduction
 
 ---
 
@@ -62,11 +62,11 @@ server.route("/api/v1/what", (req) => { // arrow function
 ## NodeJS project structure
 
 
-* package.json & lock & `node_modules`
-* scripts in `package.json`
-* jsconfig.json
-* eslint
-* .gitignore
+- package.json & lock & `node_modules`
+- scripts in `package.json`
+- jsconfig.json
+- eslint
+- .gitignore
 
 
 ---
@@ -75,14 +75,14 @@ server.route("/api/v1/what", (req) => { // arrow function
 
 
 
-* Boolean `true`
-* Null `null`
-* Undefined `undefined`
-* Number `123`
-* BigInt
-* String `'abc'`
-* Symbol
-* Object `other things`
+- Boolean `true`
+- Null `null`
+- Undefined `undefined`
+- Number `123`
+- BigInt
+- String `'abc'`
+- Symbol
+- Object `other things`
 
 ---
 
@@ -189,12 +189,12 @@ for (const key in obj) {
 
 
 
-* \+
-* \-
-* \*
-* \/
-* \*\*
-* \%
+- \+
+- \-
+- \*
+- \/
+- \*\*
+- \%
 
 ---
 
@@ -215,14 +215,12 @@ for (const key in obj) {
 
 ## Operators - Comparison
 
-
-
-* ==
-* ===
-* !=
-* !==
-* \>=
-* <=
+- ==
+- ===
+- !=
+- !==
+- \>=
+- <=
 
 ---
 
@@ -404,25 +402,21 @@ Person.prototype.greet = function() {}; // attach a function to the prototype
 
 ## Homework
 
-
-
-* Public Github User
-* Git
-* VSCode
-* NodeJS
+- Public Github User
+- Git
+- VSCode
+- NodeJS
 
 ---
 
 ## Homework
 
-
-
-* For the project [nodejs-training](https://github.com/Soontao/nodejs-training)
-* Edit the `training.config.json`
-* `npm install`
-* `npm run download` (daily)
-* `npm run test`
-* update unit test code in `src/cases`
-* `npm run test`
-* commit & push
-* check github workflow status
+- For the project [nodejs-training](https://github.com/Soontao/nodejs-training)
+- Edit the `training.config.json`
+- `npm install`
+- `npm run download` (daily)
+- `npm run test`
+- update unit test code in `src/cases`
+- `npm run test`
+- commit & push
+- check github workflow status
