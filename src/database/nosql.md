@@ -12,7 +12,7 @@ Theo Sun
 
 ## What is SQL ?
 
-<!-- Structured Query Language - for RDBMD -->
+<!-- Structured Query Language - for RDBMS -->
 
 - SAP HANA
 - Microsoft SQL Server
