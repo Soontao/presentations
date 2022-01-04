@@ -16,12 +16,12 @@ Theo Sun
 
 ## Agenda
 
-* ECMAScript standards introduction
-* Class & `this`
-* Promise
-* Template strings
-* Async Functions
-* Arrow Functions
+- ECMAScript standards introduction
+- Class & `this`
+- Promise
+- Template strings
+- Async Functions
+- Arrow Functions
 
 ---
 

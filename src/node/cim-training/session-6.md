@@ -16,10 +16,10 @@ Theo Sun
 
 ## [OData](https://www.odata.org/)
 
-- introduction
-- version
+- Introduction
+- Version
 - CRUD
-- expand
+- expand/navigation
 - ACTION/FUNCTION
 
 ---
@@ -30,6 +30,7 @@ Theo Sun
 - [HANA SQL Reference](https://help.sap.com/viewer/7c78579ce9b14a669c1f3295b0d8ca16/Cloud/en-US/20ff532c751910148657c32fe3431a9f.html)
 - [HANA Deployment Infra](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US)
 - HANA instance & HDI container & schema
+- HANA native artifacts
 
 ---
 
@@ -70,22 +71,17 @@ Theo Sun
 
 ## [Events](https://cap.cloud.sap/docs/guides/providing-services#handling-events)
 
-> implement the service interface by `javascirpt` code, with `event` concepts
+> implement the service interface by `javascript` code, with `event` concepts
 
-- Synchronous Requests sent from UIs, frontends, or other services:
-  - Common CRUD methods: `CREATE`, `READ`, `UPDATE`, `UPSERT`, `DELETE`
+- Synchronous Requests sent from UIs, frontend, or other services:
+  - Common CRUD methods: `CREATE`, `READ`, `UPDATE`, `DELETE`
   - Common REST methods: `POST`, `GET`, `PUT`, `PATCH`, `DELETE`
   - Custom-defined actions and functions 
 - [Events & Messaging](https://cap.cloud.sap/docs/guides/messaging/) received thru message brokers
 
 ---
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1588570700/CAP-Events-Lifecycle_7_vm6xrg.png)
-
----
-
 ## Events
-
 
 
 - focus on the `on` event
@@ -127,11 +123,11 @@ module.exports = class IndexService extends ApplicationService {
     // do some init as you want
   }
 
-  metric() {
+  async metric() {
     return { "service": "CDS" }
   }
 
-  metric2(req) {
+  async metric2(req) {
     const { name } = req.data // get data from context
     return { "service": `hello ${name}` }
   }
@@ -152,7 +148,7 @@ module.exports = (srv) => {
   })
 
   const handler = (req) => {
-    const { name } = req.data // get data from context
+    const { name } = req.data // get data from request
     return { "service": `hello ${name}` }
   }
 
@@ -182,7 +178,7 @@ module.exports = (srv) => {
 
 --- 
 
-## [Transaction](https://cap.cloud.sap/docs/node.js/transactions)
+## [Database Transaction](https://cap.cloud.sap/docs/node.js/transactions)
 
 - [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
 
@@ -191,6 +187,7 @@ module.exports = (srv) => {
 
 ## [Context](https://cap.cloud.sap/docs/node.js/cds-facade#cds-context)
 
+> Reference to the current root event or request, which acts as invocation context, providing access to the current tenant and user information, and also constitutes the transaction boundary for automatically managed transactions.
 
 ---
 
@@ -198,6 +195,7 @@ module.exports = (srv) => {
 
 - [CAP NodeJS Authentication](https://cap.cloud.sap/docs/node.js/authentication)
 - XSUAA and RBAC and authentication flow
+
 ---
 
 ## [Deployment](https://cap.cloud.sap/docs/guides/deployment/)
@@ -219,6 +217,5 @@ module.exports = (srv) => {
 - directory name/package name/service name should be same.
 - remember to add the mandatory columns to the initialize CSV file(e.g. PK)
   - please carefully use the CSV init data, ref the advance session
-- use fixed `@sap/cds` version.
 - `debug` server if you don't know the object detail.
 - use env [`DEBUG`](https://cap.cloud.sap/docs/node.js/cds-log) to get internal logs of CAP

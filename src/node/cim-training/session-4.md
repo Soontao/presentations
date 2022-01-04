@@ -13,20 +13,9 @@ Theo Sun
 2020
 
 ---
-
-## Agenda - NodeJS Basics
-
-- Module system
-- core modules
-  - event
-  - fs
-  - path
-  - process
-  - os
-  - net/http
-
----
 ## [LTS - long term support](https://nodejs.org/en/about/releases/)
+
+> use the latest LTS version
 
 
 ![](https://raw.githubusercontent.com/nodejs/Release/master/schedule.svg?sanitize=true)
@@ -110,6 +99,29 @@ require(X) from module at path Y
 
 ---
 
+## npm
+
+> node package manager
+
+```bash
+npm init
+npm i express
+```
+
+---
+
+## npm registry
+
+> central package management
+
+```ini
+@sap:registry=https://int.repositories.cloud.sap/artifactory/api/npm/build-milestones-npm
+@sap-internal:registry=https://int.repositories.cloud.sap/artifactory/api/npm/internal-tool
+```
+
+
+---
+
 ## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
 
 ```js
@@ -124,13 +136,9 @@ const Service = class extends EventEmitter {
 
 const bus = new Service();
 
-bus.on('add', function (a) {
-  this.value += a
-});
+bus.on('add', function (a) { this.value += a });
 
-bus.on('add', function (a, b) {
-  console.log(`after add: ${this.value}`);
-});
+bus.on('add', function (a, b) { console.log(`after add: ${this.value}`); });
 
 bus.emit("add", 10)
 bus.emit("add", 10)
@@ -138,11 +146,10 @@ bus.emit("add", 10)
 
 ---
 
-## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
+## [Event Emitter](https://nodejs.org/dist/latest-v16.x/docs/api/events.html)
 
 ```js
 const { EventEmitter } = require("events")
-
 const Service = class extends EventEmitter {
   constructor(...args) {
     super(...args)
@@ -157,16 +164,14 @@ const Service = class extends EventEmitter {
     console.log(`after add: ${this.value}`);
   }
 }
-
 const bus = new Service();
-
 bus.emit("add", 10)
 bus.emit("add", 10)
 ```
 
 ---
 
-## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
+## [Event Emitter](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
 
 
 
@@ -186,7 +191,7 @@ bus.emit("add", 10)
 * string, encoded
 * Promise API
 
-> DONT use sync functions on server side programming.
+> DON'T use sync functions on server side programming.
 
 ---
 
@@ -196,7 +201,7 @@ bus.emit("add", 10)
 
 ## Process - environment
 
-> access system environment variables
+> access system environment variables, sometimes you will need this, for example, run CAP in k8s
 
 ```js
 process.env.PATH

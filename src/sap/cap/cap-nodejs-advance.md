@@ -358,6 +358,7 @@ module.exports = srv => {
 
 - `CSRF` protection is fulfilled by `approuter` 
 - `Host`/`X-Forwarded-Host` injection
+- [helmet](https://cap.cloud.sap/docs/node.js/best-practices#securing-your-application)
 
 --- 
 
@@ -389,7 +390,7 @@ app.use(req => {
 
 ## Links
 
-- [CAP Github Issue](https://github.wdf.sap.corp/cap/issues/issues)
+- [CAP Github Issue](https://github.tools.sap/cap/issues/issues)
 - [CAP Internal Documentation](https://github.wdf.sap.corp/pages/cap/)
 - [HDI Deploy](https://www.npmjs.com/package/@sap/hdi-deploy)
 - [SAP JSON Schema](https://marketplace.visualstudio.com/items?itemName=TheoSun.sap-json-schemas)
