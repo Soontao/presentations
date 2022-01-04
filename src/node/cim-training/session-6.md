@@ -5,7 +5,12 @@ theme: dark
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
 
-# Node JS Training: Session 6/7 - CAP Framework
+# Node JS Training: Session 6 
+
+# CAP Framework Basics
+
+Theo Sun
+2020
 
 ---
 

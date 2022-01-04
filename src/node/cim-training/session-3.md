@@ -5,7 +5,11 @@ theme: dark
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
-# Node JS Training: Session 3 - Core API
+# Node JS Training: Session 3 
+# Javascript Core API
+
+Theo Sun
+2020
 
 ---
 

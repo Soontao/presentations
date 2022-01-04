@@ -177,11 +177,6 @@ For the customer project, we built simple dynamic API server for demo/feasibilit
 If there are no performance requirement, even we can implement the production server based the prototype server.
 
 
-
-Examples: 
-
-- TCC DataV Report Server (Phase 0)
-
 ---
 
 ## Scenario 2: Build tools for your daily work

@@ -5,7 +5,11 @@ marp: true
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
-# Node JS Training: Session 2 - ES6 & More
+# Node JS Training: Session 2 
+# ES6 & More
+
+Theo Sun
+2020
 
 ---
 

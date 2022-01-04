@@ -5,7 +5,11 @@ theme: dark
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
-# Node JS Training: Session 5 - Advanced NodeJS
+# Node JS Training: Session 5
+# Advanced NodeJS
+
+Theo Sun
+2020
 
 ---
 
@@ -24,12 +28,8 @@ theme: dark
 
 ## Event Loop - Core of NodeJS
 
-
-
 - Event
 - Callback
-
-
 
 - [nodejs official event loop doc](https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/)
 - [libuv event loop reference](http://docs.libuv.org/en/v1.x/loop.html)
@@ -166,22 +166,26 @@ if (cluster.isMaster) {
 
 > Use VSCode to debug nodejs based application
 
+- put more debug detail here
+  - `node_modules` org
+  - `.bin`
+  - how to find debug target
+  - configure the debug profile
+- [remote debug example](https://github.com/Soontao/cf-node-debug-example)
+
 ---
 
 ## [JSDoc](https://jsdoc.app)
 
 
-
 > Add necessary JSDoc for type reference
-
-
 
 ```js
 /**
  - @param {{a:string,b:{c:number}}[]} arr 
  */
 const f2 = (arr = []) => {
-    arr[0].b.c.toFixed(2)
+    arr[0].b.c.toFixed(2) // auto-complete here
 }
 ```
 
