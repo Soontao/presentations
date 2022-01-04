@@ -83,8 +83,6 @@ Theo Sun
 
 ## Events
 
-
-- focus on the `on` event
 - use `before` hook do the input validation
 - use `after` hook do the data transform
 - register single event for single entity only **ONCE**
@@ -182,7 +180,6 @@ const [books, authors] = await srv.run ([q1, q2])
 ## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
 
 
-
 - [SAP OData UI Annotation](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/UI.md)
 - [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
 
@@ -192,12 +189,13 @@ const [books, authors] = await srv.run ([q1, q2])
 
 - [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
 
-
 ---
 
 ## [Context](https://cap.cloud.sap/docs/node.js/cds-facade#cds-context)
 
 > Reference to the current root event or request, which acts as invocation context, providing access to the current tenant and user information, and also constitutes the transaction boundary for automatically managed transactions.
+
+if you want to implement some util without request/event parameter, it will be useful
 
 ---
 
