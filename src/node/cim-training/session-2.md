@@ -14,17 +14,6 @@ Theo Sun
 
 ---
 
-## Agenda
-
-- ECMAScript standards introduction
-- Class & `this`
-- Promise
-- Template strings
-- Async Functions
-- Arrow Functions
-
----
-
 ## ECMAScript
 
 
@@ -35,6 +24,28 @@ Theo Sun
 - ES8 - ES2017 (async)
 - ...
 
+---
+
+## Arrow Function (ES6)
+
+- no `arguments`
+- no `this`
+
+```js
+const f1 = () => { return "f1" }
+const f2 = () => "f2"
+const f3 = value => `hello ${value}`
+const f4 = ({ name }, ...rest) => `hello ${name}`
+const f5 = () => `hello ${arguments[0]}`
+const f6 = () => `hello ${this.name}`
+
+f1() // => 'f1'
+f2() // => 'f2'
+f3("alice") // => 'hello alice'
+f4({ name: "alice", age: 1000 }) // => 'hello alice'
+f5("alice") // Uncaught ReferenceError: arguments is not defined
+f6.call({ name: "alice" }) // => 'hello undefined'
+```
 
 ---
 
@@ -61,206 +72,25 @@ console.log(rest);
 
 ---
 
-## Function
+## [Spread syntax (...) & Rest syntax (parameters)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+> Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
 
 ```js
-function hello(arg1 = "alice") { // default value
-  console.log(`hello ${arg1}`)
+function sum(x, y, z) {
+  return x + y + z;
 }
 
-// arguments
-function hello() {
-  console.log(`hello ${arguments[0]}`)
-}
-// no arguments check in fact
-hello("alice") // hello alice
-hello() // hello undefined
+const numbers = [1, 2, 3];
 
-// function parameter de-construct
-function hello2(...params) {
-  console.log(params[0])
-}
+console.log(sum(...numbers));
+// expected output: 6
 
-hello2("alice") // alice
-
-```
-
----
-
-## Function
-
-
-
-```js
-function hello() {
-  console.log(`hello ${this.name}`) // use `this`
-}
-
-hello.call({ name: "alice" })  // hello alice
-hello() // hello undefined
-```
----
-
-## class (old)
-
-> what is class ? what is `this` ?
-
-```js
-// class (constructor) is function, function is object
-
-function People(name) {
-  this.name = name // access context
-}
-
-// function New
-function New(clazz, ...params) {
-  // create `new` object with `__proto__`
-  const obj = Object.create(clazz.prototype)
-  clazz.call(obj, ...params)
-  // obj almost = { name, __proto__ }
-  return obj
-}
-
-New(People, "admin").name == (new People("admin")).name
-
-```
-
----
-
-## [prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-
-
-
-> object has `__proto__` property
-> function has `prototype` property
-> function with `new` keyword is `constructor`
-> the returned instance object.`__proto__` is the function.`prototype`
-> javascript runtime check attr by object `__proto__`
-
----
-
-## prototype
-
-
-
-```js
-function People(name) { this.name = name }
-var p = new People();
-p.__proto__ == People.prototype; // true
-
-// instance method
-People.prototype.getName = function () { return this.name; }
-
-"getName" in p; // true
-"getName" in People; // false
-
-People.type = "china"; // class property/method, if you want
-
-"type" in p; // false
-"type" in People; // true
+console.log(sum.apply(null, numbers));
+// expected output: 6
 ```
 
 
----
-
-
-## class (ES6)
-
-
-
-```js
-class People {
-  constructor(name) {
-    this.name = name
-  }
-}
-
-// create anonymous class and assign it to `People2`
-const People2 = class extends People {
-  constructor(name) {
-    super(name + "1") // parent class constructor
-  }
-
-  getName() {
-    return this.name // what is `this` ?
-  }
-}
-
-new People2("admin") // People2 { name: 'admin1' }
-```
-
---- 
-
-## class (old) `this` issue
-
-
-
-```js
-function People(name) {
-  this.name = name
-}
-
-People.prototype.getName = function () {
-  return this.name
-}
-
-function People3(name, p) {
-  this.name = name
-  this.getName = p.getName
-}
-
-console.log(new People3("people3", new People("people1")).getName())
-// output: ?
-```
-
----
-
-## call/apply/bind & `this`
-
-> `this` is `context`
-
-```js
-function People(name) {
-  this.name = name // access context
-}
-
-var obj = {}  // new context
-var obj1 = {} // new context
-var obj2 = {} // new context
-
-People.apply(obj, ["hello"])
-
-People.call(obj1, "hello")
-
-var People2 = People.bind(obj2)
-People2("hello")
-
-obj.name == obj1.name == obj2.name
-```
-
---- 
-
-## class (old) bind `this`
-
-> PLEASE remember `this` is not secure
-
-```js
-function People(name) {
-  this.name = name
-}
-
-People.prototype.getName = function () {
-  return this.name
-}
-
-function People3(name, p) {
-  this.name = name
-  this.getName = p.getName.bind(p)
-}
-
-console.log(new People3("people3", new People("people1")).getName())
-// output: ?
-```
 
 ---
 
@@ -291,7 +121,7 @@ console.log(promise1);
 ## Promise (ES6) - error
 
 ```js
-// some times, this function will be network API or network based API
+// just a mock, this function will be async network/IO API
 const createAsyncValue = function (value) {
   return new Promise(function (resolve, reject) {
     if (value instanceof Error) {
@@ -302,12 +132,6 @@ const createAsyncValue = function (value) {
   })
 }
 
-createAsyncValue("hello promise").then(console.log)
-createAsyncValue(new Error("hello promise")).catch(console.error)
-createAsyncValue("hello")
-  .then(result => createAsyncValue(result + " promise chain"))
-  .then(console.log)
-
 createAsyncValue("hello")
   .then(result =>
     createAsyncValue(new Error(result + " promise error chain"))
@@ -316,10 +140,9 @@ createAsyncValue("hello")
   .then(console.log)
   .catch(e => console.error(`external process ${e.message}`))
 ```
-
 ---
 
-## Promise (ES6) - sync
+## Promise (ES6) - utils
 
 > send multi async requests, and wait they ALL finished 
 
@@ -332,9 +155,77 @@ Promise
   .all([createAsyncValue("run1"), createAsyncValue(new Error("error1"))])
   .then(console.log) // no here
   .catch(console.error) // only here
+
+```
+---
+
+## Async Function (ES2018)
+
+> you can use `await` keyword to wait any `promise` even `plain object`
+
+```js
+async function run() {
+  const hello = await createAsyncValue("hello")
+  try {
+    await createAsyncValue(new Error("error"))
+  } catch (error) {
+    // error
+  }
+}
 ```
 
 ---
+
+## Async Function 
+
+> convert callback to promise and wait it in async function
+
+```js
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+const f = async () => {
+  await sleep(1000)
+  // do something after 1 seconds the function called 
+}
+
+f() // it will return a Promise
+
+```
+
+---
+
+
+## class (ES6)
+
+
+
+```js
+class People {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+// create anonymous class and assign it to `People2`
+const People2 = class extends People {
+  constructor(name) {
+    super(name + "1") // parent class constructor
+  }
+
+  getName() {
+    return this.name // what is `this` ?
+  }
+}
+
+new People2("admin") // People2 { name: 'admin1' }
+```
+
+---
+
 
 ## template string
 
@@ -360,61 +251,4 @@ I'm ....
 
 ---
 
-## Async Function (ES2018)
-
-> you can use `await` keyword to wait any `promise` even `plain object`
-
-```js
-async function run() {
-  const hello = await createAsyncValue("hello")
-  try {
-    await createAsyncValue(new Error("error"))
-  } catch (error) {
-    // error
-  }
-}
-```
-
----
-
-## Arrow Function (ES6)
-
-- no `arguments`
-- no `this`
-
-```js
-const f1 = () => { return "f1" }
-const f2 = () => "f2"
-const f3 = value => `hello ${value}`
-const f4 = ({ name }, ...rest) => `hello ${name}`
-const f5 = () => `hello ${arguments[0]}`
-const f6 = () => `hello ${this.name}`
-
-f1() // => 'f1'
-f2() // => 'f2'
-f3("alice") // => 'hello alice'
-f4({ name: "alice", age: 1000 }) // => 'hello alice'
-f5("alice") // Uncaught ReferenceError: arguments is not defined
-f6.call({ name: "alice" }) // => 'hello undefined'
-```
-
----
-
-## [Spread syntax (...) & Rest syntax (parameters)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-
-> Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
-
-```js
-function sum(x, y, z) {
-  return x + y + z;
-}
-
-const numbers = [1, 2, 3];
-
-console.log(sum(...numbers));
-// expected output: 6
-
-console.log(sum.apply(null, numbers));
-// expected output: 6
-```
-
+## Thank You

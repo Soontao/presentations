@@ -380,42 +380,148 @@ arr1.forEach((ele, idx) => {
 
 ## Function
 
-
-
 ```js
-function f1(p1, p2 = 3) { // traditional function
-  const { a, b } = p1 // de-construct
+function hello(arg1 = "alice") { // default value
+  console.log(`hello ${arg1}`)
 }
 
-// arrow function, no context
-const f2 = ({ a, b }, p2) => { // de-construct parameter
+// NOTICE arguments
+function hello() {
+  console.log(`hello ${arguments[0]}`)
+}
+// no arguments check in fact
+hello("alice") // hello alice
+hello() // hello undefined
 
+// function parameter de-construct
+function hello2(...params) {
+  console.log(params[0])
 }
 
-async function f3() { // async function, execute it will return Promise object
-  return await 1; // you can use other function
-}
+hello2("alice") // alice
+
 ```
 
 ---
 
-## Prototype
+## Function
 
-> generally, you don't need this
+
 
 ```js
-var Person = function(name) {
-  this.name = name;
-  this.canTalk = true;
-};
+function hello() {
+  console.log(`hello ${this.name}`) // use `this`
+}
 
-// `new` will create a object, execute Person func on it, and return the object.
-var p = new Person("alice") // Person { name: 'alice', canTalk: true }
-"greet" in p // false
-Person.prototype.greet = function() {}; // attach a function to the prototype
-"greet" in p // true
+hello.call({ name: "alice" })  // hello alice
+hello() // hello undefined
 ```
 
+
+
+--- 
+
+## `this` issue
+
+
+```js
+function People(name) {
+  this.name = name
+}
+
+People.prototype.getName = function () {
+  return this.name
+}
+
+function People3(name, p) {
+  this.name = name
+  this.getName = p.getName
+}
+
+console.log(new People3("people3", new People("people1")).getName())
+// output: ?
+```
+---
+
+## [prototype](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
+
+
+> object has `__proto__` property
+> function has `prototype` property
+> function with `new` keyword is `constructor`
+> the returned instance object.`__proto__` is the function.`prototype`
+> javascript runtime check attr by object `__proto__`
+
+---
+
+## prototype
+
+```js
+function People(name) { this.name = name }
+var p = new People();
+p.__proto__ == People.prototype; // true
+
+// instance method
+People.prototype.getName = function () { return this.name; }
+
+"getName" in p; // true
+"getName" in People; // false
+
+People.type = "china"; // class property/method, if you want
+
+"type" in p; // false
+"type" in People; // true
+```
+
+---
+
+## call/apply/bind & `this`
+
+> `this` is `context`
+
+```js
+function People(name) {
+  this.name = name // access context
+}
+
+var obj = {}  // new context
+var obj1 = {} // new context
+var obj2 = {} // new context
+
+People.apply(obj, ["hello"])
+
+People.call(obj1, "hello")
+
+var People2 = People.bind(obj2)
+People2("hello")
+
+obj.name == obj1.name == obj2.name
+```
+
+--- 
+
+## class (old) bind `this`
+
+> PLEASE remember `this` is not safe
+
+```js
+function People(name) {
+  this.name = name
+}
+
+People.prototype.getName = function () {
+  return this.name
+}
+
+function People3(name, p) {
+  this.name = name
+  this.getName = p.getName.bind(p)
+}
+
+console.log(new People3("people3", new People("people1")).getName())
+// output: ?
+```
 
 ---
 
