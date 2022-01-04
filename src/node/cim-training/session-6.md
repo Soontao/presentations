@@ -27,7 +27,8 @@ Theo Sun
 ## HANA Introduction
 
 - [HANA WIKI](https://de.wikipedia.org/wiki/SAP_HANA)
-- [HDI](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US)
+- [HANA SQL Reference](https://help.sap.com/viewer/7c78579ce9b14a669c1f3295b0d8ca16/Cloud/en-US/20ff532c751910148657c32fe3431a9f.html)
+- [HANA Deployment Infra](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US)
 - HANA instance & HDI container & schema
 
 ---
@@ -180,6 +181,12 @@ module.exports = (srv) => {
 - [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
 
 --- 
+
+## [Transaction](https://cap.cloud.sap/docs/node.js/transactions)
+
+- [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
+
+---
 
 ## CAP Application Necessary
 
