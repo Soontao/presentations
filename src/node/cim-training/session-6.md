@@ -200,29 +200,21 @@ module.exports = (srv) => {
 - XSUAA and RBAC and authentication flow
 ---
 
-## CAP Application Necessary
+## [Deployment](https://cap.cloud.sap/docs/guides/deployment/)
 
-- cds & sap-hana & sqlite dependency
-- cds configuration (in the `package.json` or `.cdsrc` file)
-- entity & service implementation
-
----
-
-## Deployment
-
-> if you are using the `cap-01` template project, please remember CHANGE the `directory name` & `package.json.name` 
-
+- [MTA](https://www.sap.com/documents/2016/06/e2f618e4-757c-0010-82c7-eda71af511fa.html)
+- cloud foundry `manifest.yml`
 - cloud foundry & cf cli & quota
 - application source code
-- hana instance
+- SAP HANA Cloud instance
 - `cds build` project
 
 ---
 
 ## Tips
 
-- custom **action*- is used to `WRITE`
-- custom **function*- is used to `QUERY`
+- custom *action* is used for `WRITE`
+- custom *function* is used for `QUERY`
 - use `NODE_ENV` control the CAP running profile (local sqlite/remote hana).
 - directory name/package name/service name should be same.
 - remember to add the mandatory columns to the initialize CSV file(e.g. PK)
