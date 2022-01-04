@@ -221,7 +221,6 @@ module.exports = (srv) => {
 
 ## Tips
 
-
 - custom **action*- is used to `WRITE`
 - custom **function*- is used to `QUERY`
 - use `NODE_ENV` control the CAP running profile (local sqlite/remote hana).
@@ -231,22 +230,3 @@ module.exports = (srv) => {
 - use fixed `@sap/cds` version.
 - `debug` server if you don't know the object detail.
 - use env [`DEBUG`](https://cap.cloud.sap/docs/node.js/cds-log) to get internal logs of CAP
-
-
---- 
-
-## Hands On
-
-
-
-1. install `nodejs`, `git`, `@sap/cds-dk`
-1. init project by `cds init`
-1. install drivers (`sqlite3`, `@sap/hana-client`)
-1. define database schema in `db` directory
-1. expose db schema as odata in `svc` directory
-1. enhance your odata CRUD logic with javascript
-1. build `db` & `srv` package for deployment
-1. install `cf cli` (for deployment) & `cf login`
-1. prepare cloud foundry database and other dependencies (by ui or by cli)
-1. deploy database `cf push -f gen/db`
-1. deploy service `cf push -f gen/srv`
