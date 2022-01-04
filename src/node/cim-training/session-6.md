@@ -151,6 +151,21 @@ module.exports = (srv) => {
 
 }
 ```
+
+---
+
+## Perform Database Query
+
+```js
+const { Books, Authors } = srv.entities //> reflection
+const q1 = SELECT.one.from(Authors)
+const q2 = (Books, 201, b => { b.ID, b.title }) //> expand
+const [books, authors] = await srv.run ([q1, q2])
+```
+
+- [reflection](https://cap.cloud.sap/docs/node.js/services#srv-entities)
+- [expand](https://cap.cloud.sap/docs/node.js/cds-ql#projection-functions)
+
 ---
 
 ## [Action & Function](https://cap.cloud.sap/docs/guides/providing-services#actions-and-functions) 
