@@ -48,8 +48,6 @@ module.exports = { readFileString }
 // module.exports.readFileString = readFileString // almost same
 ```
 
-
-
 [nodejs module document](https://nodejs.org/dist/latest-v10.x/docs/api/modules.html)
 
 ---

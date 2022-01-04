@@ -6,6 +6,7 @@ theme: dark
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
 # Node JS Training: Session 5
+
 # Advanced NodeJS
 
 Theo Sun
@@ -62,7 +63,6 @@ Theo Sun
 ---
 
 ## Event Loop
-
 
 
 - No thread context switch
@@ -191,13 +191,19 @@ const f2 = (arr = []) => {
 
 ---
 
+## NODE_ENV environment
+
+> `NODE_ENV` is a common environment which used in nodejs
+
+- frontend build
+- cloud environment declaration
+- [CAP runtime profile](https://cap.cloud.sap/docs/node.js/cds-env)
+
+---
+
 ## NPM & Open Source & Security
 
-
-
 > Check security with tools
-
-
 
 - npm
     - registry

@@ -5,7 +5,7 @@ theme: dark
 
 ![blur bg 50% right](https://cap.cloud.sap/docs/assets/logos/cap.svg)
 
-# CAP NodeJS Runtime Advance 
+# Advanced CAP NodeJS Runtime
 
 Theo Sun
 2021

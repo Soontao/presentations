@@ -16,12 +16,6 @@ Theo Sun
 
 ## Agenda - CAP Framework Basics
 
-- Q & A
-  - problems
-    - type definition
-    - packaged node_modules
-    - express path match
-  - homework answers
 - CAP
   - Introduction (document tree, entity, events)
   - Environment Setup for Development
@@ -31,8 +25,15 @@ Theo Sun
 
 ---
 
+## [OData](https://www.odata.org/)
 
+- introduction
+- version
+- CRUD
+- expand
+- ACTION/FUNCTION
 
+---
 
 ## [CAP Framework](https://cap.cloud.sap/docs/about/)
 
@@ -49,10 +50,8 @@ Theo Sun
 ## Links
 
 
-
-
 - [CAP Framework Organization](https://github.wdf.sap.corp/cap)
-- [Roadmap](https://github.wdf.sap.corp/cap/matters/projects/33#card-138161)
+- [Road Map](https://github.wdf.sap.corp/cap/matters/projects/36)
 - [CAP Issues](https://github.wdf.sap.corp/cap/issues/issues)
 - [Setup Environment](https://cap.cloud.sap/docs/get-started/)
 
@@ -81,9 +80,7 @@ Theo Sun
   - Common CRUD methods: `CREATE`, `READ`, `UPDATE`, `UPSERT`, `DELETE`
   - Common REST methods: `POST`, `GET`, `PUT`, `PATCH`, `DELETE`
   - Custom-defined actions and functions 
-- [Asynchronous Event Messsages](https://github.wdf.sap.corp/cap/issues/issues/4665?email_source=notifications&email_token=AAAFI7G4LUUNI6YQV4Z3QOLRPZVORA5CNFSM4ABNMMMKYY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOAAQKM6Y#issuecomment-2139771) received thru message brokers:
-  - ~~Common entity-level events: `CREATED`, `CHANGED`~~
-  - ~~Custom-defined events and message topics~~
+- [Events & Messaging](https://cap.cloud.sap/docs/guides/messaging/) received thru message brokers
 
 ---
 
@@ -108,10 +105,13 @@ Theo Sun
 
 ## Service Impl -- class
 
-> some limitation, not recommend
-
 ```js
-module.exports = class IndexService {
+module.exports = class IndexService extends ApplicationService {
+
+  async init() {
+    await super.init()
+    // do some init as you want
+  }
 
   metric() {
     return { "service": "CDS" }
@@ -152,7 +152,6 @@ module.exports = (srv) => {
 ## Events - custom event
 
 
-
 - Action - `WRITE` - `POST`
 - Function - `READ` - `GET`
 
@@ -191,16 +190,15 @@ module.exports = (srv) => {
 ## Tips
 
 
-
-- **many-2-many*- association is not released until 2020 Q4
 - custom **action*- is used to `WRITE`
 - custom **function*- is used to `QUERY`
 - use `NODE_ENV` control the CAP running profile (local sqlite/remote hana).
 - directory name/package name/service name should be same.
 - remember to add the mandatory columns to the initialize CSV file(e.g. PK)
-- maybe there are some issues in the `CDS deploy` now.
+  - please carefully use the CSV init data, ref the advance session
 - use fixed `@sap/cds` version.
 - `debug` server if you don't know the object detail.
+- use env [`DEBUG`](https://cap.cloud.sap/docs/node.js/cds-log) to get internal logs of CAP
 
 
 --- 
