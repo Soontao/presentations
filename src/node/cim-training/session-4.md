@@ -21,9 +21,14 @@ theme: dark
   - net/http
 
 ---
+## [LTS - long term support](https://nodejs.org/en/about/releases/)
+
+
+![](https://raw.githubusercontent.com/nodejs/Release/master/schedule.svg?sanitize=true)
+
+---
 
 ## Module System - [CommonJS](https://zh.wikipedia.org/wiki/CommonJS)
-
 
 
 ```js

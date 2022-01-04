@@ -80,9 +80,9 @@ server.route("/api/v1/what", (req) => { // arrow function
 - Undefined `undefined`
 - Number `123`
 - BigInt
-- String `'abc'`
-- Symbol
-- Object `other things`
+- String `'abc'` `"def"` \`${param} value\`
+- Symbol `Symbol(1)`
+- Object `other any things`
 
 ---
 
@@ -99,7 +99,6 @@ foo = true;  // foo is a Boolean now
 ---
 
 ## Variables
-
 
 
 ```javascript
@@ -146,6 +145,8 @@ const a = {a:1,b:2,c:3}
 const b = {d:4,e:5}
 const c = Object.assign(a,b)
 // a == c == { a: 1, b: 2, c: 3, d: 4, e: 5 }
+const d = { ...a, ...b }
+// d == { a: 1, b: 2, c: 3, d: 4, e: 5 }
 ```
 
 ---
@@ -162,6 +163,22 @@ pName = "d"
 ob1[pName] = 4
 // ob1 == { a: 1, b: 2, c: 3, d: 4 }
 ```
+
+---
+
+## Object - optional chain
+
+> nodejs >= `14.0` ONLY
+
+```js
+const obj = {a:{b:{c:1}}}
+obj.a.b.c.d // => undefined
+obj.a.b.c.d.e // => throw TypeError: Cannot read properties of undefined 
+obj.a.b.c.d?.e // => undefined
+obj.a.b.c.d(1) // => TypeError: obj.a.b.c.d is not a function
+obj.a.b.c.d?.(param) // => undefined
+```
+
 
 ---
 
@@ -221,6 +238,7 @@ for (const key in obj) {
 - !==
 - \>=
 - <=
+- ?? ([Nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator), NodeJS >= `14.0` ONLY)
 
 ---
 
@@ -277,7 +295,7 @@ var o7 = 'Cat' || false;    // t || f returns Cat
 
 ---
 
-## Operators - Others
+## Other Keywords
 
 
 ```js
@@ -292,6 +310,7 @@ delete objectName;
 delete objectName.property;
 delete arrayName[index];
 delete variable; 
+delete constVar; // => false
 ```
 
 
@@ -341,7 +360,6 @@ Boolean("1") // true
 ---
 
 ## Loop
-
 
 
 ```js
