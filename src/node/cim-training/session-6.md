@@ -14,17 +14,6 @@ Theo Sun
 
 ---
 
-## Agenda - CAP Framework Basics
-
-- CAP
-  - Introduction (document tree, entity, events)
-  - Environment Setup for Development
-  - Basic Demo
-  - Deployment
-
-
----
-
 ## [OData](https://www.odata.org/)
 
 - introduction
