@@ -20,6 +20,7 @@ theme: dark
 - Regexp
 - Date
 - Object
+- Math
 
 ---
 
@@ -34,14 +35,14 @@ let keyObj = {};
 let keyFunc = function() {};
 let keyString = 'a string';
  
-// 添加键
+// add key
 myMap.set(keyString, "和键'a string'关联的值");
 myMap.set(keyObj, "和键keyObj关联的值");
 myMap.set(keyFunc, "和键keyFunc关联的值");
  
 myMap.size; // 3
  
-// 读取值
+// read value
 myMap.get(keyString);    // "和键'a string'关联的值"
 myMap.get(keyObj);       // "和键keyObj关联的值"
 myMap.get(keyFunc);      // "和键keyFunc关联的值"
@@ -55,20 +56,20 @@ myMap.get(keyFunc);      // "和键keyFunc关联的值"
 
 ```js
 const map1 = new Map();
-
 map1.set('0', 'foo');
 map1.set(1, 'bar');
-
 map1.keys() // all keys
 map1.values() // all values
 
-for (const v of map1.entries()) {
-  console.log(v)
+for (const kv of map1.entries()) {
+  console.log(kv)
 }
 
-map1.forEach((value, key) => {
-  console.log(value, key)
-})
+for (const [k, v] of map1.entries()) {
+  console.log(k, v)
+}
+
+map1.forEach((value, key) => { console.log(value, key)} )
 ```
 
 
@@ -85,8 +86,6 @@ map1.forEach((value, key) => {
 ---
 
 ## Set
-
-
 
 ```js
 const s = new Set([1, 2, 3, 3])

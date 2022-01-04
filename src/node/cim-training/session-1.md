@@ -26,16 +26,16 @@ Theo Sun
   - condition & loop statement
   - function (basic, arrow & async)
   - prototype
-- Homework introduction
+  - Block & Closure
 
 ---
 
 ## Installation
 
-* [setup git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-* [install vscode](https://code.visualstudio.com)
-* (windows) [install nodejs](https://nodejs.org/en) 
-* (macos/linux) [install nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) 
+- [setup git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+- [install vscode](https://code.visualstudio.com)
+- (windows) [install nodejs](https://nodejs.org/en) 
+- (macos/linux) [install nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) 
 
 ---
 
@@ -416,25 +416,98 @@ Person.prototype.greet = function() {}; // attach a function to the prototype
 "greet" in p // true
 ```
 
----
-
-## Homework
-
-- Public Github User
-- Git
-- VSCode
-- NodeJS
 
 ---
 
-## Homework
+## block
 
-- For the project [nodejs-training](https://github.com/Soontao/nodejs-training)
-- Edit the `training.config.json`
-- `npm install`
-- `npm run download` (daily)
-- `npm run test`
-- update unit test code in `src/cases`
-- `npm run test`
-- commit & push
-- check github workflow status
+```js
+var x = 1;
+let y = 1;
+
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+
+console.log(x);
+// expected output: 2
+
+console.log(y);
+// expected output: 1
+```
+
+---
+
+
+## closure
+
+> access variable outside current scope
+
+```js
+var a = 1;
+
+var f = () => {
+  console.log(a)
+}
+
+f() // output: ?
+```
+---
+
+## closure
+
+> access variable outside current scope
+
+```js
+var a = 1;
+
+var f2 = () => {
+  a = 3;
+  console.log(a);
+}
+
+f2() // output: ?
+a // ?
+```
+
+---
+
+## closure
+
+> access variable outside current scope
+
+
+```js
+var a = 1;
+
+var f3 = () => {
+  var a = 3;
+  console.log(a);
+}
+
+f3() // output: ?
+a // ?
+```
+
+---
+
+## closure
+
+> access variable outside current scope
+
+```js
+let a = 1;
+
+let f4 = () => {
+  let a = 3;
+  console.log(a);
+}
+
+f4() // output: ?
+a // ?
+```
+
+---
+
+## Thank You 

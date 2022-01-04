@@ -12,7 +12,6 @@ marp: true
 ## Agenda
 
 * ECMAScript standards introduction
-* Block & Closure
 * Class & `this`
 * Promise
 * Template strings
@@ -31,98 +30,29 @@ marp: true
 - ES8 - ES2017 (async)
 - ...
 
----
-
-## block
-
-
-
-```js
-var x = 1;
-let y = 1;
-
-if (true) {
-  var x = 2;
-  let y = 2;
-}
-
-console.log(x);
-// expected output: 2
-
-console.log(y);
-// expected output: 1
-```
 
 ---
 
+## Object - Destructuring assignment
 
-## closure
-
-> access variable outside current scope
-
-```js
-var a = 1;
-
-var f = () => {
-  console.log(a)
-}
-
-f() // output: ?
-```
----
-
-## closure
-
-> access variable outside current scope
+> The object and array literal expressions provide an easy way to create ad hoc packages of data.
 
 ```js
-var a = 1;
+let a, b, rest;
+[a, b] = [10, 20];
 
-var f2 = () => {
-  a = 3;
-  console.log(a);
-}
+console.log(a);
+// expected output: 10
 
-f2() // output: ?
-a // ?
+console.log(b);
+// expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// expected output: Array [30,40,50]
 ```
 
----
-
-## closure
-
-> access variable outside current scope
-
-
-```js
-var a = 1;
-
-var f3 = () => {
-  var a = 3;
-  console.log(a);
-}
-
-f3() // output: ?
-a // ?
-```
-
----
-
-## closure
-
-> access variable outside current scope
-
-```js
-let a = 1;
-
-let f4 = () => {
-  let a = 3;
-  console.log(a);
-}
-
-f4() // output: ?
-a // ?
-```
 
 ---
 
@@ -333,6 +263,8 @@ console.log(new People3("people3", new People("people1")).getName())
 
 > async handle
 
+**as far as possible, use `await` to wait promise** 
+
 ```js
 const promise1 = new Promise(function(resolve, reject) {
   setTimeout(function() {
@@ -401,7 +333,7 @@ Promise
 
 ## template string
 
-> Developers love this feature
+> Developers love this feature, please carefully process `undefined` error
 
 ```js
 var person = "alice"
@@ -425,7 +357,7 @@ I'm ....
 
 ## Async Function (ES2018)
 
-> make code beautiful
+> you can use `await` keyword to wait any `promise` even `plain object`
 
 ```js
 async function run() {
@@ -440,9 +372,10 @@ async function run() {
 
 ---
 
-## Arrow Function (ES2015)
+## Arrow Function (ES6)
 
-
+- no `arguments`
+- no `this`
 
 ```js
 const f1 = () => { return "f1" }
@@ -459,3 +392,24 @@ f4({ name: "alice", age: 1000 }) // => 'hello alice'
 f5("alice") // Uncaught ReferenceError: arguments is not defined
 f6.call({ name: "alice" }) // => 'hello undefined'
 ```
+
+---
+
+## [Spread syntax (...) & Rest syntax (parameters)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+> Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
+
+```js
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// expected output: 6
+
+console.log(sum.apply(null, numbers));
+// expected output: 6
+```
+

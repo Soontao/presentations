@@ -78,6 +78,12 @@ console.log(c.name) // alice
 
 > index.js & directory
 
+```js
+// same
+require("./module")
+require("./module/index.js")
+```
+
 ---
 
 ## Module System
