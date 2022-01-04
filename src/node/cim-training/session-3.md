@@ -183,7 +183,6 @@ Number.parseInt("101", 2) // 5
 ## Boolean
 
 
-
 ```js
 Boolean(0) // false
 Boolean(1) // true
@@ -192,7 +191,7 @@ Boolean(undefined) // false
 Boolean(null) // false
 Boolean(NaN) // false
 Boolean({a:1}) // true
-Boolean(new Date())
+Boolean(new Date()) // true
 Boolean([]) // true
 Boolean([1]) // true
 Boolean("") // false

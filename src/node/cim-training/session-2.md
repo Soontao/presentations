@@ -251,4 +251,23 @@ I'm ....
 
 ---
 
+## Big Number
+
+> for big decimal number, please careful to process the numeric range, sometime HANA support the number but nodejs do not support that
+
+```bash
+> 0.1 + 0.2
+0.30000000000000004
+> 0.01 + 0.05
+0.060000000000000005
+```
+
+- [What Every JavaScript Developer Should Know About Floating Points](https://modernweb.com/what-every-javascript-developer-should-know-about-floating-points/)
+- [big.js](https://www.npmjs.com/package/big.js)
+- [a discussion](https://github.wdf.sap.corp/cap/issues/issues/10208)
+
+
+
+---
+
 ## Thank You
