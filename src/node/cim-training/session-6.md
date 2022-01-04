@@ -98,6 +98,24 @@ Theo Sun
 
 ---
 
+## Service Definition
+
+```swift
+using { sap.capire.bookshop as my } from '../db/schema';
+
+service BookshopService {
+  entity Books as projection on my.Books;
+  entity Authors as projection on my.Authors;
+  action submitOrder (book : Books:ID, quantity : Integer);
+}
+```
+
+---
+
+## [Service Definition - `projection` & `select`](https://cap.cloud.sap/docs/cds/cdl#views)
+
+---
+
 ## Service Impl -- class
 
 ```js
@@ -125,7 +143,6 @@ module.exports = class IndexService extends ApplicationService {
 ## Service Impl -- programming
 
 
-
 ```js
 module.exports = (srv) => {
 
@@ -144,11 +161,14 @@ module.exports = (srv) => {
 ```
 ---
 
-## Events - custom event
+## [Action & Function](https://cap.cloud.sap/docs/guides/providing-services#actions-and-functions) 
+
+> In addition to common CRUD operations, you can declare domain-specific custom operations as shown below. These custom operations always need custom implementations in corresponding events handlers.
 
 
 - Action - `WRITE` - `POST`
 - Function - `READ` - `GET`
+- Bound & Unbound
 
 ---
 
@@ -162,8 +182,6 @@ module.exports = (srv) => {
 --- 
 
 ## CAP Application Necessary
-
-
 
 - cds & sap-hana & sqlite dependency
 - cds configuration (in the `package.json` or `.cdsrc` file)
