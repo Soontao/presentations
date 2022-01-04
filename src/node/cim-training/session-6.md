@@ -186,6 +186,18 @@ module.exports = (srv) => {
 
 - [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
 
+
+---
+
+## [Context](https://cap.cloud.sap/docs/node.js/cds-facade#cds-context)
+
+
+---
+
+## Authentication & XSUAA
+
+- [CAP NodeJS Authentication](https://cap.cloud.sap/docs/node.js/authentication)
+- XSUAA and RBAC and authentication flow
 ---
 
 ## CAP Application Necessary
