@@ -103,8 +103,6 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ## [ExpressJS](https://expressjs.com/) - Examples
 
-
-
 - App
 - Chain
 - Router
@@ -116,11 +114,10 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ## Memory
 
-
-
 - V8 js engine gc
 - [nodejs gc options](https://gist.github.com/listochkin/10973974)
-- Node inspect with Chrome, `chrome://inspect`, dump heap
+- [Node inspect](https://nodejs.org/en/docs/guides/debugging-getting-started/) with Chrome, `chrome://inspect`, dump heap
+- [Garbage Collection Methods](https://blog.risingstack.com/node-js-at-scale-node-js-garbage-collection/)
 
 ---
 
@@ -171,6 +168,7 @@ if (cluster.isMaster) {
   - `.bin`
   - how to find debug target
   - configure the debug profile
+- [native debug](https://nodejs.org/en/docs/guides/debugging-getting-started/)
 - [remote debug example](https://github.com/Soontao/cf-node-debug-example)
 
 ---

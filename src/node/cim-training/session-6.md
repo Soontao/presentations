@@ -35,9 +35,15 @@ Theo Sun
 
 ---
 
+## HANA Introduction
+
+- [HANA WIKI](https://de.wikipedia.org/wiki/SAP_HANA)
+- [HDI](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US)
+- HANA instance & HDI container & schema
+
+---
+
 ## [CAP Framework](https://cap.cloud.sap/docs/about/)
-
-
 
 > The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
 
