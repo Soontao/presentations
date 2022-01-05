@@ -10,7 +10,7 @@ theme: dark
 # NodeJS Basics
 
 Theo Sun
-2020
+2022
 
 ---
 ## [LTS - long term support](https://nodejs.org/en/about/releases/)
@@ -24,8 +24,9 @@ Theo Sun
 
 ## Module System - [CommonJS](https://zh.wikipedia.org/wiki/CommonJS)
 
+> nodejs implemented its own module system
 
-```js
+```javascript
 const fs = require("fs") // load module
 
 const moduleInternalStringUTF8 = "UTF-8" // internal variable, not exported
@@ -45,6 +46,8 @@ module.exports = { readFileString }
 
 > Load only once, later `require` will use cache
 
+You can use it as a global shared variable
+
 ---
 
 ## Module System
@@ -58,7 +61,7 @@ module.exports = { readFileString }
 > Load JSON file
 
 
-```js
+```javascript
 const c = require("./config.json")
 
 console.log(c.name) // alice
@@ -70,7 +73,7 @@ console.log(c.name) // alice
 
 > index.js & directory
 
-```js
+```javascript
 // same
 require("./module")
 require("./module/index.js")
@@ -99,13 +102,23 @@ require(X) from module at path Y
 
 ---
 
+## NodeJS project structure
+
+- package.json & lock & `node_modules`
+- scripts in `package.json`
+- jsconfig.json
+- eslint
+- .gitignore
+
+---
+
 ## npm
 
 > node package manager
 
 ```bash
 npm init
-npm i express
+npm install express
 ```
 
 ---
@@ -114,41 +127,29 @@ npm i express
 
 > central package management
 
+- [npmjs.com](https://www.npmjs.com/)
+- [sap artifactory](https://pages.github.tools.sap/Common-Repository/Artifactory-Corp/)
+
 ```ini
 @sap:registry=https://int.repositories.cloud.sap/artifactory/api/npm/build-milestones-npm
 @sap-internal:registry=https://int.repositories.cloud.sap/artifactory/api/npm/internal-tool
 ```
-
-
 ---
+## global objects
 
-## [Event](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
-
-```js
-const { EventEmitter } = require("events")
-
-const Service = class extends EventEmitter {
-  constructor(...args) {
-    super(...args)
-    this.value = 0;
-  }
-}
-
-const bus = new Service();
-
-bus.on('add', function (a) { this.value += a });
-
-bus.on('add', function (a, b) { console.log(`after add: ${this.value}`); });
-
-bus.emit("add", 10)
-bus.emit("add", 10)
+```javascript
+console.log(__dirname)
+console.log(__filename)
+require("module")
+console.log(Buffer.from("text", "utf8").toString("base64"))
 ```
 
 ---
 
+
 ## [Event Emitter](https://nodejs.org/dist/latest-v16.x/docs/api/events.html)
 
-```js
+```javascript
 const { EventEmitter } = require("events")
 const Service = class extends EventEmitter {
   constructor(...args) {
@@ -191,30 +192,30 @@ bus.emit("add", 10)
 * string, encoded
 * Promise API
 
-> DON'T use sync functions on server side programming.
+> DON'T use **sync functions** on server side programming.
 
 ---
 
-## [Process](https://nodejs.org/dist/latest-v10.x/docs/api/process.html)
+## [process](https://nodejs.org/dist/latest-v10.x/docs/api/process.html)
 
 ---
 
-## Process - environment
+## process - environment
 
 > access system environment variables, sometimes you will need this, for example, run CAP in k8s
 
-```js
-process.env.PATH
+```javascript
+console.log(process.env.PATH)
 ```
 
 
 ---
 
-## Process -- custom exit logic
+## process -- custom exit logic
 
 
 
-```js
+```javascript
 process.on("SIGINT", async () => { // interrupt
    await server.destroy(); // destroy runtime
    if (conn.isConnected) { await conn.close(); } // close connection
@@ -224,11 +225,11 @@ process.on("SIGINT", async () => { // interrupt
 
 ---
 
-## Process -- parse cli argv
+## process -- parse cli argv
 
 
 
-```js
+```javascript
 console.log(process.argv);
 // [ 'node',
 //   '/argv.js',
@@ -244,7 +245,7 @@ console.log(process.argv);
 
 > platform path library
 
-```js
+```javascript
 path.join(__dirname, "./name-list.txt") // convert to absolute path
 ```
 
@@ -254,7 +255,7 @@ path.join(__dirname, "./name-list.txt") // convert to absolute path
 
 > ALWAYS use '/' instead of '\\'
 
-```js
+```javascript
 path.join(__dirname, "./../cim-training/session-1.js") // even you are in windows
 ```
 
@@ -266,7 +267,7 @@ path.join(__dirname, "./../cim-training/session-1.js") // even you are in window
 
 
 
-```js
+```javascript
 os.homedir() // user home
 os.tmpdir() // tmp dir
 ```
@@ -276,7 +277,7 @@ os.tmpdir() // tmp dir
 
 ## [net](https://nodejs.org/dist/latest-v10.x/docs/api/net.html) - access low-level TCP/UDP API
 
-```js
+```javascript
 const net = require('net');
 const server = net.createServer((c) => {
   // 'connection' listener.
@@ -304,7 +305,7 @@ server.listen(5000, () => {
 
 > http server
 
-```js
+```javascript
 const http = require('http');
 
 http.createServer(function (request, response) {
@@ -323,7 +324,7 @@ http.createServer(function (request, response) {
 
 > http server
 
-```js
+```javascript
 var http = require('http');
 
 http.createServer(function (request, response) {
@@ -347,7 +348,7 @@ http.createServer(function (request, response) {
 
 > http server parse content
 
-```js
+```javascript
 var http = require('http');
 
 http.createServer(function (request, response) {
@@ -375,9 +376,7 @@ http.createServer(function (request, response) {
 
 ## [http](https://nodejs.org/dist/latest-v10.x/docs/api/http.html) - client
 
-> http client
-
-```js
+```javascript
 const http = require("http")
 const opt = { method: "POST", headers: { "Content-Type": "application/json" } }
 
@@ -393,3 +392,6 @@ req.end()
 ```
 
 
+---
+
+## Thank You

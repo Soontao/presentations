@@ -7,10 +7,10 @@ marp: true
 
 # Node JS Training: Session 2 
 
-# Advanced Javascript - ES6 & More
+# Advanced Javascript
 
 Theo Sun
-2020
+2022
 
 ---
 
@@ -31,7 +31,7 @@ Theo Sun
 - no `arguments`
 - no `this`
 
-```js
+```javascript
 const f1 = () => { return "f1" }
 const f2 = () => "f2"
 const f3 = value => `hello ${value}`
@@ -53,9 +53,9 @@ f6.call({ name: "alice" }) // => 'hello undefined'
 
 > The object and array literal expressions provide an easy way to create ad hoc packages of data.
 
-```js
+```javascript
 let a, b, rest;
-[a, b] = [10, 20];
+[a, b] = [10, 20]; // image this is a function return value
 
 console.log(a);
 // expected output: 10
@@ -66,7 +66,7 @@ console.log(b);
 [a, b, ...rest] = [10, 20, 30, 40, 50];
 
 console.log(rest);
-// expected output: Array [30,40,50]
+// expected output: Array [30, 40, 50]
 ```
 
 
@@ -76,7 +76,7 @@ console.log(rest);
 
 > Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
 
-```js
+```javascript
 function sum(x, y, z) {
   return x + y + z;
 }
@@ -100,7 +100,7 @@ console.log(sum.apply(null, numbers));
 
 **as far as possible, use `await` to wait promise** 
 
-```js
+```javascript
 const promise1 = new Promise(function(resolve, reject) {
   setTimeout(function() {
     resolve('foo');
@@ -120,7 +120,7 @@ console.log(promise1);
 
 ## Promise (ES6) - error
 
-```js
+```javascript
 // just a mock, this function will be async network/IO API
 const createAsyncValue = function (value) {
   return new Promise(function (resolve, reject) {
@@ -146,7 +146,7 @@ createAsyncValue("hello")
 
 > send multi async requests, and wait they ALL finished 
 
-```js
+```javascript
 Promise
   .all([createAsyncValue("run1"), createAsyncValue("run2")])
   .then(console.log) // [ 'run1', 'run2' ]
@@ -155,7 +155,6 @@ Promise
   .all([createAsyncValue("run1"), createAsyncValue(new Error("error1"))])
   .then(console.log) // no here
   .catch(console.error) // only here
-
 ```
 ---
 
@@ -163,7 +162,7 @@ Promise
 
 > you can use `await` keyword to wait any `promise` even `plain object`
 
-```js
+```javascript
 async function run() {
   const hello = await createAsyncValue("hello")
   try {
@@ -180,7 +179,7 @@ async function run() {
 
 > convert callback to promise and wait it in async function
 
-```js
+```javascript
 function sleep(timeout = 1000) {
   return new Promise((resolve, reject)=>{
     setTimeout(resolve, timeout)
@@ -203,7 +202,7 @@ f() // it will return a Promise
 
 
 
-```js
+```javascript
 class People {
   constructor(name) {
     this.name = name
@@ -231,9 +230,9 @@ new People2("admin") // People2 { name: 'admin1' }
 
 > Developers love this feature, please carefully process `undefined` error
 
-```js
+```javascript
 var person = "alice"
-var hello_person_1 = "hello " + alice + ".";
+var hello_person_1 = "hello " + person + ".";
 var hello_person_2 = "hello ".concat(person).concat(".")
 var hello_person_3 = `hello ${person}.`
 
@@ -250,22 +249,34 @@ I'm ....
 ```
 
 ---
+## Operators - [Nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+
+- used for undefined check, replace the `||` operator in some cases
+- NodeJS >= `14.0` ONLY)
+
+
+```javascript
+console.log(0 && 1)
+console.log(0 || 1)
+console.log(0 ?? 1)
+```
+
+---
 
 ## Big Number
 
 > for big decimal number, please careful to process the numeric range, sometime HANA support the number but nodejs do not support that
 
-```bash
-> 0.1 + 0.2
-0.30000000000000004
-> 0.01 + 0.05
-0.060000000000000005
+```javascript
+console.log(0.1 + 0.2)
+// 0.30000000000000004
+console.log(0.01 + 0.05)
+// 0.060000000000000005
 ```
 
 - [What Every JavaScript Developer Should Know About Floating Points](https://modernweb.com/what-every-javascript-developer-should-know-about-floating-points/)
 - [big.js](https://www.npmjs.com/package/big.js)
 - [a discussion](https://github.wdf.sap.corp/cap/issues/issues/10208)
-
 
 
 ---

@@ -10,20 +10,7 @@ theme: dark
 # Advanced NodeJS
 
 Theo Sun
-2020
-
----
-
-## Agenda - Advanced NodeJS
-
-- Event Loop
-- ExpressJS
-- Memory
-- Stream
-- Cluster
-- Debug & Unit Test Debug
-- JSDoc
-- NPM & Open Source & Security
+2022
 
 ---
 
@@ -38,6 +25,8 @@ Theo Sun
 ---
 
 ## Event Loop
+
+> put async jobs to queue, and execute them on time
 
 ```text
        ┌───────────────────────────┐
@@ -195,7 +184,7 @@ const f2 = (arr = []) => {
 
 - frontend build
 - cloud environment declaration
-- [CAP runtime profile](https://cap.cloud.sap/docs/node.js/cds-env)
+- [CAP Profile](https://cap.cloud.sap/docs/node.js/cds-env)
 
 ---
 
@@ -207,5 +196,6 @@ const f2 = (arr = []) => {
     - registry
     - install (dev/default)
     - run (script name)
-- npm audit
-- whitesource
+- [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit/)
+- [white source](https://saas.whitesourcesoftware.com/Wss/WSS.html)
+- [open source tool](https://open-source.tools.sap.corp/)

@@ -10,22 +10,7 @@ theme: dark
 # Javascript Core API
 
 Theo Sun
-2020
-
----
-
-## Agenda - Core Classes
-
-- Map
-- Set
-- Array, foreach/map/reduce
-- Number
-- Boolean
-- String
-- Regexp
-- Date
-- Object
-- Math
+2022
 
 ---
 
@@ -258,8 +243,6 @@ const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
 
 ## Date
 
-
-
 ```js
 const d = new Date()
 d.toISOString() // '2020-04-23T02:28:56.507Z'
@@ -269,9 +252,7 @@ new Date(1587608936507) // parse from unix timestamp
 new Date("2020-04-23T02:28:56.507Z") // parse from ISO
 ```
 
-
-
-[library -- momentjs](https://momentjs.com/docs/)
+[date library -- luxon](https://moment.github.io/luxon/#/)
 
 ---
 

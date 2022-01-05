@@ -9,28 +9,11 @@ theme: dark
 # Javascript Basics
 
 Theo Sun
-2020
+2022
 
 ---
 
-## Agenda
-
-- Installation - Git, VSCode & NodeJS (nvm)
-- Overview language introduction
-- NodeJS project structure
-- Javascript basics
-  - datatype
-  - variable
-  - object
-  - expression & operator
-  - condition & loop statement
-  - function (basic, arrow & async)
-  - prototype
-  - Block & Closure
-
----
-
-## Installation
+## Tools
 
 - [setup git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - [install vscode](https://code.visualstudio.com)
@@ -57,16 +40,7 @@ server.route("/api/v1/what", (req) => { // arrow function
 })
 
 ```
----
 
-## NodeJS project structure
-
-
-- package.json & lock & `node_modules`
-- scripts in `package.json`
-- jsconfig.json
-- eslint
-- .gitignore
 
 
 ---
@@ -121,8 +95,7 @@ d = 4; // ok, but static code check will report this var not defined before
 
 > Almost everything is 'object' in javascript
 
-
-```js
+```javascript
 const o1 = { a: 1, b: "2" } // create an object with 2 properties
 o1.a = 2 // change the properties
 // o1 = {} // ERROR
@@ -140,7 +113,7 @@ o1.a != a
 
 > combine object
 
-```js
+```javascript
 const a = {a:1,b:2,c:3}
 const b = {d:4,e:5}
 const c = Object.assign(a,b)
@@ -155,7 +128,7 @@ const d = { ...a, ...b }
 
 > dynamic access object properties
 
-```js
+```javascript
 let pName = "c"
 const ob1 = {a:1,b:2,c:3}
 ob1[pName] == 3
@@ -170,7 +143,7 @@ ob1[pName] = 4
 
 > nodejs >= `14.0` ONLY
 
-```js
+```javascript
 const obj = {a:{b:{c:1}}}
 obj.a.b.c.d // => undefined
 obj.a.b.c.d.e // => throw TypeError: Cannot read properties of undefined 
@@ -186,7 +159,7 @@ obj.a.b.c.d?.(param) // => undefined
 
 > foreach object
 
-```js
+```javascript
 const obj = { a: 1, b: 2 }
 const keys = Object.keys(obj)
 // keys == [ 'a', 'b' ]
@@ -219,7 +192,7 @@ for (const key in obj) {
 
 
 
-```js
+```javascript
 1 + 2 // 3
 1 - 2 // -1
 1 * 2 // 2
@@ -238,13 +211,11 @@ for (const key in obj) {
 - !==
 - \>=
 - <=
-- ?? ([Nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator), NodeJS >= `14.0` ONLY)
-
 ---
 
 ## Operators - Comparison
 
-```js
+```javascript
 "1" == 1 // true
 "1" === 1 // false
 ```
@@ -255,7 +226,7 @@ for (const key in obj) {
 
 > In fact, you don't need these
 
-```js
+```javascript
 1 & 2 // 01 & 10 => 00
 1 | 2 // 01 | 10 => 11
 1 ^ 2 // 01 | 10 => 11
@@ -269,7 +240,7 @@ for (const key in obj) {
 
 
 
-```js
+```javascript
 var a1 =  true && true;     // t && t returns true
 var a2 =  true && false;    // t && f returns false
 var a3 = false && true;     // f && t returns false
@@ -283,7 +254,7 @@ var a7 = 'Cat' && false;    // t && f returns false
 
 ## Operators - Logical
 
-```js
+```javascript
 var o1 =  true || true;     // t || t returns true
 var o2 = false || true;     // f || t returns true
 var o3 =  true || false;    // t || f returns true
@@ -298,7 +269,7 @@ var o7 = 'Cat' || false;    // t || f returns Cat
 ## Other Keywords
 
 
-```js
+```javascript
 var one = new Number(1)
 one instanceof Number // check object type
 
@@ -320,7 +291,7 @@ delete constVar; // => false
 
 
 
-```js
+```javascript
 var a = { b: 1, c: 2, d: 0 }
 if (a.b) {
   // will run
@@ -341,7 +312,7 @@ if (true) {
 
 
 
-```js
+```javascript
 Boolean(0) // false
 Boolean(1) // true
 Boolean(-1) // true
@@ -362,7 +333,7 @@ Boolean("1") // true
 ## Loop
 
 
-```js
+```javascript
 var arr1 = [1, 2, 3]
 
 for (let idx = 0; idx < arr1.length; idx++) {
@@ -380,7 +351,7 @@ arr1.forEach((ele, idx) => {
 
 ## Function
 
-```js
+```javascript
 function hello(arg1 = "alice") { // default value
   console.log(`hello ${arg1}`)
 }
@@ -406,9 +377,7 @@ hello2("alice") // alice
 
 ## Function
 
-
-
-```js
+```javascript
 function hello() {
   console.log(`hello ${this.name}`) // use `this`
 }
@@ -417,28 +386,30 @@ hello.call({ name: "alice" })  // hello alice
 hello() // hello undefined
 ```
 
-
-
 --- 
 
 ## `this` issue
 
 
-```js
-function People(name) {
-  this.name = name
-}
-
-People.prototype.getName = function () {
+```javascript
+function getName() {
   return this.name
 }
 
-function People3(name, p) {
+function People(name) {
   this.name = name
-  this.getName = p.getName
 }
+People.prototype.getName = getName;
 
-console.log(new People3("people3", new People("people1")).getName())
+function People3(name) {
+  this.name = name
+}
+People3.prototype.getName = getName;
+
+console.log(new People("people").getName())
+console.log(new People3("people3").getName())
+console.log(getName.call(new People("people")))
+console.log(getName.call(new People3("people3")))
 // output: ?
 ```
 ---
@@ -457,7 +428,7 @@ console.log(new People3("people3", new People("people1")).getName())
 
 ## prototype
 
-```js
+```javascript
 function People(name) { this.name = name }
 var p = new People();
 p.__proto__ == People.prototype; // true
@@ -480,54 +451,30 @@ People.type = "china"; // class property/method, if you want
 
 > `this` is `context`
 
-```js
+```javascript
 function People(name) {
   this.name = name // access context
 }
 
-var obj = {}  // new context
-var obj1 = {} // new context
-var obj2 = {} // new context
+const obj = {}  // new context
+const obj1 = {} // new context
+const obj2 = {} // new context
 
 People.apply(obj, ["hello"])
 
 People.call(obj1, "hello")
 
-var People2 = People.bind(obj2)
+const People2 = People.bind(obj2)
 People2("hello")
 
 obj.name == obj1.name == obj2.name
-```
-
---- 
-
-## class (old) bind `this`
-
-> PLEASE remember `this` is not safe
-
-```js
-function People(name) {
-  this.name = name
-}
-
-People.prototype.getName = function () {
-  return this.name
-}
-
-function People3(name, p) {
-  this.name = name
-  this.getName = p.getName.bind(p)
-}
-
-console.log(new People3("people3", new People("people1")).getName())
-// output: ?
 ```
 
 ---
 
 ## block
 
-```js
+```javascript
 var x = 1;
 let y = 1;
 
@@ -550,7 +497,7 @@ console.log(y);
 
 > access variable outside current scope
 
-```js
+```javascript
 var a = 1;
 
 var f = () => {
@@ -565,7 +512,7 @@ f() // output: ?
 
 > access variable outside current scope
 
-```js
+```javascript
 var a = 1;
 
 var f2 = () => {
@@ -584,7 +531,7 @@ a // ?
 > access variable outside current scope
 
 
-```js
+```javascript
 var a = 1;
 
 var f3 = () => {
@@ -602,7 +549,7 @@ a // ?
 
 > access variable outside current scope
 
-```js
+```javascript
 let a = 1;
 
 let f4 = () => {
