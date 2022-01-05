@@ -1,7 +1,6 @@
 const apple = require("./apple")
 const fruit = "fruit";
 
-console.log("run fruit")
-console.log(`apple: ${apple.apple}`)
+console.log(`fruit apple: ${apple.apple}`)
 
-module.exports = { fruit }
+module.exports = { fruit, apple }

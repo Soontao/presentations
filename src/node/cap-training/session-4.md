@@ -44,15 +44,21 @@ module.exports = { readFileString }
 
 ## Module System
 
-> Load only once, later `require` will use cache
+> Load (sync) only once, later `require` will use cache
 
 You can use it as a global shared variable
+
+
+```js
+const GLOBAL_ENTITY_NAME_PREFIX = 'com.sap.xxxx';
+module.export = { GLOBAL_ENTITY_NAME_PREFIX }
+```
 
 ---
 
 ## Module System
 
-> Cycle dependency issue
+> Cycle import issue
 
 ---
 
@@ -101,6 +107,21 @@ require(X) from module at path Y
 ```
 
 ---
+
+## ECMAScript modules (ESM)
+
+> for reference, `NOT` supported till now
+
+```js
+import { v } from "./m1"
+
+const v2 = v + 1
+
+export { v2 }
+```
+
+---
+
 
 ## NodeJS project structure
 
@@ -430,6 +451,32 @@ require("./m2")
 const { a } = require("./m1")
 console.log(a) // value ?
 ```
+
+---
+
+## Quiz - 5
+
+```js
+// fruit.js
+const { fruit } = require("./fruit")
+const apple = "apple"
+module.exports = { apple, fruit }
+```
+
+```js
+// apple.js
+const apple = require("./apple")
+const fruit = "fruit";
+console.log(`fruit apple: ${apple.apple}`)
+module.exports = { fruit, apple }
+```
+
+```js
+// main.js
+const apple = require("./apple")
+console.log(`main apple: ${apple.apple}`)
+```
+
 
 ---
 
