@@ -171,6 +171,52 @@ async function run() {
 }
 ```
 
+
+---
+
+## Async Function - Control Flow
+
+> execute one by one
+
+```javascript
+async function f() {
+  const list = [1, 2, 3]
+  // NOTICE, this is a keyword supported loop
+  for (item of list) {
+    await createAsyncValue(item)
+  }
+  // all async ops finished
+}
+```
+
+---
+
+## Async Function - Control Flow
+
+> execute parallel
+
+```javascript
+async function f() {
+  const list = [1, 2, 3]
+  await Promise.all(list.map(createAsyncValue))
+  // all async ops finished
+}
+```
+
+---
+
+## Async Function - Carefully
+
+> how about this ?
+
+```javascript
+async function f() {
+  const list = [1, 2, 3]
+  await list.forEach(createAsyncValue)
+  // all async ops finished ?
+}
+```
+
 ---
 
 ## Async Function 

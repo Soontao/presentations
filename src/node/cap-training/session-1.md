@@ -319,11 +319,15 @@ Boolean("1") // true
 
 
 ```javascript
-var arr1 = [1, 2, 3]
+const arr1 = [1, 2, 3]
 
 for (let idx = 0; idx < arr1.length; idx++) {
   const ele = arr1[idx];
-  
+}
+
+// or
+for (const item of arr1) {
+
 }
 
 // or
