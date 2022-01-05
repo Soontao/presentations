@@ -11,14 +11,12 @@ theme: dark
 Theo Sun
 2022
 
+
 ---
 
-## Tools
+## Introduction
 
-- [setup git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-- [install vscode](https://code.visualstudio.com)
-- (windows) [install nodejs](https://nodejs.org/en) 
-- (macos/linux) [install nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) 
+> JavaScript (JS) is a `lightweight`, `interpreted`, or `just-in-time` compiled programming language with `first-class functions`. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, `single-threaded`, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 ---
 
@@ -137,20 +135,7 @@ ob1[pName] = 4
 // ob1 == { a: 1, b: 2, c: 3, d: 4 }
 ```
 
----
 
-## Object - optional chain
-
-> nodejs >= `14.0` ONLY
-
-```javascript
-const obj = {a:{b:{c:1}}}
-obj.a.b.c.d // => undefined
-obj.a.b.c.d.e // => throw TypeError: Cannot read properties of undefined 
-obj.a.b.c.d?.e // => undefined
-obj.a.b.c.d(1) // => TypeError: obj.a.b.c.d is not a function
-obj.a.b.c.d?.(param) // => undefined
-```
 
 
 ---
@@ -560,6 +545,51 @@ let f4 = () => {
 f4() // output: ?
 a // ?
 ```
+
+---
+
+## error
+
+
+```javascript
+function f1() {
+  throw new Error("w1")
+  // never executed
+}
+f1()
+```
+
+```javascript
+function f1() {
+  throw "w1" // you can throw anything
+  // never executed
+}
+f1()
+```
+
+---
+
+## error - catch
+
+
+```javascript
+class CustomError extends Error {}
+
+function f1() {
+  throw new CustomError("w1")
+  // never executed
+}
+
+try {
+  f1()
+} catch(e){
+  console.log(`${typeof e}: ${e?.constructor?.name} : ${e.message}`)
+} finally {
+  console.log("always run")
+}
+```
+
+
 
 ---
 

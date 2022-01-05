@@ -16,8 +16,6 @@ Theo Sun
 
 ## ECMAScript
 
-
-
 - ES5 (old)
 - ES6 - ES2015 (many many APIs)
 - ES7 - ES2016 (**)
@@ -198,29 +196,32 @@ f() // it will return a Promise
 ---
 
 
-## class (ES6)
+## class (ES2015)
 
-
+> modern javascript class
 
 ```javascript
 class People {
   constructor(name) {
-    this.name = name
+    // no explicit instance field declaration
+    this._name = name
   }
 }
 
 // create anonymous class and assign it to `People2`
+// class People2 extends People {
 const People2 = class extends People {
   constructor(name) {
     super(name + "1") // parent class constructor
   }
 
   getName() {
-    return this.name // what is `this` ?
+    return this._name // what is `this` ?
   }
 }
 
-new People2("admin") // People2 { name: 'admin1' }
+const p = new People2("admin") // People2 { name: 'admin1' }
+console.log(p.getName())
 ```
 
 ---
@@ -259,6 +260,21 @@ I'm ....
 console.log(0 && 1)
 console.log(0 || 1)
 console.log(0 ?? 1)
+```
+
+---
+
+## Object - optional chain
+
+> nodejs >= `14.0` ONLY
+
+```javascript
+const obj = {a:{b:{c:1}}}
+obj.a.b.c.d // => undefined
+obj.a.b.c.d.e // => throw TypeError: Cannot read properties of undefined 
+obj.a.b.c.d?.e // => undefined
+obj.a.b.c.d(1) // => TypeError: obj.a.b.c.d is not a function
+obj.a.b.c.d?.(param) // => undefined
 ```
 
 ---
