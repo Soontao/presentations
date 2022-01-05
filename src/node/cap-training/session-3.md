@@ -16,14 +16,14 @@ Theo Sun
 
 ## Map
 
-> Generally Key-Value
+> Generally Key-Value, `carefully process the key`
 
 ```js
-let myMap = new Map();
+const myMap = new Map();
  
-let keyObj = {};
-let keyFunc = function() {};
-let keyString = 'a string';
+const keyObj = {};
+const keyFunc = function() {};
+const keyString = 'a string';
  
 // add key
 myMap.set(keyString, "和键'a string'关联的值");
@@ -66,8 +66,6 @@ map1.forEach((value, key) => { console.log(value, key)} )
 ---
 
 ## WeakMap
-
-
 
 > Key Weak Reference Map
 > Limit key type - only `object`

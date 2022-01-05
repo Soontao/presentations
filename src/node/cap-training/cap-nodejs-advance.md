@@ -161,7 +161,7 @@ ORDER BY id ASC limit 1000 []
       { "passport":
         { "strategy":"mock",
           "users": 
-            { "admin@aiib.mock.com": // req.user.id
+            { "admin@user.mock.com": // req.user.id
               { "roles":[
                   // uaa scope
                   "FullReportAccess"
@@ -383,6 +383,7 @@ app.use(req => {
 ## MTA Topics
 
 - `cf deploy` alert `memory quota exceed`, reduce `app-deployer` `db-deployer` memory to `256M`
+- put more memory to `dynamic deployer` because each deployment will take about 70MB memory (OOM will cause onboard process crash)
 - `xsuaa` `api-access` plan DO NOT support `update configuration` -> existing-service
 - `IDP_ORIGIN` is different from `ADFS` tenants -> set it to mta properties (CF Environment Variables)
 

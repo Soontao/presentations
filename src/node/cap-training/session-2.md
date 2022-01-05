@@ -334,6 +334,8 @@ console.log(0.1 + 0.2)
 // 0.30000000000000004
 console.log(0.01 + 0.05)
 // 0.060000000000000005
+0.1 + 0.2 <= 0.3
+// false
 ```
 
 - [What Every JavaScript Developer Should Know About Floating Points](https://modernweb.com/what-every-javascript-developer-should-know-about-floating-points/)

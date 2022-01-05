@@ -330,7 +330,8 @@ for (const item of arr1) {
 
 }
 
-// or
+// or, please careful here, 
+// this is NOT a programming syntax but a function
 arr1.forEach((ele, idx) => {
 
 })
