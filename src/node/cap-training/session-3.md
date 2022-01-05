@@ -3,7 +3,7 @@ marp: true
 theme: dark
 ---
 
-![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
+![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1641363781/Unofficial_JavaScript_logo_2_sq9qnl.svg)
 
 # Node JS Training: Session 3
  
