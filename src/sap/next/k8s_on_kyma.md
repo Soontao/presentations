@@ -18,7 +18,6 @@ Theo Sun
 - Create/Renew you [SAP trial global account](https://cockpit.hanatrial.ondemand.com)
 - BTP Trial Kyma Runtime, [Official Guide](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ccb83c700e8d4bb8aa545d7307b8b08a.html)
 - `kubectl` command line tools, [Installation Guid](https://kubernetes.io/docs/tasks/tools/#kubectl)
-- 
 
 
 ---
@@ -51,3 +50,4 @@ TODO
 ---
 
 
+## Thank You
