@@ -231,12 +231,12 @@ function sleep(timeout = 1000) {
 }
 
 const f = async () => {
+  await 1 // you can await any object
   await sleep(1000)
   // do something after 1 seconds the function called 
 }
 
 f() // it will return a Promise
-
 ```
 
 ---
@@ -342,6 +342,186 @@ console.log(0.01 + 0.05)
 - [big.js](https://www.npmjs.com/package/big.js)
 - [a discussion](https://github.wdf.sap.corp/cap/issues/issues/10208)
 
+
+---
+
+## Quiz - 1
+
+```javascript
+const f1 = (arg0, ...args) => {
+  return args[1]
+}
+
+console.log(f1(1, 2, 3))
+```
+
+---
+## Quiz - 2
+
+```javascript
+const f2 = ({a, b, c}) => {
+  return a + b + (c % 10)
+}
+
+// e.g. 1 + '2' => 12
+
+console.log(f2({a: 1, b: 1, c: 99})) // value ?
+console.log(f2({a: 1, b: '2', c: 99})) // value ?
+```
+
+---
+
+## Quiz - 3.1
+
+```javascript
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+async function timeIt(f) {
+  const v1 = Date.now()
+  await f()
+  console.log(`function ${f.name} spent: ${Date.now() - v1} ms`)
+}
+
+const f1 = async () => {
+  await Promise.all([sleep(1000), sleep(1000)])
+}
+
+const f2 = async () => {
+  for(const prom of [sleep(1000), sleep(1000)]){
+    await prom
+  }
+}
+
+timeIt(f1)
+```
+
+---
+
+## Quiz - 3.2
+
+```javascript
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+async function timeIt(f) {
+  const v1 = Date.now()
+  await f()
+  console.log(`function ${f.name} spent: ${Date.now() - v1} ms`)
+}
+
+const f2 = async () => {
+  for(const prom of [sleep(1000), sleep(1000)]){
+    await prom
+  }
+}
+
+timeIt(f2)
+```
+
+---
+
+## Quiz - 3.3
+
+```javascript
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+async function timeIt(f) {
+  const v1 = Date.now()
+  await f()
+  console.log(`function ${f.name} spent: ${Date.now() - v1} ms`)
+}
+
+const f3 = async () => {
+  for(const prom of [0, 1, 2]){
+    await sleep(1000)
+  }
+}
+
+timeIt(f3)
+```
+
+---
+
+## Quiz - 3.4
+
+```javascript
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+async function timeIt(f) {
+  const v1 = Date.now()
+  await f()
+  console.log(`function ${f.name} spent: ${Date.now() - v1} ms`)
+}
+
+const f4 = async () => {
+  await [1000, 1000, 1000].forEach(async timeout => {
+    await sleep(timeout)
+  })
+}
+
+timeIt(f4)
+```
+
+---
+
+## Quiz - 3.5
+
+```javascript
+function sleep(timeout = 1000) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(resolve, timeout)
+  })
+}
+
+async function timeIt(f) {
+  const v1 = Date.now()
+  await f()
+  console.log(`function ${f.name} spent: ${Date.now() - v1} ms`)
+}
+
+const f5 = async () => {
+  await Promise.all([1000, 1000, 1000].map(async timeout => {
+    await sleep(timeout)
+  }))
+}
+
+timeIt(f5)
+```
+
+---
+
+## Quiz - 4
+
+
+```javascript
+class Person {
+  constructor(name) {
+    this._name = name
+  }
+  sayName() {
+    console.log(this._name)
+  }
+}
+
+const p = new Person("Bob")
+const { sayName } = p
+sayName() // value ?
+```
 
 ---
 

@@ -104,11 +104,8 @@ require(X) from module at path Y
 
 ## NodeJS project structure
 
-- package.json & lock & `node_modules`
+- package.json & package-lock.json & `node_modules`
 - scripts in `package.json`
-- jsconfig.json
-- eslint
-- .gitignore
 
 ---
 
@@ -173,9 +170,6 @@ bus.emit("add", 10)
 ---
 
 ## [Event Emitter](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
-
-
-
 
 * EventEmitter.prototype.once
 * EventEmitter.prototype.removeListener
@@ -391,6 +385,51 @@ req.write(Buffer.from(JSON.stringify({ "client": "native nodejs client request" 
 req.end()
 ```
 
+---
+
+## Quiz - 1
+
+> What is `LTS` for nodejs ?, which `releases` are LTS versions?
+
+---
+
+## Quiz - 2
+
+> What is the `package manger` of the nodejs, whats the usage of package manager ?
+
+- do you known any other package manager of nodejs ?
+
+---
+
+## Quiz - 3
+
+> What is the `registry` of the nodejs ?
+
+---
+
+## Quiz - 4
+
+```js
+// m1.js
+var a = 1
+a++
+module.exports.a = a
+```
+
+```js
+// m2.js
+require("./m1")
+const { a } = require("./m1")
+console.log(a) // value ?
+```
+
+
+```js
+// m3.js
+require("./m2")
+const { a } = require("./m1")
+console.log(a) // value ?
+```
 
 ---
 

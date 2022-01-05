@@ -18,7 +18,7 @@ Theo Sun
 
 > Generally Key-Value, `carefully process the key`
 
-```js
+```javascript
 const myMap = new Map();
  
 const keyObj = {};
@@ -36,6 +36,7 @@ myMap.size; // 3
 myMap.get(keyString);    // "和键'a string'关联的值"
 myMap.get(keyObj);       // "和键keyObj关联的值"
 myMap.get(keyFunc);      // "和键keyFunc关联的值"
+JSON.stringify(myMap)    // => '{}'
 ```
 
 ---
@@ -44,7 +45,7 @@ myMap.get(keyFunc);      // "和键keyFunc关联的值"
 
 > Traverse
 
-```js
+```javascript
 const map1 = new Map();
 map1.set('0', 'foo');
 map1.set(1, 'bar');
@@ -62,20 +63,11 @@ for (const [k, v] of map1.entries()) {
 map1.forEach((value, key) => { console.log(value, key)} )
 ```
 
-
----
-
-## WeakMap
-
-> Key Weak Reference Map
-> Limit key type - only `object`
-> Used when runtime un-expected memory leak
-
 ---
 
 ## Set
 
-```js
+```javascript
 const s = new Set([1, 2, 3, 3])
 Array.from(s) // [ 1, 2, 3 ]
 
@@ -102,7 +94,7 @@ Array.from(s2) // [ 1, '1', 2 ]
 
 
 
-```js
+```javascript
 [1, 2, 3].forEach((value, index, array) => {
   // foreach item
 })
@@ -114,7 +106,7 @@ Array.from(s2) // [ 1, '1', 2 ]
 
 > mapping value (transform, extract ... )
 
-```js
+```javascript
 const a1 = [1, 2, 3]
 const a2 = a1.map(v => "" + v) // [ '1', '2', '3' ]
 a1 != a2 // new array
@@ -126,7 +118,7 @@ a1 != a2 // new array
 
 > reduce dimension
 
-```js
+```javascript
 const a1 = [1, 2, 3]
 const sum = a1.reduce((acc, cur) => acc + cur, 0) 
 // 6
@@ -138,7 +130,7 @@ const sum = a1.reduce((acc, cur) => acc + cur, 0)
 
 > filter value
 
-```js
+```javascript
 const a3 = [
   { name: "a", enabled: true },
   { name: "b", enabled: true },
@@ -154,8 +146,7 @@ const enabledNames = a3.filter(item => item.enabled).map(item => item.name)
 ## Number
 
 
-
-```js
+```javascript
 Number.parseFloat("1.23") // 1.23
 Number.parseInt("123", 10) // 123
 Number.parseInt("101", 2) // 5
@@ -166,7 +157,7 @@ Number.parseInt("101", 2) // 5
 ## Boolean
 
 
-```js
+```javascript
 Boolean(0) // false
 Boolean(1) // true
 Boolean(-1) // true
@@ -187,7 +178,7 @@ Boolean("1") // true
 
 
 
-```js
+```javascript
 "1" + '.' // '1.'
 
 "123".split("") // [ '1', '2', '3' ]
@@ -207,8 +198,7 @@ Boolean("1") // true
 ## String
 
 
-
-```js
+```javascript
 "https://domain.com:3333".match(/([a-z]+)\:\/\/(.*)(\:\d+)/) 
 // [
 //   'https://domain.com:3333',
@@ -229,7 +219,7 @@ Boolean("1") // true
 
 
 
-```js
+```javascript
 const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
 ```
 
@@ -241,7 +231,7 @@ const result = /([a-z]+)\:\/\/(.*)(\:\d+)/.exec("https://domain.com:3333")
 
 ## Date
 
-```js
+```javascript
 const d = new Date()
 d.toISOString() // '2020-04-23T02:28:56.507Z'
 d.getTime() // 1587608936507 unix time
@@ -258,7 +248,7 @@ new Date("2020-04-23T02:28:56.507Z") // parse from ISO
 
 
 
-```js
+```javascript
 var obj = { a: 1, b: 2, c: { d: 3 } }
 
 Object.keys(obj) // [ 'a', 'b', 'c' ]
@@ -266,3 +256,76 @@ Object.values(obj) // [ 1, 2, { d: 3 } ]
 Object.entries(obj) // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', { d: 3 } ] ]
 Object.assign(obj, { a: 11 }, { a: 13, b: 4 }) // { a: 13, b: 4, c: { d: 3 } }
 ```
+
+---
+
+## Quiz - 1
+
+
+```javascript
+const data = [
+  { name: 'Bob', age: 10},
+  { name: 'Alice', age: 11},
+  { name: 'John', age: 108},
+]
+
+const total = data
+  .map(p => p.age * 3)
+  .filter(age => age > 30)
+  .reduce((pre,cur) => pre + cur, 0)
+
+console.log(total)
+```
+
+---
+
+## Quiz - 2
+
+
+```javascript
+const defaultValue = { name: 'unknown', age: 0 }
+const v = Object.assign({ country: "CN" }, defaultValue)
+
+console.log(v) // value?
+console.log(defaultValue) // value?
+```
+
+---
+
+## Quiz - 3
+
+
+```javascript
+const defaultValue = { name: 'unknown', age: 0 }
+const v = Object.assign(defaultValue, { country: "CN" })
+
+console.log(v) // value?
+console.log(defaultValue) // value?
+```
+
+---
+
+## Quiz - 4
+
+
+```javascript
+const m1 = new Map()
+const m2 = new Map()
+
+const k = 'k'
+const v = 'v'
+m1.set(k, v)
+m2.set(k, v)
+
+console.log(k == v) // ?
+console.log(k === v) // ?
+console.log(JSON.stringify(m1) === JSON.stringify(m2)) // ?
+m1.set(k, 'v2') // change value
+console.log(JSON.stringify(m1) === JSON.stringify(m2)) // ?
+```
+
+
+---
+
+
+## Thank You

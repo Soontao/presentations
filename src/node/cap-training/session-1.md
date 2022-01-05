@@ -114,7 +114,7 @@ o1.a != a
 ```javascript
 const a = {a:1,b:2,c:3}
 const b = {d:4,e:5}
-const c = Object.assign(a,b)
+const c = Object.assign(a, b)
 // a == c == { a: 1, b: 2, c: 3, d: 4, e: 5 }
 const d = { ...a, ...b }
 // d == { a: 1, b: 2, c: 3, d: 4, e: 5 }
@@ -274,8 +274,6 @@ delete constVar; // => false
 
 ## Condition Statement
 
-
-
 ```javascript
 var a = { b: 1, c: 2, d: 0 }
 if (a.b) {
@@ -293,9 +291,9 @@ if (true) {
 
 ---
 
-## Condition Check
+## Boolean & Condition Check
 
-
+> If value parameter is omitted or is `0`, `-0`, `null`, `false`, `NaN`, `undefined`, or the `empty string ("")`, the object has an initial value of false.
 
 ```javascript
 Boolean(0) // false
@@ -507,11 +505,11 @@ var a = 1;
 
 var f2 = () => {
   a = 3;
-  console.log(a);
+  return a;
 }
 
-f2() // output: ?
-a // ?
+console.log(f2()) // output: ?
+console.log(a) // ?
 ```
 
 ---
@@ -526,29 +524,11 @@ var a = 1;
 
 var f3 = () => {
   var a = 3;
-  console.log(a);
+  return a;
 }
 
-f3() // output: ?
-a // ?
-```
-
----
-
-## closure
-
-> access variable outside current scope
-
-```javascript
-let a = 1;
-
-let f4 = () => {
-  let a = 3;
-  console.log(a);
-}
-
-f4() // output: ?
-a // ?
+console.log(f3()) // output: ?
+console.log(a) // ?
 ```
 
 ---
@@ -594,7 +574,71 @@ try {
 }
 ```
 
+---
 
+## Quiz - 1
+
+```javascript
+var a = 1
+var b = { a: a }
+
+b.a = 10
+console.log(b.a === a) // value: ?
+```
+
+---
+
+## Quiz - 2
+
+```javascript
+var a = 100;
+
+function 函数(value) {
+  console.log(value || a)
+}
+
+函数() // output: ?
+函数(null) // output: ?
+函数(0) // output: ?
+函数('0') // output: ?
+函数('1') // output: ?
+```
+
+---
+
+## Quiz - 3
+
+```javascript
+var a = 100;
+
+function 函数(value) {
+  console.log(value && a)
+}
+
+函数() // output: ?
+函数(null) // output: ?
+函数(0) // output: ?
+函数('0') // output: ?
+函数('1') // output: ?
+```
+
+---
+
+## Quiz - 4
+
+```javascript
+var a = 105;
+
+function f1(b, c, d, e) {
+  var a = c + d
+  function f2(f, g, h) {
+    return c + h + (a * c);
+  }
+  return f2(c, d, e)
+}
+
+console.log(f1(1, 2, 3, 4)) // result: ?
+```
 
 ---
 

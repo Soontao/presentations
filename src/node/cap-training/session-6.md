@@ -41,7 +41,6 @@ Theo Sun
 - CAP - Cloud Application Programming
 - CDS - Core Data Service
 
-
 ---
 
 ## Links
@@ -227,3 +226,7 @@ if you want to implement some util without request/event parameter, it will be u
   - please carefully use the CSV init data, ref the advance session
 - `debug` server if you don't know the object detail.
 - use env [`DEBUG`](https://cap.cloud.sap/docs/node.js/cds-log) to get internal logs of CAP
+
+---
+
+## Thank You
