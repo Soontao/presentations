@@ -19,7 +19,7 @@
 /**
  * @param {import("@sap/cds/apis/services").Service} srv
  */
-module.exports = (srv) => {
+module.exports = async (srv) => {
 
   srv.on("metric", () => {
     return { "service": "CDS" }
@@ -36,5 +36,13 @@ module.exports = (srv) => {
   }
 
   srv.on("metric2", handler)
+
+  const ClassService = await cds.connect.to("ClassService")
+
+  srv.on("classRecords", async () => {
+    const { Classes } = ClassService.entities;
+    const { total } = await ClassService.run(SELECT.one.from(Classes).columns("count(1) as total"))
+    return total
+  })
 
 }

@@ -6,9 +6,9 @@ type PlusReqeust {
 }
 
 
+@Impl : './lib/OtherService.js'
 service OtherService {
 
-  @UI.Label : 'Counts'
   entity Counts as projection on training.Count;
   //actions {
   // removed, not work

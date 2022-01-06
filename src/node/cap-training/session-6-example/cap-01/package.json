@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "description": "s1.",
   "dependencies": {
-    "@sap/cds": "^3",
-    "@sap/hana-client": "^2",
-    "express": "^4"
+    "@sap/cds": "^5",
+    "cds-swagger-ui-express": "^0.3.0",
+    "express": "^4",
+    "hdb": "^0.18.3"
   },
   "engines": {
-    "node": "10"
+    "node": "16"
   },
   "scripts": {
     "start": "cds run"
   },
   "devDependencies": {
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^5"
   },
   "cds": {
     "requires": {
@@ -22,15 +23,11 @@
         "kind": "sql"
       }
     },
-    "[development]": {
-      "requires": {
-        "db": {
-          "kind": "sql"
-        }
-      }
-    },
     "odata": {
       "version": "v4"
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
     }
   }
 }
