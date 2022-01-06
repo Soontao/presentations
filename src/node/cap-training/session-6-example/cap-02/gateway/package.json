@@ -5,9 +5,8 @@
   "scripts": {
     "start": "node node_modules/@sap/approuter/approuter.js"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
-    "@sap/approuter": "^7.1.1"
+    "@sap/approuter": "latest"
   }
 }

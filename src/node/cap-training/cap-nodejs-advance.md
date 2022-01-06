@@ -126,7 +126,6 @@ WHERE    age > 99
 ORDER BY id ASC limit 1000 []
 ```
 
-
 ---
 
 ## Configuration Files

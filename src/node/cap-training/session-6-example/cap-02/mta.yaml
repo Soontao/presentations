@@ -1,46 +1,46 @@
 ## Generated mta.yaml based on template version 0.2.0
 ## appName = cap-02
 ## language=nodejs; multiTenant=false
-_schema-version: '3.1'
+_schema-version: "3.1"
 ID: cap-uaa
 version: 1.0.0
 description: "cap-uaa-demo-project"
 parameters:
   enable-parallel-deployments: true
-  
+
 build-parameters:
   before-all:
-   - builder: custom
-     commands:
-      - npm install
-      - npx cds build
-      - npx cds compile srv/ --to xsuaa > xs-security.json
+    - builder: custom
+      commands:
+        - npm install
+        - npx cds build
+        - npx cds compile srv/ --to xsuaa > xs-security.json
 
 modules:
- # --------------------- SERVER MODULE ------------------------
- -  name: srv
- # ------------------------------------------------------------
+  # --------------------- SERVER MODULE ------------------------
+  - name: srv
+    # ------------------------------------------------------------
     type: nodejs
     path: gen/srv
     parameters:
       memory: 128M
       app-name: uaa-demo-srv
     properties:
-      EXIT: 1  # required by deploy.js task to terminate 
+      EXIT: 1 # required by deploy.js task to terminate
     requires:
       # Resources extracted from CAP configuration
       - name: uaa-schema
       - name: uaa
     provides:
-      - name: srv-binding      # required by consumers of CAP services (e.g. approuter)
+      - name: srv-binding # required by consumers of CAP services (e.g. approuter)
         properties:
           srv-url: ${default-url}
 
- # -------------------- SIDECAR MODULE ------------------------
- -  name: db-deployer
- # ------------------------------------------------------------
+  # -------------------- SIDECAR MODULE ------------------------
+  - name: db-deployer
+    # ------------------------------------------------------------
     type: hdb
-    path: gen/db  
+    path: gen/db
     parameters:
       app-name: uaa-demo-db-deployer
       memory: 128M
@@ -48,9 +48,9 @@ modules:
       # 'hana' and 'xsuaa' resources extracted from CAP configuration
       - name: uaa-schema
 
- # -------------------- GATEWAY ------------------------
- -  name: gateway
- # ------------------------------------------------------------
+  # -------------------- GATEWAY ------------------------
+  - name: gateway
+    # ------------------------------------------------------------
     type: nodejs
     path: gateway
     parameters:
@@ -68,18 +68,17 @@ modules:
           forwardAuthToken: true
 
 resources:
-# ------------------------------------------------------------
- -  name: uaa-schema
-# ------------------------------------------------------------
+  # ------------------------------------------------------------
+  - name: uaa-schema
+    # ------------------------------------------------------------
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
       service-plan: hdi-shared
       service-name: uaa-demo-schema-instance
 
- - name: uaa
-   type: com.sap.xs.uaa-application
-   parameters:
+  - name: uaa
+    type: com.sap.xs.uaa-application
+    parameters:
       service-name: uaa-demo-uaa-instance
       config-path: ./xs-security.json
-

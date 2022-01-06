@@ -63,7 +63,7 @@ Theo Sun
 
 > Process requests with chain
 
-```js
+```javascript
 const express = require('express')
 const app = express()
 const port = 3000
@@ -101,9 +101,8 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 ---
 
-## Memory
+## Memory & Performance
 
-- V8 js engine gc
 - [nodejs gc options](https://gist.github.com/listochkin/10973974)
 - [Node inspect](https://nodejs.org/en/docs/guides/debugging-getting-started/) with Chrome, `chrome://inspect`, dump heap
 - [Garbage Collection Methods](https://blog.risingstack.com/node-js-at-scale-node-js-garbage-collection/)
@@ -114,7 +113,7 @@ app.listen(port, () => console.log(`started at http://localhost:${port}`))
 
 > The stream process interface
 
-```js
+```javascript
 api_v3.get("/stream-file", req => {
     fs.createReadStream(path.join(__dirname, "./server.js")).pipe(req.res)
 })
@@ -126,7 +125,7 @@ api_v3.get("/stream-file", req => {
 
 > Multi-process mode
 
-```js
+```javascript
 var app = require("./server");
 var cluster = require('cluster')
 var coreCount = require('os').cpus().length;
@@ -168,7 +167,7 @@ if (cluster.isMaster) {
 
 > Add necessary JSDoc for type reference
 
-```js
+```javascript
 /**
  - @param {{a:string,b:{c:number}}[]} arr 
  */
@@ -186,7 +185,7 @@ const f2 = (arr = []) => {
 - frontend build
 - cloud environment declaration
 - [CAP Profile](https://cap.cloud.sap/docs/node.js/cds-env)
-
+- `vscode` debug env file
 ---
 
 ## NPM & Open Source & Security
