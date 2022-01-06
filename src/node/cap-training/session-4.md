@@ -454,30 +454,4 @@ console.log(a) // value ?
 
 ---
 
-## Quiz - 5
-
-```js
-// fruit.js
-const { fruit } = require("./fruit")
-const apple = "apple"
-module.exports = { apple, fruit }
-```
-
-```js
-// apple.js
-const apple = require("./apple")
-const fruit = "fruit";
-console.log(`fruit apple: ${apple.apple}`)
-module.exports = { fruit, apple }
-```
-
-```js
-// main.js
-const apple = require("./apple")
-console.log(`main apple: ${apple.apple}`)
-```
-
-
----
-
 ## Thank You

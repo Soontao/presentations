@@ -29,9 +29,7 @@ const keyString = 'a string';
 myMap.set(keyString, "和键'a string'关联的值");
 myMap.set(keyObj, "和键keyObj关联的值");
 myMap.set(keyFunc, "和键keyFunc关联的值");
- 
 myMap.size; // 3
- 
 // read value
 myMap.get(keyString);    // "和键'a string'关联的值"
 myMap.get(keyObj);       // "和键keyObj关联的值"
@@ -317,8 +315,6 @@ const v = 'v'
 m1.set(k, v)
 m2.set(k, v)
 
-console.log(k == v) // ?
-console.log(k === v) // ?
 console.log(JSON.stringify(m1) === JSON.stringify(m2)) // ?
 m1.set(k, 'v2') // change value
 console.log(JSON.stringify(m1) === JSON.stringify(m2)) // ?

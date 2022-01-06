@@ -390,12 +390,6 @@ const f1 = async () => {
   await Promise.all([sleep(1000), sleep(1000)])
 }
 
-const f2 = async () => {
-  for(const prom of [sleep(1000), sleep(1000)]){
-    await prom
-  }
-}
-
 timeIt(f1)
 ```
 

@@ -162,7 +162,7 @@ if (cluster.isMaster) {
 
 ---
 
-## [JSDoc](https://jsdoc.app)
+## [JSDoc](https://jsdoc.app) & Type
 
 
 > Add necessary JSDoc for type reference
@@ -193,9 +193,9 @@ const f2 = (arr = []) => {
 > Check security with tools
 
 - npm
-    - registry
-    - install (dev/default)
     - run (script name)
+    - build
+    - npx
 - [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit/)
 - [white source](https://saas.whitesourcesoftware.com/Wss/WSS.html)
 - [open source tool](https://open-source.tools.sap.corp/)
