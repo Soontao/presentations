@@ -45,7 +45,6 @@ Theo Sun
 
 ## Links
 
-
 - [CAP Framework Organization](https://github.wdf.sap.corp/cap)
 - [Road Map](https://github.wdf.sap.corp/cap/matters/projects/36)
 - [CAP Issues](https://github.wdf.sap.corp/cap/issues/issues)
@@ -149,6 +148,34 @@ module.exports = (srv) => {
 }
 ```
 
+--- 
+
+## Service Impl -- impl location
+
+> defined the service implementation location
+
+```swift
+using {sap.training} from '../db/schema';
+
+@impl : './lib/class-service.js' // manual define the service, implmentation
+service ClassService {
+  // ...
+}
+```
+
+- [service impl](https://cap.cloud.sap/docs/node.js/services#srv-impl)
+
+---
+
+## Service Impl -- consume other service
+
+
+```js
+const ClassService = await cds.connect.to("ClassService")
+const { Classes } = ClassService.entities;
+const { total } = await ClassService.run(query)
+```
+
 ---
 
 ## Perform Database Query
@@ -174,14 +201,6 @@ const [books, authors] = await srv.run ([q1, q2])
 - Function - `READ` - `GET`
 - Bound & Unbound
 
----
-
-## [`Declarative` UI](https://cap.cloud.sap/docs/guides/fiori/)
-
-
-- [SAP OData UI Annotation](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/UI.md)
-- [Annotation based Custom Actions](https://wiki.wdf.sap.corp/wiki/pages/viewpage.action?spaceKey=fioritech&title=Annotation+based+Custom+Actions)
-
 --- 
 
 ## [Database Transaction](https://cap.cloud.sap/docs/node.js/transactions)
@@ -201,7 +220,8 @@ if you want to implement some util without request/event parameter, it will be u
 ## Authentication & XSUAA
 
 - [CAP NodeJS Authentication](https://cap.cloud.sap/docs/node.js/authentication)
-- XSUAA and RBAC and authentication flow
+- [XSUAA and RBAC and authentication flow](https://blogs.sap.com/2020/08/20/demystifying-xsuaa-in-sap-cloud-foundry/)
+- [Restricting Roles with `@requires`](https://cap.cloud.sap/docs/guides/authorization#requires)
 
 ---
 

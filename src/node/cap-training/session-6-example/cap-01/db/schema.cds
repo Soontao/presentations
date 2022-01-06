@@ -11,7 +11,7 @@ using {sap.training} from './common';
 // many to many association seems have some problem
 // https://github.wdf.sap.corp/cap/matters/issues/670
 
-abstract entity SeqID : managed {
+aspect SeqID : managed {
   key id : Integer;
 }
 
