@@ -159,6 +159,7 @@ if (cluster.isMaster) {
   - configure the debug profile
 - [native debug](https://nodejs.org/en/docs/guides/debugging-getting-started/)
 - [remote debug example](https://github.com/Soontao/cf-node-debug-example)
+- inspect by chrome inspect tool
 
 ---
 
@@ -199,3 +200,14 @@ const f2 = (arr = []) => {
 - [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit/)
 - [white source](https://saas.whitesourcesoftware.com/Wss/WSS.html)
 - [open source tool](https://open-source.tools.sap.corp/)
+
+
+---
+
+## Quiz - 1
+
+> Which items will cause nodejs runtime crash
+
+- put too much item in object/map, Out of Memory
+- throw `Error` in `timer`
+- uncaught `Error` in `Promise`

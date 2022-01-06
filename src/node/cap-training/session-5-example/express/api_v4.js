@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const req = require("express/lib/request")
+const uuid = require("uuid")
 
 const api_v4 = Router()
 
@@ -65,13 +65,23 @@ api_v4.get("/crash-2", () => {
     new Promise((resolve, reject) => reject(new Error()))
 })
 
+const cache = {}
+
+// http://localhost:3000/api/v4/put-items
+api_v4.get("/put-items", req => {
+    for (let index = 0; index < 100000; index++) {
+        cache[uuid.v4()] = uuid.v4()
+    }
+    req.res.status(200).send()
+})
+
+
 // http://localhost:3000/api/v4/block-js
 api_v4.get("/block-js", req => {
     let i = 1
     for (let index = 0; index < 5000000000; index++) {
         i + index
     }
-    console.log("finished")
     req.res.status(200).send()
 })
 

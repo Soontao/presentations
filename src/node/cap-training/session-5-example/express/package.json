@@ -4,12 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "inspect": "node  --inspect server.js",
+    "gc": "node --expose-gc --trace-gc --max_old_space_size=50 server.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^4.1.1",
+    "uuid": "^8.3.2"
   }
 }
