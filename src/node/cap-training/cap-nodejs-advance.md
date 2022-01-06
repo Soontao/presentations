@@ -85,7 +85,7 @@ ERASE DATA ON (by default):
 
 > fallback & sub query in `grant`
 
-```js
+```swift
 entity limitedEntity @(restrict : [
   {
     grant : 'READ',
