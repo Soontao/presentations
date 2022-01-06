@@ -9,8 +9,32 @@
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/.vscode/cds",
-      "args": [ "run", "--with-mocks", "--in-memory?" ],
-      "skipFiles": [ "<node_internals>/**" ],
+      "args": [
+        "run",
+        "--with-mocks",
+        "--in-memory?"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "internalConsole",
+      "autoAttachChildProcesses": true
+    },
+    {
+      "name": "cds run (hana)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/cds",
+      "args": [
+        "run"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      },
       "internalConsoleOptions": "openOnSessionStart",
       "console": "internalConsole",
       "autoAttachChildProcesses": true
