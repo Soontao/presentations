@@ -8,11 +8,11 @@ cds.on('bootstrap', app => {
 // an exmaple for global event hook
 cds.on('serving', service => {
   if (service instanceof cds.ApplicationService) {
-    const logger = cds.log(service.name)
+    const logger = cds.log(service?.name)
     service.prepend('*', srv => srv.on('*', async (evt, next) => {
-      logger.info(`before ${evt.event}`)
+      logger.info(`before ${evt?.event}`)
       const rt = await next()
-      logger.info(`after ${evt.event}`)
+      logger.info(`after ${evt?.event}`)
       return rt;
     }))
   }
