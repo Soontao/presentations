@@ -15,20 +15,27 @@ aspect SeqID : managed {
   key id : Integer;
 }
 
+
 entity Student : SeqID {
-  name   : training.PeopleName;
-  age    : Integer default 18;
-  weight : Decimal;
-// classes : Association to many Class
-//             on classes.students = $self;
+  name    : training.PeopleName;
+  age     : Integer default 18;
+  weight  : Decimal;
+  classes : Association to many ClassRel
+              on classes.student = $self;
 
 }
 
+@cds.autoexpose
+entity ClassRel : SeqID {
+  key student : Association to Student;
+  key class   : Association to Class;
+}
+
 entity Class : SeqID {
-  name    : localized String(255);
-  teacher : Association to Teacher;
-// students : Association to many Student
-//              on students.classes = $self
+  name     : localized String(255);
+  teacher  : Association to Teacher;
+  students : Association to many ClassRel
+               on students.class = $self
 
 }
 
