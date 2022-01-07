@@ -1,6 +1,6 @@
 ---
-marp: true
 theme: dark
+marp: true
 ---
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
@@ -16,11 +16,12 @@ Theo Sun
 
 ## [OData](https://www.odata.org/)
 
-- Introduction
+- [Introduction](https://www.odata.org/)
 - Version
 - CRUD
 - expand/navigation
 - ACTION/FUNCTION
+- [IEEE754Compatible](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Controlling_the_Representation)
 
 ---
 
@@ -29,6 +30,7 @@ Theo Sun
 - [HANA WIKI](https://de.wikipedia.org/wiki/SAP_HANA)
 - [HANA SQL Reference](https://help.sap.com/viewer/7c78579ce9b14a669c1f3295b0d8ca16/Cloud/en-US/20ff532c751910148657c32fe3431a9f.html)
 - [HANA Deployment Infra](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.04/en-US)
+- [The secret of SAP HANA](https://blogs.sap.com/2017/12/01/secret-hana-pssst-dont-tell-anyone/)
 - HANA instance & HDI container & schema
 - HANA native artifacts
 

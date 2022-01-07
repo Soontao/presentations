@@ -168,6 +168,8 @@ ORDER BY id ASC limit 1000 []
 }}}}}}}
 ```
 
+- you can use [`CDS_CONFIG`](https://cap.cloud.sap/docs/node.js/cds-env#env-cds-config) env to configure it now!
+
 ---
 
 ### Debug with HANA & XSUAA
