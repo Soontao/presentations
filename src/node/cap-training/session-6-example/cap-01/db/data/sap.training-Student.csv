@@ -1,3 +1,4 @@
-id;name_last_name;age
-1;s1;18
-2;s2;19
+id;name_last_name;age;weight
+1;s1;18;59.1
+2;s2;19;59.2
+3;s3;19;59

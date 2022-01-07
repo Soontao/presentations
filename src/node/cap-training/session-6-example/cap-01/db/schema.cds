@@ -16,15 +16,16 @@ aspect SeqID : managed {
 }
 
 entity Student : SeqID {
-  name : training.PeopleName;
-  age  : Integer default 18;
+  name   : training.PeopleName;
+  age    : Integer default 18;
+  weight : Decimal;
 // classes : Association to many Class
 //             on classes.students = $self;
 
 }
 
 entity Class : SeqID {
-  name    : localized String;
+  name    : localized String(255);
   teacher : Association to Teacher;
 // students : Association to many Student
 //              on students.classes = $self

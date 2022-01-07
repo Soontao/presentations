@@ -198,7 +198,6 @@ const f2 = (arr = []) => {
     - npx
 - [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit/)
 - [white source](https://saas.whitesourcesoftware.com/Wss/WSS.html)
-- [open source tool](https://open-source.tools.sap.corp/)
 
 
 ---
