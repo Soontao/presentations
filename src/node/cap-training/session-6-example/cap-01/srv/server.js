@@ -1,11 +1,15 @@
 const cds = require('@sap/cds')
+const { AsyncLocalStorage } = require("async_hooks")
+
+const featureLocalStorage = new AsyncLocalStorage();
 
 cds.once('bootstrap', app => {
 
   app.use(require('cds-swagger-ui-express')())
+
   app.use((req) => {
-    req.features = req.headers?.['x-cds-features']?.split(',') ?? []
-    req.next()
+    featureLocalStorage.enterWith({ features: req.headers?.['x-cds-features']?.split(',') ?? [] })
+    return req.next()
   })
 
 })
@@ -22,7 +26,7 @@ const isEnabled = (evtName, srv) => {
   // contains features
   if (
     op['@cds.features.enabled.on'] !== undefined &&
-    cds.context?._.req?.features?.includes?.(op['@cds.features.enabled.on'])
+    featureLocalStorage.getStore().features?.includes?.(op['@cds.features.enabled.on'])
   ) {
     return true
   }
