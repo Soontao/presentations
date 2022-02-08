@@ -58,3 +58,7 @@ entity Table1 : cuid {
 entity Table2 : Table1 {
   c2 : Integer;
 }
+
+entity Foo : SeqID {
+  Name : String(255);
+}

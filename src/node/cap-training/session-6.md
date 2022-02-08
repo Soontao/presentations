@@ -33,6 +33,7 @@ Theo Sun
 - [The secret of SAP HANA](https://blogs.sap.com/2017/12/01/secret-hana-pssst-dont-tell-anyone/)
 - HANA instance & HDI container & schema
 - HANA native artifacts
+- [HANA Monitoring/TroubleShooting Tools](https://wiki.wdf.sap.corp/wiki/display/SAPEMS/HANA+Cloud+Monitoring)
 
 ---
 

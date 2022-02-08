@@ -10,6 +10,14 @@ module.exports = async (srv) => {
     return { "service": "CDS" }
   })
 
+  srv.on("metricV2", () => {
+    return { "service": "CDS V2" }
+  })
+
+  srv.on("metricV3", () => {
+    return { "service": "CDS V3" }
+  })
+
   // defined handler firstly and use it later
   /**
    * 
@@ -27,7 +35,7 @@ module.exports = async (srv) => {
   srv.on("classRecords", async () => {
     const ClassService = await cds.connect.to("ClassService")
     const { Classes } = ClassService.entities;
-    const { total } = await ClassService.run(SELECT.one.from(Classes).columns("count(1) as total"))
+    const { total } = await ClassService.run(SELECT.from(Classes).columns("count(1) as total"))
     return total
   })
 

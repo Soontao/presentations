@@ -6,7 +6,8 @@
     "@sap/cds": "^5",
     "cds-swagger-ui-express": "^0.3.0",
     "express": "^4",
-    "hdb": "^0.18.3"
+    "hdb": "^0.18.3",
+    "passport": "^0.5.2"
   },
   "engines": {
     "node": "16"

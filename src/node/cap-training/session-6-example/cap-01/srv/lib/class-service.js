@@ -6,7 +6,9 @@ const logger = cds.log("class-service")
  */
 module.exports = (srv) => {
 
-  srv.on("READ", "Classes", async (req, next) => {
+  const { Classes } = srv.entities
+
+  srv.on("READ", Classes, async (req, next) => {
     logger.info("read classes handler 1")
     // do something
     return await next()

@@ -36,6 +36,7 @@
       "env": {
         "NODE_ENV": "production"
       },
+      "envFile": "${workspaceFolder}/.env",
       "internalConsoleOptions": "openOnSessionStart",
       "console": "internalConsole",
       "autoAttachChildProcesses": true
