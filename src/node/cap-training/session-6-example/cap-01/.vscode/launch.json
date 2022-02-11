@@ -18,6 +18,9 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "runtimeArgs": [
+        "--preserve-symlinks"
+      ],
       "internalConsoleOptions": "openOnSessionStart",
       "console": "internalConsole",
       "autoAttachChildProcesses": true
