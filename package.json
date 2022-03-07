@@ -46,7 +46,6 @@
     "debug": "^4.3.3",
     "fast-glob": "^3.2.11",
     "husky": "^4.3.8",
-    "isomorphic-git": "^1.11.2",
     "mkdirp": "^1.0.4",
     "pretty": "^2.0.0",
     "textlint": "^12.1.0"
