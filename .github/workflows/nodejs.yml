@@ -42,4 +42,4 @@ jobs:
       - name: npm install, build
         run: |
           npm install
-          bash ./build.sh
+          bash ./build_html.sh

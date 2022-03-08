@@ -10,7 +10,7 @@
   },
   "scripts": {
     "server": "marp -p --server ./src",
-    "release": "standard-version --commit-all --no-verify"
+    "release": "npx standard-version --commit-all --no-verify"
   },
   "husky": {
     "hooks": {
@@ -31,25 +31,23 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/cli": "^16",
+    "@commitlint/config-conventional": "^16",
     "@marp-team/marp-cli": "^1.5.2",
     "@marp-team/marp-core": "^2.3.2",
     "@marp-team/marpit": "^2.2.2",
     "@newdash/newdash": "^5.21.0",
-    "@slidev/cli": "0.27.10",
-    "@slidev/theme-default": "~0.21.1",
-    "@slidev/theme-seriph": "~0.21.1",
+    "@slidev/cli": "^0.28",
+    "@slidev/theme-default": "~0.21.2",
+    "@slidev/theme-seriph": "~0.21.2",
     "@textlint/markdown-to-ast": "^12.1.0",
     "@types/debug": "^4.1.7",
     "colors": "^1.4.0",
     "debug": "^4.3.3",
     "fast-glob": "^3.2.11",
     "husky": "^4.3.8",
-    "isomorphic-git": "^1.11.2",
     "mkdirp": "^1.0.4",
     "pretty": "^2.0.0",
-    "standard-version": "^9.3.2",
     "textlint": "^12.1.0"
   }
 }

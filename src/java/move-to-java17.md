@@ -17,13 +17,13 @@ Theo Sun
 # How about the LTS of java
 
 
-| Release            | GA Date        | Premier Support Until  | Extended Support Until  | Sustaining Support |
-| ------------------ | -------------- | ---------------------- | ----------------------- | ------------------ |
-| 7 (LTS)            | July 2011      | July 2019              | July 2022\*\*\*\*\*     | Indefinite         |
-| 8 (LTS)\*\*       | March 2014     | March 2022             | December 2030\*\*\*\*\* | Indefinite         |
-| 11 (LTS)           | September 2018 | September 2023         | September 2026          | Indefinite         |
-| 17 (LTS)           | September 2021 | September 2026\*\*\*\* | September 2029\*\*\*\*  | Indefinite         |
-| 21 (LTS)\*\*\*     | September 2023 | September 2028         | September 2031          | Indefinite         |
+| Release        | GA Date        | Premier Support Until  | Extended Support Until  | Sustaining Support |
+| -------------- | -------------- | ---------------------- | ----------------------- | ------------------ |
+| 7 (LTS)        | July 2011      | July 2019              | July 2022\*\*\*\*\*     | Indefinite         |
+| 8 (LTS)\*\*    | March 2014     | March 2022             | December 2030\*\*\*\*\* | Indefinite         |
+| 11 (LTS)       | September 2018 | September 2023         | September 2026          | Indefinite         |
+| 17 (LTS)       | September 2021 | September 2026\*\*\*\* | September 2029\*\*\*\*  | Indefinite         |
+| 21 (LTS)\*\*\* | September 2023 | September 2028         | September 2031          | Indefinite         |
 
 <br>
 
