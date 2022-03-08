@@ -4,6 +4,7 @@
   "description": "s1.",
   "dependencies": {
     "@sap/cds": "^5",
+    "cds-feature-toggle": "^0.0.3-alpha.0",
     "cds-swagger-ui-express": "^0.3.0",
     "express": "^4",
     "hdb": "^0.18.3",
@@ -13,13 +14,21 @@
     "node": "16"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
     "sqlite3": "^5"
   },
   "cds": {
     "requires": {
+      "auth": {
+        "auth": {
+          "kind": "basic-auth"
+        }
+      },
       "db": {
         "kind": "sql"
       }

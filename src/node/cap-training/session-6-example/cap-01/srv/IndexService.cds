@@ -16,11 +16,11 @@ service IndexService {
   @cds.features.redirect.target : [metricV2]
   action metric() returns MetricReponse;
 
-  @cds.features.enabled         : 'feature-metrics-v2'
+  @cds.features.required        : 'feature-metrics-v2'
   @cds.features.redirect.target : [metricV3]
   action metricV2() returns MetricReponse;
 
-  @cds.features.enabled : 'feature-metrics-v3'
+  @cds.features.required : 'feature-metrics-v3'
   action metricV3() returns MetricReponse;
 
   // GET, parameter in URI
@@ -28,5 +28,14 @@ service IndexService {
   // unbounded action
   function classRecords() returns Integer;
   function firstClassId() returns Integer;
+
+  function userInfo() returns {
+    id       : String;
+    locale   : String;
+    attr     : {
+      ![key] : String
+    };
+    roles    : array of String;
+  }
 
 }

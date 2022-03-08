@@ -39,4 +39,8 @@ module.exports = async (srv) => {
     return total
   })
 
+  srv.on("userInfo", async (req) => {
+    return { id: req.user.id, attr: req.user.attr, roles: Object.keys(req.user._roles) }
+  })
+
 }

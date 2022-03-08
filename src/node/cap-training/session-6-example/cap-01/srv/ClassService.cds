@@ -1,7 +1,6 @@
 using {sap.training} from '../db/schema';
 
-@cds.features.enabled : ['class-service']
-@impl                 : './lib/class-service.js' // manual define the service, implmentation
+@impl : './lib/class-service.js' // manual define the service, implmentation
 service ClassService {
 
 
