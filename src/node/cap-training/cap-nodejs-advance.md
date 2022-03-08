@@ -286,6 +286,23 @@ const { Mutex } = require("@newdash/newdash/functional/Semaphore")
 
 ---
 
+## Swagger Support
+
+- use [cds-swagger-ui-express](https://github.com/chgeo/cds-swagger-ui-express)
+
+
+```js
+const cds = require ('@sap/cds')
+
+if (process.env.NODE_ENV !== 'production') {
+  const cds_swagger = require ('cds-swagger-ui-express')
+  cds.on ('bootstrap', app => app.use (cds_swagger()) )
+}
+
+module.exports = cds.server
+```
+---
+
 ## Logging
 
 > integrate with `application-logging`/`CLS`
@@ -303,6 +320,21 @@ const logger = cds.log("BusinessService")
 logger.info("call service with", param0, "is ok")
 ```
 
+---
+
+## Feature Toggle Support (Preview)
+
+> Preview of community module, use it on your own risk
+
+- try to use [cds-feature-toggle](https://github.com/Soontao/cds-feature-toggle)
+
+
+```groovy
+@cds.features.required : ['class-service'] 
+service ClassService {
+
+}
+```
 
 --- 
 
@@ -312,6 +344,7 @@ logger.info("call service with", param0, "is ok")
 
 - [Example](https://github.com/Soontao/cap-unit-test-example)
 - [Complex Example](https://github.com/Soontao/cds-mysql/blob/main/test/integration.test.ts)
+- [cds-jest preview](https://github.com/Soontao/cds-jest)
 
 
 ```js
