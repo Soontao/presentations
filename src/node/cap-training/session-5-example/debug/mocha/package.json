@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^7.1.2"
+    "mocha": "^9"
   },
   "dependencies": {
     "express": "^4.17.1",

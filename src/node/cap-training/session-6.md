@@ -118,8 +118,8 @@ service BookshopService {
 module.exports = class IndexService extends ApplicationService {
 
   async init() {
+    // register some events, prepare some thing
     await super.init()
-    // do some init as you want
   }
 
   async metric() {
@@ -157,7 +157,7 @@ module.exports = (srv) => {
 
 > defined the service implementation location
 
-```swift
+```groovy
 using {sap.training} from '../db/schema';
 
 @impl : './lib/class-service.js' // manual define the service, implmentation
@@ -244,7 +244,6 @@ if you want to implement some util without request/event parameter, it will be u
 - custom *action* is used for `WRITE`
 - custom *function* is used for `QUERY`
 - use `NODE_ENV` control the CAP running profile (local sqlite/remote hana).
-- directory name/package name/service name should be same.
 - remember to add the mandatory columns to the initialize CSV file(e.g. PK)
   - please carefully use the CSV init data, ref the advance session
 - `debug` server if you don't know the object detail.
