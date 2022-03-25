@@ -77,6 +77,12 @@ Could you list out some most frequent used open source project in your daily wor
 
 --- 
 
+## Interesting
+
+- [Q#](https://github.com/microsoft/qsharp-compiler)
+
+---
+
 ## OSS security become more and more important
 
 - log4j2
