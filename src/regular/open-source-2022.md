@@ -18,16 +18,23 @@ Could you list out some most frequent used open source project in your daily wor
 
 ---
 
-## They are Open Source projects
+## They are Open-Source projects
 
-- NodeJS
-- Tomcat
-- Lodash
-- VSCode
-- React
-- OpenUI5
+- NodeJS - OpenJS Foundation
+- Tomcat - Apache Foundation
+- Lodash - Private OSS
+- VSCode - Microsoft
+- React - Facebook
+- OpenUI5 - SAP
 
 --- 
+
+## Agenda
+
+- Whats new
+- Security
+
+---
 
 ## Whats new about OSS in 2022 ?
 
@@ -38,7 +45,35 @@ Could you list out some most frequent used open source project in your daily wor
 - Spring Boot 3.0
 - Golang Generics
 - `mermaid` on Github
-- Jetbrains compose library
+
+---
+
+## Low Code
+
+> The `Low-Code` trend is back again
+
+- [amplication](https://github.com/amplication/amplication)
+- [ToolJet](https://github.com/ToolJet/ToolJet)
+- [alibaba/lowcode-engine](https://github.com/alibaba/lowcode-engine)
+- [Yao](https://github.com/YaoApp/yao)
+
+
+--- 
+
+## [eBPF](https://ebpf.io/)
+
+![bg right 100%](https://camo.githubusercontent.com/714c5d777b0025dda66b46f14e28badc01e3e3360ef264be204f54846a7c9573/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f63696c69756d2f63696c69756d406d61737465722f446f63756d656e746174696f6e2f696d616765732f63696c69756d5f6f766572766965772e706e67)
+
+- [Cilium](https://github.com/cilium/cilium)
+- [falco](https://github.com/falcosecurity/falco)
+- [katran](https://github.com/facebookincubator/katran)
+
+---
+
+## WASM
+
+- [copy/v86](https://copy.sh/v86/)
+- [WasmEdge](https://github.com/WasmEdge/WasmEdge)
 
 --- 
 
@@ -46,3 +81,4 @@ Could you list out some most frequent used open source project in your daily wor
 
 - log4j2
 - Spring Cloud Gateway
+- npm supply chain attack

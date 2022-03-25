@@ -31,23 +31,23 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "devDependencies": {
-    "@commitlint/cli": "^16",
-    "@commitlint/config-conventional": "^16",
-    "@marp-team/marp-cli": "^1.5.2",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@marp-team/marp-cli": "^1.7.0",
     "@marp-team/marp-core": "^2.3.2",
     "@marp-team/marpit": "^2.2.2",
-    "@newdash/newdash": "^5.21.0",
-    "@slidev/cli": "^0.28",
-    "@slidev/theme-default": "~0.21.2",
-    "@slidev/theme-seriph": "~0.21.2",
-    "@textlint/markdown-to-ast": "^12.1.0",
+    "@newdash/newdash": "^5.21.1",
+    "@slidev/cli": "^0.28.10",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.2",
+    "@textlint/markdown-to-ast": "^12.1.1",
     "@types/debug": "^4.1.7",
     "colors": "^1.4.0",
-    "debug": "^4.3.3",
+    "debug": "^4.3.4",
     "fast-glob": "^3.2.11",
     "husky": "^4.3.8",
     "mkdirp": "^1.0.4",
     "pretty": "^2.0.0",
-    "textlint": "^12.1.0"
+    "textlint": "^12.1.1"
   }
 }
