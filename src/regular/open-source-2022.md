@@ -85,6 +85,15 @@ Could you list out some most frequent used open source project in your daily wor
 
 ## OSS security become more and more important
 
-- log4j2
-- Spring Cloud Gateway
+- [log4j2](https://nvd.nist.gov/vuln/detail/CVE-2021-44832)
 - npm supply chain attack
+  - [core-js](https://stackoverflow.com/questions/60722968/how-do-i-block-advertising-in-npm)
+  - [faker.js](https://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)
+  - [node-ipc](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/)
+  - [nodejs_net_server](https://thehackernews.com/2021/07/malicious-npm-package-caught-stealing.html)
+- Spring Cloud Gateway
+- [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement)
+
+--- 
+
+## [OSS at SAP](https://gist.github.tools.sap/I337313/762aeb10c33d959ef9cb7ffbbd9dad01)
