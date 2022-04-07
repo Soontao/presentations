@@ -103,3 +103,16 @@ Could you list out some most frequent used open source project in your daily wor
 --- 
 
 ## [OSS at SAP](https://gist.github.tools.sap/I337313/762aeb10c33d959ef9cb7ffbbd9dad01)
+
+---
+
+## What I have done in 2021
+
+- [ts hdb](https://github.com/Soontao/ts-hdb)
+- [similar](https://github.com/Soontao/similar)
+- [cds mysql](https://github.com/Soontao/cds-mysql)
+- [ws proxy](https://github.com/Soontao/ws-proxy)
+
+---
+
+## Thank You
