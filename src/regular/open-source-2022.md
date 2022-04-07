@@ -5,7 +5,7 @@ theme: dark
 
 # Open Source Outlook 2022
 
-Theo  Sun
+Theo Sun
 2022
 
 ![bg right 50%](https://res.cloudinary.com/digf90pwi/image/upload/v1646725446/osi_keyhole_300X300_90ppi_0_sdzuf9.png)
@@ -56,6 +56,8 @@ Could you list out some most frequent used open source project in your daily wor
 - [ToolJet](https://github.com/ToolJet/ToolJet)
 - [alibaba/lowcode-engine](https://github.com/alibaba/lowcode-engine)
 - [Yao](https://github.com/YaoApp/yao)
+- [lowdefy](https://github.com/lowdefy/lowdefy)
+- [nocodb](https://github.com/nocodb/nocodb)
 
 
 --- 
@@ -67,6 +69,7 @@ Could you list out some most frequent used open source project in your daily wor
 - [Cilium](https://github.com/cilium/cilium)
 - [falco](https://github.com/falcosecurity/falco)
 - [katran](https://github.com/facebookincubator/katran)
+- [eCapture](https://github.com/ehids/ecapture)
 
 ---
 
@@ -74,12 +77,15 @@ Could you list out some most frequent used open source project in your daily wor
 
 - [copy/v86](https://copy.sh/v86/)
 - [WasmEdge](https://github.com/WasmEdge/WasmEdge)
-
+- [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
+- [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
+ 
 --- 
 
 ## Interesting
 
 - [Q#](https://github.com/microsoft/qsharp-compiler)
+- [immudb](https://github.com/codenotary/immudb)
 
 ---
 
