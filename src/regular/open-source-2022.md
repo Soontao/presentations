@@ -14,7 +14,7 @@ Theo Sun
 
 > Open Source become more and more important in modern application development
 
-Could you list out some most frequent used open source project in your daily work ?
+Could you list out some most frequent used open source projects in your daily work ?
 
 ---
 
@@ -111,6 +111,14 @@ Could you list out some most frequent used open source project in your daily wor
 
 - [lo](https://github.com/samber/lo)
 
+--- 
+
+### Something for Frontend
+
+- [rome - rust](https://rome.tools/)
+- [esbuild - golang](https://esbuild.github.io/)
+- [pnpm - npm package manager](https://pnpm.io/zh/)
+
 ---
 
 ## OSS security become more and more important
@@ -157,16 +165,16 @@ Could you list out some most frequent used open source project in your daily wor
 - [nocodb - database as a web-service](https://github.com/nocodb/nocodb)
 - [RisingWave - Material View](https://github.com/singularity-data/risingwave)
 - [coolify - PaaS](https://github.com/coollabsio/coolify)
-- [esbuild - js bundler but in go](https://esbuild.github.io/)
+
 
 ---
 
 ## What I have done in 2021
 
-- [ts hdb](https://github.com/Soontao/ts-hdb)
-- [similar](https://github.com/Soontao/similar)
-- [cds mysql](https://github.com/Soontao/cds-mysql)
-- [ws proxy](https://github.com/Soontao/ws-proxy)
+- [ts-hdb](https://github.com/Soontao/ts-hdb) - [typescript template literal types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html)/[async generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [similar](https://github.com/Soontao/similar) - similar sentence check for golang
+- [cds mysql](https://github.com/Soontao/cds-mysql) - MySQL database adapter for CAP nodejs runtime
+- [ws proxy](https://github.com/Soontao/ws-proxy) - minimal proxy under websocket
 
 ---
 
