@@ -18,7 +18,7 @@ Could you list out some most frequent used open source project in your daily wor
 
 ---
 
-## They are Open-Source projects
+## They are Open-Source Projects
 
 - NodeJS - OpenJS Foundation
 - Tomcat - Apache Foundation
@@ -26,31 +26,41 @@ Could you list out some most frequent used open source project in your daily wor
 - VSCode - Microsoft
 - React - Facebook
 - OpenUI5 - SAP
+- Spring Framework - VMWare
+- OpenJDK - Oracle/SAP/Red Hat/Google
+- Golang - Google
+- Docker - Docker, Inc
+- Kubernates - Google
+- Rust - Mozilla
 
 --- 
 
 ## Agenda
 
-- Whats new
+- Whats New
 - Security
+- OSS Projects Recommendation
 
 ---
 
 ## Whats new about OSS in 2022 ?
 
+
+![bg 50% right blur](https://res.cloudinary.com/drxgh9gqs/image/upload/c_scale,h_600/v1649645795/1200px-WebAssembly_Logo.svg_s4nprs.png)
+
+
 - low code application platform
 - low code GUI framework
-- mature eBPF projects
-- WASM on Cloud
-- Spring Boot 3.0
+- eBPF projects grow up
+- [WASM on Cloud](https://www.youtube.com/watch?v=YnQeoGrkJKM) maybe better
+- [Spring Boot 3.0](https://spring.io/blog/2022/01/20/spring-boot-3-0-0-m1-is-now-available)
 - Golang Generics
-- `mermaid` on Github
 
 ---
 
-## Low Code
+### Low Code
 
-> The `Low-Code` trend is back again
+> The `Low-Code` trend
 
 - [amplication](https://github.com/amplication/amplication)
 - [ToolJet](https://github.com/ToolJet/ToolJet)
@@ -60,9 +70,11 @@ Could you list out some most frequent used open source project in your daily wor
 - [nocodb](https://github.com/nocodb/nocodb)
 
 
+[![bg right 100%](https://user-images.githubusercontent.com/5435402/133762127-e94da292-a1c3-4458-b09a-02cd5b57be53.png)](https://github.com/nocodb/nocodb)
+
 --- 
 
-## [eBPF](https://ebpf.io/)
+### [eBPF](https://ebpf.io/)
 
 ![bg right 100%](https://camo.githubusercontent.com/714c5d777b0025dda66b46f14e28badc01e3e3360ef264be204f54846a7c9573/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f63696c69756d2f63696c69756d406d61737465722f446f63756d656e746174696f6e2f696d616765732f63696c69756d5f6f766572766965772e706e67)
 
@@ -73,13 +85,31 @@ Could you list out some most frequent used open source project in your daily wor
 
 ---
 
-## WASM
+### WASM
 
 - [copy/v86](https://copy.sh/v86/)
 - [WasmEdge](https://github.com/WasmEdge/WasmEdge)
 - [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
 - [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
+- [rustwasm](https://rustwasm.github.io/wasm-bindgen/examples/dom.html)
+
+![bg right 95%](https://camo.githubusercontent.com/1d24e64022fd725f1896890b3ce14c560f075dc1f80f0b0baae3ece8981c882a/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f782e636f6d2f735f353445314239364546464546443239343536323930324443354239393731443335434436423635304243383744313230303341333041343635313737363230315f313538363531343237353631385f696d6167652e706e67)
  
+
+---
+
+### Spring Boot 3.0
+
+- baseline from `Java 8` to `Java 17`.
+- [Spring Boot 2022](https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released)
+
+---
+
+### Golang 1.18 and Generics
+
+> much libraries should be re-written by generics
+
+- [lo](https://github.com/samber/lo)
 
 ---
 
@@ -92,10 +122,20 @@ Could you list out some most frequent used open source project in your daily wor
   - [node-ipc](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/)
   - [nodejs_net_server](https://thehackernews.com/2021/07/malicious-npm-package-caught-stealing.html)
   - [npm unpublish policy](https://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy.html)
-- Spring Cloud Gateway
+- [Spring Cloud Gateway](https://tanzu.vmware.com/security/cve-2022-22947)
 - [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement)
 
 --- 
+
+## Risks of OSS
+
+- Security Vulnerabilities
+- Single Supplier - Github
+- Business Model of OSS
+- License
+
+---
+
 
 ## [OSS at SAP](https://gist.github.tools.sap/I337313/762aeb10c33d959ef9cb7ffbbd9dad01)
 
