@@ -157,6 +157,7 @@ Could you list out some most frequent used open source project in your daily wor
 - [nocodb - database as a web-service](https://github.com/nocodb/nocodb)
 - [RisingWave - Material View](https://github.com/singularity-data/risingwave)
 - [coolify - PaaS](https://github.com/coollabsio/coolify)
+- [esbuild - js bundler but in go](https://esbuild.github.io/)
 
 ---
 
