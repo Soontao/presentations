@@ -123,7 +123,7 @@ Could you list out some most frequent used open source project in your daily wor
   - [nodejs_net_server](https://thehackernews.com/2021/07/malicious-npm-package-caught-stealing.html)
   - [npm unpublish policy](https://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy.html)
 - [Spring Cloud Gateway](https://tanzu.vmware.com/security/cve-2022-22947)
-- [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement)
+- [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement) 
 
 --- 
 
@@ -147,12 +147,14 @@ Could you list out some most frequent used open source project in your daily wor
 - [RSSHub - RSS Transformer](https://github.com/DIYgod/RSSHub)
 - [Uptime Kuma - Uptime Robot](https://github.com/louislam/uptime-kuma)
 - [frp - Tunnel](https://github.com/fatedier/frp)
+- [marp](https://marp.app/#get-started) / [slidev](https://cn.sli.dev/guide/why.html) - markdown as presentation
 
 ---
 
 ## OSS Projects Interesting
 
 - [immudb - Immutable Database](https://github.com/codenotary/immudb)
+- [nocodb - database as a web-service](https://github.com/nocodb/nocodb)
 - [RisingWave - Material View](https://github.com/singularity-data/risingwave)
 - [coolify - PaaS](https://github.com/coollabsio/coolify)
 
