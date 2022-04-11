@@ -80,12 +80,6 @@ Could you list out some most frequent used open source project in your daily wor
 - [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
 - [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
  
---- 
-
-## Interesting
-
-- [Q#](https://github.com/microsoft/qsharp-compiler)
-- [immudb](https://github.com/codenotary/immudb)
 
 ---
 
@@ -97,12 +91,30 @@ Could you list out some most frequent used open source project in your daily wor
   - [faker.js](https://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)
   - [node-ipc](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/)
   - [nodejs_net_server](https://thehackernews.com/2021/07/malicious-npm-package-caught-stealing.html)
+  - [npm unpublish policy](https://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy.html)
 - Spring Cloud Gateway
 - [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement)
 
 --- 
 
 ## [OSS at SAP](https://gist.github.tools.sap/I337313/762aeb10c33d959ef9cb7ffbbd9dad01)
+
+--- 
+
+## OSS Projects Recommendation
+
+- [miniflux - RSS Reader](https://github.com/miniflux/v2)
+- [RSSHub - RSS Transformer](https://github.com/DIYgod/RSSHub)
+- [Uptime Kuma - Uptime Robot](https://github.com/louislam/uptime-kuma)
+- [frp - Tunnel](https://github.com/fatedier/frp)
+
+---
+
+## OSS Projects Interesting
+
+- [immudb - Immutable Database](https://github.com/codenotary/immudb)
+- [RisingWave - Material View](https://github.com/singularity-data/risingwave)
+- [coolify - PaaS](https://github.com/coollabsio/coolify)
 
 ---
 
