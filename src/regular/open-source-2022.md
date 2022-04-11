@@ -18,7 +18,7 @@ Could you list out some most frequent used open source project in your daily wor
 
 ---
 
-## They are Open-Source Projects
+## All of them are Open-Source projects
 
 - NodeJS - OpenJS Foundation
 - Tomcat - Apache Foundation
