@@ -100,8 +100,12 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ### Spring Boot 3.0
 
+![bg right 50%](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg)
+
 - baseline from `Java 8` to `Java 17`.
-- [Spring Boot 2022](https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released)
+- [Spring 6.x](https://spring.io/blog/2021/09/02/a-java-17-and-jakarta-ee-9-baseline-for-spring-framework-6)
+- [Spring Boot 3.x](https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released)
+- [Spring Cloud 2022](https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released)
 
 ---
 
