@@ -92,6 +92,7 @@ Could you list out some most frequent used open source projects in your daily wo
 - [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
 - [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
 - [rustwasm](https://rustwasm.github.io/wasm-bindgen/examples/dom.html)
+- [spin](https://spin.fermyon.dev/go-components/)
 
 ![bg right 95%](https://camo.githubusercontent.com/1d24e64022fd725f1896890b3ce14c560f075dc1f80f0b0baae3ece8981c882a/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f782e636f6d2f735f353445314239364546464546443239343536323930324443354239393731443335434436423635304243383744313230303341333041343635313737363230315f313538363531343237353631385f696d6167652e706e67)
  
