@@ -165,7 +165,7 @@ Could you list out some most frequently used open source projects in your daily 
 ## Risks of OSS
 
 - Security Vulnerabilities
-  - Security Report
+  - [Security Report Process](https://nvd.nist.gov/vuln/detail/CVE-2021-41862#VulnChangeHistorySection)
 - Single Supplier - Github
   - Export Control
 - Business Model of OSS
