@@ -62,11 +62,10 @@ Could you list out some most frequently used open source projects in your daily 
 ![bg 50% right blur](https://res.cloudinary.com/drxgh9gqs/image/upload/c_scale,h_600/v1649645795/1200px-WebAssembly_Logo.svg_s4nprs.png)
 
 
-- low code application platform
-- low code GUI framework
+- low/no code application/UI framework
 - eBPF projects grow up
-- [WASM on Cloud](https://www.youtube.com/watch?v=YnQeoGrkJKM) maybe better
-- [Spring Boot 3.0](https://spring.io/blog/2022/01/20/spring-boot-3-0-0-m1-is-now-available)
+- [WASM as Cloud VM ?](https://www.youtube.com/watch?v=YnQeoGrkJKM)
+- [Spring Boot 3.0](https://spring.io/blog/2022/01/20/spring-boot-3-0-0-m1-is-now-available) is coming
 - Golang Generics
 
 ---
