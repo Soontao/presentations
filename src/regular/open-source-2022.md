@@ -63,7 +63,7 @@ Could you list out some most frequently used open source projects in your daily 
 
 
 - low/no code application/UI framework
-- eBPF projects grow up
+- eBPF become popular
 - [WASM as Cloud VM ?](https://www.youtube.com/watch?v=YnQeoGrkJKM)
 - [Spring Boot 3.0](https://spring.io/blog/2022/01/20/spring-boot-3-0-0-m1-is-now-available) is coming
 - Golang Generics
@@ -135,11 +135,14 @@ Could you list out some most frequently used open source projects in your daily 
 
 --- 
 
-### Something for Frontend
+### Frontend
 
 - [rome - rust](https://rome.tools/)
 - [esbuild - golang](https://esbuild.github.io/) (40x faster)
 - [pnpm - npm package manager](https://pnpm.io/zh/) (10x faster)
+- [qiankun](https://github.com/umijs/qiankun)
+- [luigi](https://github.com/SAP/luigi)
+- [Compose, by JetBrains](https://github.com/JetBrains/compose-jb)
 
 ---
 
