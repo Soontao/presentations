@@ -37,13 +37,26 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ## Agenda
 
+- OSS 2021
 - Whats New
 - Security
 - OSS Projects Recommendation
 
 ---
 
-## Whats new about OSS in 2022 ?
+## How about 2021 ?
+
+---
+
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,h_958/v1649901622/Screen_Shot_2022-04-14_at_10.00.15_jcmisi.png)
+
+---
+
+![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/v1649902137/Screen_Shot_2022-04-14_at_10.08.50_t1j6us.png)
+
+---
+
+## Whats New ?
 
 
 ![bg 50% right blur](https://res.cloudinary.com/drxgh9gqs/image/upload/c_scale,h_600/v1649645795/1200px-WebAssembly_Logo.svg_s4nprs.png)
@@ -87,12 +100,15 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ### WASM
 
-- [copy/v86](https://copy.sh/v86/)
-- [WasmEdge](https://github.com/WasmEdge/WasmEdge)
-- [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
-- [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
-- [rustwasm](https://rustwasm.github.io/wasm-bindgen/examples/dom.html)
-- [spin](https://spin.fermyon.dev/go-components/)
+- Trend
+  - [WasmEdge](https://github.com/WasmEdge/WasmEdge)
+  - [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
+  - [rustwasm](https://rustwasm.github.io/wasm-bindgen/examples/dom.html)
+  - [spin](https://spin.fermyon.dev/go-components/)
+- Interesting
+  - [copy/v86](https://copy.sh/v86/)
+  - [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
+  - [pyodide](https://github.com/pyodide/pyodide)
 
 ![bg right 95%](https://camo.githubusercontent.com/1d24e64022fd725f1896890b3ce14c560f075dc1f80f0b0baae3ece8981c882a/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f782e636f6d2f735f353445314239364546464546443239343536323930324443354239393731443335434436423635304243383744313230303341333041343635313737363230315f313538363531343237353631385f696d6167652e706e67)
  
@@ -144,9 +160,14 @@ Could you list out some most frequent used open source projects in your daily wo
 ## Risks of OSS
 
 - Security Vulnerabilities
+  - Security Report
 - Single Supplier - Github
+  - Export Control
 - Business Model of OSS
+  - [Product Hunt](https://www.producthunt.com/)
 - License
+- Leadership
+
 
 ---
 
@@ -175,7 +196,7 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ---
 
-## What I have done in 2021
+## OSS I contributed in 2021
 
 - [ts-hdb](https://github.com/Soontao/ts-hdb) - [typescript template literal types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html)/[async generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
 - [similar](https://github.com/Soontao/similar) - similar sentence check for golang
