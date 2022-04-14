@@ -14,7 +14,7 @@ Theo Sun
 
 > Open Source become more and more important in modern application development
 
-Could you list out some most frequent used open source projects in your daily work ?
+Could you list out some most frequently used open source projects in your daily work ?
 
 ---
 
