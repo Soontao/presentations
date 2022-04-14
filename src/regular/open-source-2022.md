@@ -108,7 +108,7 @@ Could you list out some most frequent used open source projects in your daily wo
 - Interesting
   - [copy/v86](https://copy.sh/v86/)
   - [tfjs-backend-wasm](https://www.npmjs.com/package/@tensorflow/tfjs-backend-wasm)
-  - [pyodide](https://github.com/pyodide/pyodide)
+  - [pyodide](https://pyodide.org/en/stable/console.html)
 
 ![bg right 95%](https://camo.githubusercontent.com/1d24e64022fd725f1896890b3ce14c560f075dc1f80f0b0baae3ece8981c882a/68747470733a2f2f70617065722d6174746163686d656e74732e64726f70626f782e636f6d2f735f353445314239364546464546443239343536323930324443354239393731443335434436423635304243383744313230303341333041343635313737363230315f313538363531343237353631385f696d6167652e706e67)
  
@@ -132,13 +132,15 @@ Could you list out some most frequent used open source projects in your daily wo
 
 - [lo](https://github.com/samber/lo)
 
+![bg right 30%](https://res.cloudinary.com/digf90pwi/image/upload/v1649905346/ladder_gfavsz.svg)
+
 --- 
 
 ### Something for Frontend
 
 - [rome - rust](https://rome.tools/)
-- [esbuild - golang](https://esbuild.github.io/)
-- [pnpm - npm package manager](https://pnpm.io/zh/)
+- [esbuild - golang](https://esbuild.github.io/) (40x faster)
+- [pnpm - npm package manager](https://pnpm.io/zh/) (10x faster)
 
 ---
 
