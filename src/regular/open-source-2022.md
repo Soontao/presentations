@@ -48,7 +48,7 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ---
 
-![bg 80%](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,h_958/v1649901622/Screen_Shot_2022-04-14_at_10.00.15_jcmisi.png)
+![bg 60%](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,h_958/v1649901622/Screen_Shot_2022-04-14_at_10.00.15_jcmisi.png)
 
 ---
 
