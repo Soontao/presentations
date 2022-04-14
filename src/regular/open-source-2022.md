@@ -178,7 +178,7 @@ Could you list out some most frequently used open source projects in your daily 
 ---
 
 
-## [OSS at SAP](https://gist.github.tools.sap/I337313/762aeb10c33d959ef9cb7ffbbd9dad01)
+## [OSS at SAP](https://developers.sap.com/open-source.html)
 
 --- 
 
