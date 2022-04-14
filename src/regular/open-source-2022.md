@@ -170,8 +170,9 @@ Could you list out some most frequently used open source projects in your daily 
   - Export Control
 - Business Model of OSS
   - [Product Hunt](https://www.producthunt.com/)
-- License
+- Open Source License
 - Leadership
+- Programming Language Ownership
 
 
 ---
