@@ -146,16 +146,17 @@ Could you list out some most frequent used open source projects in your daily wo
 
 ## OSS security become more and more important
 
-- [log4j2](https://nvd.nist.gov/vuln/detail/CVE-2021-44832)
 - npm supply chain attack
+  - [npm unpublish policy](https://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy.html)
   - [core-js](https://stackoverflow.com/questions/60722968/how-do-i-block-advertising-in-npm)
   - [faker.js](https://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)
   - [node-ipc](https://snyk.io/blog/peacenotwar-malicious-npm-node-ipc-package-vulnerability/)
   - [nodejs_net_server](https://thehackernews.com/2021/07/malicious-npm-package-caught-stealing.html)
   - [event-source-polyfill](https://github.com/Yaffle/EventSource/commit/de137927e13d8afac153d2485152ccec48948a7a)
-  - [npm unpublish policy](https://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy.html)
+- [log4j2](https://nvd.nist.gov/vuln/detail/CVE-2021-44832)
 - [Spring Cloud Gateway](https://tanzu.vmware.com/security/cve-2022-22947)
 - [Spring Core RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement) 
+  - [fishing for security researcher](https://cn-sec.com/archives/853514.html)
 
 --- 
 
