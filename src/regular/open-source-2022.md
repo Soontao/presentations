@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: dark
+author: Theo Sun
 ---
 
 # Open Source Outlook 2022
@@ -8,7 +9,7 @@ theme: dark
 Theo Sun
 2022
 
-![bg right 50% blur](https://res.cloudinary.com/digf90pwi/image/upload/v1646725446/osi_keyhole_300X300_90ppi_0_sdzuf9.png)
+![bg contain blur](https://res.cloudinary.com/digf90pwi/image/upload/v1646725446/osi_keyhole_300X300_90ppi_0_sdzuf9.png)
 
 ---
 

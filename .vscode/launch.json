@@ -2,13 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "name": "Run Marp Server",
+      "program": "${workspaceFolder}/node_modules/.bin/marp",
       "request": "launch",
-      "name": "debug-current-file",
-      "program": "${file}",
+      "args": [
+        "-s",
+        "src"
+      ],
       "skipFiles": [
         "<node_internals>/**"
-      ]
+      ],
+      "type": "node"
     }
   ]
 }

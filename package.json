@@ -27,15 +27,16 @@
     "url": "https://github.com/Soontao/presentations/issues"
   },
   "marp": {
-    "themeSet": "./theme"
+    "themeSet": "./theme",
+    "engine": "./engine.js"
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@marp-team/marp-cli": "^1.7.0",
-    "@marp-team/marp-core": "^2.4.0",
-    "@marp-team/marpit": "^2.2.3",
+    "@marp-team/marp-cli": "next",
+    "@marp-team/marp-core": "next",
+    "@marp-team/marpit": "next",
     "@newdash/newdash": "^5.21.2",
     "@slidev/cli": "^0.28.10",
     "@slidev/theme-default": "^0.21.2",
