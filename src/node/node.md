@@ -190,7 +190,7 @@ Computer is good at doing repetitive fixed boring work.
 Examples:
 
 - [System Tool](https://github.com/Soontao/clean-icon-and-thumb-cache)
-- [Javascript Static Analyse Tool](https://github.com/Soontao/cycle-import-check)
+- [Javascript Static Analyses Tool](https://github.com/Soontao/cycle-import-check)
 - [Documentation Tool](https://github.com/ui5-next/automation-documentation)
 - [Project Generator](https://github.com/ui5-next/ui5g)
 
