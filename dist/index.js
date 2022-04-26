@@ -1,6 +1,10 @@
 
 sap.ui.getCore().attachInit(function () {
 
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(console.error);
+  }
+
   /**
    * global shared model, contains all data
    */

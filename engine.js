@@ -1,2 +1,2 @@
 
-module.exports = ({ marp }) => marp.use(require('./plugins/kroko'))
+module.exports = ({ marp }) => marp.use(require('./plugins/kroki'))

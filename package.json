@@ -38,6 +38,7 @@
     "@marp-team/marp-core": "next",
     "@marp-team/marpit": "next",
     "@newdash/newdash": "^5.21.2",
+    "@openui5/ts-types": "^1.101.0",
     "@slidev/cli": "^0.28.10",
     "@slidev/theme-default": "^0.21.2",
     "@slidev/theme-seriph": "^0.21.2",
