@@ -10,6 +10,7 @@
   },
   "scripts": {
     "server": "marp -p --server ./src",
+    "version:sw": "npx replace \"DEFAULT_CACHE\" \"CACHE_REV_$(git rev-parse --short HEAD)\" ./dist/sw.js",
     "release": "npx standard-version --commit-all --no-verify"
   },
   "husky": {
