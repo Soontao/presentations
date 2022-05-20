@@ -201,8 +201,8 @@ HAProxy -> "CF Go Router"
 
 ## But ... How about `Outbound` communication?
 
-- for `java` get keystore from `destination service` and set it into `HttpClient`
-- for `nodejs` just use the raw `PEM` format cert/key and put it into `http.Client`
+- for `java` get keystore from `destination service` and set it into [`HttpClient`](https://www.javadoc.io/doc/org.apache.httpcomponents/httpclient/4.5.9/org/apache/http/impl/client/HttpClientBuilder.html#setSslcontext(javax.net.ssl.SSLContext))
+- for `nodejs` just use the raw `PEM` format cert/key and put it into [`http.Agent`](https://nodejs.org/api/tls.html#tlscreatesecurecontextoptions)
 
 ---
 
