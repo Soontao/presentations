@@ -199,6 +199,13 @@ HAProxy -> "CF Go Router"
 
 ---
 
+## But ... How about `Outbound` communication?
+
+- for `java` get keystore from `destination service` and set it into `HttpClient`
+- for `nodejs` just use the raw `PEM` format cert/key and put it into `http.Client`
+
+---
+
 ## Reference
 
 - [RSA Interactive Session](https://github.com/Soontao/rsa-interactive-session)
