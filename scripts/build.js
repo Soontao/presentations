@@ -2,7 +2,7 @@
 const process = require("process")
 const path = require("path").posix
 
-function build(cwdPath = process.cwd()) {
+function build(cwdPath = process.cwd(), targetFolder = "dist") {
 
   require("colors")
   const fs = require("fs").promises
@@ -29,12 +29,11 @@ function build(cwdPath = process.cwd()) {
       // src/sap/cpi/cpi-sftp.md
 
       const marpCommand = path.join(
-        __dirname,
-        "..",
+        cwdPath,
         "./node_modules/@marp-team/marp-cli/marp-cli.js"
       )
-      const sourceBasePath = path.join(__dirname, "../src")
-      const targetBasePath = path.join(__dirname, "../dist")
+      const sourceBasePath = path.join(cwdPath, "./src")
+      const targetBasePath = path.join(cwdPath, targetFolder)
 
       const navigation = await Promise.all(
         presentationsFiles
