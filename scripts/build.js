@@ -110,6 +110,15 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
         silent: false,
       })
 
+      replace({
+        regex: /CACHE_REV_.{7}/,
+        replacement: `CACHE_REV_${git.short()}`,
+        paths: [path.join(workspace, outputDirectory, "sw.js")],
+        recursive: false,
+        silent: false,
+      })
+
+
       process.exit()
 
 
