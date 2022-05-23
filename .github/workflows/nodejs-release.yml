@@ -17,6 +17,8 @@ jobs:
           node-version: 18.x
           registry-url: https://registry.npmjs.org/
 
+      - uses: pnpm/action-setup@v2.1.0
+
       - name: npm build
         run: |
           pnpm install
