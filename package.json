@@ -34,7 +34,7 @@
     "engine": "./engine.js"
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@marp-team/marp-cli": "^1.7.2",
