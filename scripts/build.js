@@ -6,11 +6,10 @@ if (require.main == module) {
   const path = require("path").posix
   const fs = require("fs").promises
   const { trimPrefix } = require("@newdash/newdash/trimPrefix");
-  const { trimSuffix } = require("@newdash/newdash/trimSuffix");
   const { findTitleForMarkdown } = require("./utils")
 
-  const formats = (process.env.FORMATS || "html,pdf,pptx").split(",")
-  const fileTypes = (process.env.FILE_TYPES || "marp,slidev").split(",")
+  const formats = (process.env.FORMATS || "html").split(",")
+  const fileTypes = (process.env.FILE_TYPES || "marp").split(",")
 
   const child_process = require("child_process")
   const cwdPath = path.join(__dirname, "..")
@@ -18,7 +17,7 @@ if (require.main == module) {
   const glob = require("fast-glob");
   const mkdirp = require("mkdirp");
 
-  const toFileType = (filename) => filename.endsWith(".slidev.md") ? 'slidev' : 'marp';
+  const toFileType = () => 'marp';
 
   (
     async () => {
@@ -34,11 +33,6 @@ if (require.main == module) {
         __dirname,
         "..",
         "./node_modules/@marp-team/marp-cli/marp-cli.js"
-      )
-      const slidevCommand = path.join(
-        __dirname,
-        "..",
-        "./node_modules/@slidev/cli/bin/slidev.js"
       )
       const sourceBasePath = path.join(__dirname, "../src")
       const targetBasePath = path.join(__dirname, "../dist")
@@ -84,48 +78,6 @@ if (require.main == module) {
                 })
 
                 target = `${fileRelPath}.html`
-                break;
-              case "slidev":
-                const fileName = path.basename(presentationFile, ".slidev.md")
-                const localFsTargetBase = path.join(
-                  targetBasePath,
-                  fileRelBaseDir,
-                  fileName
-                )
-                await mkdirp(localFsTargetBase)
-                const cmdParts = [
-                  "node",
-                  slidevCommand,
-                  "build",
-                  "--base",
-                  "''",
-                  source,
-                  "-o",
-                  localFsTargetBase
-                ];
-                const localFsTargetIndexHtml = path.join(localFsTargetBase, "index.html")
-                target = path.join(fileRelBaseDir, fileName, "index.html")
-                child_process.execSync(cmdParts.join(" "), { cwd: cwdPath })
-                const indexPage = await fs.readFile(
-                  localFsTargetIndexHtml,
-                  { encoding: "utf-8" }
-                )
-                // overwrite base dir
-                await fs.writeFile(
-                  localFsTargetIndexHtml,
-                  indexPage
-                    .replace(
-                      /src=\"assets/g,
-                      `src="${fileRelBaseDir}/${fileName}/assets`,
-                      -1
-                    )
-                    .replace(
-                      /href=\"assets/g,
-                      `href="${fileRelBaseDir}/${fileName}/assets`,
-                      -1
-                    ),
-                  { encoding: "utf-8" }
-                )
                 break;
               default:
                 break;
