@@ -31,4 +31,4 @@ jobs:
 
       - run: pnpm install
 
-      - name: pnpm build
+      - run: pnpm build
