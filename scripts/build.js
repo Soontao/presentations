@@ -1,18 +1,17 @@
 
+const process = require("process")
 
-if (require.main == module) {
+function build(cwdPath = process.cwd()) {
 
   require("colors")
   const path = require("path").posix
   const fs = require("fs").promises
   const { trimPrefix } = require("@newdash/newdash/trimPrefix");
   const { findTitleForMarkdown } = require("./utils")
-
   const formats = (process.env.FORMATS || "html").split(",")
   const fileTypes = (process.env.FILE_TYPES || "marp").split(",")
 
   const child_process = require("child_process")
-  const cwdPath = path.join(__dirname, "..")
 
   const glob = require("fast-glob");
   const mkdirp = require("mkdirp");
@@ -104,7 +103,10 @@ if (require.main == module) {
 
     }
   )()
-
-
-
 }
+
+if (require.main === module) {
+  build(path.join(__dirname, ".."))
+}
+
+module.exports = build
