@@ -78,6 +78,7 @@ presentations.json
 *.zip
 xs-security.json
 *.mta
+dist/sw.js
 
 # slidev
 assets

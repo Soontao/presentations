@@ -2,16 +2,18 @@
 const process = require("process")
 const path = require("path").posix
 
-function build(cwdPath = process.cwd(), targetFolder = "dist") {
+function build(workspace = process.cwd(), outputDirectory = "dist") {
 
   require("colors")
+  const os = require("os")
   const fs = require("fs").promises
   const { trimPrefix } = require("@newdash/newdash/trimPrefix");
+  const { concurrency } = require("@newdash/newdash/concurrency");
   const { findTitleForMarkdown } = require("./utils")
+  const replace = require("replace")
   const formats = (process.env.FORMATS || "html").split(",")
   const fileTypes = (process.env.FILE_TYPES || "marp").split(",")
-
-  const child_process = require("child_process")
+  const git = require('git-rev-sync');
 
   const glob = require("fast-glob");
   const mkdirp = require("mkdirp");
@@ -25,77 +27,88 @@ function build(cwdPath = process.cwd(), targetFolder = "dist") {
         "!src/**/node_modules/**",
         "!src/**/node_modules/**",
         "!src/**/*example*/**"
-      ], { cwd: cwdPath })
+      ], { cwd: workspace })
       // src/sap/cpi/cpi-sftp.md
 
-      const marpCommand = path.join(
-        cwdPath,
-        "./node_modules/@marp-team/marp-cli/marp-cli.js"
+      const marpCommand = require("@marp-team/marp-cli")
+      const sourceBasePath = path.join(workspace, "./src")
+      const targetBasePath = path.join(workspace, outputDirectory)
+
+      const renderFile = concurrency.limit(
+        async (presentationFile) => {
+
+          const fileType = toFileType(presentationFile)
+
+          // without 'src/' and 'dist/' prefix
+          /**
+           * sap/cf/xsuaa-and-multitenacy.md
+           */
+          const fileRelPath = trimPrefix(presentationFile, "src")
+          /**
+           * /sap/cf
+           */
+          const fileRelBaseDir = path.dirname(fileRelPath)
+
+          // create -p ../dist/sap/cf
+          await mkdirp(path.join(targetBasePath, fileRelBaseDir))
+
+          const source = path.join(sourceBasePath, fileRelPath);
+
+          let target = ''
+
+          switch (fileType) {
+            case 'marp':
+              const targetBase = path.join(targetBasePath, fileRelPath)
+
+              await Promise.all(
+                formats.map(
+                  format =>
+                    marpCommand.marpCli([
+                      source,
+                      `--${format}`,
+                      '-o',
+                      `${targetBase}.${format}`
+                    ]
+                    )
+                )
+              )
+
+              target = `${fileRelPath}.html`
+              break;
+            default:
+              break;
+          }
+
+          const content = await fs.readFile(source, { encoding: "utf-8" })
+          const title = findTitleForMarkdown(content)
+          return {
+            title, fileType, path: target
+          }
+        },
+        os.cpus().length - 1
       )
-      const sourceBasePath = path.join(cwdPath, "./src")
-      const targetBasePath = path.join(cwdPath, targetFolder)
 
       const navigation = await Promise.all(
         presentationsFiles
           .filter(filename => fileTypes.includes(toFileType(filename)))
-          .map(async (presentationFile) => {
-
-            const fileType = toFileType(presentationFile)
-
-            // without 'src/' and 'dist/' prefix
-            /**
-             * sap/cf/xsuaa-and-multitenacy.md
-             */
-            const fileRelPath = trimPrefix(presentationFile, "src")
-            /**
-             * /sap/cf
-             */
-            const fileRelBaseDir = path.dirname(fileRelPath)
-
-            // create -p ../dist/sap/cf
-            await mkdirp(path.join(targetBasePath, fileRelBaseDir))
-
-            const source = path.join(sourceBasePath, fileRelPath);
-
-            let target = ''
-
-            switch (fileType) {
-              case 'marp':
-                const targetBase = path.join(targetBasePath, fileRelPath)
-                const marpCmd = (format) => [
-                  'node',
-                  marpCommand,
-                  source,
-                  `--${format}`,
-                  '-o',
-                  `${targetBase}.${format}`
-                ].join(" ");
-
-                formats.forEach(format => {
-                  child_process.execSync(marpCmd(format), { cwd: cwdPath })
-                })
-
-                target = `${fileRelPath}.html`
-                break;
-              default:
-                break;
-            }
-
-            const content = await fs.readFile(source, { encoding: "utf-8" })
-            const title = findTitleForMarkdown(content)
-            return {
-              title, fileType, path: target
-            }
-          })
+          .map(renderFile)
       )
 
       await fs.writeFile(
-        path.join(cwdPath, "dist/presentations.json"),
+        path.join(workspace, outputDirectory, "presentations.json"),
         JSON.stringify(navigation),
         { encoding: "utf-8" }
       )
 
       console.log("navigation file generated, total presentations: %s", navigation.length)
+
+      replace({
+        regex: "DEFAULT_CACHE",
+        replacement: `CACHE_REV_${git.short()}`,
+        paths: [path.join(workspace, outputDirectory, "sw.js")],
+        recursive: false,
+        silent: false,
+      })
 
       process.exit()
 
