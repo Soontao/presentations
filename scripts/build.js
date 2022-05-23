@@ -1,10 +1,10 @@
 
 const process = require("process")
+const path = require("path").posix
 
 function build(cwdPath = process.cwd()) {
 
   require("colors")
-  const path = require("path").posix
   const fs = require("fs").promises
   const { trimPrefix } = require("@newdash/newdash/trimPrefix");
   const { findTitleForMarkdown } = require("./utils")
