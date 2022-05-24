@@ -200,6 +200,8 @@ func TestEncryptDecryptMagic(t *testing.T) {
 
 ## NginX Configuration
 
+> for client certification
+
 
 ```conf
 server {
