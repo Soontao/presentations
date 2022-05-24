@@ -12,6 +12,16 @@ Theo Sun
 
 ---
 
+## Agenda
+
+- mTLS authentication
+- RSA
+- Certificate Chain
+- mTLS on XSUAA
+- mTLS for Cloud Foundry
+
+---
+
 ## What is mutual authentication?
 
 > `Mutual authentication` or `two-way authentication` (not to be confused with `two-factor authentication`) refers to two parties authenticating each other at the same time in an authentication protocol. It is a default mode of authentication in some protocols (IKE, SSH) and optional in others (TLS).
@@ -100,6 +110,8 @@ func NewPrime(n int64) *big.Int {
 }
 ```
 
+* **random** is important for crypto
+
 ---
 
 ## Choose the `E` and `D` number
@@ -178,6 +190,53 @@ func TestEncryptDecryptMagic(t *testing.T) {
 
 ---
 
+## CA and Trust Chain
+
+---
+
+![bg 95%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1653357124/Chain_Of_Trust_kqi5z3.svg)
+
+---
+
+## NginX Configuration
+
+
+```conf
+server {
+    listen        443;
+    ssl on;
+    server_name myserver.com;
+    proxy_ssl_server_name on;
+    ssl_certificate      /etc/nginx/certificates/cert.crt; ## Use your own trusted certificate from CA/SSLTrust
+    ssl_certificate_key /etc/nginx/certificates/cert.key; ## Use your own trusted certificate from CA/SSLTrust
+    ssl_client_certificate /etc/nginx/certificates/myCA.pem; ## Use your own trusted certificate from CA/SSLTrust
+    ssl_verify_client on;
+    ssl_prefer_server_ciphers on;
+    ssl_protocols TLSv1.1 TLSv1.2;
+    ssl_ciphers 'ignored';
+    keepalive_timeout 10;
+    ssl_session_timeout 5m;
+
+location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_pass http://mysite;
+    // optionally you may want to look into the proxy_pass_reverse directive as well.
+  }
+}
+```
+
+---
+
+## Typical Client Authentication Flow
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1653357386/ssl-tls-client-authentication_pevluy.jpg)
+
+---
+
+
 ## Cloud Foundry Solution
 
 
@@ -208,6 +267,7 @@ HAProxy -> "CF Go Router"
 
 ## Reference
 
+- [TLS Wiki](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [RSA Interactive Session](https://github.com/Soontao/rsa-interactive-session)
 - [Public Keys, Private Keys, and Certificates](https://docs.oracle.com/cd/E19509-01/820-3503/ggbgc/index.html)
 - [RSA加密算法原理](https://blog.csdn.net/a745233700/article/details/102341542)
