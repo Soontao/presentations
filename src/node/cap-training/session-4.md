@@ -5,7 +5,9 @@ theme: dark
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
-# Node JS Training: Session 4 
+# Node JS Training: Session 4
+
+> NodeJS Basics
 
 # NodeJS Basics
 
@@ -192,9 +194,9 @@ bus.emit("add", 10)
 
 ## [Event Emitter](https://nodejs.org/dist/latest-v10.x/docs/api/events.html)
 
-* EventEmitter.prototype.once
-* EventEmitter.prototype.removeListener
-* EventEmitter.prototype.removeAllListeners
+- EventEmitter.prototype.once
+- EventEmitter.prototype.removeListener
+- EventEmitter.prototype.removeAllListeners
 
 
 ---
@@ -203,9 +205,9 @@ bus.emit("add", 10)
 
 > provide local file system access
 
-* buffer, binary
-* string, encoded
-* Promise API
+- buffer, binary
+- string, encoded
+- Promise API
 
 > DON'T use **sync functions** on server side programming.
 

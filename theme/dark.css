@@ -192,7 +192,7 @@ pre {
   display: block;
   margin: 1em;
   min-height: 1em;
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 pre code {
@@ -204,6 +204,7 @@ pre code {
   border: white;
   border-style: dashed;
   border-width: 0.5px;
+  width: 100%;
   color: var(--atheme-foreground);
 }
 

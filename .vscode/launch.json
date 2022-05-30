@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "Run Marp Server",
-      "program": "${workspaceFolder}/node_modules/.bin/marp",
+      "program": "${workspaceFolder}/node_modules/@marp-team/marp-cli/marp-cli",
       "request": "launch",
       "args": [
         "-s",
