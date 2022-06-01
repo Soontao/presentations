@@ -123,3 +123,46 @@ catch (e) {
 doSomething2() // executed
 ```
 
+
+---
+
+## Class 类
+
+```js
+// abstract instance
+// class
+class Animal {
+  age; // instance property/variable
+  constructor(age) {
+    this.age = age
+  }
+  getAge() { return this.age  } // method
+}
+
+const bird1 = new Animal(1) // instance
+const bird2 = new Animal(2) // instance
+
+class Horse extends Animal {
+  speed;
+  constructor(speed, age) { // construct the instance
+    super(age) // call super constructor
+    this.speed = speed
+  }
+}
+
+class People extends Animal { // inherit
+  name;
+  constructor(name, age) {
+    super(age)
+    this.name = name
+  }
+  getName() {
+    return this.name
+  }
+}
+
+const theo = new People('theo', 27);
+const yandan = new People('yadan', 26);
+
+```
+
