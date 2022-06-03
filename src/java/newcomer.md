@@ -35,9 +35,78 @@ Theo Sun
 
 --- 
 
-## Basic Programming Elements
+
+## Programming Language
+
+- compiler - for early c/fortran languages (compile source code to machine executable binary)
+- programming vm - for modern `java`/`c#` languages (source code/byte code is running in a programming VM)
+- byte (8 bit) - kilobyte (KB) - megabyte (MB) - gigabyte (GB)
+  - `00000011` plus `1` is `00000100`
+- the first ['hello world'](https://en.m.wikipedia.org/wiki/%22Hello,_World!%22_program) example of c programming language
 
 ---
+
+## Compiler with C example
+
+```c
+#include<stdio.h>
+int main() {
+  printf("hello world");
+}
+```
+
+```bash
+cat hello.c # hello.c is the source code
+cc hello.c -o hello_world # 'cc' is the compiler 'hello_world' is the output executable binary object
+```
+
+---
+
+## VM (Virtual Machine) with Javascript example
+
+> `java` and `javascript` are different languages
+
+```bash
+node # 'node' is a VM, also is a compiled executable binary object
+console.log('hello world')
+```
+
+---
+
+## Functional Programming
+
+
+```js
+// not a functional example
+let a = 1;
+function add(b) {
+  a = a + b
+  return a
+}
+add(2)
+```
+
+```js
+// pure function
+function add(a, b) {
+  return a + b
+}
+// high order function
+function twoNumCal(f, a, b) {
+  return f(a, b)
+}
+twoNumCal(add, 1, 2)
+```
+---
+
+## Programming Elements
+
+- Keyword
+- Statement
+- Block
+
+---
+
 
 ## Variable
 
@@ -165,4 +234,3 @@ const theo = new People('theo', 27);
 const yandan = new People('yadan', 26);
 
 ```
-
