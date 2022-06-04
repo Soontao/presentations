@@ -19,9 +19,14 @@ Theo Sun
   - COBOL
   - C
   - C++
-  - Java
-  - JavaScript
+- High-Level VM based Programming Language
+  - Java (编译)
+  - C#
+  - JavaScript (解释型)
+  - Python
+- Declarative/Markup Programming Language
   - SQL
+  - HTML
 
 --- 
 
@@ -85,6 +90,8 @@ function add(b) {
 }
 add(2)
 ```
+
+---
 
 ```js
 // pure function
@@ -211,6 +218,13 @@ class Animal {
 const bird1 = new Animal(1) // instance
 const bird2 = new Animal(2) // instance
 
+```
+
+
+---
+
+```js
+
 class Horse extends Animal {
   speed;
   constructor(speed, age) { // construct the instance
@@ -231,6 +245,61 @@ class People extends Animal { // inherit
 }
 
 const theo = new People('theo', 27);
-const yandan = new People('yadan', 26);
+const yadan = new People('yadan', 26);
 
 ```
+
+---
+
+## Java
+
+- VM based language programming
+- Compiling is required (java source code -> bytecode (which could be executed by JVM) *instead of binary*)
+- Object-Oriented Programming Language
+- `Oracle` own copyright
+  - **JVM** - Java Virtual Machine (java/javac/C++/pre-compiled)
+    - Oracle JVM/Oracle JDK ([Java Development Kit](https://docs.oracle.com/en/java/javase/11/docs/api/))
+    - Open JVM/JDK
+
+---
+
+## Java Version
+
+LTS (Long Term Support) versions
+
+- **8**
+- 11
+- 17
+
+---
+
+## Install JVM
+
+[Download](https://adoptium.net/temurin/releases?version=8)
+
+---
+
+## Setup Java Environment
+
+- [First Java Program](https://www.runoob.com/java/java-tutorial.html)
+
+`HelloWorld.java`
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+---
+
+- [打开命令提示符](https://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%AD%E6%89%93%E5%BC%80%E2%80%9C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E2%80%9D%E7%BB%88%E7%AB%AF)
+
+```bash
+javac HelloWorld.java 
+java HelloWorld # call class 
+```
+
+---

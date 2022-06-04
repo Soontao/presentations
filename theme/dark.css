@@ -171,8 +171,8 @@ blockquote p {
   margin: 0;
 }
 
-ul > li,
-ol > li {
+ul>li,
+ol>li {
   color: white;
   font-size: 1em;
 }
@@ -192,7 +192,7 @@ pre {
   display: block;
   margin: 1em;
   min-height: 1em;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 pre code {
@@ -226,6 +226,7 @@ table {
   border-collapse: collapse;
   margin: 1em 0 0 0;
 }
+
 table th,
 table td {
   padding: 0.2em 0.4em;
@@ -245,22 +246,27 @@ section {
   color: var(--atheme-foreground);
   background-color: var(--atheme-background);
 }
-section > *:first-child,
-section > header:first-child + * {
+
+section>*:first-child,
+section>header:first-child+* {
   margin-top: 0;
 }
+
 section a,
 section mark {
   color: #3e9ce0;
 }
+
 section p {
   color: var(--atheme-foreground);
 }
+
 section code {
   background: var(--atheme-cyan);
   color: rgba(2, 7, 26, 0.801);
   font-weight: bold;
 }
+
 section h1 strong,
 section h2 strong,
 section h3 strong,
@@ -269,9 +275,11 @@ section h5 strong,
 section h6 strong {
   color: var(--atheme-current-line);
 }
-section pre > code {
+
+section pre>code {
   background: rgb(46, 45, 45);
 }
+
 section header,
 section footer,
 section section::after,
@@ -279,16 +287,19 @@ section blockquote::before,
 section blockquote::after {
   color: var(--atheme-comment);
 }
+
 section table th,
 section table td {
   border-color: var(--atheme-current-line);
 }
+
 section table thead th {
   background: var(--atheme-current-line);
   color: var(--atheme-yellow);
 }
-section table tbody > tr:nth-child(even) td,
-section table tbody > tr:nth-child(even) th {
+
+section table tbody>tr:nth-child(even) td,
+section table tbody>tr:nth-child(even) th {
   background: var(--atheme-current-line);
 }
 
