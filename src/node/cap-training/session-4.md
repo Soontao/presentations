@@ -34,11 +34,14 @@ Theo Sun
 
 ## What is NodeJS ?
 
+![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
+
+
 ---
 
 ## What is NodeJS ?
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1654568611/1_KSUVEyemgCd7e52w7l28jA_u7wfkk.png)
+![bg right 95%](https://res.cloudinary.com/digf90pwi/image/upload/v1654568611/1_KSUVEyemgCd7e52w7l28jA_u7wfkk.png)
 
 ---
 
