@@ -52,7 +52,7 @@ Theo Sun
 - NodeJS runtime - JVM
 - NodeJS built-in API - JDK
 - modules - package
-- prototype - class
+- prototype/class - class
 - function - Functional Interface
 - object - `None`
 - array - List and stream
@@ -70,6 +70,10 @@ Theo Sun
 
 
 ![](https://raw.githubusercontent.com/nodejs/Release/master/schedule.svg?sanitize=true)
+
+---
+
+## Lets start with a simple program
 
 ---
 
