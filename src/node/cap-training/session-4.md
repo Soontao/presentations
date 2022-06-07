@@ -9,8 +9,6 @@ theme: dark
 
 > NodeJS Basics
 
-# NodeJS Basics
-
 Theo Sun
 2022
 
@@ -60,7 +58,7 @@ module.export = { GLOBAL_ENTITY_NAME_PREFIX }
 
 ## Module System
 
-> Cycle import issue
+> [Circular Dependency](https://github.com/Soontao/cycle-import-check#circular-dependency-sample-project)
 
 ---
 
