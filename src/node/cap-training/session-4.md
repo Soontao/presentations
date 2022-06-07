@@ -222,6 +222,9 @@ npm install express
 
 ## [Global Objects](https://nodejs.org/docs/latest/api/globals.html)
 
+- [Javascript API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
+- NodeJS API
+
 ```javascript
 console.log(__dirname)
 console.log(__filename)
