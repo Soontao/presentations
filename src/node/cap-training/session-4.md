@@ -22,7 +22,7 @@ Theo Sun
 
 ## What is JavaScript ?
 
-- high-level,
+- high-level
 - just-in-time compiled 
 - dynamic typing
 - prototype-based object-orientation
@@ -186,6 +186,13 @@ export { v2 }
 npm init
 npm install express
 ```
+
+---
+
+## npm - package json & package lock
+
+- [semver](https://semver.npmjs.com/)
+- [package-lock.json](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json) & [npm ci](https://docs.npmjs.com/cli/v8/commands/npm-ci)
 
 ---
 
