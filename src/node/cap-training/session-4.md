@@ -5,14 +5,62 @@ theme: dark
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1640327704/logo_pgbqzz.svg)
 
-# Node JS Training: Session 4
+# NodeJS Basics
 
-> NodeJS Basics
 
 Theo Sun
 2022
 
 ---
+
+## What is JavaScript ?
+
+![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1641363781/Unofficial_JavaScript_logo_2_sq9qnl.svg)
+
+
+---
+
+## What is JavaScript ?
+
+- high-level,
+- just-in-time compiled 
+- dynamic typing
+- prototype-based object-orientation
+- first-class functions 
+- multi-paradigm
+
+
+---
+
+## What is NodeJS ?
+
+---
+
+## What is NodeJS ?
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1654568611/1_KSUVEyemgCd7e52w7l28jA_u7wfkk.png)
+
+---
+
+## NodeJS in a short
+
+> for `java` developer `ONLY`
+
+- NodeJS runtime - JVM
+- NodeJS built-in API - JDK
+- modules - package
+- prototype - class
+- function - Functional Interface
+- object - `None`
+- array - List and stream
+- io/net/async - multi thread
+- cluster - multi process
+- gc - gc
+
+
+---
+
+
 ## [LTS - long term support](https://nodejs.org/en/about/releases/)
 
 > use the latest LTS version
@@ -108,9 +156,9 @@ require(X) from module at path Y
 
 ---
 
-## ECMAScript modules (ESM)
+## [ECMAScript modules (ESM)](https://nodejs.org/docs/latest/api/esm.html)
 
-> for reference, `NOT` supported till now
+> still in progress
 
 ```js
 import { v } from "./m1"
@@ -145,15 +193,20 @@ npm install express
 
 > central package management
 
-- [npmjs.com](https://www.npmjs.com/)
-- [sap artifactory](https://pages.github.tools.sap/Common-Repository/Artifactory-Corp/)
+- Global [npmjs.com](https://www.npmjs.com/)
+- [SAP Artifactory](https://pages.github.tools.sap/Common-Repository/Artifactory-Corp/)
 
 ```ini
 @sap:registry=https://int.repositories.cloud.sap/artifactory/api/npm/build-milestones-npm
 @sap-internal:registry=https://int.repositories.cloud.sap/artifactory/api/npm/internal-tool
 ```
 ---
-## global objects
+
+
+## Common Modules in NodeJS
+---
+
+## [Global Objects](https://nodejs.org/docs/latest/api/globals.html)
 
 ```javascript
 console.log(__dirname)
@@ -411,6 +464,12 @@ req.end()
 ## Quiz - 1
 
 > What is `LTS` for nodejs ?, which `releases` are LTS versions?
+
+- 8
+- 11
+- 12
+- 13
+- 14
 
 ---
 
