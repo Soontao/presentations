@@ -5,8 +5,6 @@ marp: true
 
 ![blur bg 50% right](https://res.cloudinary.com/digf90pwi/image/upload/v1588562767/cap_r2hzvb.svg)
 
-# Node JS Training: Session 6 
-
 # CAP Framework Basics
 
 Theo Sun
@@ -48,9 +46,8 @@ Theo Sun
 
 ## Links
 
-- [CAP Framework Organization](https://github.wdf.sap.corp/cap)
-- [Road Map](https://github.wdf.sap.corp/cap/matters/projects/36)
-- [CAP Issues](https://github.wdf.sap.corp/cap/issues/issues)
+- [CAP Framework Organization](https://github.tools.sap/cap/)
+- [CAP Issues](https://github.tools.sap/cap/issues/issues)
 - [Setup Environment](https://cap.cloud.sap/docs/get-started/)
 
 ---
@@ -70,7 +67,7 @@ Theo Sun
 ---
 
 
-## [Events](https://cap.cloud.sap/docs/guides/providing-services#handling-events)
+## [Service Events](https://cap.cloud.sap/docs/guides/providing-services#handling-events)
 
 > implement the service interface by `javascript` code, with `event` concepts
 
@@ -209,6 +206,28 @@ const [books, authors] = await srv.run ([q1, q2])
 ## [Database Transaction](https://cap.cloud.sap/docs/node.js/transactions)
 
 - [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
+
+
+> and manually transaction
+
+```js
+let db = await cds.connect.to('db')
+let tx = db.tx()
+try {
+  await tx.run (SELECT.from(Foo))
+  await tx.create (Foo, {...})
+  await tx.read (Foo)
+  await tx.commit()
+} catch(e) {
+  await tx.rollback(e)
+}
+```
+
+[please remember **commit/rollback** if manually control the transaction](https://cap.cloud.sap/docs/node.js/transactions#commit)
+
+
+
+
 
 ---
 

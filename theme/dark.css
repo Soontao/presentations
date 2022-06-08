@@ -3,7 +3,7 @@
  * @theme dark
  * @author Theo Sun
  *
- * @auto-scaling true
+ * @auto-scaling false
  * @size 4:3 2000px 1500px
  * @size 16:9 1920px 1080px
  */
@@ -189,10 +189,9 @@ code {
 }
 
 pre {
-  display: block;
   margin: 1em;
   min-height: 1em;
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 pre code {
@@ -203,7 +202,7 @@ pre code {
   font-size: 0.7em;
   border: white;
   border-style: dashed;
-  border-width: 0.5px;
+  border-width: 0px;
   width: 100%;
   color: var(--atheme-foreground);
 }
