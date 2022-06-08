@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo App</title>
+
+  <script>
+    window["sap-ushell-config"] = {
+      defaultRenderer: "fiori2",
+      applications: {
+        'class-app': {
+          title: 'Manage Class',
+          additionalInformation: 'SAPUI5.Component=sap.demo.app.class',
+          applicationType: 'URL',
+          url: '/class/webapp',
+          navigationMode: 'embedded',
+        }
+      }
+    };
+  </script>
+
+  <script id="sap-ushell-bootstrap"
+    src="https://sapui5.hana.ondemand.com/1.96.9/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+  <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/1.96.9/resources/sap-ui-core.js"
+    data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout, sap.fe.templates, sap.fe.macros"
+    data-sap-ui-compatVersion="edge" data-sap-ui-async="true" data-sap-ui-theme="sap_fiori_3"
+    data-sap-ui-frameOptions="allow" data-sap-ui-resourceroots='{ 
+      "sap.demo.app.class": "./class/webapp"
+    }'></script>
+  <script>
+    sap.ui.getCore().attachInit(() => sap.ushell.Container.createRenderer().placeAt("content"))
+  </script>
+
+</head>
+
+<body class="sapUiBody" id="content"></body>
+
+</html>
