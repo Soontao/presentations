@@ -181,8 +181,8 @@ const { total } = await ClassService.run(query)
 ## Perform Database Query
 
 ```js
-const { Books, Authors } = srv.entities //> reflection
-const q1 = SELECT.one.from(Authors)
+const { Books, Authors } = srv.entities //> reflection Entity in 'this' Service
+const q1 = SELECT.one.from(Authors) // build query
 const q2 = (Books, 201, b => { b.ID, b.title }) //> expand
 const [books, authors] = await srv.run ([q1, q2])
 ```
@@ -205,7 +205,7 @@ const [books, authors] = await srv.run ([q1, q2])
 
 ## [Database Transaction](https://cap.cloud.sap/docs/node.js/transactions)
 
-- [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions)
+- [Automatic Transactions](https://cap.cloud.sap/docs/node.js/transactions#automatic-transactions) - all db operations in single HTTP/OData request will automatically use the same transaction/db connection 
 
 
 > and manually transaction
@@ -236,6 +236,11 @@ try {
 > Reference to the current root event or request, which acts as invocation context, providing access to the current tenant and user information, and also constitutes the transaction boundary for automatically managed transactions.
 
 if you want to implement some util without request/event parameter, it will be useful
+
+---
+
+## [Fiori Element](https://cap.cloud.sap/docs/advanced/fiori)
+
 
 ---
 

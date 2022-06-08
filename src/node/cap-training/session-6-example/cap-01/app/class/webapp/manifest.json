@@ -1,0 +1,110 @@
+{
+  "_version": "1.0.0",
+  "sap.app": {
+    "id": "sap.demo.app.class",
+    "type": "application",
+    "title": "Classes CRUD",
+    "description": "Classes CURD",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "ClassService": {
+        "uri": "/class/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "sourceTemplate": {
+      "id": "ui5template.smartTemplate",
+      "version": "1.40.12"
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.81.0",
+      "libs": {
+        "sap.fe.templates": {}
+      }
+    },
+    "models": {
+      "": {
+        "dataSource": "ClassService",
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupProperties": {
+            "default": {
+              "submit": "Auto"
+            }
+          }
+        }
+      }
+    },
+    "routing": {
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "List",
+          "target": "List"
+        },
+        {
+          "pattern": "Classes({key}):?query:",
+          "name": "Details",
+          "target": "Details"
+        }
+      ],
+      "targets": {
+        "List": {
+          "type": "Component",
+          "id": "List",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "entitySet": "Classes",
+              "initialLoad": true,
+              "navigation": {
+                "Classes": {
+                  "detail": {
+                    "route": "Details"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Details": {
+          "type": "Component",
+          "id": "Details",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "entitySet": "Classes"
+            }
+          }
+        }
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "fullWidth": false,
+    "deviceTypes":{
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

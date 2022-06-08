@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "s1.",
   "dependencies": {
-    "@sap/cds": "^5",
+    "@sap/cds": "^5.9.6",
     "cds-feature-toggle": "^0.0.3-alpha.0",
     "cds-swagger-ui-express": "^0.3.0",
-    "express": "^4",
+    "express": "^4.18.1",
     "hdb": "^0.18.3",
-    "passport": "^0.5.2"
+    "passport": "^0.5.3"
   },
   "engines": {
     "node": "16"
@@ -18,9 +18,9 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.5.2",
     "jest": "^27.5.1",
-    "sqlite3": "^5"
+    "sqlite3": "^5.0.8"
   },
   "cds": {
     "requires": {
