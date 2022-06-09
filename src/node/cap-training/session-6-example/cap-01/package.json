@@ -4,8 +4,10 @@
   "description": "s1.",
   "dependencies": {
     "@sap/cds": "^5.9.6",
-    "cds-feature-toggle": "^0.0.3-alpha.0",
-    "cds-swagger-ui-express": "^0.3.0",
+    "cds-feature-toggle": "^0.0.6",
+    "cds-hyper-app-service": "^0.0.6",
+    "cds-internal-tool": "^0.0.31",
+    "cds-swagger-ui-express": "^0.4.0",
     "express": "^4.18.1",
     "hdb": "^0.18.3",
     "passport": "^0.5.3"
@@ -22,8 +24,28 @@
     "jest": "^27.5.1",
     "sqlite3": "^5.0.8"
   },
+  "overrides": {
+    "@sap/xsenv": "3.2.0"
+  },
+  "jest": {
+    "testTimeout": 15000
+  },
   "cds": {
     "requires": {
+      "app-service": {
+        "impl": "cds-hyper-app-service",
+        "exts": [
+          "builtIn",
+          {
+            "impl": "cds-feature-toggle",
+            "providers": [
+              {
+                "impl": "CDSRequestProvider"
+              }
+            ]
+          }
+        ]
+      },
       "auth": {
         "auth": {
           "kind": "basic-auth"

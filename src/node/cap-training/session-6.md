@@ -128,7 +128,7 @@ module.exports = class IndexService extends ApplicationService {
 
 ---
 
-## Service Impl -- programming
+## Service Impl -- impl function
 
 
 ```js
