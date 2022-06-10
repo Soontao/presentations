@@ -293,8 +293,9 @@ if you want to implement some util without request/event parameter, it will be u
 
 ## [Fiori Element](https://cap.cloud.sap/docs/advanced/fiori)
 
-![Bookshop Example](https://github.com/SAP-samples/cloud-cap-samples/blob/main/fiori/app/browse/fiori-service.cds)
-
+- [Bookshop Example](https://github.com/SAP-samples/cloud-cap-samples/blob/main/fiori/app/browse/fiori-service.cds)
+- [OData Vocabulary](https://sap.github.io/odata-vocabularies/)
+- [Developing Apps with SAP Fiori Elements](https://sapui5.hana.ondemand.com/#/topic/03265b0408e2432c9571d6b3feb6b1fd)
 
 ---
 
