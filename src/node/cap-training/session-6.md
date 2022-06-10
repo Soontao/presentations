@@ -12,6 +12,67 @@ Theo Sun
 
 ---
 
+## [CAP Framework](https://cap.cloud.sap/docs/about/)
+
+> The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
+
+- CAP - Cloud Application Programming
+- CDS - Core Data Service
+
+
+---
+
+![bg 95%](https://cap.cloud.sap/docs/assets/overview.png)
+
+---
+
+```plantuml
+@startmindmap
+* CAP Development
+** CDS
+*** cds type (reused common type)
+*** cds aspect (reused common structure)
+*** cds entity (database model)
+*** cds entity projection (view/transform/aggregation)
+*** cds service (odata/rest service definition)
+*** cds annotation (UI annotation, permission, authentication, restriction)
+** JavaScript
+*** service implementation, init/registration
+*** service handler 
+**** before/on/after hook
+**** event/CRUD/draft
+*** express middleware
+@endmindmap
+```
+---
+
+```plantuml
+@startmindmap
+* CAP NodeJS Runtime
+** cds.Service
+*** Database
+**** Transaction
+*** Application
+**** Protocol OData
+**** Protocol Rest
+*** Messaging
+*** Audit Log
+** cds.utils
+*** logger
+*** test
+*** uuid
+** cds.ql (CQL)
+*** CRUD (SELECT/UPDATE/INSERT/DELETE)
+** middlewares
+*** authentication (basic/dummy/jwt/xsuaa)
+** mtx
+*** extensibility
+*** srv.model
+*** deployment
+@endmindmap
+```
+---
+
 ## [OData](https://www.odata.org/)
 
 - [Introduction](https://www.odata.org/)
@@ -32,15 +93,6 @@ Theo Sun
 - HANA instance & HDI container & schema
 - HANA native artifacts
 - [HANA Monitoring/TroubleShooting Tools](https://wiki.wdf.sap.corp/wiki/display/SAPEMS/HANA+Cloud+Monitoring)
-
----
-
-## [CAP Framework](https://cap.cloud.sap/docs/about/)
-
-> The SAP Cloud Application Programming Model is an open and opinionated, framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers through proven best practices and a great wealth of out-of-the-box solutions for recurring tasks.
-
-- CAP - Cloud Application Programming
-- CDS - Core Data Service
 
 ---
 
@@ -240,6 +292,8 @@ if you want to implement some util without request/event parameter, it will be u
 ---
 
 ## [Fiori Element](https://cap.cloud.sap/docs/advanced/fiori)
+
+![Bookshop Example](https://github.com/SAP-samples/cloud-cap-samples/blob/main/fiori/app/browse/fiori-service.cds)
 
 
 ---
