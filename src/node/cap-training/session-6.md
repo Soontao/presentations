@@ -54,13 +54,22 @@ Theo Sun
 **** Transaction
 *** Application
 **** Protocol OData
+***** OData Service (V4)
 **** Protocol Rest
+***** Some other restful services (provision/log ...)
 *** Messaging
 *** Audit Log
 ** cds.utils
 *** logger
 *** test
 *** uuid
+** cds.compiler
+*** HANA Artifacts (hdbtable/hdbcds)
+*** OData EDMX
+*** OpenAPI JSON
+*** CSN JSON
+*** SQL (sqlite)
+*** XSUAA (security.json)
 ** cds.ql (CQL)
 *** CRUD (SELECT/UPDATE/INSERT/DELETE)
 ** middlewares
