@@ -244,7 +244,7 @@ const { total } = await ClassService.run(query)
 ```js
 const { Books, Authors } = srv.entities //> reflection Entity in 'this' Service
 const q1 = SELECT.one.from(Authors) // build query
-const q2 = (Books, 201, b => { b.ID, b.title }) //> expand
+const q2 =  SELECT.one.from(Books, 201, b => { b.ID, b.title }) //> expand
 const [books, authors] = await srv.run ([q1, q2])
 ```
 

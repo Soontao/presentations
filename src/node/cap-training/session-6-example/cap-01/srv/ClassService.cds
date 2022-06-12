@@ -3,7 +3,6 @@ using {sap.training} from '../db/schema';
 @impl : './lib/class-service.js' // manual define the service, implmentation
 service ClassService {
 
-
   entity Students @(cds.features : [
     {
       on      : 'READ',
@@ -36,5 +35,6 @@ service ClassService {
     from training.Class
     group by
       Class.teacher.name;
+
 
 }

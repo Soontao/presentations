@@ -32,7 +32,7 @@ module.exports = async (srv) => {
 
 
   // another example, consume another 'service'
-  srv.on("classRecords", async () => {
+  srv.on("classRecords", async function () {
     const ClassService = await cds.connect.to("ClassService")
     const { Classes } = ClassService.entities;
     const { total } = await ClassService.run(SELECT.from(Classes).columns("count(1) as total"))

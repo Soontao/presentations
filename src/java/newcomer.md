@@ -19,6 +19,11 @@ Theo Sun
   - COBOL
   - C
   - C++
+
+---
+
+## History of Programming Language
+
 - High-Level VM based Programming Language
   - Java (编译)
   - C#
@@ -303,3 +308,9 @@ java HelloWorld # call class
 ```
 
 ---
+
+## Download IDE
+
+- [Idea](https://www.jetbrains.com/idea/)
+- [Eclipse](https://www.eclipse.org/)
+
