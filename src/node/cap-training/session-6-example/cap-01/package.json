@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "cds run",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "npm test -- --coverage"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
