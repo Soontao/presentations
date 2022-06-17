@@ -1,5 +1,10 @@
 namespace sap.training;
 
+
+type SoftDeletion {
+  deleted : Boolean default false;
+}
+
 type PeopleName {
   first_name  : String(255);
   middle_name : String(255);

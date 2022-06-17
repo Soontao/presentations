@@ -33,20 +33,6 @@
   },
   "cds": {
     "requires": {
-      "app-service": {
-        "impl": "cds-hyper-app-service",
-        "exts": [
-          "builtIn",
-          {
-            "impl": "cds-feature-toggle",
-            "providers": [
-              {
-                "impl": "CDSRequestProvider"
-              }
-            ]
-          }
-        ]
-      },
       "auth": {
         "auth": {
           "kind": "basic-auth"

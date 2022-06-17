@@ -62,3 +62,8 @@ entity Table2 : Table1 {
 entity Foo : SeqID {
   Name : String(255);
 }
+
+
+entity Table3 : cuid, training.SoftDeletion {
+  c1 : String(255);
+}
