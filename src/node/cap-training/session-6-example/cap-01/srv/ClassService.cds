@@ -21,6 +21,7 @@ service ClassService {
   entity Teachers as projection on training.Teacher;
 
   @cds.redirection.target
+  @odata.draft.enabled
   entity Classes  as projection on training.Class actions {
     // bounded action
     function getName() returns String(255);

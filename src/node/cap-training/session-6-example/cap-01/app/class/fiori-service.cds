@@ -37,9 +37,17 @@ annotate ClassService.Classes with @(UI : {
     teacher_id,
   ],
   LineItem        : [
-    {Value : id},
-    {Value : name},
-    {Value : teacher.name.first_name},
-    {Value : teacher.name.last_name},
+    {
+      Value : id,
+      Label : 'ID'
+    },
+    {
+      Value : name,
+      Label : 'Class Name'
+    },
+    {
+      Value : teacher.name.last_name,
+      Label : 'Teacher Last Name'
+    },
   ]
 });
