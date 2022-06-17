@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mock Test Suite should support insert data 1`] = `
+Object {
+  "ID": "651db316-edfa-11ec-8ea0-0242ac120002",
+  "c1": "v1",
+}
+`;
+
+exports[`Mock Test Suite should support soft deletion 1`] = `
+Array [
+  Array [
+    UPDATE {
+      "UPDATE": Object {
+        "data": Object {
+          "deleted": true,
+        },
+        "entity": Object {
+          "ref": Array [
+            Object {
+              "id": "ImportantService.Table3s",
+              "where": Array [],
+            },
+          ],
+        },
+      },
+    },
+    Object {
+      "deleted": true,
+    },
+  ],
+]
+`;
