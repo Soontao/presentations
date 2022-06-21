@@ -139,7 +139,7 @@ function serve(options = {}) {
 
   beforeAll(async () => {
     const model = await cds.load("*", options);
-    db.model = cds.model = cds.linked(model)
+    db.model = cds.model = cds.compile.for.nodejs(model)
     await cds.serve("all", options).in({ use() { } });
   })
 
