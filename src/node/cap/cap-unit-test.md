@@ -201,3 +201,10 @@ describe('People Service Test with Mock Serve', () => {
 - no express middlewares could be tested 
 - Draft related events are hard to trigger (need to use the converted CQN request)
 - some mocked result maybe not match the database result
+
+---
+
+## Thank You
+
+Theo Sun
+2022
