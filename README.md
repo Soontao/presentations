@@ -1,6 +1,8 @@
 # Markdown Presentations
 
 [![node-build](https://github.com/Soontao/presentations/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Soontao/presentations/actions/workflows/nodejs.yml)
-[![Netlify](https://img.shields.io/netlify/bb7f7526-42e4-4148-81c0-8c97f8d1cf03)](https://presentations.netlify.fornever.org/)
+[![detect non-inclusive](https://github.com/Soontao/presentations/actions/workflows/gh-woke.yml/badge.svg)](https://github.com/Soontao/presentations/actions/workflows/gh-woke.yml)
 
-Presentations.
+Presentations of Theo Sun.
+
+[![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1655781472/2022-06-21_11-16-50_k3vqss.png)](https://presentations.netlify.fornever.org/)
