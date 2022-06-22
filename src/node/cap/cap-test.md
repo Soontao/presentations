@@ -108,7 +108,7 @@ describe('People Service Unit Test', () => {
 
 - Mock database execute results (in some cases)
 - Assert runtime behavior by [database execution](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-unit.spec.js#L58)
-- Manage the service dependency (if the service is using cds.service[SERVICE_NAME] to access other `cds.ApplicationService`)
+- Manually Manage the service dependency
 
 ---
 
