@@ -34,8 +34,6 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "dependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
     "@marp-team/marp-cli": "^1.7.2",
     "@marp-team/marp-core": "^3.2.0",
     "@marp-team/marpit": "^2.3.1",
@@ -47,7 +45,6 @@
     "debug": "^4.3.4",
     "fast-glob": "^3.2.11",
     "git-rev-sync": "^3.0.2",
-    "husky": "^4.3.8",
     "mkdirp": "^1.0.4",
     "pretty": "^2.0.0",
     "replace": "^1.2.1",
