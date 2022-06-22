@@ -5,7 +5,7 @@ theme: dark
 
 ![blur bg 50% right](https://cap.cloud.sap/docs/assets/logos/cap.svg)
 
-# Unit Test for CAP NodeJS Runtime
+# Test for CAP NodeJS Runtime
 
 ## Expert Level Session
 
@@ -22,7 +22,6 @@ Theo Sun
   - `cds.ApplicationService` 
   - `cds.DatabaseService`
 - Is that possible to test a single `cds.ApplicationService` fast and correct ?
-
 
 ---
 
@@ -58,15 +57,16 @@ describe('People Service Int Test', () => {
 - configure the `axios.defaults` value to adapt you test cases
 - use [`await expect(async function).rejects.toThrow()`](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/7280c8cbe99737816d6d50a429cc6fc326f727f9/test/people-service-int.spec.js#L86) to require an exception
 - [debug](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/31c9314c8fa2cc9b2a9c79798f92cdff9a1ce79e/.vscode/launch.json#L15) with your test case
+- `spy` the `cds.db.run` to assert database execution
 
 ---
 
-### Benefits
+> Benefits
 
 - Easy to use (test like API invocation)
 - Full framework is executed
 
-### Disadvantages
+> Disadvantages
 
 - Each test case will start a server (slowly when model is large)
 - Need to deploy db model firstly
@@ -112,14 +112,14 @@ describe('People Service Unit Test', () => {
 
 ---
 
-### Benefits
+> Benefits
 
 - only single service CSN (and its dependency) is processed, so fast
 - request is handled by `cds.Service` framework, handlers are performed as expected
 - could trigger `cds.Service` layer exceptions
 - no database dependency, feel free to mock the results you want without data preparation
 
-### Disadvantages
+> Disadvantages
 
 - no express middlewares could be tested 
 - Draft related events are hard to trigger (need to use the converted CQN request)
@@ -188,19 +188,61 @@ describe('People Service Test with Mock Serve', () => {
 
 --- 
 
-### Benefits
+> Benefits
 
 - all `cds.ApplicationService` are ready in `cds.services` 
 - request is handled by `cds.Service` framework, handlers are performed as expected
 - could trigger `cds.Service` layer exceptions
 - no database dependency, feel free to mock the results you want without data preparation
 
-### Disadvantages
+> Disadvantages
 
-- all model are loaded, maybe slowly
+- all model are loaded, large project will be slowly
 - no express middlewares could be tested 
-- Draft related events are hard to trigger (need to use the converted CQN request)
+- Draft related events are hard to trigger (need to use the converted `CQN` request)
 - some mocked result maybe not match the database result
+
+---
+
+## The Legacy Unit Test Way
+
+--- 
+
+> Benefits
+
+- fastest/most flexible way/less resource consumption
+- no cds.model is loaded, large project will be quickly
+- no database dependency, free to mock the results you want without data preparation
+
+> Disadvantages
+
+- no `cds.Service` layer, cannot test the framework features (handlers, middlewares, etc.)
+- all APIs based on `srv.model` will not work, need additional care (`srv.crud` api)
+
+
+---
+
+## How to mock `cds.connect.to`/`cds.services`
+
+- assign the mocked instance to `cds.services`
+
+```js
+const s = cds.services['OrderService'] = new cds.Service('OrderService')
+const run = s.run = jest.fn() // or other mock function
+```
+
+---
+
+## How to mock `cds.run`
+
+> it also could be used by standard handler
+
+- mock the `cds.db`
+
+```js
+const db = cds.db = cds.services['db'] = new cds.Service('db')
+const run = db.run = jest.fn()
+```
 
 ---
 

@@ -33,5 +33,11 @@
   "markdown.marp.themes": [
     "theme/dracula.css",
     "theme/dark.css"
-  ]
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  }
 }
