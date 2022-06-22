@@ -52,11 +52,11 @@ describe('People Service Int Test', () => {
 
 ## The Official Way - `cds.test` - key points
 
-- test your code by API firstly
+- test your code by `HTTP Client` firstly
 - add correct `JSDoc` make test case written easily
 - configure the `axios.defaults` value to adapt you test cases
-- use [`await expect(async function).rejects.toThrow()`](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/7280c8cbe99737816d6d50a429cc6fc326f727f9/test/people-service-int.spec.js#L86) to require an exception
-- [debug](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/31c9314c8fa2cc9b2a9c79798f92cdff9a1ce79e/.vscode/launch.json#L15) with your test case
+- use [`await expect(async function).rejects.toThrow()`](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-int.spec.js#L81) to require an exception
+- [debug](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/.vscode/launch.json#L15) with your test case
 - `spy` the `cds.db.run` to assert database execution
 
 ---
@@ -100,14 +100,14 @@ describe('People Service Unit Test', () => {
 });
 ```
 
-- [Test Case Example](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/31c9314c8fa2cc9b2a9c79798f92cdff9a1ce79e/test/people-service-unit.spec.js#L2)
+- [Test Case Example](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-unit.spec.js)
 
 ---
 
 ## The Single Service Way - Key Points
 
 - Mock database execute results (in some cases)
-- Assert runtime behavior by [database execution](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/31c9314c8fa2cc9b2a9c79798f92cdff9a1ce79e/test/people-service-unit.spec.js#L56)
+- Assert runtime behavior by [database execution](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-unit.spec.js#L58)
 - Manage the service dependency (if the service is using cds.service[SERVICE_NAME] to access other `cds.ApplicationService`)
 
 ---
@@ -174,7 +174,7 @@ describe('People Service Test with Mock Serve', () => {
 });
 ```
 
-- [Test Case Example](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/1816deadcd48b45007114148ff7b16033050b435/test/people-service-mock-serve.spec.js#L2)
+- [Test Case Example](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-mock-serve.spec.js)
 
 ---
 
@@ -206,6 +206,31 @@ describe('People Service Test with Mock Serve', () => {
 
 ## The Legacy Unit Test Way
 
+> The hard way to test `cds.ApplicationService`
+
+
+```js
+describe('PeopleService Legacy Unit Test', () => {
+  const cds = require("@sap/cds")
+  const PeopleService = require("../srv/PeopleService")
+
+  cds.db = cds.services['db'] = new cds.Service("db")
+  const run = cds.db.run = jest.fn()
+
+  it('should support soft deletion', async () => {
+    const p = new PeopleService()
+    await p._softDeletePeople(
+      new cds.Request({
+        query: DELETE.from("entity").where({
+          ID: "0dbb7b93-145d-478c-98d0-2203d1bcde12"
+        })
+      })
+    )
+    expect(run.mock.lastCall).toMatchSnapshot()
+  });
+});
+```
+
 --- 
 
 > Benefits
@@ -222,7 +247,7 @@ describe('People Service Test with Mock Serve', () => {
 
 ---
 
-## How to mock `cds.connect.to`/`cds.services`
+## How to mock `cds.connect.to`/`cds.services` ?
 
 - assign the mocked instance to `cds.services`
 
@@ -231,17 +256,49 @@ const s = cds.services['OrderService'] = new cds.Service('OrderService')
 const run = s.run = jest.fn() // or other mock function
 ```
 
+> why I use `new cds.Service`?
+
 ---
 
-## How to mock `cds.run`
+## How to mock `cds.run` ?
 
-> it also could be used by standard handler
+> it also could be used by standard handler of `cds.Service`
 
 - mock the `cds.db`
 
 ```js
 const db = cds.db = cds.services['db'] = new cds.Service('db')
 const run = db.run = jest.fn()
+```
+
+---
+
+## How to spy the `cds.db.run` ?
+
+> When use the `cds.test` util to test and connect to the real database
+
+```js
+const cds = require("@sap/cds")
+
+describe('People Service Int Test', () => {
+  /**
+   * @type {{axios:import("axios").AxiosInstance}}
+   */
+  const { axios } = cds.test(".").in(__dirname, "..")
+  axios.defaults.validateStatus = () => true
+
+  const testPeopleID = "318da8b4-95be-498d-bae7-f0c6ed6516ac"
+  
+  beforeAll(async () => { jest.spyOn(cds.db, 'run') })
+  
+  it('should support soft delete for EarthPeople', async () => {
+    const response = await axios.delete(`/people/EarthPeoples(${testPeopleID})`)
+    expect(response.status).toBe(204)
+    // because setup the spy on the cds.db.run
+    // so that, you can check the last call of the cds.db.run
+    expect(cds.db.run.mock.lastCall).toMatchSnapshot()
+  });
+});
 ```
 
 ---
