@@ -334,6 +334,12 @@ service.model = cds.model = cds.compile.for.nodejs(cds.parse.cdl(`
 
 ---
 
+## One Quiz
+
+> Whats the difference between `cds.connect.to` and `cds.serve` in testing ?
+
+---
+
 ## One More Quiz
 
 > Whats the difference of following queries ?
