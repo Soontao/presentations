@@ -84,7 +84,7 @@ describe('People Service Unit Test', () => {
   const run = db.run = jest.fn()
 
   const getPeopleService = async () => cds.connect.to(
-    "sap.brh.handson.srv.PeopleService",
+    "ns.srv.PeopleService",
     {
       impl: cds.ApplicationService,
       model: await cds.load("*"), // you can specify a .cds file here directly
@@ -157,7 +157,7 @@ function serve(options = {}) {
 describe('People Service Test with Mock Serve', () => {
   const run = serve()
   const getPeopleService = async () => cds.connect.to(
-    "sap.brh.handson.srv.PeopleService"
+    "ns.srv.PeopleService"
   )
 
   it('should support insert database correctly', async () => {
@@ -340,9 +340,10 @@ service.model = cds.model = cds.compile.for.nodejs(cds.parse.cdl(`
 > Whats the difference of following queries ?
 
 ```js
-await peopleService.run(SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples"))
-await cds.run(SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples"))
-await SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples")
+await peopleService.run(SELECT.from("ns.srv.PeopleService.EarthPeoples"))
+await SELECT.from("ns.srv.PeopleService.EarthPeoples").bind(peopleService)
+await cds.run(SELECT.from("ns.srv.PeopleService.EarthPeoples"))
+await SELECT.from("ns.srv.PeopleService.EarthPeoples")
 ```
 
 ---
