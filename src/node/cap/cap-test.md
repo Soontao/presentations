@@ -133,20 +133,19 @@ describe('People Service Unit Test', () => {
 > the mock `serve` function, perform `cds.serve` but mount it to a `'mocked' express` app
 
 ```js
-function serve(options = {}) {
+function serve(models = '*') {
   const cds = require("@sap/cds");
   const db = cds.db = cds.services["db"] = new cds.Service("db")
   const run = db.run = jest.fn()
 
   beforeAll(async () => {
-    const model = await cds.load("*", options);
+    const model = await cds.load(models);
     db.model = cds.model = cds.compile.for.nodejs(model)
-    await cds.serve("all", options).in({ use() { } });
+    await cds.serve('all').in({ use() { } });
   })
 
   return run
 }
-
 ```
 
 ---
