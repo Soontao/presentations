@@ -313,6 +313,38 @@ npx jest --coverage ./test/people-service-ui-unit.spec.js # with coverage
 
 ---
 
+## How to create `cds.LinkedCSN` from scratch
+
+> sometimes, your application use the `reflect` API
+
+```js
+service.model = cds.model = cds.compile.for.nodejs(
+ await cds.load(path.join(__dirname, "../srv/people.cds"))
+)
+// or inline method
+service.model = cds.model = cds.compile.for.nodejs(cds.parse.cdl(`
+  service PeopleService {
+    entity People {
+      Name: String(255);
+    }
+  }
+`))
+```
+
+---
+
+## One More Quiz
+
+> Whats the difference of following queries ?
+
+```js
+await peopleService.run(SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples"))
+await cds.run(SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples"))
+await SELECT.from("sap.brh.handson.srv.PeopleService.EarthPeoples")
+```
+
+---
+
 ## Thank You
 
 Theo Sun
