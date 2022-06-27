@@ -115,9 +115,9 @@ describe('People Service Unit Test', () => {
 
 > Benefits
 
-- only single service CSN (and its dependency) is processed, so fast
+- only single service CSN (and its dependency) is processed, so its fast
 - request is handled by `cds.Service` framework, handlers are performed as expected
-- could trigger `cds.Service` layer exceptions
+- could trigger `cds.Service` layer hooks/handlers/exceptions
 - no database dependency, feel free to mock the results you want without data preparation
 
 > Disadvantages
@@ -125,6 +125,7 @@ describe('People Service Unit Test', () => {
 - no express middlewares could be tested 
 - Draft related events are hard to trigger (need to use the converted CQN request)
 - some mocked result maybe not match the database result
+- `cds.services` are not initialized
 
 ---
 
@@ -183,8 +184,7 @@ describe('People Service Test with Mock Serve', () => {
 - behavior like `cds.test`, but without
   - database connection 
   - express server
-- will load all `cds.Application` at startup
-
+- will load all `cds.ApplicationService` at startup, otherwise, you can filter the model to reduce the startup time
 
 --- 
 
