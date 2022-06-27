@@ -129,7 +129,7 @@ describe('People Service Unit Test', () => {
 
 ---
 
-## The Mock Serve Way
+## The Serve Way
 
 > the mock `serve` function, perform `cds.serve` but mount it to a `'mocked' express` app
 
@@ -142,7 +142,7 @@ function serve(models = '*') {
   beforeAll(async () => {
     const model = await cds.load(models);
     db.model = cds.model = cds.compile.for.nodejs(model)
-    await cds.serve('all').in({ use() { } });
+    await cds.serve('all');
   })
 
   return run
@@ -151,7 +151,7 @@ function serve(models = '*') {
 
 ---
 
-## The Mock Serve Way
+## The Serve Way
 
 ```js
 describe('People Service Test with Mock Serve', () => {
@@ -179,7 +179,7 @@ describe('People Service Test with Mock Serve', () => {
 
 ---
 
-## The Mock Serve Way - Key Points
+## The Serve Way - Key Points
 
 - behavior like `cds.test`, but without
   - database connection 
