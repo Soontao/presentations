@@ -16,12 +16,11 @@ Theo Sun
 
 ## Questions
 
-- How do you test your handler ?
-- How do you think about the `cds.test` utils ?
-- Whats the relationship between 
-  - `cds.ApplicationService` 
-  - `cds.DatabaseService`
-- Is that possible to test a single `cds.ApplicationService` fast and correct ?
+- How do you test your event handler ?
+- Did you know how the `cds.test` works ?
+- What's the relationship between [`ApplicationService` and `DatabaseService`](https://github.com/Soontao/opentelemetry-cds)
+- Is it possible to test a single `ApplicationService` quickly and correctly? ?
+- Why we write the `Test Cases` ? if we do not, what will happen ?
 
 ---
 
@@ -299,6 +298,17 @@ describe('People Service Int Test', () => {
     expect(cds.db.run.mock.lastCall).toMatchSnapshot()
   });
 });
+```
+
+---
+
+## How to run single test
+
+> speed up your local test case running
+
+```bash
+npx jest ./test/people-service-ui-unit.spec.js 
+npx jest --coverage ./test/people-service-ui-unit.spec.js # with coverage 
 ```
 
 ---
