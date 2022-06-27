@@ -75,7 +75,7 @@ describe('People Service Int Test', () => {
 
 ---
 
-## The Single Service Way
+## The `Connect` Way
 
 ```js
 describe('People Service Unit Test', () => {
@@ -105,7 +105,7 @@ describe('People Service Unit Test', () => {
 
 ---
 
-## The Single Service Way - Key Points
+## The `Connect` Way - Key Points
 
 - Mock database execute results (in some cases)
 - Assert runtime behavior by [database execution](https://github.wdf.sap.corp/I337313/brc-hand-on-session-repo/blob/main/test/people-service-unit.spec.js#L58)
@@ -129,7 +129,7 @@ describe('People Service Unit Test', () => {
 
 ---
 
-## The Serve Way
+## The `Serve` Way
 
 > the mock `serve` function, perform `cds.serve` but mount it to a `'mocked' express` app
 
@@ -151,7 +151,7 @@ function serve(models = '*') {
 
 ---
 
-## The Serve Way
+## The `Serve` Way
 
 ```js
 describe('People Service Test with Mock Serve', () => {
@@ -179,7 +179,7 @@ describe('People Service Test with Mock Serve', () => {
 
 ---
 
-## The Serve Way - Key Points
+## The `Serve` Way - Key Points
 
 - behavior like `cds.test`, but without
   - database connection 
