@@ -32,6 +32,8 @@ describe('People Service Int Test', () => {
    * @type {{axios:import("axios").AxiosInstance}}
    */
   const { axios } = cds.test(".").in(__dirname, "..")
+  // serve the single service you want to test
+  // const { axios } = cds.test("serve", "./srv/PeopleService.cds").in(__dirname, "..")
   axios.defaults.validateStatus = () => true
   // if you enabled the basic auth for local development
   // axios.defaults.auth = { username: "user", password: 'pass' }
