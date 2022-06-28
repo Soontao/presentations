@@ -8,6 +8,7 @@ specifiers:
   '@openui5/ts-types': ^1.101.0
   '@textlint/markdown-to-ast': ^12.1.1
   '@types/debug': ^4.1.7
+  '@types/markdown-it': ^12.2.3
   colors: ^1.4.0
   debug: ^4.3.4
   fast-glob: ^3.2.11
@@ -25,6 +26,7 @@ dependencies:
   '@openui5/ts-types': 1.102.0
   '@textlint/markdown-to-ast': 12.1.1
   '@types/debug': 4.1.7
+  '@types/markdown-it': 12.2.3
   colors: 1.4.0
   debug: 4.3.4
   fast-glob: 3.2.11
@@ -329,10 +331,25 @@ packages:
       '@types/ms': 0.7.31
     dev: false
 
+  /@types/linkify-it/3.0.2:
+    resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+    dev: false
+
+  /@types/markdown-it/12.2.3:
+    resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
+    dependencies:
+      '@types/linkify-it': 3.0.2
+      '@types/mdurl': 1.0.2
+    dev: false
+
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: false
+
+  /@types/mdurl/1.0.2:
+    resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
     dev: false
 
   /@types/ms/0.7.31:

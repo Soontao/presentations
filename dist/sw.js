@@ -1,5 +1,5 @@
 // update cache version after release
-const CACHE_VERSION = 'CACHE_REV_1249973';
+const CACHE_VERSION = 'CACHE_REV_dd49ea1';
 
 async function refresh(request) {
   const cache = await caches.open(CACHE_VERSION);
