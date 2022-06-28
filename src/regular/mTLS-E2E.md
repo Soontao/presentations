@@ -214,9 +214,12 @@ server {
     ssl on;
     server_name myserver.com;
     proxy_ssl_server_name on;
-    ssl_certificate      /etc/nginx/certificates/cert.crt; ## Use your own trusted certificate from CA/SSLTrust
-    ssl_certificate_key /etc/nginx/certificates/cert.key; ## Use your own trusted certificate from CA/SSLTrust
-    ssl_client_certificate /etc/nginx/certificates/myCA.pem; ## Use your own trusted certificate from CA/SSLTrust
+		## Use your own trusted certificate from CA/SSLTrust
+    ssl_certificate      /etc/nginx/certificates/cert.crt; 
+		## Use your own trusted certificate from CA/SSLTrust
+    ssl_certificate_key /etc/nginx/certificates/cert.key;
+		## Use your own trusted certificate from CA/SSLTrust 
+    ssl_client_certificate /etc/nginx/certificates/myCA.pem; 
     ssl_verify_client on;
     ssl_prefer_server_ciphers on;
     ssl_protocols TLSv1.1 TLSv1.2;
@@ -230,7 +233,6 @@ location / {
     proxy_redirect off;
     proxy_set_header X-Forwarded-Proto https;
     proxy_pass http://mysite;
-    // optionally you may want to look into the proxy_pass_reverse directive as well.
   }
 }
 ```
