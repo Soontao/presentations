@@ -36,8 +36,7 @@ li {
 }
 
 .hljs {
-  display: block;
-  overflow-x: auto;
+  display: inline-block;
   padding: 0.5em;
   background: #23241f;
 }
@@ -191,7 +190,9 @@ code {
 pre {
   margin: 1em;
   min-height: 1em;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 pre code {

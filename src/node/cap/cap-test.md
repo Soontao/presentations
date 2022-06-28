@@ -334,6 +334,22 @@ service.model = cds.model = cds.compile.for.nodejs(cds.parse.cdl(`
 
 ---
 
+## How to set tenant and user permissions
+
+> if you want to test the permissions, you need to set the tenant and user to `cds.context`
+
+```js
+cds.context = { tenant: "tenant-uuid-here", user: new cds.User({ id: "theo sun", _roles: ['scope_1'] }) };
+```
+
+> after that, please remember to clear the context
+
+```js
+afterEach(() => { cds.context = undefined })
+```
+
+---
+
 ## One Quiz
 
 > Whats the difference between `cds.connect.to` and `cds.serve` in testing ?

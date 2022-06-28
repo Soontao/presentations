@@ -132,7 +132,12 @@ func NewKeyPair(n int64) (p *KeyPair) {
 		big.NewInt(0).Sub(p.P, big.NewInt(1)),
 		big.NewInt(0).Sub(p.Q, big.NewInt(1)),
 	)
-	pqGCD := big.NewInt(0).GCD(nil, nil, big.NewInt(0).Sub(p.P, big.NewInt(1)), big.NewInt(0).Sub(p.Q, big.NewInt(1)))
+	pqGCD := big.NewInt(0).GCD(
+		nil, 
+		nil,
+		big.NewInt(0).Sub(p.P, big.NewInt(1)), 
+		big.NewInt(0).Sub(p.Q, big.NewInt(1)),
+	)
 
 	p.L = pqValue.Div(pqValue, pqGCD)
 
