@@ -1,16 +1,13 @@
 ---
-theme: default
-highlighter: shiki
-background: https://res.cloudinary.com/digf90pwi/image/upload/v1636193155/michiel-leunens-0wIHsm2_1fc-unsplash_zjbbju.jpg
+marp: true
+theme: dark
 ---
 
 # Move to Java 17
 
-> We must move forward, even if we love the golden age.
+> We have to move forward, though we love the golden age.
 
 Theo Sun
-
-2021
 
 ---
 
@@ -41,3 +38,9 @@ Theo Sun
 - `Collection` and `Stream` API update
 - `instance of Type t && t.methodCall()` shorten type guarded
 - `var` keyword in method scope
+
+---
+
+# Thank You
+
+Theo Sun
