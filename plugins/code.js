@@ -29,6 +29,7 @@ const krokiLangs = [
 const monacoLanguageMapping = {
   "js": "javascript",
   "ts": "typescript",
+  "json5": "json",
 }
 
 const entrypoint = 'https://kroki.io/'
