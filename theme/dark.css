@@ -190,7 +190,7 @@ code {
 pre {
   margin: 1em;
   min-height: 1em;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   overflow-wrap: break-word;
 }
