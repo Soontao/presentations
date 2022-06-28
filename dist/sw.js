@@ -1,5 +1,5 @@
 // update cache version after release
-const CACHE_VERSION = 'CACHE_REV_1249971';
+const CACHE_VERSION = 'CACHE_REV_1249972';
 
 
 async function refresh(request) {

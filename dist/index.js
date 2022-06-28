@@ -96,6 +96,7 @@ sap.ui.getCore().attachInit(function () {
         id: "initMaster",
         content: [
           new sap.m.SelectList({
+            id: 'list',
             selectedKey: "{/selectedKey}",
             items: {
               path: "/presentationList",
@@ -129,7 +130,7 @@ sap.ui.getCore().attachInit(function () {
               placeholder: "Search 🚀",
               liveChange: (event) => {
                 const value = event.getParameter("newValue")
-                const binding = list.getBinding("items")
+                const binding = sap.ui.getCore().byId("list").getBinding("items")
                 binding.filter([
                   new sap.ui.model.Filter({
                     path: "title",
