@@ -19,8 +19,7 @@ self.addEventListener('activate', async function (event) {
       cacheKeys
         .filter(key => key !== CACHE_VERSION)
         .map(cacheKey => caches.delete(cacheKey))
-    )
-    )
+    ))
   )
 });
 
@@ -30,7 +29,6 @@ self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') {
     return event.respondWith(fetch(event.request))
   }
-
 
   event.respondWith((async function () {
 

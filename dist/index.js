@@ -9,14 +9,13 @@ sap.ui.getCore().attachInit(function () {
           const worker = regitration.installing;
           worker.addEventListener('statechange', () => {
             if (worker.state === "activated") {
-              sap.ui.require(["sap/m/MessageBox"], function (MessageBox) {
+              sap?.ui?.require?.(["sap/m/MessageBox"], function (MessageBox) {
                 MessageBox.confirm(
                   "The presentations have been updated. Do you want to reload this page ?",
                   () => { window.location.reload(); },
                   "Refresh Page"
                 );
               });
-
             }
           });
         });
