@@ -165,9 +165,7 @@ sap.ui.getCore().attachInit(function () {
     ]
   })
 
-  const shell = new sap.m.Shell({ app })
-
-  shell.setModel(viewModel)
-  shell.placeAt("content")
+  app.setModel(viewModel)
+  app.placeAt("content")
 
 });
