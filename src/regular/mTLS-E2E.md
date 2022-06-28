@@ -6,6 +6,8 @@ math: katex
 
 # mTLS E2E Introduction
 
+![bg right:40% blur grayscale:0.7](https://res.cloudinary.com/drxgh9gqs/image/upload/q_42/v1656395721/etf-investment-guide-theme-cyber-security_aih2cw.jpg)
+
 Theo Sun
 2022
 
@@ -210,30 +212,30 @@ func TestEncryptDecryptMagic(t *testing.T) {
 
 ```conf
 server {
-    listen        443;
-    ssl on;
-    server_name myserver.com;
-    proxy_ssl_server_name on;
-		## Use your own trusted certificate from CA/SSLTrust
-    ssl_certificate      /etc/nginx/certificates/cert.crt; 
-		## Use your own trusted certificate from CA/SSLTrust
-    ssl_certificate_key /etc/nginx/certificates/cert.key;
-		## Use your own trusted certificate from CA/SSLTrust 
-    ssl_client_certificate /etc/nginx/certificates/myCA.pem; 
-    ssl_verify_client on;
-    ssl_prefer_server_ciphers on;
-    ssl_protocols TLSv1.1 TLSv1.2;
-    ssl_ciphers 'ignored';
-    keepalive_timeout 10;
-    ssl_session_timeout 5m;
+	listen        443;
+	ssl on;
+	server_name myserver.com;
+	proxy_ssl_server_name on;
+	## Use your own trusted certificate from CA/SSLTrust
+	ssl_certificate      /etc/nginx/certificates/cert.crt; 
+	## Use your own trusted certificate from CA/SSLTrust
+	ssl_certificate_key /etc/nginx/certificates/cert.key;
+	## Use your own trusted certificate from CA/SSLTrust 
+	ssl_client_certificate /etc/nginx/certificates/myCA.pem; 
+	ssl_verify_client on;
+	ssl_prefer_server_ciphers on;
+	ssl_protocols TLSv1.1 TLSv1.2;
+	ssl_ciphers 'ignored';
+	keepalive_timeout 10;
+	ssl_session_timeout 5m;
 
-location / {
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_redirect off;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_pass http://mysite;
-  }
+	location / {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Host $http_host;
+		proxy_redirect off;
+		proxy_set_header X-Forwarded-Proto https;
+		proxy_pass http://mysite;
+	}
 }
 ```
 
@@ -241,7 +243,8 @@ location / {
 
 ## Typical Client Authentication Flow
 
-![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1653357386/ssl-tls-client-authentication_pevluy.jpg)
+
+![height:400px](https://res.cloudinary.com/drxgh9gqs/image/upload/v1653357386/ssl-tls-client-authentication_pevluy.jpg)
 
 ---
 
