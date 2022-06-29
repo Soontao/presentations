@@ -69,7 +69,6 @@ cds.DatabaseService <|-- cds.HanaDatabaseService
 
 > how the service handle each request
 
-
 ```js
 exports.handle = async function handle (req) {
   const srv=this; let handlers //...
@@ -114,3 +113,35 @@ exports.handle = async function handle (req) {
   return req.results //> done
 }
 ```
+
+---
+
+![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_39/v1656484394/2022-06-29_14-32-23_x73clh.png)
+
+---
+
+![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_34/v1656484989/2022-06-29_14-32-23_mpqncf.png)
+
+---
+
+## Service-dispatch
+
+- `cds.Service` handle events cascaded
+- transaction is lazy
+- commit is later
+- `on` hook have some standard handlers
+- `after` hook will trigger rollback if an error occurs
+- error check is in `hook` level, after all handlers have been executed in single `hook`, the framework will check and throw the error (except `on` for `cds.Request`)
+
+
+---
+
+## Service kind and impl
+
+---
+
+## Configuration and Profile
+
+---
+
+## cds.context
