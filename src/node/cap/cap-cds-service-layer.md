@@ -62,12 +62,38 @@ cds.DatabaseService <|-- cds.HanaDatabaseService
 @enduml
 ```
 
+---
+
+## Service kind and impl
+
+- kind - a kind of service
+  - db
+  - messaging
+- impl - an implementation of the kind
+  - db
+    - sqlite
+    - hana
+  - messaging
+    - file-based
+    - enterprise-messaging-shared
+
+> `auth` is not a service
+
+---
+
+## Service kind and impl
+
+- `auth` is not a `cds.Service` but a express middleware
+- each service will be singleton (by key) and stored in `cds.services`
+- some services are not initialized until they are `cds.connect.to`, for the pre-initialized services, please check the `server.js`
+- all the `service` in `cds` definition, will be initialized when the server is starting, and they are instances of `cds.ApplicationService` 
+- suggest to use `kind` in `cds.requires` so that you can switch the `impl` by env
 
 ---
 
 ## Service-dispatch
 
-> how the service handle each request
+> what happened when we emit a service event?
 
 ```js
 exports.handle = async function handle (req) {
@@ -154,34 +180,6 @@ exports.handle = async function handle (req) {
   - for `cds.Request`, the execution order is related to the registered order
     - you can use `await next()` to do something like `@Around` in Spring 
   - for `cds.Event`, the execution order is not promised, in parallel
-
-
----
-
-## Service kind and impl
-
-- kind - a kind of service
-  - db
-  - messaging
-- impl - an implementation of the kind
-  - db
-    - sqlite
-    - hana
-  - messaging
-    - file-based
-    - enterprise-messaging-shared
-
-> `auth` is not a service
-
----
-
-## Service kind and impl
-
-- `auth` is not a `cds.Service` but a express middleware
-- each service will be singleton (by key) and stored in `cds.services`
-- some services are not initialized until they are `cds.connect.to`, for the pre-initialized services, please check the `server.js`
-- all the `service` in `cds` definition, will be initialized when the server is starting, and they are instances of `cds.ApplicationService` 
-- suggest to use `kind` in `cds.requires` so that you can switch the `impl` by env
 
 ---
 
