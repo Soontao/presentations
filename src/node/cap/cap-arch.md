@@ -16,6 +16,8 @@ Theo Sun
 
 ## Service Layer
 
+> An overview for the `cds.Service` hierarchy
+
 ```plantuml
 @startuml
 class cds.EventHandlers {
@@ -25,7 +27,11 @@ class cds.EventHandlers {
   reject();
   async prepend();
 }
-class cds.Service {}
+class cds.Service {
+  emit();
+  send();
+  run();
+}
 class cds.RemoteService
 class cds.ApplicationService
 class cds.OutboxService

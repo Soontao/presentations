@@ -50,14 +50,12 @@ const marpKrokiPlugin = (md) => {
 
       if (krokiLangs.includes(lang)) {
         const data = deflateSync(tokens[idx].content).toString('base64url')
-
-        // <marp-auto-scaling> is working only with Marp Core v3
-        return `<p><img style="max-height: 60vh" src="${entrypoint}${lang}/svg/${data}"/></p>`
+        return `<p><img style="max-height: 400px" src="${entrypoint}${lang}/svg/${data}"/></p>`
       }
       else {
         const containerId = `monaco-container-${Math.random().toString(36).substring(2, 15)}`
 
-        let content = `<div id="${containerId}" style="width: 100%; height: 50vh; padding-top: 2vh; padding-bottom: 2vh"></div>`
+        let content = `<div id="${containerId}" style="width: 100%; height: 200px; padding-top: 15px; padding-bottom: 15px"></div>`
         if (monacoCDNAdded) {
           // do nothing
         }
