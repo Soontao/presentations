@@ -116,7 +116,7 @@ exports.handle = async function handle (req) {
   // .on handlers run in parallel for async events, and as interceptors stack for sync requests
   handlers = this._handlers.on.filter (h => h.for(req))
   if (handlers.length) {
-    if (!req.reply) await Promise.all (handlers.map (each => each.handler.call (this,req,_dummy)))
+    if (!req.reply) await Promise.all (handlers.map (each => each.handler.call (this,req,_empty_next)))
     else await async function next (r=req) { //> handlers may pass a new req object into next()
       const each = handlers.shift(); if (!each) return //> unhandled silently
       const x = await each.handler.call (srv,r,next)
