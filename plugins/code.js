@@ -55,7 +55,7 @@ const marpKrokiPlugin = (md) => {
       else {
         const containerId = `monaco-container-${Math.random().toString(36).substring(2, 15)}`
 
-        let content = `<div id="${containerId}" style="width: 100%; height: 200px; padding-top: 15px; padding-bottom: 15px"></div>`
+        let content = `<div id="${containerId}" style="width: 100%; height: 400px; padding-top: 50px; padding-bottom: 50px"></div>`
         if (monacoCDNAdded) {
           // do nothing
         }
