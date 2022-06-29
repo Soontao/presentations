@@ -5,7 +5,7 @@ theme: dark
 
 ![blur bg 50% right](https://cap.cloud.sap/docs/assets/logos/cap.svg)
 
-# CAP NodeJS Runtime Arch Overview
+# CAP NodeJS Runtime Service Layer
 
 ## Expert Level Session
 
@@ -131,19 +131,77 @@ exports.handle = async function handle (req) {
 - `transaction` is lazier than you expected
 - `commit` is later than you expected
 - `on` hook have some standard handlers
-- `after` hook will trigger rollback if an error occurs
+- `after` hook will trigger rollback if any error occurs
+
+---
+
+## Service-dispatch
+
 - error check is in `hook` level
-  - after `ALL` handlers have been executed in single `hook`, the framework will check and throw the error (except `on` for `cds.Request`)
+  - if you do not throw error in `before` hook, the handlers of `on` hook will be executed
+  - with `req.error`/`req.reject` API 
+    - after `ALL` handlers have been executed in single `hook`, the framework will check and throw the error
+  - with `throw` keyword, you can block the synchronous execution of the rest of the handlers in the same `hook`
+
+---
+
+## Service-dispatch
+
+- for `before`/`after` hooks
+  - for async handler, the execution order is not promised, they are executed in parallel
+  - for sync handler, the execution order is related to the registered order
+- for `on` hook
+  - for `cds.Request`, the execution order is related to the registered order
+    - you can use `await next()` to do something like `@Around` in Spring 
+  - for `cds.Event`, the execution order is not promised, in parallel
 
 
 ---
 
 ## Service kind and impl
 
+- kind - a kind of service
+  - db
+  - messaging
+- impl - an implementation of the kind
+  - db
+    - sqlite
+    - hana
+  - messaging
+    - file-based
+    - enterprise-messaging-shared
+
+> `auth` is not a service
+
 ---
 
-## Configuration and Profile
+## Service kind and impl
+
+- `auth` is not a `cds.Service` but a express middleware
+- each service will be singleton (by key) and stored in `cds.services`
+- some services are not initialized until they are `cds.connect.to`, for the pre-initialized services, please check the `server.js`
+- all the `service` in `cds` definition, will be initialized when the server is starting, and they are instances of `cds.ApplicationService` 
+- suggest to use `kind` in `cds.requires` so that you can switch the `impl` by env
 
 ---
 
-## cds.context
+## cds.ApplicationService and adapter
+
+- odata
+- rest (changing)
+- graphql (experimental)
+
+---
+
+## Batch Operation for OData Adapter
+
+- `READ` operations are parallel
+- `WRITE` operations in each `changeset` will be sequential
+- each `changeset` will have its own database transaction
+
+---
+
+# Thank You
+
+Theo Sun
+2022
