@@ -127,11 +127,13 @@ exports.handle = async function handle (req) {
 ## Service-dispatch
 
 - `cds.Service` handle events cascaded
-- transaction is lazy
-- commit is later
+  - `cds.ApplicationService` will trigger `cds.DatabaseService` to execute database operation
+- `transaction` is lazier than you expected
+- `commit` is later than you expected
 - `on` hook have some standard handlers
 - `after` hook will trigger rollback if an error occurs
-- error check is in `hook` level, after all handlers have been executed in single `hook`, the framework will check and throw the error (except `on` for `cds.Request`)
+- error check is in `hook` level
+  - after `ALL` handlers have been executed in single `hook`, the framework will check and throw the error (except `on` for `cds.Request`)
 
 
 ---
