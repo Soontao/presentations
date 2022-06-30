@@ -314,21 +314,6 @@ exports.handle = async function handle (req) {
     - you can use `await next()` to do something like `@Around` in Spring 
   - for `cds.Event`, the execution order is not promised, in parallel
 
----
-
-## cds.ApplicationService and adapter
-
-- odata
-- rest (changing)
-- graphql (experimental)
-
----
-
-## Batch Operation for OData Adapter
-
-- `READ` operations are parallel
-- `WRITE` operations in each `changeset` will be sequential
-- each `changeset` will have its own database transaction
 
 ---
 
