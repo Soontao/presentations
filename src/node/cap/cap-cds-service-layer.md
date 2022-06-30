@@ -204,7 +204,7 @@ module.exports = async function cds_server (options) {
 
 ---
 
-## Service kind and impl
+## Service Provisioning
 
 - `auth` is not a `cds.Service` but a express middleware
 - each service will be singleton (by key) and stored in `cds.services`
