@@ -19,7 +19,7 @@ Theo Sun
 - introduction the service layer
 - `cds.Service` hierarchy in CAP NodeJS Runtime
 - provisioning for `cds.Service`
-- consuming the `cds.Service`
+- consuming for `cds.Service`
 
 
 ---
@@ -220,6 +220,16 @@ module.exports = async function cds_server (options) {
 - srv.send
 - srv.dispatch
 
+> lets start with a batch request
+
+---
+
+![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_39/v1656484394/2022-06-29_14-32-23_x73clh.png)
+
+---
+
+![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_34/v1656484989/2022-06-29_14-32-23_mpqncf.png)
+
 ---
 
 ## Service-dispatch
@@ -270,14 +280,6 @@ exports.handle = async function handle (req) {
   return req.results //> done
 }
 ```
-
----
-
-![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_39/v1656484394/2022-06-29_14-32-23_x73clh.png)
-
----
-
-![bg 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/q_34/v1656484989/2022-06-29_14-32-23_mpqncf.png)
 
 ---
 
