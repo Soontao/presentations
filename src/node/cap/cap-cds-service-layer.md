@@ -16,7 +16,7 @@ Theo Sun
 
 ## Agenda
 
-- introduction the service layer
+- introduction
 - `cds.Service` hierarchy in CAP NodeJS Runtime
 - provisioning for `cds.Service`
 - consuming for `cds.Service`
