@@ -7,7 +7,7 @@
     "cds-feature-toggle": "0.0.6",
     "cds-hyper-app-service": "0.0.7",
     "cds-internal-tool": "0.0.31",
-    "cds-swagger-ui-express": "0.4.0",
+    "cds-swagger-ui-express": "0.5.0",
     "express": "4.18.1",
     "hdb": "0.18.3",
     "passport": "0.5.3"
