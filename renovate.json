@@ -3,5 +3,10 @@
   "extends": [
     "config:base"
   ],
-  "automerge": true
+  "automerge": true,
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "src/**"
+  ]
 }
