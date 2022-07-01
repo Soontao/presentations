@@ -8,7 +8,7 @@
     "@sap/xsenv": "^3",
     "@sap/xssec": "^3",
     "express": "4.18.1",
-    "passport": "0.4.1"
+    "passport": "0.6.0"
   },
   "scripts": {
     "start": "npx cds run"
