@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@marp-team/marp-cli': 1.7.2
+  '@marp-team/marp-cli': 2.0.4
   '@marp-team/marp-core': 3.2.1
   '@marp-team/marpit': 2.3.1
   '@newdash/newdash': 5.21.2
@@ -19,7 +19,7 @@ specifiers:
   textlint: 12.2.1
 
 dependencies:
-  '@marp-team/marp-cli': 1.7.2
+  '@marp-team/marp-cli': 2.0.4
   '@marp-team/marp-core': 3.2.1
   '@marp-team/marpit': 2.3.1
   '@newdash/newdash': 5.21.2
@@ -69,48 +69,28 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@marp-team/marp-cli/1.7.2:
-    resolution: {integrity: sha512-XJ5W19x1PZn2mEGJP79kZCRspjSXoBH+kUn+Ikfo9AxfWjkJ5/hcykmRvXdLi9Wu/WNA9ienqYkpeubeWno6eQ==}
-    engines: {node: '>=12'}
+  /@marp-team/marp-cli/2.0.4:
+    resolution: {integrity: sha512-vvQplBil7y6HOBZELfhEx4auk9ANVhrAu/872CnqxS1YR/UTDLijR17wRrkMrz/dfqXyhWvphu+p+LDACaLh7w==}
+    engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 2.4.2
+      '@marp-team/marp-core': 3.2.1
       '@marp-team/marpit': 2.3.1
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
       import-from: 4.0.0
       is-wsl: 2.2.0
-      puppeteer-core: 13.6.0
+      puppeteer-core: 14.2.1
       serve-index: 1.9.1
       tmp: 0.2.1
       v8-compile-cache: 2.3.0
-      ws: 8.6.0
+      ws: 8.8.0
       yargs: 17.5.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - supports-color
       - utf-8-validate
-    dev: false
-
-  /@marp-team/marp-core/2.4.2:
-    resolution: {integrity: sha512-Nnhp0NYATlpxjT9mALbmtGzoi2GZ0/HCJbsxZybxb5AtXiPXdYFyoZ5kYjeVR1+bSMrakJHXAkpAUUF8PF4bJQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@marp-team/marpit': 2.3.1
-      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.3.1
-      emoji-regex: 10.1.0
-      highlight.js: 10.7.3
-      katex: 0.15.6
-      markdown-it-emoji: 2.0.2
-      mathjax-full: 3.2.1
-      postcss: 8.4.14
-      postcss-minify-params: 5.1.3_postcss@8.4.14
-      postcss-minify-selectors: 5.2.0_postcss@8.4.14
-      postcss-normalize-whitespace: 5.1.1_postcss@8.4.14
-      postcss-selector-parser: 6.0.10
-      twemoji: 14.0.2
-      xss: 1.0.11
     dev: false
 
   /@marp-team/marp-core/3.2.1:
@@ -777,8 +757,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /devtools-protocol/0.0.981744:
-    resolution: {integrity: sha512-0cuGS8+jhR67Fy7qG3i3Pc7Aw494sb9yG9QgpG97SFVWwolgYjlhJg7n+UaHxOQT30d1TYu/EYe9k01ivLErIg==}
+  /devtools-protocol/0.0.1001819:
+    resolution: {integrity: sha512-G6OsIFnv/rDyxSqBa2lDLR6thp9oJioLsb2Gl+LbQlyoA9/OBAkrTU9jiCcQ8Pnh7z4d6slDiLaogR5hzgJLmQ==}
     dev: false
 
   /diff/4.0.2:
@@ -1091,10 +1071,6 @@ packages:
       function-bind: 1.1.1
     dev: false
 
-  /highlight.js/10.7.3:
-    resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
-    dev: false
-
   /highlight.js/11.5.1:
     resolution: {integrity: sha512-LKzHqnxr4CrD2YsNoIf/o5nJ09j4yi/GcH5BnYz9UnVpZdS4ucMgvP61TDty5xJcFGRjnH4DpujkS9bHT3hq0Q==}
     engines: {node: '>=12.0.0'}
@@ -1114,8 +1090,8 @@ packages:
       statuses: 1.5.0
     dev: false
 
-  /https-proxy-agent/5.0.0:
-    resolution: {integrity: sha512-EkYm5BcKUGiduxzSt3Eppko+PiNWNEpa4ySk9vTC6wDsQJW9rHSa+UhGNJoRYp7bz6Ht1eaRIa6QaJqO5rCFbA==}
+  /https-proxy-agent/5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
     dependencies:
       agent-base: 6.0.2
@@ -2079,22 +2055,22 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /puppeteer-core/13.6.0:
-    resolution: {integrity: sha512-n692xT9uOTxbFKcCRkfOT2Go5LL0YBCHrSpBdbNsjLhcxO5yuhj2/4jgAIK9bT1blY17Pb4I35eBSuDzJ54ERw==}
-    engines: {node: '>=10.18.1'}
+  /puppeteer-core/14.2.1:
+    resolution: {integrity: sha512-Hl5vaLGVr4z3fhlWILgm143yz08K5LyljavaEpcMZdSS9BQNRO3MdpHARXSgKddg/LkfSdOCbDf6w+suES0MMQ==}
+    engines: {node: '>=14.1.0'}
     dependencies:
       cross-fetch: 3.1.5
       debug: 4.3.4
-      devtools-protocol: 0.0.981744
+      devtools-protocol: 0.0.1001819
       extract-zip: 2.0.1
-      https-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.1
       pkg-dir: 4.2.0
       progress: 2.0.3
       proxy-from-env: 1.1.0
       rimraf: 3.0.2
       tar-fs: 2.1.1
       unbzip2-stream: 1.4.3
-      ws: 8.5.0
+      ws: 8.7.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -2704,8 +2680,8 @@ packages:
       mkdirp: 0.5.6
     dev: false
 
-  /ws/8.5.0:
-    resolution: {integrity: sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==}
+  /ws/8.7.0:
+    resolution: {integrity: sha512-c2gsP0PRwcLFzUiA8Mkr37/MI7ilIlHQxaEAtd0uNMbVMoy8puJyafRlm0bV9MbGSabUPeLrRRaqIBcFcA2Pqg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2717,8 +2693,8 @@ packages:
         optional: true
     dev: false
 
-  /ws/8.6.0:
-    resolution: {integrity: sha512-AzmM3aH3gk0aX7/rZLYvjdvZooofDu3fFOzGqcSnQ1tOcTWwhM/o+q++E8mAyVVIyUdajrkzWUGftaVSDLn1bw==}
+  /ws/8.8.0:
+    resolution: {integrity: sha512-JDAgSYQ1ksuwqfChJusw1LSJ8BizJ2e/vVu5Lxjq3YvNJNlROv1ui4i+c/kUUrPheBvQl4c5UbERhTwKa6QBJQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
