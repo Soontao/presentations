@@ -8,7 +8,7 @@
     "node": ">=14",
     "npm": ">=7"
   },
-  "packageManager": "pnpm@7.1.3",
+  "packageManager": "pnpm@7.4.1",
   "scripts": {
     "server": "marp -p --server ./src",
     "release": "npx standard-version --commit-all --no-verify",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "dependencies": {
-    "@marp-team/marp-cli": "1.7.2",
+    "@marp-team/marp-cli": "2.0.4",
     "@marp-team/marp-core": "3.2.1",
     "@marp-team/marpit": "2.3.1",
     "@newdash/newdash": "5.21.2",
