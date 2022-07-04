@@ -1,8 +1,27 @@
 // update cache version after release
-const CACHE_VERSION = 'CACHE_REV_f4cc87c';
+const CACHE_VERSION = 'CACHE_REV_b32a827';
+
+const CACHE_STATIC = 'CACHE_STATIC_RES';
+
+const STATIC_RESOURCE_HOST = [
+  "cdn.jsdelivr.net",
+  "openui5.hana.ondemand.com",
+  "cdnjs.cloudflare.com",
+  "res.cloudinary.com",
+]
+
+/**
+ * @param {Request} request 
+ */
+function isStaticResource(request) {
+  if (typeof request?.url === 'string') {
+    return STATIC_RESOURCE_HOST.find(s => request.url.includes(s)) !== undefined
+  }
+  return false
+}
 
 async function refresh(request) {
-  const cache = await caches.open(CACHE_VERSION);
+  const cache = isStaticResource(request) ? await caches.open(CACHE_STATIC) : await caches.open(CACHE_VERSION);
   const response = await fetch(request)
   cache.put(request, response.clone())
   return response
@@ -17,7 +36,7 @@ self.addEventListener('activate', async function (event) {
   event.waitUntil(
     caches.keys().then((cacheKeys) => Promise.all(
       cacheKeys
-        .filter(key => key !== CACHE_VERSION)
+        .filter(key => key !== CACHE_VERSION && key !== CACHE_STATIC)
         .map(cacheKey => caches.delete(cacheKey))
     ))
   )
