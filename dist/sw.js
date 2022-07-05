@@ -1,5 +1,5 @@
 // update cache version after release
-const CACHE_VERSION = 'CACHE_REV_b32a827';
+const CACHE_VERSION = 'CACHE_REV_fwce3b0';
 
 const CACHE_STATIC = 'CACHE_STATIC_RES';
 
@@ -8,6 +8,8 @@ const STATIC_RESOURCE_HOST = [
   "openui5.hana.ondemand.com",
   "cdnjs.cloudflare.com",
   "res.cloudinary.com",
+  "cap.cloud.sap",
+  "kroki.io",
 ]
 
 /**

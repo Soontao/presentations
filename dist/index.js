@@ -9,13 +9,8 @@ sap.ui.getCore().attachInit(function () {
           const worker = regitration.installing;
           worker.addEventListener('statechange', () => {
             if (worker.state === "activated") {
-              sap?.ui?.require?.(["sap/m/MessageBox"], function (MessageBox) {
-                MessageBox.confirm(
-                  "The presentations have been updated. Do you want to reload this page ?",
-                  () => { window.location.reload(); },
-                  "Refresh Page"
-                );
-              });
+              sap?.m?.MessageToast?.show?.("The presentations have been updated.")
+              refreshModel()
             }
           });
         });
@@ -35,33 +30,39 @@ sap.ui.getCore().attachInit(function () {
     }
   });
 
+  async function refreshModel() {
+    // data initialize
+    return fetch("./presentations.json")
+      .then(res => res.json())
+      .then(data => {
+        viewModel.setProperty("/presentationList", data)
 
-  // data initialize
-  fetch("./presentations.json")
-    .then(res => res.json())
-    .then(data => {
-      viewModel.setProperty("/presentationList", data)
-      if (location.hash.length > 0) {
-        const hash = location.hash.substring(1)
-        const item = data.find(({ path }) => path === hash)
-        if (item !== undefined) {
-          viewModel.setProperty("/selectedKey", item.path)
-          viewModel.setProperty("/main/title", item.title)
-          viewModel.setProperty("/main/content", `<iframe src="${item.path}"></iframe>`);
-          location.hash = item.path
-        } else {
-          // not existed file, reset
-          location.path = ''
+        let initItem = undefined
+        // if with prefefined presentation, select it
+        if (location.hash.length > 0) {
+          const hash = location.hash.substring(1)
+          const item = data.find(({ path }) => path === hash)
+          if (item !== undefined) {
+            initItem = item
+          }
         }
-      } else {
-        const item = data[0]
-        viewModel.setProperty("/selectedKey", item.path)
-        viewModel.setProperty("/main/title", item.title)
-        viewModel.setProperty("/main/content", `<iframe src="${item.path}"></iframe>`);
-        location.hash = item.path
-      }
-    });
 
+        initItem = initItem ?? data?.[0]
+        if (initItem !== undefined) {
+          viewModel.setProperty("/selectedKey", initItem.path)
+          viewModel.setProperty("/main/title", initItem.title)
+          viewModel.setProperty("/main/content", `<iframe src="${initItem.path}"></iframe>`);
+          location.hash = initItem.path
+        }
+        else {
+          sap.m.MessageToast.show("not found any presentation")
+        }
+
+      })
+      .catch(console.error);
+  }
+
+  refreshModel() // refresh on init
 
   // application main
   const app = new sap.m.SplitApp({
