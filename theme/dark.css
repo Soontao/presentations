@@ -122,6 +122,8 @@ h3,
 h4,
 h5,
 h6 {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
   color: var(--atheme-foreground);
 }
 
@@ -166,7 +168,13 @@ blockquote p {
   color: var(--atheme-comment);
   font-weight: bolder;
   font-size: 1.2em;
-  margin: 0;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+ul {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 ul>li,
@@ -336,4 +344,11 @@ section::after {
 a {
   color: var(--atheme-cyan);
   text-decoration: none;
+}
+
+.monaco-preview-editor {
+  width: 100%; 
+  height: 350px; 
+  padding-top: 10px; 
+  padding-bottom: 10px;
 }

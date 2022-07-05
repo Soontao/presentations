@@ -55,7 +55,7 @@ const marpKrokiPlugin = (md) => {
       else {
         const containerId = `monaco-container-${Math.random().toString(36).substring(2, 15)}`
 
-        let content = `<div id="${containerId}" style="width: 100%; height: 400px; padding-top: 50px; padding-bottom: 50px"></div>`
+        let content = `<div id="${containerId}" class="monaco-preview-editor"></div>`
         if (monacoCDNAdded) {
           // do nothing
         }
@@ -63,11 +63,13 @@ const marpKrokiPlugin = (md) => {
           monacoCDNAdded = true
           content += `
           <script src="${baseCDNUrl}/min/vs/loader.js"></script>
+          <script>
+            require.config({ paths: { vs: '${baseCDNUrl}/min/vs' } });
+          </script>
           `
         }
         content += `
           <script>
-            require.config({ paths: { vs: '${baseCDNUrl}/min/vs' } });
             require(['vs/editor/editor.main'], async function () {
               const editor = monaco.editor.create(document.getElementById('${containerId}'), {
                 value: ${JSON.stringify(tokens[idx].content)},
