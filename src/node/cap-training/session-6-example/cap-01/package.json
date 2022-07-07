@@ -1,15 +1,10 @@
 {
   "name": "cap-01",
   "version": "1.0.0",
-  "description": "s1.",
   "dependencies": {
-    "@sap/cds": "^5.9.6",
-    "cds-feature-toggle": "0.0.6",
-    "cds-hyper-app-service": "0.0.7",
-    "cds-internal-tool": "0.0.31",
-    "cds-swagger-ui-express": "0.4.0",
-    "express": "4.18.1",
-    "hdb": "0.18.3",
+    "@sap/cds": "^6",
+    "cds-swagger-ui-express": "^0.5.0",
+    "express": "^4",
     "passport": "0.5.3"
   },
   "engines": {
@@ -21,13 +16,9 @@
     "coverage": "npm test -- --coverage"
   },
   "devDependencies": {
-    "@types/jest": "27.5.2",
-    "jest": "27.5.1",
+    "@types/jest": "28",
+    "jest": "28",
     "sqlite3": "5.0.8"
-  },
-  "overrides": {
-    "@sap/xsenv": "3.2.0",
-    "cds-internal-tool": "^0.0.31"
   },
   "jest": {
     "testTimeout": 15000
