@@ -173,8 +173,8 @@ blockquote p {
 }
 
 ul {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
 }
 
 ul>li,
