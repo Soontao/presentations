@@ -107,6 +107,81 @@ cds.DatabaseService <|-- cds.HanaDatabaseService
 
 ---
 
+## Provisioning - overview
+
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam ranksep 20
+skinparam dpi 150
+skinparam arrowThickness 0.7
+skinparam packageTitleAlignment left
+skinparam usecaseBorderThickness 0.4
+skinparam defaultFontSize 12
+skinparam rectangleBorderThickness 1
+
+rectangle "bootstrap" {
+
+  rectangle "<b>cds run</b>" as cds_run
+
+  rectangle cds {
+    (server.js)
+  }
+  
+  rectangle "cds.lib.serve" {
+    (cds_serve)
+  }
+
+}
+
+
+rectangle "cds.libx._runtime" {
+  rectangle db {
+    (Database Service)
+  }
+  rectangle "cds-services" {
+    (Application Service)
+  }
+  rectangle "messaging" {
+    (Messaging Service)
+  }
+
+  rectangle "common" {
+    (crud handler)
+    (auth handler)
+    (paging/sorting handler)
+    (input handler)
+  }
+
+  rectangle "fiori" {
+    (fiori handlers)
+  }
+
+}
+
+
+(cds_run) ..> (server.js)
+(server.js) ..> (cds_serve)
+(server.js) ..> (Database Service)
+(server.js) ..> (Messaging Service)
+(cds_serve) ..> (Application Service)
+(Application Service) ..> (crud handler)
+(Application Service) ..> (auth handler)
+(Application Service) ..> (paging/sorting handler)
+(Application Service) ..> (input handler)
+(Application Service) ..> (fiori handlers)
+
+(crud handler) ..> (Database Service)
+(auth handler) ..> (Database Service)
+(paging/sorting handler) ..> (Database Service)
+(input handler) ..> (Database Service)
+(fiori handlers) ..> (Database Service)
+
+@enduml
+```
+
+---
+
 ## Service Provisioning
 
 - `cds.connect.to`
@@ -314,6 +389,13 @@ exports.handle = async function handle (req) {
     - you can use `await next()` to do something like `@Around` in Spring 
   - for `cds.Event`, the execution order is not promised, in parallel
 
+
+---
+
+## Links 
+
+- [OpenTelemetry for CDS](https://github.com/Soontao/opentelemetry-cds)
+- [Bootstrapping Servers and Service Providers](https://pages.github.tools.sap/cap/docs/node.js/cds-serve)
 
 ---
 
