@@ -21,93 +21,9 @@ Theo Sun
 - provisioning for `cds.Service`
 - consuming for `cds.Service`
 
-
 ---
 
-## Service in CAP NodeJS Runtime
-
-```plantuml
-@startuml
-"CDS Runtime" as Runtime
-"Custom Handler in Application Service" as AppService
-Runtime --> (Provision/Connect Service)
-Runtime --> (Consume Service)
-AppService --> (Provision/Connect Service)
-AppService --> (Consume Service)
-@enduml
-```
-
----
-
-## Service Layer
-
-> An overview for the `cds.Service` hierarchy
-
-```plantuml
-@startuml
-class cds.EventHandlers {
-  before();
-  on();
-  after();
-  reject();
-  async prepend();
-}
-class cds.Service {
-  emit();
-  send();
-  run();
-}
-class cds.RemoteService
-class cds.ApplicationService
-class cds.OutboxService
-class cds.AuditLogService
-class cds.MessagingService
-class cds.RedisMessaging
-class cds.EnterpriseMessaging
-class cds.EnterpriseMessagingShared
-class cds.AMQPWebhookMessaging
-class cds.FileBasedMessaging
-class cds.SqliteDatabaseService
-class cds.HanaDatabaseService
-
-cds.EventHandlers <|-- cds.Service
-cds.Service <|-- cds.ApplicationService
-cds.Service <|-- cds.DatabaseService
-cds.Service <|-- cds.OutboxService
-cds.Service <|-- cds.RemoteService
-cds.OutboxService <|-- cds.MessagingService
-cds.OutboxService <|-- cds.AuditLogService
-cds.MessagingService <|-- cds.RedisMessaging
-cds.MessagingService <|-- cds.FileBasedMessaging
-cds.MessagingService <|-- cds.AMQPWebhookMessaging
-cds.AMQPWebhookMessaging <|-- cds.EnterpriseMessaging
-cds.AMQPWebhookMessaging <|-- cds.EnterpriseMessagingShared
-cds.DatabaseService <|-- cds.SqliteDatabaseService
-cds.DatabaseService <|-- cds.HanaDatabaseService
-@enduml
-```
-
----
-
-## Service kind and impl
-
-- kind - a kind of service
-  - db
-  - messaging
-- impl - an implementation of the kind
-  - db
-    - sqlite
-    - hana
-  - messaging
-    - file-based
-    - enterprise-messaging-shared
-
-> `auth` is not a service
-
-
----
-
-## Provisioning - overview
+## CDS Bootstrap and Runtime - overview
 
 ```plantuml
 @startuml
@@ -182,6 +98,57 @@ rectangle "cds.libx._runtime" {
 
 ---
 
+## Service Hierarchy
+
+> An overview for the `cds.Service` hierarchy
+
+```plantuml
+@startuml
+class cds.EventHandlers {
+  before();
+  on();
+  after();
+  reject();
+  async prepend();
+}
+class cds.Service {
+  emit();
+  send();
+  run();
+}
+class cds.RemoteService
+class cds.ApplicationService
+class cds.OutboxService
+class cds.AuditLogService
+class cds.MessagingService
+class cds.RedisMessaging
+class cds.EnterpriseMessaging
+class cds.EnterpriseMessagingShared
+class cds.AMQPWebhookMessaging
+class cds.FileBasedMessaging
+class cds.SqliteDatabaseService
+class cds.HanaDatabaseService
+
+cds.EventHandlers <|-- cds.Service
+cds.Service <|-- cds.ApplicationService
+cds.Service <|-- cds.DatabaseService
+cds.Service <|-- cds.OutboxService
+cds.Service <|-- cds.RemoteService
+cds.OutboxService <|-- cds.MessagingService
+cds.OutboxService <|-- cds.AuditLogService
+cds.MessagingService <|-- cds.RedisMessaging
+cds.MessagingService <|-- cds.FileBasedMessaging
+cds.MessagingService <|-- cds.AMQPWebhookMessaging
+cds.AMQPWebhookMessaging <|-- cds.EnterpriseMessaging
+cds.AMQPWebhookMessaging <|-- cds.EnterpriseMessagingShared
+cds.DatabaseService <|-- cds.SqliteDatabaseService
+cds.DatabaseService <|-- cds.HanaDatabaseService
+@enduml
+```
+
+
+---
+
 ## Service Provisioning
 
 - `cds.connect.to`
@@ -190,6 +157,8 @@ rectangle "cds.libx._runtime" {
 ---
 
 ## Provisioning - connect.to
+
+> how CDS construct the service instance
 
 ```js
 connect.to = async (datasource, options) => {
@@ -276,6 +245,23 @@ module.exports = async function cds_server (options) {
 
 }
 ```
+
+---
+
+## Service kind and impl
+
+- kind - a kind of service
+  - db
+  - messaging
+- impl - an implementation of the kind
+  - db
+    - sqlite
+    - hana
+  - messaging
+    - file-based
+    - enterprise-messaging-shared
+
+> `auth` is not a service
 
 ---
 
