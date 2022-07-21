@@ -2,11 +2,11 @@
   "name": "cap-uaa",
   "version": "1.0.0",
   "dependencies": {
-    "@sap/audit-logging": "^5",
-    "@sap/cds": "^5",
-    "@sap/hana-client": "^2",
-    "@sap/xsenv": "^3",
-    "@sap/xssec": "^3",
+    "@sap/audit-logging": "^5.5.4",
+    "@sap/cds": "^5.9.8",
+    "@sap/hana-client": "^2.13.22",
+    "@sap/xsenv": "^3.3.2",
+    "@sap/xssec": "^3.2.13",
     "express": "4.18.1",
     "passport": "0.4.1"
   },
@@ -14,7 +14,7 @@
     "start": "npx cds run"
   },
   "devDependencies": {
-    "@sap/cds-dk": "^4",
+    "@sap/cds-dk": "^4.9.7",
     "sqlite3": "5.0.8"
   }
 }
