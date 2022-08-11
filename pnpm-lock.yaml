@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@marp-team/marp-cli': 2.1.0
+  '@marp-team/marp-cli': 2.1.1
   '@marp-team/marp-core': 3.3.0
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
@@ -19,7 +19,7 @@ specifiers:
   textlint: 12.2.1
 
 dependencies:
-  '@marp-team/marp-cli': 2.1.0
+  '@marp-team/marp-cli': 2.1.1
   '@marp-team/marp-core': 3.3.0
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
@@ -69,12 +69,12 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@marp-team/marp-cli/2.1.0:
-    resolution: {integrity: sha512-hkAqGzHH3jAuNRa5QRbqXDe2rn4Uah5mrP2dpVXXAFMRzLn1HR31WsBbtpc8HlcU2Xs/qQib5bTd1qSP4SZrUA==}
+  /@marp-team/marp-cli/2.1.1:
+    resolution: {integrity: sha512-fKQTPwCqWn27Yj5Nnx4RGe1vJiyN5CHulBOzURkaJVFeeYVLiU8+WnhxUN+VbNqa1391aUUs7m99wSd3aOwYDQ==}
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.3.0
+      '@marp-team/marp-core': 3.3.1
       '@marp-team/marpit': 2.4.0
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
@@ -95,6 +95,26 @@ packages:
 
   /@marp-team/marp-core/3.3.0:
     resolution: {integrity: sha512-Nox7FLV/ITccjWxJremgB7ethyPjwgdXKEmZRpL9MhJraK7XDQ84zxrlYIXvBO4mBKwiS022GyxbH093odzMtg==}
+    engines: {node: ^12.20 || ^14.13.1 || >=16}
+    dependencies:
+      '@marp-team/marpit': 2.4.0
+      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.0
+      emoji-regex: 10.1.0
+      highlight.js: 11.6.0
+      katex: 0.16.0
+      markdown-it-emoji: 2.0.2
+      mathjax-full: 3.2.2
+      postcss: 8.4.16
+      postcss-minify-params: 5.1.3_postcss@8.4.16
+      postcss-minify-selectors: 5.2.1_postcss@8.4.16
+      postcss-normalize-whitespace: 5.1.1_postcss@8.4.16
+      postcss-selector-parser: 6.0.10
+      twemoji: 14.0.2
+      xss: 1.0.13
+    dev: false
+
+  /@marp-team/marp-core/3.3.1:
+    resolution: {integrity: sha512-Iwe5RXO7NEWHO/BlJcJq0GrOgx9QI40boeDb+AirueTR1XRjCLPqYpGzxAaaGC4c9Uk1JdKDerAS+dl/pScsKQ==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
       '@marp-team/marpit': 2.4.0
