@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@marp-team/marp-cli': 2.1.0
-  '@marp-team/marp-core': 3.2.1
+  '@marp-team/marp-core': 3.3.0
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
   '@openui5/ts-types': 1.105.0
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   '@marp-team/marp-cli': 2.1.0
-  '@marp-team/marp-core': 3.2.1
+  '@marp-team/marp-core': 3.3.0
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
   '@openui5/ts-types': 1.105.0
@@ -91,26 +91,6 @@ packages:
       - encoding
       - supports-color
       - utf-8-validate
-    dev: false
-
-  /@marp-team/marp-core/3.2.1:
-    resolution: {integrity: sha512-vEePHJvXbb1My0ERJvDoqsUbJQ0uUx0rnnS7VnvMnDPbTuHumnyogEhbIREU3jpYBW7dbkKX9aKCk5kBsquyuw==}
-    engines: {node: ^12.20 || ^14.13.1 || >=16}
-    dependencies:
-      '@marp-team/marpit': 2.4.0
-      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.0
-      emoji-regex: 10.1.0
-      highlight.js: 11.6.0
-      katex: 0.15.6
-      markdown-it-emoji: 2.0.2
-      mathjax-full: 3.2.2
-      postcss: 8.4.14
-      postcss-minify-params: 5.1.3_postcss@8.4.14
-      postcss-minify-selectors: 5.2.1_postcss@8.4.14
-      postcss-normalize-whitespace: 5.1.1_postcss@8.4.14
-      postcss-selector-parser: 6.0.10
-      twemoji: 14.0.2
-      xss: 1.0.13
     dev: false
 
   /@marp-team/marp-core/3.3.0:
@@ -708,16 +688,7 @@ packages:
     dev: false
 
   /cssfilter/0.0.10:
-    resolution: {integrity: sha1-xtJnJjKi5cg+AT5oZKQs6N79IK4=}
-    dev: false
-
-  /cssnano-utils/3.1.0_postcss@8.4.14:
-    resolution: {integrity: sha512-JQNR19/YZhz4psLX/rQ9M83e3z2Wf/HdJbryzte4a3NSuafyp9w/I4U+hx5C2S9g41qlstH7DEWnZaaj83OuEA==}
-    engines: {node: ^10 || ^12 || >=14.0}
-    peerDependencies:
-      postcss: ^8.2.15
-    dependencies:
-      postcss: 8.4.14
+    resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
     dev: false
 
   /cssnano-utils/3.1.0_postcss@8.4.16:
@@ -1361,13 +1332,6 @@ packages:
       graceful-fs: 4.2.10
     dev: false
 
-  /katex/0.15.6:
-    resolution: {integrity: sha512-UpzJy4yrnqnhXvRPhjEuLA4lcPn6eRngixW7Q3TJErjg3Aw2PuLFBzTkdUb89UtumxjhHTqL3a5GDGETMSwgJA==}
-    hasBin: true
-    dependencies:
-      commander: 8.3.0
-    dev: false
-
   /katex/0.16.0:
     resolution: {integrity: sha512-wPRB4iUPysfH97wTgG5/tRLYxmKVq6Q4jRAWRVOUxXB1dsiv4cvcNjqabHkrOvJHM1Bpk3WrgmllSO1vIvP24w==}
     hasBin: true
@@ -1994,18 +1958,6 @@ packages:
     resolution: {integrity: sha512-TqNZzQCD4S42De9IfnnBvILN7HAW7riLqsCyp8lgjXeysyPlX5HhqKAcJHHHb9XskE4/a+7VGC9zzx8Ls0jOAw==}
     dev: false
 
-  /postcss-minify-params/5.1.3_postcss@8.4.14:
-    resolution: {integrity: sha512-bkzpWcjykkqIujNL+EVEPOlLYi/eZ050oImVtHU7b4lFS82jPnsCb44gvC6pxaNt38Els3jWYDHTjHKf0koTgg==}
-    engines: {node: ^10 || ^12 || >=14.0}
-    peerDependencies:
-      postcss: ^8.2.15
-    dependencies:
-      browserslist: 4.21.2
-      cssnano-utils: 3.1.0_postcss@8.4.14
-      postcss: 8.4.14
-      postcss-value-parser: 4.2.0
-    dev: false
-
   /postcss-minify-params/5.1.3_postcss@8.4.16:
     resolution: {integrity: sha512-bkzpWcjykkqIujNL+EVEPOlLYi/eZ050oImVtHU7b4lFS82jPnsCb44gvC6pxaNt38Els3jWYDHTjHKf0koTgg==}
     engines: {node: ^10 || ^12 || >=14.0}
@@ -2018,16 +1970,6 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-minify-selectors/5.2.1_postcss@8.4.14:
-    resolution: {integrity: sha512-nPJu7OjZJTsVUmPdm2TcaiohIwxP+v8ha9NehQ2ye9szv4orirRU3SDdtUmKH+10nzn0bAyOXZ0UEr7OpvLehg==}
-    engines: {node: ^10 || ^12 || >=14.0}
-    peerDependencies:
-      postcss: ^8.2.15
-    dependencies:
-      postcss: 8.4.14
-      postcss-selector-parser: 6.0.10
-    dev: false
-
   /postcss-minify-selectors/5.2.1_postcss@8.4.16:
     resolution: {integrity: sha512-nPJu7OjZJTsVUmPdm2TcaiohIwxP+v8ha9NehQ2ye9szv4orirRU3SDdtUmKH+10nzn0bAyOXZ0UEr7OpvLehg==}
     engines: {node: ^10 || ^12 || >=14.0}
@@ -2036,16 +1978,6 @@ packages:
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
-    dev: false
-
-  /postcss-normalize-whitespace/5.1.1_postcss@8.4.14:
-    resolution: {integrity: sha512-83ZJ4t3NUDETIHTa3uEg6asWjSBYL5EdkVB0sDncx9ERzOKBVJIUeDO9RyA9Zwtig8El1d79HBp0JEi8wvGQnA==}
-    engines: {node: ^10 || ^12 || >=14.0}
-    peerDependencies:
-      postcss: ^8.2.15
-    dependencies:
-      postcss: 8.4.14
-      postcss-value-parser: 4.2.0
     dev: false
 
   /postcss-normalize-whitespace/5.1.1_postcss@8.4.16:
@@ -2068,15 +2000,6 @@ packages:
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-    dev: false
-
-  /postcss/8.4.14:
-    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.4
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: false
 
   /postcss/8.4.16:
