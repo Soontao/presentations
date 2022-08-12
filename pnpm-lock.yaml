@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@marp-team/marp-cli': 2.1.1
+  '@marp-team/marp-cli': 2.1.2
   '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.4
@@ -19,7 +19,7 @@ specifiers:
   textlint: 12.2.1
 
 dependencies:
-  '@marp-team/marp-cli': 2.1.1
+  '@marp-team/marp-cli': 2.1.2
   '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.4
@@ -69,8 +69,8 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@marp-team/marp-cli/2.1.1:
-    resolution: {integrity: sha512-fKQTPwCqWn27Yj5Nnx4RGe1vJiyN5CHulBOzURkaJVFeeYVLiU8+WnhxUN+VbNqa1391aUUs7m99wSd3aOwYDQ==}
+  /@marp-team/marp-cli/2.1.2:
+    resolution: {integrity: sha512-R4pskLEbSuql/UyFSx7zgCQpYjgT/y2ETh+YdGqOqH/yhu5fnYRlhtDMTDmxQD5+l5yJXghqYXa+z8GXrR1uUg==}
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
