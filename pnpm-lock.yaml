@@ -4,7 +4,7 @@ specifiers:
   '@marp-team/marp-cli': 2.1.1
   '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
-  '@newdash/newdash': 5.21.3
+  '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.105.0
   '@textlint/markdown-to-ast': 12.2.1
   '@types/debug': 4.1.7
@@ -22,7 +22,7 @@ dependencies:
   '@marp-team/marp-cli': 2.1.1
   '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
-  '@newdash/newdash': 5.21.3
+  '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.105.0
   '@textlint/markdown-to-ast': 12.2.1
   '@types/debug': 4.1.7
@@ -138,8 +138,8 @@ packages:
       postcss: 8.4.16
     dev: false
 
-  /@newdash/newdash/5.21.3:
-    resolution: {integrity: sha512-yMkdFyT5vI4NYQ2H3udTGr/yUuuZeAj1HMD9d4W8gnggqax+pvE2OdGL5ytfZsBd98BXVds6hwa0r5Z1SlCsFg==}
+  /@newdash/newdash/5.21.4:
+    resolution: {integrity: sha512-bFNcF95XYMnZwP6VXdq1ZxfkzQiSUFFDXMezEzMd/DgUZVnFTGnqf/mZ6pBEoeqqtUnGvhxL/JqtdZOb4eLsZw==}
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
