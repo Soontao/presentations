@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@marp-team/marp-cli': 2.1.1
-  '@marp-team/marp-core': 3.3.1
+  '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
   '@openui5/ts-types': 1.105.0
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   '@marp-team/marp-cli': 2.1.1
-  '@marp-team/marp-core': 3.3.1
+  '@marp-team/marp-core': 3.3.2
   '@marp-team/marpit': 2.4.0
   '@newdash/newdash': 5.21.3
   '@openui5/ts-types': 1.105.0
@@ -74,7 +74,7 @@ packages:
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.3.1
+      '@marp-team/marp-core': 3.3.2
       '@marp-team/marpit': 2.4.0
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
@@ -93,8 +93,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@marp-team/marp-core/3.3.1:
-    resolution: {integrity: sha512-Iwe5RXO7NEWHO/BlJcJq0GrOgx9QI40boeDb+AirueTR1XRjCLPqYpGzxAaaGC4c9Uk1JdKDerAS+dl/pScsKQ==}
+  /@marp-team/marp-core/3.3.2:
+    resolution: {integrity: sha512-eV7Z5Hd4l6rpkPdogkgoKqAvDhZiOfZloQq2YHeP2CLi63aiJHoPZz/E6Qb6U18BzWa/JShJfRkkrEDt/Fu+hA==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
       '@marp-team/marpit': 2.4.0
