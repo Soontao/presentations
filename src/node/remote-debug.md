@@ -109,6 +109,13 @@ docker run -p3000:3000 -p9229:9229 -eNODE_OPTIONS="--inspect=0.0.0.0:9229" --rm 
 
 ## When we need the remote debug ?
 
+- Cloud only
+  - inspect inbound traffic
+  - hard-coded feature
+  - only specific situation/request
+  - hard to prepare environment
+  - network restriction
+
 ---
 
 ## Some tips
