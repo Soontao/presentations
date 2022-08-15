@@ -59,7 +59,8 @@ const leakRef = []
 // http://localhost:3000/leak
 app.get('/leak', (req, res) => {
     for (let i = 0; i < 100 * 1000; i++) {
-        leakRef.push(i)
+        // generate a random string
+        leakRef.push(Math.random().toString(36).substring(2, 15))
     }
     res.json({
         success: true
@@ -118,7 +119,7 @@ app.use((err, req, res, next) => {
 })
 
 if (require.main == module) {
-    app.listen(port, () => console.log(`started`))
+    app.listen(port, () => console.log(`started at ${port}`))
 }
 
 module.exports = app
