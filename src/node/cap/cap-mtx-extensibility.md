@@ -82,7 +82,7 @@ Theo Sun
 ## Problems we found
 
 - [could not activate extension when multi-instance enabled](https://github.tools.sap/cap/issues/issues/12181)
-- [\_locaized (\_texts) definitions for extensibility](<![](https://github.tools.sap/cap/issues/issues/11987)>)
+- [\_locaized (\_texts) definitions for extensibility](https://github.tools.sap/cap/issues/issues/11987)
 - [allow list is not worked as expected](https://sap.stackenterprise.co/questions/15212/15226)
 
 ---
