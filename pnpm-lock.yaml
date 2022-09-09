@@ -11,7 +11,7 @@ specifiers:
   '@types/markdown-it': 12.2.3
   colors: 1.4.0
   debug: 4.3.4
-  fast-glob: 3.2.11
+  fast-glob: 3.2.12
   git-rev-sync: 3.0.2
   mkdirp: 1.0.4
   pretty: 2.0.0
@@ -29,7 +29,7 @@ dependencies:
   '@types/markdown-it': 12.2.3
   colors: 1.4.0
   debug: 4.3.4
-  fast-glob: 3.2.11
+  fast-glob: 3.2.12
   git-rev-sync: 3.0.2
   mkdirp: 1.0.4
   pretty: 2.0.0
@@ -838,8 +838,8 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: false
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
+  /fast-glob/3.2.12:
+    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
