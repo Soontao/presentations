@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@marp-team/marp-cli': 2.1.2
   '@marp-team/marp-core': 3.3.3
-  '@marp-team/marpit': 2.4.0
+  '@marp-team/marpit': 2.4.1
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.106.0
   '@textlint/markdown-to-ast': 12.2.1
@@ -21,7 +21,7 @@ specifiers:
 dependencies:
   '@marp-team/marp-cli': 2.1.2
   '@marp-team/marp-core': 3.3.3
-  '@marp-team/marpit': 2.4.0
+  '@marp-team/marpit': 2.4.1
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.106.0
   '@textlint/markdown-to-ast': 12.2.1
@@ -75,7 +75,7 @@ packages:
     hasBin: true
     dependencies:
       '@marp-team/marp-core': 3.3.3
-      '@marp-team/marpit': 2.4.0
+      '@marp-team/marpit': 2.4.1
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
       import-from: 4.0.0
@@ -97,8 +97,8 @@ packages:
     resolution: {integrity: sha512-/HU2T0BaeUUnScj8g0SbHe/L0kftD+P4smY8k0AJt9sNAefrdh4kNfKL4OgCF2mcw+ROMgomx8w7rvzudgMf4A==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
-      '@marp-team/marpit': 2.4.0
-      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.0
+      '@marp-team/marpit': 2.4.1
+      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.1
       emoji-regex: 10.1.0
       highlight.js: 11.6.0
       katex: 0.16.0
@@ -110,7 +110,7 @@ packages:
       xss: 1.0.13
     dev: false
 
-  /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.0:
+  /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.1:
     resolution: {integrity: sha512-KIp5EaUkwFaeYOAb0b9B7+3XAjZYAUDJi3LRSnH1y27jJY2TCKrXnKIATfPJXSkn9QjTy69fbwCZ07B93QhupA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -119,11 +119,11 @@ packages:
       '@marp-team/marpit':
         optional: true
     dependencies:
-      '@marp-team/marpit': 2.4.0
+      '@marp-team/marpit': 2.4.1
     dev: false
 
-  /@marp-team/marpit/2.4.0:
-    resolution: {integrity: sha512-CZziAgWATgrQsxyJDIiFAo6DgnbnWDM6mpGBtxgGhcBlcH8WN6iH1LTxqebi1s4Kf4RzmiS1Hv7MEsv5ho7EzA==}
+  /@marp-team/marpit/2.4.1:
+    resolution: {integrity: sha512-GcsvYmdaUOGkLINvIxMGkL6XSqOXPSBaHD2dCWLXfD5DhjQMEDnrLYImpeKRwv4FS6xorCB44ylzxWDP3GzgCg==}
     engines: {node: '>=10'}
     dependencies:
       color-string: 1.9.1
