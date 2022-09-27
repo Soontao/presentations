@@ -50,7 +50,7 @@ const marpKrokiPlugin = (md) => {
 
       if (krokiLangs.includes(lang)) {
         const data = deflateSync(tokens[idx].content).toString('base64url')
-        return `<p><img style="max-height: 400px" src="${entrypoint}${lang}/svg/${data}"/></p>`
+        return `<p><img style="max-height: 400px; max-width: 100%" src="${entrypoint}${lang}/svg/${data}"/></p>`
       }
       else {
         const containerId = `monaco-container-${Math.random().toString(36).substring(2, 15)}`
