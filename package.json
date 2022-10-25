@@ -48,7 +48,7 @@
     "git-rev-sync": "3.0.2",
     "mkdirp": "1.0.4",
     "pretty": "2.0.0",
-    "replace": "1.2.1",
+    "replace": "1.2.2",
     "textlint": "12.2.2"
   }
 }
