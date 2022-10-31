@@ -5,7 +5,7 @@ specifiers:
   '@marp-team/marp-core': 3.3.3
   '@marp-team/marpit': 2.4.1
   '@newdash/newdash': 5.21.4
-  '@openui5/ts-types': 1.107.1
+  '@openui5/ts-types': 1.108.0
   '@textlint/markdown-to-ast': 12.2.2
   '@types/debug': 4.1.7
   '@types/markdown-it': 12.2.3
@@ -23,7 +23,7 @@ dependencies:
   '@marp-team/marp-core': 3.3.3
   '@marp-team/marpit': 2.4.1
   '@newdash/newdash': 5.21.4
-  '@openui5/ts-types': 1.107.1
+  '@openui5/ts-types': 1.108.0
   '@textlint/markdown-to-ast': 12.2.2
   '@types/debug': 4.1.7
   '@types/markdown-it': 12.2.3
@@ -160,8 +160,8 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@openui5/ts-types/1.107.1:
-    resolution: {integrity: sha512-mVee2IWgiO/s1q9nyUNmYu7vpoEP2F+qOvH93AVBOC71EtapGx8qWhX+n5jWzTKs+TYC4zK1WLavwx2EZPpogQ==}
+  /@openui5/ts-types/1.108.0:
+    resolution: {integrity: sha512-975Rs+S1osne7MRhzwLtZx/NUyH6mXZmaHz+Zqv6Pa35tdcW1goUf7UdcXAbQaViR289ztkK1IoJbg3UqqsHkQ==}
     dev: false
 
   /@textlint/ast-node-types/12.2.2:
