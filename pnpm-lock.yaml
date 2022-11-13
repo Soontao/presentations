@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@marp-team/marp-cli': 2.2.0
   '@marp-team/marp-core': 3.3.3
-  '@marp-team/marpit': 2.4.1
+  '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.108.0
   '@textlint/markdown-to-ast': 12.2.3
@@ -21,7 +21,7 @@ specifiers:
 dependencies:
   '@marp-team/marp-cli': 2.2.0
   '@marp-team/marp-core': 3.3.3
-  '@marp-team/marpit': 2.4.1
+  '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.108.0
   '@textlint/markdown-to-ast': 12.2.3
@@ -75,7 +75,7 @@ packages:
     hasBin: true
     dependencies:
       '@marp-team/marp-core': 3.3.3
-      '@marp-team/marpit': 2.4.1
+      '@marp-team/marpit': 2.4.2
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
       import-from: 4.0.0
@@ -97,8 +97,8 @@ packages:
     resolution: {integrity: sha512-/HU2T0BaeUUnScj8g0SbHe/L0kftD+P4smY8k0AJt9sNAefrdh4kNfKL4OgCF2mcw+ROMgomx8w7rvzudgMf4A==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
-      '@marp-team/marpit': 2.4.1
-      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.1
+      '@marp-team/marpit': 2.4.2
+      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.2
       emoji-regex: 10.1.0
       highlight.js: 11.6.0
       katex: 0.16.0
@@ -110,7 +110,7 @@ packages:
       xss: 1.0.13
     dev: false
 
-  /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.1:
+  /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.2:
     resolution: {integrity: sha512-KIp5EaUkwFaeYOAb0b9B7+3XAjZYAUDJi3LRSnH1y27jJY2TCKrXnKIATfPJXSkn9QjTy69fbwCZ07B93QhupA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -119,11 +119,11 @@ packages:
       '@marp-team/marpit':
         optional: true
     dependencies:
-      '@marp-team/marpit': 2.4.1
+      '@marp-team/marpit': 2.4.2
     dev: false
 
-  /@marp-team/marpit/2.4.1:
-    resolution: {integrity: sha512-GcsvYmdaUOGkLINvIxMGkL6XSqOXPSBaHD2dCWLXfD5DhjQMEDnrLYImpeKRwv4FS6xorCB44ylzxWDP3GzgCg==}
+  /@marp-team/marpit/2.4.2:
+    resolution: {integrity: sha512-MBCMaSjkeDzF+Exq8CmhmwsMTzU7fK4NyzA7zl+hreBGppAPvOq5NCnIR2O6nOm9F0QJ9Vmxhs7ZP/BXZ+lWBw==}
     engines: {node: '>=10'}
     dependencies:
       color-string: 1.9.1
@@ -132,7 +132,7 @@ packages:
       lodash.kebabcase: 4.1.1
       markdown-it: 13.0.1
       markdown-it-front-matter: 0.2.3
-      postcss: 8.4.16
+      postcss: 8.4.19
     dev: false
 
   /@newdash/newdash/5.21.4:
@@ -1955,6 +1955,15 @@ packages:
 
   /postcss/8.4.16:
     resolution: {integrity: sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.4
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: false
+
+  /postcss/8.4.19:
+    resolution: {integrity: sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.4
