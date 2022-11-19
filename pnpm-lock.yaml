@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@marp-team/marp-cli': 2.2.0
-  '@marp-team/marp-core': 3.3.3
+  '@marp-team/marp-core': 3.4.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.108.0
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   '@marp-team/marp-cli': 2.2.0
-  '@marp-team/marp-core': 3.3.3
+  '@marp-team/marp-core': 3.4.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.108.0
@@ -74,7 +74,7 @@ packages:
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.3.3
+      '@marp-team/marp-core': 3.4.0
       '@marp-team/marpit': 2.4.2
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
@@ -93,21 +93,21 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@marp-team/marp-core/3.3.3:
-    resolution: {integrity: sha512-/HU2T0BaeUUnScj8g0SbHe/L0kftD+P4smY8k0AJt9sNAefrdh4kNfKL4OgCF2mcw+ROMgomx8w7rvzudgMf4A==}
+  /@marp-team/marp-core/3.4.0:
+    resolution: {integrity: sha512-Sty4C6/AJ6WJONeDujofPNIEHkJtGYpXGqOxR12n+HbgSJtr5bUaAz9P/XVpaXs2EeTqtHwmDxItoqJaZN6qXw==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
       '@marp-team/marpit': 2.4.2
       '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.2
-      emoji-regex: 10.1.0
+      emoji-regex: 10.2.1
       highlight.js: 11.6.0
-      katex: 0.16.0
+      katex: 0.16.3
       markdown-it-emoji: 2.0.2
       mathjax-full: 3.2.2
-      postcss: 8.4.16
+      postcss: 8.4.19
       postcss-selector-parser: 6.0.10
       twemoji: 14.0.2
-      xss: 1.0.13
+      xss: 1.0.14
     dev: false
 
   /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.2:
@@ -755,8 +755,8 @@ packages:
       sigmund: 1.0.1
     dev: false
 
-  /emoji-regex/10.1.0:
-    resolution: {integrity: sha512-xAEnNCT3w2Tg6MA7ly6QqYJvEoY1tm9iIjJ3yMKK9JPlWuRHAMoe5iETwQnx3M9TVbFMfsrBgWKR+IsmswwNjg==}
+  /emoji-regex/10.2.1:
+    resolution: {integrity: sha512-97g6QgOk8zlDRdgq1WxwgTMgEWGVAQvB5Fdpgc1MkNy56la5SKP9GsMXKDOdqwn90/41a8yPwIGk1Y6WVbeMQA==}
     dev: false
 
   /emoji-regex/8.0.0:
@@ -1319,8 +1319,8 @@ packages:
       graceful-fs: 4.2.10
     dev: false
 
-  /katex/0.16.0:
-    resolution: {integrity: sha512-wPRB4iUPysfH97wTgG5/tRLYxmKVq6Q4jRAWRVOUxXB1dsiv4cvcNjqabHkrOvJHM1Bpk3WrgmllSO1vIvP24w==}
+  /katex/0.16.3:
+    resolution: {integrity: sha512-3EykQddareoRmbtNiNEDgl3IGjryyrp2eg/25fHDEnlHymIDi33bptkMv6K4EOC2LZCybLW/ZkEo6Le+EM9pmA==}
     hasBin: true
     dependencies:
       commander: 8.3.0
@@ -1951,15 +1951,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: false
-
-  /postcss/8.4.16:
-    resolution: {integrity: sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.4
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: false
 
   /postcss/8.4.19:
@@ -2657,8 +2648,8 @@ packages:
     engines: {node: '>=0.1'}
     dev: false
 
-  /xss/1.0.13:
-    resolution: {integrity: sha512-clu7dxTm1e8Mo5fz3n/oW3UCXBfV89xZ72jM8yzo1vR/pIS0w3sgB3XV2H8Vm6zfGnHL0FzvLJPJEBhd86/z4Q==}
+  /xss/1.0.14:
+    resolution: {integrity: sha512-og7TEJhXvn1a7kzZGQ7ETjdQVS2UfZyTlsEdDOqvQF7GoxNfY+0YLCzBy1kPdsDDx4QuNAonQPddpsn6Xl/7sw==}
     engines: {node: '>= 0.10.0'}
     hasBin: true
     dependencies:
