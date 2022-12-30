@@ -16,7 +16,7 @@ specifiers:
   mkdirp: 1.0.4
   pretty: 2.0.0
   replace: 1.2.2
-  textlint: 12.3.0
+  textlint: 12.3.1
 
 dependencies:
   '@marp-team/marp-cli': 2.2.2
@@ -34,7 +34,7 @@ dependencies:
   mkdirp: 1.0.4
   pretty: 2.0.0
   replace: 1.2.2
-  textlint: 12.3.0
+  textlint: 12.3.1
 
 packages:
 
@@ -181,8 +181,8 @@ packages:
       '@textlint/ast-node-types': 12.3.0
     dev: false
 
-  /@textlint/config-loader/12.3.0:
-    resolution: {integrity: sha512-b4793A9JBSaFcm36a9/ZdwAbKVPBdzZJsZo/sXCfVKJIuKisFnAzlYfhbmCBCmMmFH/s4t8V3zgY3mf6EQXX+Q==}
+  /@textlint/config-loader/12.3.1:
+    resolution: {integrity: sha512-iKCrif/McG0dCokvyoxvXcH6G9FaiSDF3DtNYo4GlxavqVtKxKxuFvkeQahWL0QWM9Z+yXlGUcBJdYj6Zxevkw==}
     dependencies:
       '@textlint/kernel': 12.3.0
       '@textlint/module-interop': 12.3.0
@@ -199,8 +199,8 @@ packages:
     resolution: {integrity: sha512-7WgC2d6gk+aeQLPz6M24Ngt4hsZkUL701CjP9R9P2RnLFMVOxwJ7YzpxcGTrlK5pmMNZ06xfbHpBd4rE0d567Q==}
     dev: false
 
-  /@textlint/fixer-formatter/12.3.0:
-    resolution: {integrity: sha512-fjCK6EnwagijtzWE0CObXx8pPN2MxwQRvOynSX1A1LWp03tD88LiOwrgbLSR/6By2fs3W/UewXXLkN3X+KcJQQ==}
+  /@textlint/fixer-formatter/12.3.1:
+    resolution: {integrity: sha512-+xYI5oOlSoKXGpV7AGuWOleUfgzLNGaCN7PuTujxdZ5czAm2LxYplJ58+0oAOYE/N3QfLN2dO+itAsEZho6vhQ==}
     dependencies:
       '@textlint/module-interop': 12.3.0
       '@textlint/types': 12.3.0
@@ -233,8 +233,8 @@ packages:
       - supports-color
     dev: false
 
-  /@textlint/linter-formatter/12.3.0:
-    resolution: {integrity: sha512-XELEIsZm7d8mIRYF8MA7IqvOy79apWBauj7kxFVSM3zIbnkQURdOV+RI4iN/fW7EbV39DwCNPgzGTTh1BcEvaA==}
+  /@textlint/linter-formatter/12.3.1:
+    resolution: {integrity: sha512-n6elvyIBux/lefhmQBZUjgN2EZQ347b6v1waUPAGKmljsndoVCyY+m6RbNhAQtVsNTA1sdO7cJDIxvnX4g1kaA==}
     dependencies:
       '@azu/format-text': 1.0.1
       '@azu/style-format': 1.0.0
@@ -1311,12 +1311,6 @@ packages:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
     dev: false
 
-  /json5/2.2.1:
-    resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
-    engines: {node: '>=6'}
-    hasBin: true
-    dev: false
-
   /json5/2.2.2:
     resolution: {integrity: sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==}
     engines: {node: '>=6'}
@@ -2039,7 +2033,7 @@ packages:
     dependencies:
       debug: 4.3.4
       js-yaml: 3.14.1
-      json5: 2.2.1
+      json5: 2.2.2
       require-from-string: 2.0.2
     transitivePeerDependencies:
       - supports-color
@@ -2428,18 +2422,18 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: false
 
-  /textlint/12.3.0:
-    resolution: {integrity: sha512-LWBGbtZtERRcyvYFIxe7r+3wD/OaBlxcr3Nwh7WxS55HE1fIraU9UG68fFj7VZdUg3CrU1KS9kDhSmMCNFVMGw==}
+  /textlint/12.3.1:
+    resolution: {integrity: sha512-YrQmJBLhThUimP4eVWQAZfJBBXMdYvuuvNa4q0qmB7ibcYtTnwbysRAEI1FYx8qG/AoLtjqBcF6WO8oSGEnODg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       '@textlint/ast-node-types': 12.3.0
       '@textlint/ast-traverse': 12.3.0
-      '@textlint/config-loader': 12.3.0
+      '@textlint/config-loader': 12.3.1
       '@textlint/feature-flag': 12.3.0
-      '@textlint/fixer-formatter': 12.3.0
+      '@textlint/fixer-formatter': 12.3.1
       '@textlint/kernel': 12.3.0
-      '@textlint/linter-formatter': 12.3.0
+      '@textlint/linter-formatter': 12.3.1
       '@textlint/module-interop': 12.3.0
       '@textlint/textlint-plugin-markdown': 12.3.0
       '@textlint/textlint-plugin-text': 12.3.0
