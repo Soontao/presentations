@@ -46,7 +46,7 @@
     "debug": "4.3.4",
     "fast-glob": "3.2.12",
     "git-rev-sync": "3.0.2",
-    "mkdirp": "1.0.4",
+    "mkdirp": "2.1.1",
     "pretty": "2.0.0",
     "replace": "1.2.2",
     "textlint": "12.5.1"
