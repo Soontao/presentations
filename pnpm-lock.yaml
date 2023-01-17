@@ -13,7 +13,7 @@ specifiers:
   debug: 4.3.4
   fast-glob: 3.2.12
   git-rev-sync: 3.0.2
-  mkdirp: 2.1.1
+  mkdirp: 2.1.2
   pretty: 2.0.0
   replace: 1.2.2
   textlint: 12.5.1
@@ -31,7 +31,7 @@ dependencies:
   debug: 4.3.4
   fast-glob: 3.2.12
   git-rev-sync: 3.0.2
-  mkdirp: 2.1.1
+  mkdirp: 2.1.2
   pretty: 2.0.0
   replace: 1.2.2
   textlint: 12.5.1
@@ -1675,8 +1675,8 @@ packages:
       minimist: 1.2.6
     dev: false
 
-  /mkdirp/2.1.1:
-    resolution: {integrity: sha512-tXNRfEiv5Z5R1jrXKfSNwhzDjMPdSZqYC1co5ZC7yjNwClJ0Hqt5NGRAayuK6urzM5MWX2IGFLAT4Gs1saeYQw==}
+  /mkdirp/2.1.2:
+    resolution: {integrity: sha512-12UORspdR5q37RhJO1XasFrqNX3FbIbdtvNP2uHJJx6mhEXdNDaaCiXLiLGrqaKX1n6WvafTIIndZV2pJayNsg==}
     engines: {node: '>=10'}
     hasBin: true
     dev: false
