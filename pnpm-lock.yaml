@@ -6,7 +6,7 @@ specifiers:
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.110.0
-  '@textlint/markdown-to-ast': 13.1.1
+  '@textlint/markdown-to-ast': 13.1.3
   '@types/debug': 4.1.7
   '@types/markdown-it': 12.2.3
   colors: 1.4.0
@@ -24,7 +24,7 @@ dependencies:
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.110.0
-  '@textlint/markdown-to-ast': 13.1.1
+  '@textlint/markdown-to-ast': 13.1.3
   '@types/debug': 4.1.7
   '@types/markdown-it': 12.2.3
   colors: 1.4.0
@@ -166,10 +166,14 @@ packages:
     resolution: {integrity: sha512-dCya4xnzE7H2eqMLQ+sYb+sqC5EdF0iSrQzfCEuDC+xgyUOw/doG2yq2W27+R3nCWuMLo0qDjh1Gyh5qUsR9ZQ==}
     dev: false
 
+  /@textlint/ast-node-types/13.1.3:
+    resolution: {integrity: sha512-mJXzxhD5tj7eSQb4KQcLRNHRelvNXNb72ZZdC+sBKcZe/EqZTW0+rs2dFroDNsD0Felo9+jEbZPlz9syOkkmIQ==}
+    dev: false
+
   /@textlint/ast-tester/13.1.1:
     resolution: {integrity: sha512-WnpUbGlZ54L/ApzMRwCEg0xOf6oxAVoZncQ+WtHorpXnyZMLMEq0xf8bjxV9p0COilkdOEQFfSYGtkWfjAg1Qg==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
@@ -178,7 +182,7 @@ packages:
   /@textlint/ast-traverse/13.1.1:
     resolution: {integrity: sha512-mDc6VpUP96o3tMQaADaXd0vG5kcHFi8gbiQj+Go9xLfGIjxVnO8Igf4d4yVKX3xhIn84PCJi805SITOAW+lOdw==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
     dev: false
 
   /@textlint/config-loader/13.1.1:
@@ -219,7 +223,7 @@ packages:
   /@textlint/kernel/13.1.1:
     resolution: {integrity: sha512-JW1pceFftw/V12tODawiLYqDqalTIgr68sA3xZcez3v95RKqqnHJzAU4zt16ydrcRFZa7leXgWOGtTeOfk2MpA==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
       '@textlint/ast-tester': 13.1.1
       '@textlint/ast-traverse': 13.1.1
       '@textlint/feature-flag': 13.1.1
@@ -256,10 +260,10 @@ packages:
       - supports-color
     dev: false
 
-  /@textlint/markdown-to-ast/13.1.1:
-    resolution: {integrity: sha512-hBSkcd0lCsHLtrplaK/8PNehx3PgY9M8IKq45zsFBeSUq4ggZZFQthmUE0szJiqt3moOUqutoOgaYVoFcBogNQ==}
+  /@textlint/markdown-to-ast/13.1.3:
+    resolution: {integrity: sha512-G4fuxiKbcHIZVtqXZGleh6QrlU7DfDpswY2h91GicWw+L0bzo6Q0weKwzpOYGR52nFlLdZSlNoTeK2UMFs277g==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
       debug: 4.3.4
       mdast-util-gfm-autolink-literal: 0.1.3
       remark-footnotes: 3.0.0
@@ -288,13 +292,13 @@ packages:
   /@textlint/text-to-ast/13.1.1:
     resolution: {integrity: sha512-ZedjKx3JB666jGrS9aEa/iEN+r9ksdtedSEncumQrnSeFycX/9VrOU3cVaF0WsDUclYGcs6si9D8Ct8Rycnxhg==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
     dev: false
 
   /@textlint/textlint-plugin-markdown/13.1.1:
     resolution: {integrity: sha512-7S1Oh1OeIY/MVcJWlztv6+Vl/dzbqv9SVCHGI1d4y9GLd8yhil8QwWo2J6kFUHcWBH0Wjf/XsJzUEJm+wqlgKw==}
     dependencies:
-      '@textlint/markdown-to-ast': 13.1.1
+      '@textlint/markdown-to-ast': 13.1.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -308,7 +312,7 @@ packages:
   /@textlint/types/13.1.1:
     resolution: {integrity: sha512-S64zKHgSztQ+X0oHZACW/IWg0pvGaZrlyQxDV6PF0/8ZB1YR2pyrCXbWZVusHOEvEPJTOXwfQf/Eg3BrUPn1tg==}
     dependencies:
-      '@textlint/ast-node-types': 13.1.1
+      '@textlint/ast-node-types': 13.1.3
     dev: false
 
   /@textlint/utils/13.1.1:
