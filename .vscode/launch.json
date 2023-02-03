@@ -9,6 +9,9 @@
         "-s",
         "src"
       ],
+      "env": {
+        "PORT": "5678"
+      },
       "skipFiles": [
         "<node_internals>/**"
       ],
