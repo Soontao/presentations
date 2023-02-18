@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@marp-team/marp-cli': 2.3.0
-  '@marp-team/marp-core': 3.4.2
+  '@marp-team/marp-core': 3.5.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.110.0
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   '@marp-team/marp-cli': 2.3.0
-  '@marp-team/marp-core': 3.4.2
+  '@marp-team/marp-core': 3.5.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
   '@openui5/ts-types': 1.110.0
@@ -74,7 +74,7 @@ packages:
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.4.2
+      '@marp-team/marp-core': 3.5.0
       '@marp-team/marpit': 2.4.2
       chokidar: 3.5.3
       cosmiconfig: 8.0.0
@@ -94,12 +94,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@marp-team/marp-core/3.4.2:
-    resolution: {integrity: sha512-eJFK/Xk8d9Fe8yCwXreAA+QjSiQVSVLUP1FbscN2Jr0Jo0NRhvC8cob9yTq6XdPkkcZCyTW/v61W668eKMdaww==}
+  /@marp-team/marp-core/3.5.0:
+    resolution: {integrity: sha512-1PcPSvhh3VvHFyh8pMKslCpTuDY7hiAtPKdHb+yZCheTdd0+IUOeOI9YRW3mb3ge9/d65CoOGeATPBzuGYuUYQ==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
       '@marp-team/marpit': 2.4.2
-      '@marp-team/marpit-svg-polyfill': 2.0.0_@marp-team+marpit@2.4.2
+      '@marp-team/marpit-svg-polyfill': 2.1.0_@marp-team+marpit@2.4.2
       highlight.js: 11.7.0
       katex: 0.16.4
       mathjax-full: 3.2.2
@@ -108,8 +108,8 @@ packages:
       xss: 1.0.14
     dev: false
 
-  /@marp-team/marpit-svg-polyfill/2.0.0_@marp-team+marpit@2.4.2:
-    resolution: {integrity: sha512-KIp5EaUkwFaeYOAb0b9B7+3XAjZYAUDJi3LRSnH1y27jJY2TCKrXnKIATfPJXSkn9QjTy69fbwCZ07B93QhupA==}
+  /@marp-team/marpit-svg-polyfill/2.1.0_@marp-team+marpit@2.4.2:
+    resolution: {integrity: sha512-VqCoAKwv1HJdzZp36dDPxznz2JZgRjkVSSPHpCzk72G2N753F0HPKXjevdjxmzN6gir9bUGBgMD1SguWJIi11A==}
     engines: {node: '>=10'}
     peerDependencies:
       '@marp-team/marpit': '>=0.5.0'
