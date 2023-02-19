@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@marp-team/marp-cli': 2.3.0
+  '@marp-team/marp-cli': 2.4.0
   '@marp-team/marp-core': 3.5.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
@@ -19,7 +19,7 @@ specifiers:
   textlint: 13.3.0
 
 dependencies:
-  '@marp-team/marp-cli': 2.3.0
+  '@marp-team/marp-cli': 2.4.0
   '@marp-team/marp-core': 3.5.0
   '@marp-team/marpit': 2.4.2
   '@newdash/newdash': 5.21.4
@@ -69,8 +69,8 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@marp-team/marp-cli/2.3.0:
-    resolution: {integrity: sha512-M6U1FYN0ubrXBOj/P9bsXxWS0q2PPzcPqzUgqTNSlmABY42c8J+EHiJsPhyStpUxXySTQgAAu8R1tiNqBsvOxw==}
+  /@marp-team/marp-cli/2.4.0:
+    resolution: {integrity: sha512-iwU4/YLHOBVL+SFNZ1MtCam2E39/eAgsV9JhW8kbF7MDYW3u677PPPk6YFUktOjKIQDs+thkMFBnZhhUUhI8Pw==}
     engines: {node: ^14.13.1 || >=16}
     hasBin: true
     dependencies:
@@ -80,17 +80,19 @@ packages:
       cosmiconfig: 8.0.0
       import-from: 4.0.0
       is-wsl: 2.2.0
-      puppeteer-core: 19.4.1
+      puppeteer-core: 19.7.1
       remove: 0.1.5
       serve-index: 1.9.1
       tmp: 0.2.1
       v8-compile-cache: 2.3.0
-      ws: 8.12.0
-      yargs: 17.6.2
+      ws: 8.12.1
+      yargs: 17.7.0
     transitivePeerDependencies:
       - bufferutil
+      - chromium-bidi
       - encoding
       - supports-color
+      - typescript
       - utf-8-validate
     dev: false
 
@@ -724,8 +726,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /devtools-protocol/0.0.1068969:
-    resolution: {integrity: sha512-ATFTrPbY1dKYhPPvpjtwWKSK2mIwGmRwX54UASn9THEuIZCe2n9k3vVuMmt6jWeL+e5QaaguEv/pMyR+JQB7VQ==}
+  /devtools-protocol/0.0.1094867:
+    resolution: {integrity: sha512-pmMDBKiRVjh0uKK6CT1WqZmM3hBVSgD+N2MrgyV1uNizAZMw4tx6i/RTc+/uCsKSCmg0xXx7arCP/OFcIwTsiQ==}
     dev: false
 
   /diff/4.0.2:
@@ -1901,13 +1903,21 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /puppeteer-core/19.4.1:
-    resolution: {integrity: sha512-JHIuqtqrUAx4jGOTxXu4ilapV2jabxtVMA/e4wwFUMvtSsqK4nVBSI+Z1SKDoz7gRy/JUIc8WzmfocCa6SIZ1w==}
+  /puppeteer-core/19.7.1:
+    resolution: {integrity: sha512-4b5Go25IA+0xrUIw0Qtqi4nxc0qwdu/C7VT1+tFPl1W27207YT+7bxfANC3PjXMlS6bcbzinCf5YfGqMl8tfyQ==}
     engines: {node: '>=14.1.0'}
+    peerDependencies:
+      chromium-bidi: 0.4.3
+      typescript: '>= 4.7.4'
+    peerDependenciesMeta:
+      chromium-bidi:
+        optional: true
+      typescript:
+        optional: true
     dependencies:
       cross-fetch: 3.1.5
       debug: 4.3.4
-      devtools-protocol: 0.0.1068969
+      devtools-protocol: 0.0.1094867
       extract-zip: 2.0.1
       https-proxy-agent: 5.0.1
       proxy-from-env: 1.1.0
@@ -2528,8 +2538,8 @@ packages:
         optional: true
     dev: false
 
-  /ws/8.12.0:
-    resolution: {integrity: sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==}
+  /ws/8.12.1:
+    resolution: {integrity: sha512-1qo+M9Ba+xNhPB+YTWUlK6M17brTut5EXbcBaMRN5pH5dFrXz7lzz1ChFSUq3bOUl8yEvSenhHmYUNJxFzdJew==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2598,8 +2608,8 @@ packages:
       yargs-parser: 18.1.3
     dev: false
 
-  /yargs/17.6.2:
-    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+  /yargs/17.7.0:
+    resolution: {integrity: sha512-dwqOPg5trmrre9+v8SUo2q/hAwyKoVfu8OC1xPHKJGNdxAvPl4sKxL4vBnh3bQz/ZvvGAFeA5H3ou2kcOY8sQQ==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1
