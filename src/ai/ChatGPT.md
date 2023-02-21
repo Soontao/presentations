@@ -1,0 +1,245 @@
+---
+marp: true
+theme: dark
+---
+
+# ChatGPT
+
+![bg right 70%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676954586/2023-02-21_12-41-57_fft0co.png)
+
+Theo Sun
+2023
+
+---
+
+## Agenda
+
+- Introduction
+- Conversations between ChatGPT and me
+
+---
+
+## Introduction
+
+> GPT-3 is a powerful language processing AI model developed by OpenAI, capable of generating human-like text and has a wide range of applications. It is commonly used to create chatbots that can respond to user prompts and questions in a natural language. The model has 175 billion parameters and is one of the largest and most powerful language processing AI models to date. In summary, GPT-3 understands human language and can generate text based on the worded information it is fed.
+
+-- ChatGPT
+
+---
+
+![bg 75%](https://cdn.openai.com/chatgpt/draft-20221129c/ChatGPT_Diagram.svg)
+
+---
+
+> 我们使用人类反馈强化学习（RLHF）的方法对该模型进行了训练，使用的方法与InstructGPT相同，但数据收集设置上有轻微的不同。我们使用有人工智能训练师提供的对话，让他们扮演用户和人工智能助手两方，来对初始模型进行了监督微调。我们为训练师提供了模型编写的建议，以帮助他们组织回应。我们将这个新的对话数据集与InstructGPT数据集混合，将其转化为对话格式。
+
+-- ChatGPT
+
+---
+
+> 为了创建强化学习的奖励模型，我们需要收集比较数据，其中包括按质量排名的两个或更多模型响应。为了收集这些数据，我们使用人工智能训练师与聊天机器人进行对话。我们随机选择一条模型编写的消息，采样出几个备选的完成方案，然后让人工智能训练师对它们进行排名。使用这些奖励模型，我们可以使用Proximal Policy Optimization来对模型进行微调。我们进行了几次此过程的迭代。
+
+-- ChatGPT
+
+---
+
+## Key Points
+
+- Labeler
+  - [Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic](https://time.com/6247678/openai-chatgpt-kenya-workers/)
+- Supervised Learning
+- Azure AI supercomputing infrastructure.
+- In Context Learning
+
+---
+
+## Traning
+
+For GPT-3
+
+- It would take `355 years` to train GPT-3 on a single NVIDIA Tesla V100 GPU.
+- Using 1,024 x A100 GPUs, researchers calculated that OpenAI could have trained GPT-3 in as little as `34 days`.
+- Estimated that it cost around $5M in compute time to train GPT-3.
+- The supercomputer developed for OpenAI is a single system with more than 285,000 CPU cores, 10,000 GPUs and 400 gigabits per second of network connectivity for each GPU server. - [Microsoft](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/)
+
+---
+
+## Traning
+
+For [`BLOOM`](https://huggingface.co/blog/bloom-megatron-deepspeed)
+
+- Dataset: 46 Languages in 1.5TB of deduplicated massively cleaned up text
+- GPUs: 384 NVIDIA A100 80GB GPUs (48 nodes) + 32 spare gpus
+- 8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
+- CPU: AMD EPYC 7543 32-Core Processor
+- CPU memory: 512GB per node
+- GPU memory: 640GB per node
+- Inter-node connect: Omni-Path Architecture (OPA) w/ non-blocking fat tree
+- NCCL-communications network: a fully dedicated subnet
+- Disc IO network: GPFS shared with other nodes and users
+- Spent `3.5 months`
+
+
+--- 
+
+## Generation
+
+For `BLOOM`
+
+- with (i5 11gen, 16GB RAM, 1TB SSD Samsung 980 pro), the generation takes `3 minutes` per token using only the CPU
+- all in memory, take `~ 30s` per token
+
+---
+
+## Conversations
+
+> I think you are interested into this :) 
+
+---
+
+## Conversation 1 - Date
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676956295/2023-02-21_13-08-11_tfxa7p.png)
+
+---
+
+## Conversation 2 - Base64 and MongoDB for CDS
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676956761/2023-02-21_13-19-12_fxjizx.png)
+
+---
+
+## Conversation 3 - AES Decrypto
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676956404/2023-02-21_13-13-17_xh0bwf.png)
+
+---
+
+## Conversation 4 - The Programming Assistant
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676956884/2023-02-21_13-21-17_i6glaw.png)
+
+---
+
+## Conversation 5 - Need Your Input/Ask what I've known
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957119/2023-02-21_13-24-56_fbm3db.png)
+
+---
+
+## Conversation 6 - 42
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957236/2023-02-21_13-27-06_ni59iw.png)
+
+---
+
+## Conversation 7 - Translation
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957542/2023-02-21_13-32-08_uscqay.png)
+
+---
+
+## Conversation 8 - Nuclear Weapon
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957632/2023-02-21_13-33-47_lvm495.png)
+
+---
+
+## Conversation 9 - Never say 'I dont know'
+
+<style scoped>
+  p { 
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>
+
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957715/2023-02-21_13-35-08_kivp9t.png)
+
+
+---
+
+## Related Things
+
+- MariaGPT
+- [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
+- [Toolformer](https://arxiv.org/abs/2302.04761)
+
+---
+
+## Reference
+
+- [The Technology Behind BLOOM Training](https://huggingface.co/blog/bloom-megatron-deepspeed)
+- [OpenAI Used Kenyan Workers Making $2 an Hour to Filter Traumatic Content from ChatGPT](https://www.vice.com/en/article/wxn3kw/openai-used-kenyan-workers-making-dollar2-an-hour-to-filter-traumatic-content-from-chatgpt)
+- [Microsoft announces new supercomputer, lays out vision for future AI work](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/)
+- [Prerequisite to run bloom locally?](https://discuss.huggingface.co/t/prerequisite-to-run-bloom-locally/20365/3)
+
+---
+
+## Thanks
