@@ -91,7 +91,7 @@ Theo Sun
 - But in `AI perspective`, maybe the developer replacement is `NOT` a `progressive` way.
   - No need to adapt to some stupid programming principles, such as `name convention`/`code quality`/`code readability`/`reuse`
   - AI sometime will response with `wrong answer`, while human developer sometime will develop `fresh bugs`.
-  - So, imagine: end-user give their requirement/input/context, business fully processed by AI, then response result, no programming any more. make sense ?
+  - So, imagine: end-user give their requirement/input/context to AI, then business fully processed by AI, then AI response the final result, no programming any more. make sense ?
 
 ---
 
