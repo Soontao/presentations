@@ -235,7 +235,7 @@ Theo Sun
 
 ---
 
-![bg 75%](https://cdn.openai.com/chatgpt/draft-20221129c/ChatGPT_Diagram.svg)
+![bg 75%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677156784/ChatGPT_Diagram_bixw8u.svg)
 
 ---
 
