@@ -85,10 +85,10 @@ Theo Sun
 
 ## Conversation 2 - Base64 and MongoDB for CDS
 
-- But there is a lot of things missing by `ChatGPT`
+- But for `programming perspective`, there are a lot of things missing
   - Register/Override handlers/Build/Deploy
   - Connection Pool/Connection Acquire/Transaction
-- In another hand, maybe its `NOT` a `progressive` way to replace developers
+- But in `AI perspective`, maybe the developer replacement is `NOT` a `progressive` way.
   - No need to adapt to some stupid programming principles, such as `name convention`/`code quality`/`code readability`/`reuse`
   - AI sometime will response with `wrong answer`, while human developer sometime will develop `fresh bugs`.
   - So, imagine: end-user give their requirement/input/context, business fully processed by AI, then response result, no programming any more. make sense ?
@@ -158,6 +158,17 @@ Theo Sun
 </style>
 
 ![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957236/2023-02-21_13-27-06_ni59iw.png)
+
+---
+
+## Conversation 6 - 42
+
+- Not found an existing identical exact same question on WWW
+- But there are many similar questions:
+  - [What is the right question to the answer 42? - Quora](https://www.quora.com/What-is-the-right-question-to-the-answer-42)
+- Somehow, a good searcher
+  - search your question by meaning, migrate or mapping similar questions
+  - and give you a summary
 
 ---
 
