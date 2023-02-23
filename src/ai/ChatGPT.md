@@ -3,6 +3,12 @@ marp: true
 theme: dark
 ---
 
+<style>
+  img {
+    width: 100%
+  }
+</style>
+
 # ChatGPT
 
 ![bg right 70%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676954586/2023-02-21_12-41-57_fft0co.png)
@@ -200,7 +206,14 @@ Theo Sun
 
 ---
 
-## Conversation 9 - Never say 'I dont know'
+## Conversation 8 - Nuclear Weapon
+
+- AI needs more regulation
+- AI companies may also have more pressure from moral and ethical aspects
+
+---
+
+## Conversation 9 - Never say 'I don't know'
 
 <style scoped>
   p { 
@@ -211,23 +224,6 @@ Theo Sun
 </style>
 
 ![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676957715/2023-02-21_13-35-08_kivp9t.png)
-
----
-
-## Related Things
-
-- MariaGPT
-- [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
-- [Toolformer](https://arxiv.org/abs/2302.04761)
-
----
-
-## Reference
-
-- [The Technology Behind BLOOM Training](https://huggingface.co/blog/bloom-megatron-deepspeed)
-- [OpenAI Used Kenyan Workers Making $2 an Hour to Filter Traumatic Content from ChatGPT](https://www.vice.com/en/article/wxn3kw/openai-used-kenyan-workers-making-dollar2-an-hour-to-filter-traumatic-content-from-chatgpt)
-- [Microsoft announces new supercomputer, lays out vision for future AI work](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/)
-- [Prerequisite to run bloom locally?](https://discuss.huggingface.co/t/prerequisite-to-run-bloom-locally/20365/3)
 
 ---
 
@@ -260,12 +256,14 @@ Theo Sun
 - Labeler
   - [Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic](https://time.com/6247678/openai-chatgpt-kenya-workers/)
 - Supervised Learning
-- Azure AI supercomputing infrastructure.
-- In Context Learning
+- Azure AI supercomputing [infrastructure](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/).
+- In Context Learning (ICL)
+  - [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/abs/2202.12837)
+  - [What Makes Good In-Context Examples for GPT-3?](https://arxiv.org/abs/2101.06804)
 
 ---
 
-## Traning
+## Training
 
 For GPT-3
 
@@ -276,7 +274,7 @@ For GPT-3
 
 ---
 
-## Traning
+## Training
 
 For [`BLOOM`](https://huggingface.co/blog/bloom-megatron-deepspeed)
 
@@ -299,6 +297,24 @@ For `BLOOM`
 
 - with (i5 11gen, 16GB RAM, 1TB SSD Samsung 980 pro), the generation takes `3 minutes` per token using only the CPU
 - all in memory, take `~ 30s` per token
+
+---
+
+## Related Things
+
+- [Mario GPT](https://github.com/shyamsn97/mario-gpt)
+- [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
+- [Toolformer](https://arxiv.org/abs/2302.04761)
+- [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
+
+---
+
+## Reference
+
+- [The Technology Behind BLOOM Training](https://huggingface.co/blog/bloom-megatron-deepspeed)
+- [OpenAI Used Kenyan Workers Making $2 an Hour to Filter Traumatic Content from ChatGPT](https://www.vice.com/en/article/wxn3kw/openai-used-kenyan-workers-making-dollar2-an-hour-to-filter-traumatic-content-from-chatgpt)
+- [Microsoft announces new supercomputer, lays out vision for future AI work](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/)
+- [Prerequisite to run bloom locally?](https://discuss.huggingface.co/t/prerequisite-to-run-bloom-locally/20365/3)
 
 ---
 
