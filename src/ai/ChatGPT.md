@@ -300,7 +300,7 @@ For `BLOOM`
 
 ---
 
-![bg 85%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677205427/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2023-02-24_102311_qf4agd.png)
+## [![bg 85%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677205427/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2023-02-24_102311_qf4agd.png)](https://huggingface.co/bigscience/bloom)
 
 ---
 
