@@ -310,6 +310,7 @@ For `BLOOM`
 - [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
 - [Toolformer](https://arxiv.org/abs/2302.04761)
 - [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
+- [LLaMA](https://github.com/facebookresearch/llama)
 
 ---
 
