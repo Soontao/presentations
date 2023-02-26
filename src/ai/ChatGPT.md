@@ -11,7 +11,7 @@ theme: dark
 
 # ChatGPT
 
-![bg right 70%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676954586/2023-02-21_12-41-57_fft0co.png)
+![bg right 75%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676954586/2023-02-21_12-41-57_fft0co.png)
 
 Theo Sun
 2023
