@@ -24,7 +24,7 @@ Theo Sun
 - Deep Dive (10 ~ 15 mins)
   - Introduction
   - Similar Works
-  - Training
+  - Training & Inference
 - Discussion
   - survey (~5 mins)
   - result and discussion (~20 mins)
