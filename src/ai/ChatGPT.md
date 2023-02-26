@@ -336,9 +336,9 @@ For `BLOOM`
 
 ---
 
-## Survey (5 minutes)
+## [Survey](https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_25npJvwHkM9H8uq) (5 minutes)
 
-![bg right 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677395585/SV_25npJvwHkM9H8uq-qrcode_niklle.png)
+![bg right 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677396308/SV_25npJvwHkM9H8uq-qrcode_1_ha8kjt.png)
 
 ---
 
