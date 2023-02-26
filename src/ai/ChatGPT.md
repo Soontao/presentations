@@ -20,9 +20,14 @@ Theo Sun
 
 ## Agenda
 
-- Conversations
-- Introduction
-- Questions
+- Conversations (~15 mins)
+- Deep Dive (10 ~ 15 mins)
+  - Introduction
+  - Similar Works
+  - Training
+- Discussion
+  - survey (~5 mins)
+  - result and discussion (~20 mins)
 
 ---
 
@@ -69,7 +74,7 @@ Theo Sun
   }
 </style>
 
-![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1676956761/2023-02-21_13-19-12_fxjizx.png)
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/q_39/v1676956761/2023-02-21_13-19-12_fxjizx.png)
 
 ---
 
@@ -227,15 +232,28 @@ Theo Sun
 
 ---
 
+## Conversation 9 - Never say 'I don't know'
+
+- try to use existing knowledge
+- but cannot judge `facts` and `ideas`
+  - for `facts`, just answer `I don't know`
+  - for `ideas`, could migrate existing knowledge to infer
+
+---
+
 ## Introduction
 
-> GPT-3 is a powerful language processing AI model developed by OpenAI, capable of generating human-like text and has a wide range of applications. It is commonly used to create chatbots that can respond to user prompts and questions in a natural language. The model has 175 billion parameters and is one of the largest and most powerful language processing AI models to date. In summary, GPT-3 understands human language and can generate text based on the worded information it is fed.
+---
+
+## Introduction
+
+> GPT-3 is a powerful language processing AI model developed by OpenAI, capable of generating `human-like` text and has a wide range of applications. It is commonly used to create chatbots that can respond to user prompts and questions in a natural language. The model has 175 billion parameters and is one of the largest and most powerful language processing AI models to date. In summary, GPT-3 understands human language and can generate text based on the worded information it is fed.
 
 -- ChatGPT
 
 ---
 
-![bg 75%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677156784/ChatGPT_Diagram_bixw8u.svg)
+![bg 99%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677156784/ChatGPT_Diagram_bixw8u.svg)
 
 ---
 
@@ -260,6 +278,20 @@ Theo Sun
 - In Context Learning (ICL)
   - [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/abs/2202.12837)
   - [What Makes Good In-Context Examples for GPT-3?](https://arxiv.org/abs/2101.06804)
+
+---
+
+## Similar Works
+
+- [Mario GPT](https://github.com/shyamsn97/mario-gpt)
+- [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
+- [Toolformer](https://arxiv.org/abs/2302.04761)
+- [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
+- [LLaMA](https://github.com/facebookresearch/llama)
+
+---
+
+![bg 99%](https://res.cloudinary.com/drxgh9gqs/image/upload/c_crop,h_1342,q_44/v1677205427/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2023-02-24_102311_qf4agd.png)
 
 ---
 
@@ -300,17 +332,17 @@ For `BLOOM`
 
 ---
 
-## [![bg 85%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677205427/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2023-02-24_102311_qf4agd.png)](https://huggingface.co/bigscience/bloom)
+## Discussion
 
 ---
 
-## Related Things
+## Survey (5 minutes)
 
-- [Mario GPT](https://github.com/shyamsn97/mario-gpt)
-- [Bloom](https://huggingface.co/docs/transformers/model_doc/bloom)
-- [Toolformer](https://arxiv.org/abs/2302.04761)
-- [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
-- [LLaMA](https://github.com/facebookresearch/llama)
+![bg right 90%](https://res.cloudinary.com/drxgh9gqs/image/upload/v1677395585/SV_25npJvwHkM9H8uq-qrcode_niklle.png)
+
+---
+
+## Result & Discussion
 
 ---
 
