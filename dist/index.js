@@ -1,7 +1,7 @@
 
 sap.ui.getCore().attachInit(function () {
 
-  if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator && !window.location.host.includes("localhost")) {
     navigator.serviceWorker
       .register('sw.js')
       .then(regitration => {
@@ -76,6 +76,14 @@ sap.ui.getCore().attachInit(function () {
         footer: new sap.m.Toolbar({
           style: "Standard",
           content: [
+            new sap.m.Button({
+              icon: "sap-icon://nav-back",
+              text: "Back",
+              visible: sap.ui.Device.system.phone,
+              press: () => {
+                app.backMaster("initMaster")
+              }
+            }),
             new sap.m.ToolbarSpacer(),
             new sap.m.Button({
               text: "Open in Single Page",
@@ -125,6 +133,9 @@ sap.ui.getCore().attachInit(function () {
               })
             },
             itemPress: event => {
+              if (sap.ui.Device.orientation.portrait) {
+                app.toDetail("initDetail")
+              }
               const bindingItem = event
                 .getParameter("item")
                 .getBindingContext()
@@ -145,8 +156,10 @@ sap.ui.getCore().attachInit(function () {
         ],
         customHeader: new sap.m.Bar({
           contentLeft: [
+            new sap.m.Title({ text: "Presentations", visible: sap.ui.Device.system.phone }),
             new sap.m.SearchField({
               placeholder: "Search 🚀",
+              visible: !sap.ui.Device.system.phone,
               liveChange: (event) => {
                 const value = event.getParameter("newValue")
                 const binding = sap.ui.getCore().byId("list").getBinding("items")
