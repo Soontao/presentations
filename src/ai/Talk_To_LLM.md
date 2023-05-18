@@ -20,14 +20,14 @@ Theo Sun
 
 ---
 
-## Q3: Do you want to `enpower` yourself/your product with GPT/LLM ?
+## Q3: Do you want to `empower` yourself/your product with GPT/LLM ?
 
 ---
 
 ## Agenda
 
 - Parameters of LLM
-- Integration Appraoches
+- Integration Approaches
   - forward translation
   - text as everything
   - agent
