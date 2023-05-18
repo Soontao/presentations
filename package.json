@@ -46,6 +46,7 @@
     "debug": "4.3.4",
     "fast-glob": "3.2.12",
     "git-rev-sync": "3.0.2",
+    "markdown-it-html5-media": "^0.7.1",
     "mkdirp": "2.1.6",
     "pretty": "2.0.0",
     "replace": "1.2.2",

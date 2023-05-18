@@ -46,6 +46,28 @@ Theo Sun
 
 ---
 
+### Parameters - `Temperature` - Randomness
+
+---
+
+
+![](https://res.cloudinary.com/digf90pwi/video/upload/v1684387358/2023-05-18_13-11-50_zx3f51.mp4)
+
+---
+### Parameters - `Maximum Length` - Restrict Output
+
+> Avoid unnecessary token/network consumption 
+
+---
+
+![bg 95%](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,h_1389,q_54/v1684389291/2023-05-18_13-53-53_wo0pek.png)
+
+---
+
+### Parameters - Top P
+
+---
+
 ## Integration Approaches
 
 ![bg right](https://res.cloudinary.com/drxgh9gqs/image/upload/v1684339732/image_2_ak4wt9.png)
@@ -58,6 +80,6 @@ Theo Sun
 
 ---
 
-## Refernece 
+## Reference  
 
 - [DeepFloyd IF](https://huggingface.co/spaces/DeepFloyd/IF)
