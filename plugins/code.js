@@ -1,6 +1,7 @@
 const { deflateSync } = require('zlib')
 
 const krokiLangs = [
+  "d2",
   'actdiag',
   'blockdiag',
   'bpmn',

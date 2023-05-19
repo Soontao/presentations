@@ -74,6 +74,59 @@ Theo Sun
 
 ---
 
+### Forward Translation
+
+> `Translate` human text to programming language
+
+
+```d2
+shape: sequence_diagram
+user -> app: Whats my latest schedules ?
+app -> LLM: current user is xxxx@xx.xx, \ntable1 (c1, c2, ....), table2 (c4, c5...) ..., \nuser question is xxxx\nplease output with JSON format, example: \{sql:xxxx,params:\[xxxx\]\}
+LLM -> app: \{sql:cccccc,params:\[ppppp\]\}
+app -> app: db.query(ccccc, ...ppppp)
+app -> user: UI Table
+```
+
+---
+
+### Forward Translation
+
+> `Translate` human text to programming language
+
+
+```d2
+shape: sequence_diagram
+user -> app: Whats my latest schedules ?
+app -> LLM: current user is xxxx@xx.xx, \ntable1 (c1, c2, ....), table2 (c4, c5...) ..., \nuser question is xxxx\nplease output with JSON format, example: \{sql:xxxx,params:\[xxxx\]\}
+LLM -> app: \{sql:cccccc,params:\[ppppp\]\}
+app -> app: db.query(ccccc, ...ppppp)
+app -> LLM: convert table <data> to pie charts with echarts config,\nexample: \{title ... legend...\}
+LLM -> app: \{title xxx legend www\}
+app -> user: UI Chart
+```
+
+---
+
+## Text as Everything
+
+
+
+```d2
+shape: sequence_diagram
+user -> app: Whats my latest schedules ?
+app -> LLM: current user is xxxx@xx.xx, \ntable1 (c1, c2, ....), table2 (c4, c5...) ..., \nuser question is xxxx\nplease output with JSON format, example: \{sql:xxxx,params:\[xxxx\]\}
+LLM -> app: \{sql:cccccc,params:\[ppppp\]\}
+app -> app: db.query(ccccc, ...ppppp)
+app -> LLM: convert table <data> to pie charts with echarts config,\nexample: \{title ... legend...\}
+LLM -> app: \{title xxx legend www\}
+app -> user: UI Chart
+```
+
+
+
+---
+
 ## Agent
 
 ![bg left](https://res.cloudinary.com/drxgh9gqs/image/upload/v1684340254/image_4_tqgdfg.png)
