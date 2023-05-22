@@ -20,8 +20,8 @@ dependencies:
     specifier: 13.3.2
     version: 13.3.2
   '@types/debug':
-    specifier: 4.1.7
-    version: 4.1.7
+    specifier: 4.1.8
+    version: 4.1.8
   '@types/markdown-it':
     specifier: 12.2.3
     version: 12.2.3
@@ -355,8 +355,8 @@ packages:
     resolution: {integrity: sha512-eEi4j5vyQ0WRkfkBS+Sa2q1YQVo0B6cFXde2+TVpoDp7f8yPAb4wMv9jgQ23N+DpiafJVOhRQLyJdrITFwnmFw==}
     dev: false
 
-  /@types/debug@4.1.7:
-    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+  /@types/debug@4.1.8:
+    resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
       '@types/ms': 0.7.31
     dev: false
