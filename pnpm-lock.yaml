@@ -8,8 +8,8 @@ dependencies:
     specifier: 3.6.0
     version: 3.6.0
   '@marp-team/marpit':
-    specifier: 2.4.2
-    version: 2.4.2
+    specifier: 2.5.0
+    version: 2.5.0
   '@newdash/newdash':
     specifier: 5.22.0
     version: 5.22.0
@@ -92,7 +92,7 @@ packages:
     hasBin: true
     dependencies:
       '@marp-team/marp-core': 3.6.0
-      '@marp-team/marpit': 2.4.2
+      '@marp-team/marpit': 2.5.0
       chokidar: 3.5.3
       cosmiconfig: 8.1.3
       import-from: 4.0.0
@@ -116,8 +116,8 @@ packages:
     resolution: {integrity: sha512-V2tA5nLR4HR+hTGrMTaSLB7bDKi+xz1FrhytOyHV/U2ztRRjAKtlQnul+xPZ7LpRxVsLNwbmO/Alw1AwUx7eXQ==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
-      '@marp-team/marpit': 2.4.2
-      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@2.4.2)
+      '@marp-team/marpit': 2.5.0
+      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@2.5.0)
       highlight.js: 11.7.0
       katex: 0.16.4
       mathjax-full: 3.2.2
@@ -126,7 +126,7 @@ packages:
       xss: 1.0.14
     dev: false
 
-  /@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@2.4.2):
+  /@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@2.5.0):
     resolution: {integrity: sha512-VqCoAKwv1HJdzZp36dDPxznz2JZgRjkVSSPHpCzk72G2N753F0HPKXjevdjxmzN6gir9bUGBgMD1SguWJIi11A==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -135,11 +135,11 @@ packages:
       '@marp-team/marpit':
         optional: true
     dependencies:
-      '@marp-team/marpit': 2.4.2
+      '@marp-team/marpit': 2.5.0
     dev: false
 
-  /@marp-team/marpit@2.4.2:
-    resolution: {integrity: sha512-MBCMaSjkeDzF+Exq8CmhmwsMTzU7fK4NyzA7zl+hreBGppAPvOq5NCnIR2O6nOm9F0QJ9Vmxhs7ZP/BXZ+lWBw==}
+  /@marp-team/marpit@2.5.0:
+    resolution: {integrity: sha512-VHxBJR4M371u8GmACtacGjcQY3i7wYSUrMmnpp+ic0a0TBIozgbCCaRHZ8mWd0Bn4CYMpl3bKjZoq6x6Lk75fw==}
     engines: {node: '>=10'}
     dependencies:
       color-string: 1.9.1
@@ -148,7 +148,7 @@ packages:
       lodash.kebabcase: 4.1.1
       markdown-it: 13.0.1
       markdown-it-front-matter: 0.2.3
-      postcss: 8.4.21
+      postcss: 8.4.24
     dev: false
 
   /@newdash/newdash@5.22.0:
@@ -1695,8 +1695,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: false
 
-  /nanoid@3.3.4:
-    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
+  /nanoid@3.3.6:
+    resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: false
@@ -1939,7 +1939,16 @@ packages:
     resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.4
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: false
+
+  /postcss@8.4.24:
+    resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: false
