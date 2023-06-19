@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@marp-team/marp-cli':
-    specifier: 3.0.0
-    version: 3.0.0
+    specifier: 3.0.2
+    version: 3.0.2
   '@marp-team/marp-core':
     specifier: 3.7.0
     version: 3.7.0
@@ -86,8 +86,8 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /@marp-team/marp-cli@3.0.0:
-    resolution: {integrity: sha512-qcCz/o7kALc5wd37OMYCfN6IFa3fLLHAAoyoeVRDBfjRowZnVz9ECoLLwk/ZyxYDJLvvj8WWB4aZGq6BvispuQ==}
+  /@marp-team/marp-cli@3.0.2:
+    resolution: {integrity: sha512-UwZi6HJN4tdnIxagUPBphh6gbsB0GH8yy1SKa/rjcF0W/RO3Spjf25jH8N6WNQXbktdZA894+0e+wtFg8D92kw==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
