@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "@sap/cds-dk": "^4.9.7",
-    "sqlite3": "5.0.8"
+    "sqlite3": "5.1.5"
   }
 }
