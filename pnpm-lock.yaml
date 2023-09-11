@@ -8,8 +8,8 @@ dependencies:
     specifier: 3.8.1
     version: 3.8.1
   '@marp-team/marpit':
-    specifier: 2.5.1
-    version: 2.5.1
+    specifier: 2.5.3
+    version: 2.5.3
   '@newdash/newdash':
     specifier: 5.22.0
     version: 5.22.0
@@ -92,7 +92,7 @@ packages:
     hasBin: true
     dependencies:
       '@marp-team/marp-core': 3.8.1
-      '@marp-team/marpit': 2.5.1
+      '@marp-team/marpit': 2.5.3
       chokidar: 3.5.3
       cosmiconfig: 8.2.0
       is-wsl: 2.2.0
@@ -133,19 +133,6 @@ packages:
         optional: true
     dependencies:
       '@marp-team/marpit': 2.5.3
-    dev: false
-
-  /@marp-team/marpit@2.5.1:
-    resolution: {integrity: sha512-xh+P2zT93rVwwIFWEnOGatO2qOJeGae6s3EkPXl5kO3d14W7NJQV9OALZmyeZnFFl/DFQs1V/QnZkz+0nYz80A==}
-    engines: {node: '>=10'}
-    dependencies:
-      color-string: 1.9.1
-      cssesc: 3.0.0
-      js-yaml: 4.1.0
-      lodash.kebabcase: 4.1.1
-      markdown-it: 13.0.1
-      markdown-it-front-matter: 0.2.3
-      postcss: 8.4.29
     dev: false
 
   /@marp-team/marpit@2.5.3:
