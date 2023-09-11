@@ -5,8 +5,8 @@ dependencies:
     specifier: 3.2.1
     version: 3.2.1
   '@marp-team/marp-core':
-    specifier: 3.8.0
-    version: 3.8.0
+    specifier: 3.8.1
+    version: 3.8.1
   '@marp-team/marpit':
     specifier: 2.5.1
     version: 2.5.1
@@ -91,7 +91,7 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.8.0
+      '@marp-team/marp-core': 3.8.1
       '@marp-team/marpit': 2.5.1
       chokidar: 3.5.3
       cosmiconfig: 8.2.0
@@ -109,21 +109,21 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@marp-team/marp-core@3.8.0:
-    resolution: {integrity: sha512-Y9mYPLVtwvyeiVSKZsaZ9PALsDQxVz77lpL8VC7O7MiesEBLwa+wM/niF6DT700i8yePvnIjUxABwOZbZHM4ZQ==}
+  /@marp-team/marp-core@3.8.1:
+    resolution: {integrity: sha512-VIfYXokNv05e5MaO+oPdTuGKXDuDWtYZPuSk7XZUx++F+iLgI6ceaKk184/ZNrwz7dJqV7KZB+b3qPH4JlUtiA==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
-      '@marp-team/marpit': 2.5.1
-      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@2.5.1)
+      '@marp-team/marpit': 2.5.3
+      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@2.5.3)
       highlight.js: 11.8.0
       katex: 0.16.8
       mathjax-full: 3.2.2
-      postcss: 8.4.27
+      postcss: 8.4.29
       postcss-selector-parser: 6.0.13
       xss: 1.0.14
     dev: false
 
-  /@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@2.5.1):
+  /@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@2.5.3):
     resolution: {integrity: sha512-VqCoAKwv1HJdzZp36dDPxznz2JZgRjkVSSPHpCzk72G2N753F0HPKXjevdjxmzN6gir9bUGBgMD1SguWJIi11A==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -132,11 +132,24 @@ packages:
       '@marp-team/marpit':
         optional: true
     dependencies:
-      '@marp-team/marpit': 2.5.1
+      '@marp-team/marpit': 2.5.3
     dev: false
 
   /@marp-team/marpit@2.5.1:
     resolution: {integrity: sha512-xh+P2zT93rVwwIFWEnOGatO2qOJeGae6s3EkPXl5kO3d14W7NJQV9OALZmyeZnFFl/DFQs1V/QnZkz+0nYz80A==}
+    engines: {node: '>=10'}
+    dependencies:
+      color-string: 1.9.1
+      cssesc: 3.0.0
+      js-yaml: 4.1.0
+      lodash.kebabcase: 4.1.1
+      markdown-it: 13.0.1
+      markdown-it-front-matter: 0.2.3
+      postcss: 8.4.29
+    dev: false
+
+  /@marp-team/marpit@2.5.3:
+    resolution: {integrity: sha512-Ja/pRuOtTitbqxt6aJ8Z7b0jDPpbZ1q2Bsj8yUIblHXj+j9Dt7CeVXTldyzVR+Zq+LSqVvsLUeaZIVNj5A1PzA==}
     engines: {node: '>=10'}
     dependencies:
       color-string: 1.9.1
@@ -2042,15 +2055,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: false
-
-  /postcss@8.4.27:
-    resolution: {integrity: sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: false
 
   /postcss@8.4.29:
