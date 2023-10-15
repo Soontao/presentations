@@ -5,8 +5,8 @@ dependencies:
     specifier: 3.3.1
     version: 3.3.1
   '@marp-team/marp-core':
-    specifier: 3.8.1
-    version: 3.8.1
+    specifier: 3.9.0
+    version: 3.9.0
   '@marp-team/marpit':
     specifier: 2.6.1
     version: 2.6.1
@@ -91,7 +91,7 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@marp-team/marp-core': 3.8.1
+      '@marp-team/marp-core': 3.9.0
       '@marp-team/marpit': 2.6.1
       chokidar: 3.5.3
       cosmiconfig: 8.3.6
@@ -109,16 +109,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@marp-team/marp-core@3.8.1:
-    resolution: {integrity: sha512-VIfYXokNv05e5MaO+oPdTuGKXDuDWtYZPuSk7XZUx++F+iLgI6ceaKk184/ZNrwz7dJqV7KZB+b3qPH4JlUtiA==}
+  /@marp-team/marp-core@3.9.0:
+    resolution: {integrity: sha512-gi6nq0rsB1oMA8ReppW4XxmS4fisQiAsD0ZoUgLeG4h6SWatveCAA7fZyxnXfwA2UC8pNb7ktPqYdRsxvuwntA==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
     dependencies:
       '@marp-team/marpit': 2.6.1
       '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@2.6.1)
       highlight.js: 11.8.0
-      katex: 0.16.8
+      katex: 0.16.9
       mathjax-full: 3.2.2
-      postcss: 8.4.29
+      postcss: 8.4.31
       postcss-selector-parser: 6.0.13
       xss: 1.0.14
     dev: false
@@ -1357,8 +1357,8 @@ packages:
       graceful-fs: 4.2.10
     dev: false
 
-  /katex@0.16.8:
-    resolution: {integrity: sha512-ftuDnJbcbOckGY11OO+zg3OofESlbR5DRl2cmN8HeWeeFIV7wTXvAOx8kEjZjobhA+9wh2fbKeO6cdcA9Mnovg==}
+  /katex@0.16.9:
+    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
     hasBin: true
     dependencies:
       commander: 8.3.0
@@ -2039,6 +2039,15 @@ packages:
 
   /postcss@8.4.29:
     resolution: {integrity: sha512-cbI+jaqIeu/VGqXEarWkRCCffhjgXc0qjBtXpqJhTBohMUjUQnbBr0xqX3vEKudc4iviTewcJo5ajcec5+wdJw==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: false
+
+  /postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.6
