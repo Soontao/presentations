@@ -145,7 +145,7 @@ packages:
       lodash.kebabcase: 4.1.1
       markdown-it: 13.0.2
       markdown-it-front-matter: 0.2.3
-      postcss: 8.4.29
+      postcss: 8.4.31
     dev: false
 
   /@newdash/newdash@5.22.0:
@@ -2035,15 +2035,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: false
-
-  /postcss@8.4.29:
-    resolution: {integrity: sha512-cbI+jaqIeu/VGqXEarWkRCCffhjgXc0qjBtXpqJhTBohMUjUQnbBr0xqX3vEKudc4iviTewcJo5ajcec5+wdJw==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: false
 
   /postcss@8.4.31:
