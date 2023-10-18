@@ -23,8 +23,8 @@ dependencies:
     specifier: 4.1.10
     version: 4.1.10
   '@types/markdown-it':
-    specifier: 13.0.3
-    version: 13.0.3
+    specifier: 13.0.4
+    version: 13.0.4
   colors:
     specifier: 1.4.0
     version: 1.4.0
@@ -359,8 +359,8 @@ packages:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
     dev: false
 
-  /@types/markdown-it@13.0.3:
-    resolution: {integrity: sha512-5XXD3Bl9+UzneLlI7rQnDYzGT5+Z3XSzSyEwJK36lHmwDBKfjylsalyGxRTCXgFrX0gb++h7/UPPbwumhTKvBQ==}
+  /@types/markdown-it@13.0.4:
+    resolution: {integrity: sha512-FAIUdEXrCDnQmAAmJC+UeW/3p0eCI4QZ/+W0lX/h83VD3v78IgTFYftjnAeXS8H0g4PFQCgipc51cQDA8tjgLw==}
     dependencies:
       '@types/linkify-it': 3.0.2
       '@types/mdurl': 1.0.2
