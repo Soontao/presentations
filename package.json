@@ -44,7 +44,7 @@
     "@types/markdown-it": "13.0.5",
     "colors": "1.4.0",
     "debug": "4.3.4",
-    "fast-glob": "3.3.1",
+    "fast-glob": "3.3.2",
     "git-rev-sync": "3.0.2",
     "markdown-it-html5-media": "^0.7.1",
     "mkdirp": "2.1.6",
