@@ -41,7 +41,7 @@
     "@openui5/ts-types": "1.120.0",
     "@textlint/markdown-to-ast": "13.3.3",
     "@types/debug": "4.1.11",
-    "@types/markdown-it": "13.0.5",
+    "@types/markdown-it": "13.0.6",
     "colors": "1.4.0",
     "debug": "4.3.4",
     "fast-glob": "3.3.2",
