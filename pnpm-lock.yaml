@@ -14,8 +14,8 @@ dependencies:
     specifier: 5.22.0
     version: 5.22.0
   '@openui5/ts-types':
-    specifier: 1.120.0
-    version: 1.120.0
+    specifier: 1.120.1
+    version: 1.120.1
   '@textlint/markdown-to-ast':
     specifier: 13.4.0
     version: 13.4.0
@@ -177,8 +177,8 @@ packages:
       fastq: 1.15.0
     dev: false
 
-  /@openui5/ts-types@1.120.0:
-    resolution: {integrity: sha512-45KyHfmmin/2En/CmmR5dGhbzHSvUaCqkXvdY/LZ25Jw9TsNMoIvQgkStwNCKPQV0VGgpHhnw279OnPbGrCPjQ==}
+  /@openui5/ts-types@1.120.1:
+    resolution: {integrity: sha512-iLxSEOFjy6N+Jxdvs1jJ8Y8lrOv9Fos++VkSwiFMkBE464P1GejixiOFR4jhEp9yeup8185d3tLoldyeEkkkpQ==}
     dev: false
 
   /@puppeteer/browsers@1.8.0:
