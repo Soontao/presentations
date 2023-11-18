@@ -42,7 +42,7 @@ const marpKrokiPlugin = (md) => {
   // each time render will create a new plugin
   const { fence } = md.renderer.rules
   let monacoCDNAdded = false
-  const baseCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.0'
+  const baseCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0'
   md.renderer.rules.fence = (tokens, idx, options, env, self) => {
     const info = md.utils.unescapeAll(tokens[idx].info).trim()
 
@@ -80,6 +80,8 @@ const marpKrokiPlugin = (md) => {
                 insertSpaces: true,
                 scrollBeyondLastLine: false,
                 lineNumbers: 'off',
+                wordWrap: 'on',
+                minimap: { enabled: false },
                 theme: 'vs-dark',
               });
             });
