@@ -1,6 +1,6 @@
 const { deflateSync } = require('zlib')
 
-const krokiLangs = [
+const diagramLangs = [
   "d2",
   'actdiag',
   'blockdiag',
@@ -31,6 +31,7 @@ const monacoLanguageMapping = {
   "js": "javascript",
   "ts": "typescript",
   "json5": "json",
+  "jsonc": "json",
 }
 
 const entrypoint = 'https://kroki.io/'
@@ -38,7 +39,7 @@ const entrypoint = 'https://kroki.io/'
 /**
  * @type {import("markdown-it").PluginSimple} md 
  */
-const marpKrokiPlugin = (md) => {
+const codeBlockPlugin = (md) => {
   // each time render will create a new plugin
   const { fence } = md.renderer.rules
   let monacoCDNAdded = false
@@ -49,7 +50,7 @@ const marpKrokiPlugin = (md) => {
     if (info) {
       const lang = String(info?.split(/(\s+)/g)?.[0]).toLowerCase()
 
-      if (krokiLangs.includes(lang)) {
+      if (diagramLangs.includes(lang)) {
         const data = deflateSync(tokens[idx].content).toString('base64url')
         return `<p><img style="max-height: 400px; max-width: 100%" src="${entrypoint}${lang}/svg/${data}"/></p>`
       }
@@ -95,4 +96,4 @@ const marpKrokiPlugin = (md) => {
   }
 }
 
-module.exports = marpKrokiPlugin
+module.exports = codeBlockPlugin
