@@ -14,7 +14,7 @@ Theo Sun
 
 ## About this session
 
-To discuss programming itself instead of others (engineering, coding, business)
+To share some ideas about programming itself instead of others (engineering, coding, business)
 
 ---
 
