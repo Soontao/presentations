@@ -54,8 +54,7 @@ console.log(a)
 ![bg left 100%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/yl9jpbmdxdkeida7b7dy)
 
 ```js
-var a = 1
-var b = add(add(a)) // cost
+var b = add(add(1)) // cost
 console.log(b)
 ```
 
