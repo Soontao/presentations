@@ -8,7 +8,7 @@
     "node": ">=14",
     "npm": ">=7"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "server": "marp -p --server ./src",
     "release": "npx standard-version --commit-all --no-verify",
@@ -41,7 +41,7 @@
     "@openui5/ts-types": "1.120.1",
     "@textlint/markdown-to-ast": "13.4.0",
     "@types/debug": "4.1.12",
-    "@types/markdown-it": "13.0.6",
+    "@types/markdown-it": "13.0.7",
     "colors": "1.4.0",
     "debug": "4.3.4",
     "fast-glob": "3.3.2",
