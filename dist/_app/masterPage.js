@@ -1,4 +1,5 @@
 import viewModel from "./model.js";
+import app from './app.js'
 
 
 export const masterPage = new sap.m.Page({
