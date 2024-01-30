@@ -17,6 +17,7 @@ Theo Sun
 ![bg right 100%](https://res.cloudinary.com/digf90pwi/image/upload/f_auto,q_auto/u04cbdo7sckn08qav5r9)
 
 - [Playground for OpenChat 7B 1210](https://colab.research.google.com/drive/1xqn86ota28L9pscNOdZHvCyqtJsGjQiJ?usp=sharing)
+- [bloom](https://huggingface.co/bigscience/bloom)
 
 ---
 
@@ -47,7 +48,7 @@ Theo Sun
 
 ## Prompt Template
 
-> act as the `user` in full text
+> Act as the `user` in full text
 
 ![bg right 80%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/gty25nx1xw74eepnkrjp)
 
