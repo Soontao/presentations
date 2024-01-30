@@ -43,6 +43,11 @@ Theo Sun
 
 ![bg right 80%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/rbjn4p072xlnhildctgu)
 
+---
+
+## Text Generation
+
+![bg right 80%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/m4owv2lnptchcs3iwp1c)
 
 ---
 
