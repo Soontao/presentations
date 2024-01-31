@@ -28,7 +28,7 @@ Theo Sun
 
 $$tokens = tokenizer.encode(sentence)$$
 
-$$output\_tokens[n] = model.generate(tokens + output\_token[0...n-1])$$
+$$output\_tokens[n] = model.generate(tokens, ...output\_token[0...n-1])$$
 
 $$output\_sentences = tokenizer.decode(output\_tokens)$$
 
@@ -139,23 +139,46 @@ George Washington was unanimously elected as the first President of the United S
 
 ---
 
-Now, we have a model, we have a pattern, it could be interacted convinetly, let's think about content.
+Now, we have a model, we have a pattern, it could be interacted convinetly. 
+
+Let's think about generation (level 2)
+
+$$output\_tokens[n] = model.generate(tokens, ...output\_token[0...n-1])$$
 
 ---
 
-## Embedding
+## Generation (L2) - Chat Template
+
+> chat model is already trained with chats conversations, so for (raw) prompt, you must `indicate` model to fill as `assistant` 
+
+
+```text
+GPT4 Correct User: please give me a joke
+```
+
+```text
+GPT4 Correct User: please give me a joke
+GPT4 Correct Assistant: 
+```
 
 ---
 
-### Self Attention
+## Generation (L2) - In fact, if you want, you can indicate more for LLM
+
+> which is not allowed by public LLM generation provider
+
+```text
+GPT4 Correct User: give me a joke
+GPT4 Correct Assistant: npm is a joke because
+```
 
 ---
 
-### Auto Regression
+## Generation (L2) - Numeric Problem
 
----
+> in fact LLM treat input tokens discrete values, you cannot imagine how coule it be able to proceed continuous numeric space 
 
-### Positional Encoding
+![bg right 95%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/emp543wjhcvrdtq195yj)
 
 ---
 
