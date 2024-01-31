@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: dark
+math: mathjax
 ---
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/f_auto,q_auto/qtji6rjyijfc9zatldbc)
@@ -22,6 +23,8 @@ Theo Sun
 ---
 
 ## Transformer
+
+![bg right 85%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/iclmedfdw7rdrxjvzosw)
 
 $$next\_token = f(tokens)$$
 
