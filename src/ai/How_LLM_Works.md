@@ -216,8 +216,8 @@ GPT4 Correct Assistant: npm is a joke because
 
 for example you want to fill serial documentation into the LLM
 
-- [convert CAP relevant articles to a dataset](https://colab.research.google.com/drive/1zGoW5nSMKKECO0wc_U6KBPRW5CE8JAz7?usp=sharing)
-- [fine tune OpenChat model with 3 CAP datasets, qlora](https://colab.research.google.com/drive/1jor9dFSqb0S-U8Ty03PJrWxaj-HvfJqB?usp=sharing)
+- how to [convert CAP relevant articles to a dataset](https://colab.research.google.com/drive/1zGoW5nSMKKECO0wc_U6KBPRW5CE8JAz7?usp=sharing)
+- how to [fine tune OpenChat model with 3 CAP datasets, qlora](https://colab.research.google.com/drive/1jor9dFSqb0S-U8Ty03PJrWxaj-HvfJqB?usp=sharing)
 
 ---
 
@@ -235,6 +235,18 @@ for example you want to fill serial documentation into the LLM
 > preference, security, compliance
 
 - [orca_dpo_pairs](https://huggingface.co/datasets/Intel/orca_dpo_pairs)
+
+---
+
+## Generation (L3)
+
+if, I say, LLM itself, is a search engine ? 
+if, I say, LLM itself, is a pattern matching tool for language ? 
+
+`Attention` give the capability to LLM
+
+- search whole train dataset to get most reasonable next word
+- lookup input content
 
 ---
 
