@@ -212,7 +212,7 @@ GPT4 Correct Assistant: npm is a joke because
 
 ---
 
-## Fill with knowledge
+## SFT - Fill with knowledge
 
 for example you want to fill serial documentation into the LLM
 
@@ -221,7 +221,7 @@ for example you want to fill serial documentation into the LLM
 
 ---
 
-## Fine tune with new skill
+## SFT - Fine tune with new skill
 
 > you want to enable `function call` feature for the LLM, use SFT to fine tune the model with dataset
 
@@ -230,7 +230,7 @@ for example you want to fill serial documentation into the LLM
 
 ---
 
-## DPO
+## DPO - alignment with AI
 
 > preference, security, compliance
 
