@@ -133,7 +133,7 @@ George Washington was unanimously elected as the first President of the United S
 
 - there has a questioner (human)
 - there has a answerer (model)
-- each `block` will have a stop 
+- each `block` will have a `stop`
 
 > if you think about AST ....
 
