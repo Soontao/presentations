@@ -139,7 +139,7 @@ George Washington was unanimously elected as the first President of the United S
 
 ---
 
-Now, we have a model, we have a pattern, it could be interacted convinetly , let's think about content.
+Now, we have a model, we have a pattern, it could be interacted convinetly, let's think about content.
 
 ---
 
