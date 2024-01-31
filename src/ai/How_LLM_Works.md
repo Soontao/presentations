@@ -21,6 +21,12 @@ Theo Sun
 
 ---
 
+## Transformer
+
+$$next\_token = f(tokens)$$
+
+---
+
 ## Text Generation
 
 > original, the task for LLM is [`completion`](https://huggingface.co/bigscience/bloom)
