@@ -147,6 +147,17 @@ $$output\_tokens[n] = model.generate(tokens, ...output\_token[0...n-1])$$
 
 ---
 
+## Generation (L2) - Nature
+
+- reference `input tokens` and `generted tokens`
+
+it means, to get better performance, you have two options
+
+- provide more input
+- let LLM generate more output
+
+---
+
 ## Generation (L2) - Chat Template
 
 > chat model is already trained with chats conversations, so for (raw) prompt, you must `indicate` model to fill as `assistant` 
@@ -174,15 +185,56 @@ GPT4 Correct Assistant: npm is a joke because
 
 ---
 
-## Generation (L2) - Numeric Problem
+## Geneation (L2) - more token, better performance
 
-> in fact LLM treat input tokens discrete values, you cannot imagine how coule it be able to proceed continuous numeric space 
+- Chain of Thoughts
+- Tree of Thoughts
+
+---
+
+## Generation (L2) - Numeric
+
+> in fact LLM treat input tokens discrete values, you cannot imagine how coule it be able to proceed continuous numeric space
+
+> note: language is limited
 
 ![bg right 95%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/emp543wjhcvrdtq195yj)
 
 ---
 
 ## How to fine tune with model
+
+
+- model - huggingface
+- computing - runpod.io, and more
+- dataset - huggingface/self prepration
+
+
+---
+
+## Fill with knowledge
+
+for example you want to fill serial documentation into the LLM
+
+- [convert CAP relevant articles to a dataset](https://colab.research.google.com/drive/1zGoW5nSMKKECO0wc_U6KBPRW5CE8JAz7?usp=sharing)
+- [fine tune OpenChat model with 3 CAP datasets, qlora](https://colab.research.google.com/drive/1jor9dFSqb0S-U8Ty03PJrWxaj-HvfJqB?usp=sharing)
+
+---
+
+## Fine tune with new skill
+
+> you want to enable `function call` feature for the LLM, use SFT to fine tune the model with dataset
+
+- [glaiveai/glaive-function-calling-v2](https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2)
+- [Trelis/function_calling_v3](https://huggingface.co/datasets/Trelis/function_calling_v3)
+
+---
+
+## DPO
+
+> preference, security, compliance
+
+- [orca_dpo_pairs](https://huggingface.co/datasets/Intel/orca_dpo_pairs)
 
 ---
 
@@ -191,6 +243,7 @@ GPT4 Correct Assistant: npm is a joke because
 - [tensor2tensor](https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb)
 - [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 - [OpenAI - Tokenizer](https://platform.openai.com/tokenizer)
+- [glaiveai/glaive-function-calling-v2](https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2)
 
 
 ---
