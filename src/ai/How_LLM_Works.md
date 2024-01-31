@@ -202,12 +202,17 @@ GPT4 Correct Assistant: npm is a joke because
 
 ---
 
-## How to fine tune a open source model
+## How to fine tune an open source model
 
 
-- model - huggingface
+- find a model - huggingface (more than 7B parameters)
+    - llama
+    - OpenChat
+    - Mistral
 - computing - runpod.io, and more
-- dataset - huggingface/self prepration
+- dataset
+    - existed ds from huggingface
+    - prepare a new one
 
 
 ---
