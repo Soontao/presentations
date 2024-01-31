@@ -42,6 +42,14 @@ $$output\_sentences = tokenizer.decode(output\_tokens)$$
 
 ---
 
+## Attention of Transformer
+
+- [GPT 2 Attention View](https://colab.research.google.com/drive/1YFoZRtK6bDSGxKS7afo_aVaBXSssMexk?usp=sharing)
+
+![bg right](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/usan8bhhv3pqchgiypiu)
+
+---
+
 ## Generation
 
 > original, the task for LLM is [`completion`](https://huggingface.co/bigscience/bloom)
@@ -52,7 +60,7 @@ $$output\_sentences = tokenizer.decode(output\_tokens)$$
 
 ## Generation
 
-> Pattern Apply
+> LLM shows excellent imitation ability - Pattern to Pattern
 
 ![bg right 80%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/isg2eupysozg20qrb9yr)
 
@@ -60,7 +68,7 @@ $$output\_sentences = tokenizer.decode(output\_tokens)$$
 
 ## Generation
 
-> There is no interaction between YOU and AI, its just try to `complete` 
+> There is no interaction between YOU and AI, it just try to `fill more words and make its fluent` 
 
 ![bg right 80%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/rbjn4p072xlnhildctgu)
 
@@ -68,8 +76,14 @@ $$output\_sentences = tokenizer.decode(output\_tokens)$$
 
 ## Generation
 
+> another example
+
 ```text
-the first president of US is George Washington
+the first president of US is
+```
+
+```text
+George Washington
 
 George Washington was unanimously elected as the first President of the United States on April 30, 1789. He took office on the same day and served two terms until March 4, 1797.
 
@@ -110,6 +124,18 @@ George Washington was unanimously elected as the first President of the United S
 > Act as the `questioner`/`answerer` in full text
 
 ![bg right 75%](https://res.cloudinary.com/drxgh9gqs/image/upload/f_auto,q_auto/gty25nx1xw74eepnkrjp)
+
+---
+
+## Chat Generation
+
+> Chat is a `pattern` means
+
+- there has a questioner (human)
+- there has a answerer (model)
+- each `block` will have a stop 
+
+> if you think about AST ....
 
 ---
 
