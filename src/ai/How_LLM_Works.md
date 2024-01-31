@@ -256,6 +256,10 @@ if, I say, LLM itself, is a pattern matching tool for language ?
 
 ---
 
+> The limits of my language means the limits of my world - `Wittgenstein`
+
+---
+
 ## Reference
 
 - [tensor2tensor](https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb)
