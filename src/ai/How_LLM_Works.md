@@ -5,7 +5,7 @@ theme: dark
 
 ![bg right](https://res.cloudinary.com/digf90pwi/image/upload/f_auto,q_auto/qtji6rjyijfc9zatldbc)
 
-# How the Large Language Model Works
+# How does Large Language Model work
 
 Theo Sun
 2024
@@ -84,6 +84,13 @@ Theo Sun
 ---
 
 ## How to fine tune with model
+
+---
+
+## Reference
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
 
 ---
 
