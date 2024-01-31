@@ -202,7 +202,7 @@ GPT4 Correct Assistant: npm is a joke because
 
 ---
 
-## How to fine tune with model
+## How to fine tune a open source model
 
 
 - model - huggingface
@@ -247,6 +247,7 @@ if, I say, LLM itself, is a pattern matching tool for language ?
 
 - search whole train dataset to get most reasonable next word
 - lookup input content
+- follow known pattern
 
 ---
 
