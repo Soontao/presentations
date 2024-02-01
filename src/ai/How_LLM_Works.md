@@ -205,7 +205,7 @@ GPT4 Correct Assistant: npm is a joke because
 ## How to fine tune an open source model
 
 
-- find a model - huggingface (more than 7B parameters)
+- find a model - huggingface (>= 7B parameters)
     - llama
     - OpenChat
     - Mistral
@@ -223,6 +223,7 @@ for example you want to fill serial documentation into the LLM
 
 - how to [convert CAP relevant articles to a dataset](https://colab.research.google.com/drive/1zGoW5nSMKKECO0wc_U6KBPRW5CE8JAz7?usp=sharing)
 - how to [fine tune OpenChat model with 3 CAP datasets, qlora](https://colab.research.google.com/drive/1jor9dFSqb0S-U8Ty03PJrWxaj-HvfJqB?usp=sharing)
+- [evaluation](https://colab.research.google.com/drive/1kB_aUP8Hp941GwJ6mB2yNxEW-UzMEnzB?usp=sharing)
 
 ---
 
@@ -252,7 +253,7 @@ if, I say, LLM itself, is a pattern matching tool for language ?
 
 - search whole train dataset to get most reasonable next word
 - lookup input content
-- follow known pattern
+- follow pattern
 
 ---
 
