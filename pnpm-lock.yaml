@@ -21,8 +21,8 @@ dependencies:
     specifier: 1.120.6
     version: 1.120.6
   '@textlint/markdown-to-ast':
-    specifier: 14.0.1
-    version: 14.0.1
+    specifier: 14.0.2
+    version: 14.0.2
   '@types/debug':
     specifier: 4.1.12
     version: 4.1.12
@@ -229,6 +229,10 @@ packages:
     resolution: {integrity: sha512-7yc69/ip20OG3TrueSeGh/fSwZSuzxFkrxlMDDhWwSxq+/MXczshRx9HRczoy4uvecLgl1NHy/A1En6j4ag34A==}
     dev: false
 
+  /@textlint/ast-node-types@14.0.2:
+    resolution: {integrity: sha512-EYVyA4+G+KRNkNW5nytg61VvNtwy7JXSujGrsb4FB2pTA8Hwq/0n6TMXKVdL29n+EhyMIKmmqHFY1rjBwh3B/A==}
+    dev: false
+
   /@textlint/ast-tester@14.0.1:
     resolution: {integrity: sha512-SOdWGQCoJHOSTvYMKXRh/GLfAqK7gPuYEg+ATFviO+0eETWvQEj9Z5C7PGeVaA9R8nbiP6fFOyZ4C91yhnMuBQ==}
     dependencies:
@@ -317,10 +321,10 @@ packages:
       - supports-color
     dev: false
 
-  /@textlint/markdown-to-ast@14.0.1:
-    resolution: {integrity: sha512-PBNQ1+fhkj9I1wTg010WZxXndt/Cw1R7ytJIomKa56dWuhM6KUjCsFfwa1HfrWjP7PBJdTghL6wlyvktyvaW2A==}
+  /@textlint/markdown-to-ast@14.0.2:
+    resolution: {integrity: sha512-4Z23NejawSfdkAEx7CrSt8on++s9V0QNnaYPUWCKbobjymvjO/VtFmBltz3zzuKsWqCPhyxWOaQQ+ezZmsj/oA==}
     dependencies:
-      '@textlint/ast-node-types': 14.0.1
+      '@textlint/ast-node-types': 14.0.2
       debug: 4.3.4
       mdast-util-gfm-autolink-literal: 0.1.3
       remark-footnotes: 3.0.0
@@ -355,7 +359,7 @@ packages:
   /@textlint/textlint-plugin-markdown@14.0.1:
     resolution: {integrity: sha512-Q5ht+anCAj7X2PmK6yJF8t0dCEXUQouX5O9X+jpPzaOKcZHlHQqU5ta4NpjUAyHyxtkzlrOP+5hA9FoHiM0jvw==}
     dependencies:
-      '@textlint/markdown-to-ast': 14.0.1
+      '@textlint/markdown-to-ast': 14.0.2
     transitivePeerDependencies:
       - supports-color
     dev: false
