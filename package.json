@@ -47,7 +47,7 @@
     "fast-glob": "3.3.2",
     "git-rev-sync": "3.0.2",
     "markdown-it-html5-media": "^0.7.1",
-    "mkdirp": "2.1.6",
+    "mkdirp": "3.0.1",
     "pretty": "2.0.0",
     "replace": "1.2.2",
     "textlint": "14.0.4"
