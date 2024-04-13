@@ -50,7 +50,7 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
           const fileRelBaseDir = path.dirname(fileRelPath)
 
           // create -p ../dist/sap/cf
-          await mkdirp(path.join(targetBasePath, fileRelBaseDir))
+          await mkdirp.mkdirp(path.join(targetBasePath, fileRelBaseDir))
 
           const source = path.join(sourceBasePath, fileRelPath);
 
