@@ -7,6 +7,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@sap/approuter": "latest"
+    "@sap/approuter": "16.3.0"
   }
 }
