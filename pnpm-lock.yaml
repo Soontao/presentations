@@ -18,8 +18,8 @@ dependencies:
     specifier: 5.22.0
     version: 5.22.0
   '@openui5/ts-types':
-    specifier: 1.122.1
-    version: 1.122.1
+    specifier: 1.123.0
+    version: 1.123.0
   '@textlint/markdown-to-ast':
     specifier: 14.0.4
     version: 14.0.4
@@ -199,8 +199,8 @@ packages:
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
     dev: false
 
-  /@openui5/ts-types@1.122.1:
-    resolution: {integrity: sha512-23YckOdW7rxNNx5fkVGOWGxj/x+60hwv3UUj/UPK/iZXH8Y8RcgKGghzefNyfWxSwqcYlgqjkU5Ziv+kbM5cKA==}
+  /@openui5/ts-types@1.123.0:
+    resolution: {integrity: sha512-8gcftw4deQDCpx6J6Ea/GV/HnF5fKhpjoP5ohif0e5wKC52XkuZSZ3ZhTM4MaD8Ga9qX9b/byp3jjg16GdcrfQ==}
     dev: false
 
   /@pkgjs/parseargs@0.11.0:
