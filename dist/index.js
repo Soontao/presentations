@@ -1,5 +1,4 @@
-sap.ui.getCore().attachInit(async function () {
-
+sap.ui.getCore().ready(async function () {
   const { app } = await import("./_app/app.js")
   const { viewModel, refreshModel } = await import("./_app/model.js")
 
@@ -7,9 +6,9 @@ sap.ui.getCore().attachInit(async function () {
 
   if ('serviceWorker' in navigator && !window.location.host.includes("localhost")) {
     try {
-      const regitration = await navigator.serviceWorker.register('sw.js')
-      regitration.addEventListener("updatefound", () => {
-        const worker = regitration.installing;
+      const registration = await navigator.serviceWorker.register('sw.js')
+      registration.addEventListener("updatefound", () => {
+        const worker = registration.installing;
         worker.addEventListener('statechange', () => {
           if (worker.state === "activated") {
             sap?.m?.MessageToast?.show?.("The presentations have been updated.")
