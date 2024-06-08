@@ -18,8 +18,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       '@newdash/newdash':
-        specifier: 5.22.1
-        version: 5.22.1
+        specifier: 5.23.1
+        version: 5.23.1
       '@openui5/ts-types':
         specifier: 1.124.1
         version: 1.124.1
@@ -110,8 +110,8 @@ packages:
     resolution: {integrity: sha512-4S+4ty/pjwrXe3dDxenD8ZU5MkqyYyfiuQdinjbrkTyUHmjjlzOyexIYYB4JX/MyjWw1QudrJYTdk/FcxLpQCA==}
     engines: {node: '>=18'}
 
-  '@newdash/newdash@5.22.1':
-    resolution: {integrity: sha512-EDtY/brpbzetMkMLQBOB8vUcuFO3Oqk/WysmjqpR74DYMiEhwBLwZkDv578a0YQFAQpDBFnI2ZGAXVR36QQTWA==}
+  '@newdash/newdash@5.23.1':
+    resolution: {integrity: sha512-yVMMjSNKUyUC9dXM+h3M7D3e+MwKWeK6dqn0K3OkAIFkHY9/+9dXLncBipa2P3nQ7SJJlFaa0Gwx1OioXbJFhg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2014,7 +2014,7 @@ snapshots:
       markdown-it-front-matter: 0.2.4
       postcss: 8.4.38
 
-  '@newdash/newdash@5.22.1': {}
+  '@newdash/newdash@5.23.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
