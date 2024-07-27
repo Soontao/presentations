@@ -36,8 +36,8 @@ importers:
         specifier: 1.4.0
         version: 1.4.0
       debug:
-        specifier: 4.3.5
-        version: 4.3.5
+        specifier: 4.3.6
+        version: 4.3.6
       fast-glob:
         specifier: 3.3.2
         version: 3.3.2
@@ -484,8 +484,8 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+  debug@4.3.6:
+    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -2052,7 +2052,7 @@ snapshots:
   '@textlint/ast-tester@14.0.4':
     dependencies:
       '@textlint/ast-node-types': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2066,7 +2066,7 @@ snapshots:
       '@textlint/module-interop': 14.0.4
       '@textlint/types': 14.0.4
       '@textlint/utils': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
       rc-config-loader: 4.1.3
       try-resolve: 1.0.1
     transitivePeerDependencies:
@@ -2079,7 +2079,7 @@ snapshots:
       '@textlint/module-interop': 14.0.4
       '@textlint/types': 14.0.4
       chalk: 4.1.2
-      debug: 4.3.5
+      debug: 4.3.6
       diff: 5.2.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
@@ -2097,7 +2097,7 @@ snapshots:
       '@textlint/source-code-fixer': 14.0.4
       '@textlint/types': 14.0.4
       '@textlint/utils': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
       fast-equals: 4.0.3
       structured-source: 4.0.0
     transitivePeerDependencies:
@@ -2110,7 +2110,7 @@ snapshots:
       '@textlint/module-interop': 14.0.4
       '@textlint/types': 14.0.4
       chalk: 4.1.2
-      debug: 4.3.5
+      debug: 4.3.6
       js-yaml: 3.14.1
       lodash: 4.17.21
       pluralize: 2.0.0
@@ -2125,7 +2125,7 @@ snapshots:
   '@textlint/markdown-to-ast@14.0.4':
     dependencies:
       '@textlint/ast-node-types': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
       mdast-util-gfm-autolink-literal: 0.1.3
       remark-footnotes: 3.0.0
       remark-frontmatter: 3.0.0
@@ -2141,7 +2141,7 @@ snapshots:
   '@textlint/source-code-fixer@14.0.4':
     dependencies:
       '@textlint/types': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2207,7 +2207,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2464,7 +2464,7 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  debug@4.3.5:
+  debug@4.3.6:
     dependencies:
       ms: 2.1.2
 
@@ -2626,7 +2626,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -2746,7 +2746,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.3.5
+      debug: 4.3.6
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
@@ -2827,14 +2827,14 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.4:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -3253,7 +3253,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -3376,7 +3376,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.6
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
@@ -3496,7 +3496,7 @@ snapshots:
   proxy-agent@6.3.1:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.6
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
       lru-cache: 7.18.3
@@ -3537,7 +3537,7 @@ snapshots:
 
   rc-config-loader@4.1.3:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6
       js-yaml: 4.1.0
       json5: 2.2.3
       require-from-string: 2.0.2
@@ -3718,7 +3718,7 @@ snapshots:
   socks-proxy-agent@8.0.3:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.6
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
@@ -3866,7 +3866,7 @@ snapshots:
       '@textlint/textlint-plugin-text': 14.0.4
       '@textlint/types': 14.0.4
       '@textlint/utils': 14.0.4
-      debug: 4.3.5
+      debug: 4.3.6
       file-entry-cache: 5.0.1
       get-stdin: 5.0.1
       glob: 7.2.3
