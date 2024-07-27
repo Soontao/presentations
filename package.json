@@ -43,7 +43,7 @@
     "@types/debug": "4.1.12",
     "@types/markdown-it": "14.1.2",
     "colors": "1.4.0",
-    "debug": "4.3.5",
+    "debug": "4.3.6",
     "fast-glob": "3.3.2",
     "git-rev-sync": "3.0.2",
     "markdown-it-html5-media": "^0.7.1",
