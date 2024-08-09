@@ -68,7 +68,7 @@ typings/
 .DS_Store
 
 # generated
-*.html
+dist/**
 presentations.json
 
 # pptx
@@ -78,7 +78,6 @@ presentations.json
 *.zip
 xs-security.json
 *.mta
-dist/sw.js
 
 # slidev
 assets

@@ -1,16 +1,23 @@
 
 const process = require("process")
 const path = require("path").posix
+const fs = require("fs").promises
+
+async function copyFile(source, target) {
+  await fs.writeFile(
+    target,
+    await fs.readFile(source),
+  )
+}
 
 function build(workspace = process.cwd(), outputDirectory = "dist") {
 
   require("colors")
   const os = require("os")
-  const fs = require("fs").promises
+
   const { trimPrefix } = require("@newdash/newdash/trimPrefix");
   const { concurrency } = require("@newdash/newdash/concurrency");
   const { findTitleForMarkdown } = require("./utils")
-  const replace = require("replace")
   const formats = (process.env.FORMATS || "html").split(",")
   const fileTypes = (process.env.FILE_TYPES || "marp").split(",")
   const git = require('git-rev-sync');
@@ -102,25 +109,33 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
 
       console.log("navigation file generated, total presentations: %s", navigation.length)
 
-      replace({
-        regex: "DEFAULT_CACHE",
-        replacement: `CACHE_REV_${git.short()}`,
-        paths: [path.join(workspace, outputDirectory, "sw.js")],
-        recursive: false,
-        silent: false,
-      })
+      await copyFile(
+        path.join(sourceBasePath, "icon.png"),
+        path.join(outputDirectory, "icon.png")
+      )
 
-      replace({
-        regex: /CACHE_REV_.{7}/,
-        replacement: `CACHE_REV_${git.short()}`,
-        paths: [path.join(workspace, outputDirectory, "sw.js")],
-        recursive: false,
-        silent: false,
-      })
+      await copyFile(
+        path.join(sourceBasePath, "index.html"),
+        path.join(outputDirectory, "index.html")
+      )
 
+      const content = await fs.readFile(path.join(sourceBasePath, "sw.js"), 'utf-8')
+
+      await fs.writeFile(
+        path.join(workspace, outputDirectory, "sw.js"),
+        content
+          .replace(
+            "DEFAULT_CACHE",
+            `CACHE_REV_${git.short()}`
+          )
+          .replace(
+            /CACHE_REV_.{7}/,
+            `CACHE_REV_${git.short()}`,
+          ),
+        { encoding: "utf-8" }
+      )
 
       process.exit()
-
 
     }
   )()
