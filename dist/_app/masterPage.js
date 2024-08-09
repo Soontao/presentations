@@ -38,7 +38,7 @@ export const masterPage = new sap.m.Page({
     })
   ],
   customHeader: new sap.m.Bar({
-    contentLeft: [
+    contentMiddle: [
       new sap.m.Title({ text: "Presentations", visible: sap.ui.Device.system.phone }),
       new sap.m.SearchField({
         placeholder: "Search 🚀",
