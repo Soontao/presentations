@@ -109,15 +109,12 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
 
       console.log("navigation file generated, total presentations: %s", navigation.length)
 
-      await copyFile(
-        path.join(sourceBasePath, "icon.png"),
-        path.join(outputDirectory, "icon.png")
-      )
-
-      await copyFile(
-        path.join(sourceBasePath, "index.html"),
-        path.join(outputDirectory, "index.html")
-      )
+      for (const element of ['icon.png', 'index.js', 'index.html']) {
+        await copyFile(
+          path.join(sourceBasePath, element),
+          path.join(outputDirectory, element)
+        )
+      }
 
       const content = await fs.readFile(path.join(sourceBasePath, "sw.js"), 'utf-8')
 

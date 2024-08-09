@@ -1,5 +1,5 @@
 // update cache version after release
-const CACHE_VERSION = 'CACHE_REV_5c8638c';
+const CACHE_VERSION = 'DEFAULT_CACHE';
 
 const CACHE_STATIC = 'CACHE_STATIC_RES';
 
