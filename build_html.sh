@@ -2,4 +2,4 @@
 # CI build script
 # generate html only
 export FORMATS=html
-node scripts/build.js
+npm run build

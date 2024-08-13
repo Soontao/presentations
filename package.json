@@ -12,7 +12,8 @@
   "scripts": {
     "server": "marp -p --server ./src",
     "release": "npx standard-version --commit-all --no-verify",
-    "build": "node scripts/build.js"
+    "esbuild": "esbuild src/index.js --minify --sourcemap --target= --bundle --outfile=dist/index.js",
+    "build": "npm run esbuild && node scripts/build.js"
   },
   "husky": {
     "hooks": {
@@ -51,5 +52,8 @@
     "pretty": "2.0.0",
     "replace": "1.2.2",
     "textlint": "14.0.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0"
   }
 }

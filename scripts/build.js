@@ -66,19 +66,15 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
           switch (fileType) {
             case 'marp':
               const targetBase = path.join(targetBasePath, fileRelPath)
-
-              await Promise.all(
-                formats.map(
-                  format =>
-                    marpCommand.marpCli([
-                      source,
-                      `--${format}`,
-                      '-o',
-                      `${targetBase}.${format}`
-                    ]
-                    )
+              for (const format of formats) {
+                await marpCommand.marpCli([
+                  source,
+                  `--${format}`,
+                  '-o',
+                  `${targetBase}.${format}`
+                ]
                 )
-              )
+              }
 
               target = `${fileRelPath}.html`
               break;
@@ -92,7 +88,7 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
             title, fileType, path: target
           }
         },
-        os.cpus().length - 1
+        1
       )
 
       const navigation = await Promise.all(
@@ -109,7 +105,7 @@ function build(workspace = process.cwd(), outputDirectory = "dist") {
 
       console.log("navigation file generated, total presentations: %s", navigation.length)
 
-      for (const element of ['icon.png', 'index.js', 'index.html']) {
+      for (const element of ['icon.png', 'index.html']) {
         await copyFile(
           path.join(sourceBasePath, element),
           path.join(outputDirectory, element)
