@@ -15,8 +15,8 @@ importers:
         specifier: 3.9.0
         version: 3.9.0
       '@marp-team/marpit':
-        specifier: 3.1.0
-        version: 3.1.0
+        specifier: 3.1.1
+        version: 3.1.1
       '@newdash/newdash':
         specifier: 5.23.1
         version: 5.23.1
@@ -272,8 +272,8 @@ packages:
     resolution: {integrity: sha512-Hg7fZ8SqXwLjxeIFzSnlXkXEmt0ZXPeMJneEn9n1M495a34C4xtkgEgL8R1MW2IRCh4Yibn0xmGKcaf+GuqR2A==}
     engines: {node: '>=10'}
 
-  '@marp-team/marpit@3.1.0':
-    resolution: {integrity: sha512-OZELDBE7Djizrb15QTvy8qmjdTa5L87Ou0WJvrIXFB75G0zAwAljIad6Sed5Sh65MggKlxuo2Bux33pzBBZzvQ==}
+  '@marp-team/marpit@3.1.1':
+    resolution: {integrity: sha512-DM/hLG7R7tu3tz0LGRgv+Guy6bYu5lESFkE8tWlyMAWguMFTL2D2lRitIXGzzarVEZnaMqtTUz8r2Gdlp1MXdA==}
     engines: {node: '>=18'}
 
   '@newdash/newdash@5.23.1':
@@ -2021,7 +2021,7 @@ snapshots:
       markdown-it-front-matter: 0.2.4
       postcss: 8.4.41
 
-  '@marp-team/marpit@3.1.0':
+  '@marp-team/marpit@3.1.1':
     dependencies:
       '@csstools/postcss-is-pseudo-class': 5.0.0(postcss@8.4.41)
       cssesc: 3.0.0
