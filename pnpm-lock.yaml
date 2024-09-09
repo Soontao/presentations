@@ -12,8 +12,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       '@marp-team/marp-core':
-        specifier: 3.9.0
-        version: 3.9.0
+        specifier: 4.0.0
+        version: 4.0.0
       '@marp-team/marpit':
         specifier: 3.1.1
         version: 3.1.1
@@ -258,6 +258,10 @@ packages:
   '@marp-team/marp-core@3.9.0':
     resolution: {integrity: sha512-gi6nq0rsB1oMA8ReppW4XxmS4fisQiAsD0ZoUgLeG4h6SWatveCAA7fZyxnXfwA2UC8pNb7ktPqYdRsxvuwntA==}
     engines: {node: ^12.20 || ^14.13.1 || >=16}
+
+  '@marp-team/marp-core@4.0.0':
+    resolution: {integrity: sha512-a+3cx3QHEe9gNJUuPzYxJOqUYkPWqkI57SZa2bbdNMszUb80bTopRtz7o3yFjn+vTIxbw1Jb+4iqOkZt9mgs7w==}
+    engines: {node: '>=18'}
 
   '@marp-team/marpit-svg-polyfill@2.1.0':
     resolution: {integrity: sha512-VqCoAKwv1HJdzZp36dDPxznz2JZgRjkVSSPHpCzk72G2N753F0HPKXjevdjxmzN6gir9bUGBgMD1SguWJIi11A==}
@@ -860,6 +864,10 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
+
+  highlight.js@11.10.0:
+    resolution: {integrity: sha512-SYVnVFswQER+zu1laSya563s+F8VDGt7o35d4utbamowvUNLLMovFqwCLSocpZTz3MgaSRA1IbqRWZv97dtErQ==}
+    engines: {node: '>=12.0.0'}
 
   highlight.js@11.8.0:
     resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
@@ -2010,9 +2018,24 @@ snapshots:
       postcss-selector-parser: 6.1.2
       xss: 1.0.15
 
+  '@marp-team/marp-core@4.0.0':
+    dependencies:
+      '@marp-team/marpit': 3.1.1
+      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@3.1.1)
+      highlight.js: 11.10.0
+      katex: 0.16.11
+      mathjax-full: 3.2.2
+      postcss: 8.4.41
+      postcss-selector-parser: 6.1.2
+      xss: 1.0.15
+
   '@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@2.6.1)':
     optionalDependencies:
       '@marp-team/marpit': 2.6.1
+
+  '@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@3.1.1)':
+    optionalDependencies:
+      '@marp-team/marpit': 3.1.1
 
   '@marp-team/marpit@2.6.1':
     dependencies:
@@ -2684,6 +2707,8 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  highlight.js@11.10.0: {}
 
   highlight.js@11.8.0: {}
 
