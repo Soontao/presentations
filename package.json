@@ -37,7 +37,7 @@
   "dependencies": {
     "@marp-team/marp-cli": "4.0.3",
     "@marp-team/marp-core": "4.0.0",
-    "@marp-team/marpit": "3.1.1",
+    "@marp-team/marpit": "3.1.2",
     "@newdash/newdash": "5.23.1",
     "@openui5/ts-types": "1.131.1",
     "@textlint/markdown-to-ast": "14.4.0",
