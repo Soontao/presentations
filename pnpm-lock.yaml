@@ -24,8 +24,8 @@ importers:
         specifier: 1.131.1
         version: 1.131.1
       '@textlint/markdown-to-ast':
-        specifier: 14.4.0
-        version: 14.4.0
+        specifier: 14.4.2
+        version: 14.4.2
       '@types/debug':
         specifier: 4.1.12
         version: 4.1.12
@@ -311,6 +311,9 @@ packages:
   '@textlint/ast-node-types@14.4.0':
     resolution: {integrity: sha512-tEZbu6dMU8lysTpFrrW9WzN/hWnfGoanOX1WmdKZ7LgqUVDdsd9Q8RNLlQLOgl7ev1C7O3T4ruzl4rdYI5he1g==}
 
+  '@textlint/ast-node-types@14.4.2':
+    resolution: {integrity: sha512-e8/drNznaZHS/qGDC83k6Ht1wDWNHzGQ0RHcXD+72YMFercEFvp6WVfW5XbCbxGbSITEO5NBCOCTyeccS9lxEA==}
+
   '@textlint/ast-tester@14.4.0':
     resolution: {integrity: sha512-pCKEUDaZVvvj/uZOTTUgU1tTkNsK+ufNs4Xx5BsBAqy+E0aAJJ47c8h2WIoL/MJniK6ZLctsDIwaZ4z9rUvrsQ==}
 
@@ -332,8 +335,8 @@ packages:
   '@textlint/linter-formatter@14.4.0':
     resolution: {integrity: sha512-rnFwSSXDdsQHGVaRoJJYocVSYn4ZEPUFj78JYDZcR+TRYVDzRJEblFhwsiXl/gHD3L5g2RnBcLbxwZIW+xwtIA==}
 
-  '@textlint/markdown-to-ast@14.4.0':
-    resolution: {integrity: sha512-y6UxfRZ00w8XQ1jfKhR0jcQd7qbYaQgo3aERWbJR0Gxxl0T+G+TKBS12pdnUFOTshgSTEgqlvrE+Zt3lTl0e1A==}
+  '@textlint/markdown-to-ast@14.4.2':
+    resolution: {integrity: sha512-hj2xR9hz5/Tu7Hlrn6VORJgdAfUhAd5j6cBkEVpnKAU4LaERkNyVCgK/da2JHK2w84YHmaDjER4D6zUUkllwag==}
 
   '@textlint/module-interop@14.4.0':
     resolution: {integrity: sha512-QdtNDJc+XqDIbP9bwt7DryqE+vFbbIB28462VFWtXcHCJJoFTlmCJ1133SXLe14IOT9P04T9LMNhgv4d2v31gg==}
@@ -1990,6 +1993,8 @@ snapshots:
 
   '@textlint/ast-node-types@14.4.0': {}
 
+  '@textlint/ast-node-types@14.4.2': {}
+
   '@textlint/ast-tester@14.4.0':
     dependencies:
       '@textlint/ast-node-types': 14.4.0
@@ -2063,9 +2068,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@textlint/markdown-to-ast@14.4.0':
+  '@textlint/markdown-to-ast@14.4.2':
     dependencies:
-      '@textlint/ast-node-types': 14.4.0
+      '@textlint/ast-node-types': 14.4.2
       debug: 4.4.0
       mdast-util-gfm-autolink-literal: 0.1.3
       neotraverse: 0.6.18
@@ -2094,7 +2099,7 @@ snapshots:
 
   '@textlint/textlint-plugin-markdown@14.4.0':
     dependencies:
-      '@textlint/markdown-to-ast': 14.4.0
+      '@textlint/markdown-to-ast': 14.4.2
     transitivePeerDependencies:
       - supports-color
 
