@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@marp-team/marp-cli':
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.1.1
+        version: 4.1.1
       '@marp-team/marp-core':
         specifier: 4.0.1
         version: 4.0.1
@@ -259,8 +259,8 @@ packages:
   '@keyv/serialize@1.0.2':
     resolution: {integrity: sha512-+E/LyaAeuABniD/RvUezWVXKpeuvwLEA9//nE9952zBaOdBd2mQ3pPoM8cUe2X6IcMByfuSLzmYqnYshG60+HQ==}
 
-  '@marp-team/marp-cli@4.1.0':
-    resolution: {integrity: sha512-YxWn1bVK6vTXhyd6f1uyJyw5EY05zNQgJ2gSwdkPr4BrSDlnLfhRnm64Eu0G2olPwpPS8WEsjsk90ofIZ6c5Nw==}
+  '@marp-team/marp-cli@4.1.1':
+    resolution: {integrity: sha512-2Ny0LeGC8KAQn40WiQJ50XkLi3ykBDLkg+07Mq3atcoLcKpVZaW3cZT4XNG0XvmSoa6QOoU6I6Yvb2CBIomMUQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1919,7 +1919,7 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@marp-team/marp-cli@4.1.0':
+  '@marp-team/marp-cli@4.1.1':
     dependencies:
       '@marp-team/marp-core': 4.0.1
       '@marp-team/marpit': 3.1.2
