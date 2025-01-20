@@ -21,8 +21,8 @@ importers:
         specifier: 5.23.1
         version: 5.23.1
       '@openui5/ts-types':
-        specifier: 1.131.1
-        version: 1.131.1
+        specifier: 1.132.0
+        version: 1.132.0
       '@textlint/markdown-to-ast':
         specifier: 14.4.2
         version: 14.4.2
@@ -299,8 +299,8 @@ packages:
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
 
-  '@openui5/ts-types@1.131.1':
-    resolution: {integrity: sha512-pAxtzme8hTmmbrzU2Bek8gnmH/JaLx6sXb8tS5d7JWK8XIuNUqSNw87IIhn2BTxeeGwU4PUHD+bPCMXps8Y87Q==}
+  '@openui5/ts-types@1.132.0':
+    resolution: {integrity: sha512-1F0q/YnLh/abxtkSSX2ng8kYf3n25x6aL8lT8v58PYKgwKcsuE6JvAPkJMgB15+DoV0pWCro/CeLDsV4AQGUGw==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1978,7 +1978,7 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@openui5/ts-types@1.131.1': {}
+  '@openui5/ts-types@1.132.0': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
