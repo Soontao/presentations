@@ -8,7 +8,7 @@
     "node": ">=18",
     "npm": ">=9"
   },
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@10.4.0",
   "scripts": {
     "server": "marp -p --server ./src",
     "release": "npx standard-version --commit-all --no-verify",
