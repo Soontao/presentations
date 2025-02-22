@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/Soontao/presentations#readme",
   "dependencies": {
-    "@marp-team/marp-cli": "4.1.1",
+    "@marp-team/marp-cli": "4.1.2",
     "@marp-team/marp-core": "4.0.1",
     "@marp-team/marpit": "3.1.2",
     "@newdash/newdash": "5.23.1",
