@@ -51,7 +51,7 @@
     "mkdirp": "3.0.1",
     "pretty": "2.0.0",
     "replace": "1.2.2",
-    "textlint": "14.5.0"
+    "textlint": "14.6.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"
