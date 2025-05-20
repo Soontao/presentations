@@ -24,8 +24,8 @@ importers:
         specifier: 1.136.0
         version: 1.136.0
       '@textlint/markdown-to-ast':
-        specifier: 14.7.1
-        version: 14.7.1
+        specifier: 14.7.2
+        version: 14.7.2
       '@types/debug':
         specifier: 4.1.12
         version: 4.1.12
@@ -317,6 +317,9 @@ packages:
   '@textlint/ast-node-types@14.7.1':
     resolution: {integrity: sha512-7C/xYNZtaG+erIMjNZbRz7av9/S5eC+GAMh0rJ6A9Hik6nS4WyWKblutw2p+O2YWWT2tmOjzu/81fWzzDzmtRg==}
 
+  '@textlint/ast-node-types@14.7.2':
+    resolution: {integrity: sha512-3rZc9vD8y/DlcFe3Y/cyKRRVgBH4ElEUzVFYdRVDwoMSwV/cIyZgYzVG6ZuOItQt+cHSREuijuucZ4VqZynbtg==}
+
   '@textlint/ast-tester@14.6.0':
     resolution: {integrity: sha512-wGoNB35KA/LEWaGp5ccsUqQwNjygCDnkGxe8A8kCMURgM2KYTuCCItGMLrajm0T9BhNdQtK/ST6+EljTFERasA==}
 
@@ -338,8 +341,8 @@ packages:
   '@textlint/linter-formatter@14.6.0':
     resolution: {integrity: sha512-52P8jXnxqafbmV1Dg05u8EHitvdCA6nnIGwIWjLCydL1jfM5js6KvA47qRugb6EWWbYxWKCGkbmaIFhKGwFTaA==}
 
-  '@textlint/markdown-to-ast@14.7.1':
-    resolution: {integrity: sha512-aKIJi1FZj8PYr/n9EYFsifofT2XNPDX9E/24PiFMNBjiOfovCayOpfn6iuqNEo3CEPx7w4d20rQOUnxD+GYzhg==}
+  '@textlint/markdown-to-ast@14.7.2':
+    resolution: {integrity: sha512-gfOQaBFoFVTj/9rzhEjnJonWZwWjM1RLmaO4J7GHIOFBAo/qr/EJRO3QijQWaAJFoH8xd/3cpUCEzpRwhwkeoA==}
 
   '@textlint/module-interop@14.6.0':
     resolution: {integrity: sha512-eQFprk37rU6Sl250h52OaoHA4Dal4jSjWYWRdKfjvrdDcNWxPAOenAAGBf66lS7E34No9E9G51jsSc43N0CzJg==}
@@ -2004,16 +2007,18 @@ snapshots:
 
   '@textlint/ast-node-types@14.7.1': {}
 
+  '@textlint/ast-node-types@14.7.2': {}
+
   '@textlint/ast-tester@14.6.0':
     dependencies:
-      '@textlint/ast-node-types': 14.6.0
+      '@textlint/ast-node-types': 14.7.1
       debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
   '@textlint/ast-traverse@14.6.0':
     dependencies:
-      '@textlint/ast-node-types': 14.6.0
+      '@textlint/ast-node-types': 14.7.1
 
   '@textlint/config-loader@14.6.0':
     dependencies:
@@ -2045,7 +2050,7 @@ snapshots:
 
   '@textlint/kernel@14.6.0':
     dependencies:
-      '@textlint/ast-node-types': 14.6.0
+      '@textlint/ast-node-types': 14.7.1
       '@textlint/ast-tester': 14.6.0
       '@textlint/ast-traverse': 14.6.0
       '@textlint/feature-flag': 14.6.0
@@ -2077,9 +2082,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@textlint/markdown-to-ast@14.7.1':
+  '@textlint/markdown-to-ast@14.7.2':
     dependencies:
-      '@textlint/ast-node-types': 14.7.1
+      '@textlint/ast-node-types': 14.7.2
       debug: 4.4.1
       mdast-util-gfm-autolink-literal: 0.1.3
       neotraverse: 0.6.18
@@ -2104,11 +2109,11 @@ snapshots:
 
   '@textlint/text-to-ast@14.6.0':
     dependencies:
-      '@textlint/ast-node-types': 14.6.0
+      '@textlint/ast-node-types': 14.7.1
 
   '@textlint/textlint-plugin-markdown@14.6.0':
     dependencies:
-      '@textlint/markdown-to-ast': 14.7.1
+      '@textlint/markdown-to-ast': 14.7.2
     transitivePeerDependencies:
       - supports-color
 
@@ -2118,7 +2123,7 @@ snapshots:
 
   '@textlint/types@14.6.0':
     dependencies:
-      '@textlint/ast-node-types': 14.6.0
+      '@textlint/ast-node-types': 14.7.1
 
   '@textlint/utils@14.6.0': {}
 
