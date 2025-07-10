@@ -1,6 +1,6 @@
 sap.ui.getCore().ready(async function () {
-  const { app } = await import("./_app/app.js")
-  const { viewModel, refreshModel } = await import("./_app/model.js")
+  const { app } = await import("./app/app.js")
+  const { viewModel, refreshModel } = await import("./app/model.js")
 
   app.setModel(viewModel).placeAt("content")
 
