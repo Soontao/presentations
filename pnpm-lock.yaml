@@ -12,8 +12,8 @@ importers:
         specifier: 4.2.3
         version: 4.2.3
       '@marp-team/marp-core':
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.2.0
+        version: 4.2.0
       '@marp-team/marpit':
         specifier: 3.2.0
         version: 3.2.0
@@ -266,8 +266,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@marp-team/marp-core@4.1.0':
-    resolution: {integrity: sha512-QJ79tGpr3itR4TVQ4Cbe9J0kLHg9sR5cNX19OWSHeVK9EjDzMA9iCwS+OCRMKBAvRHo0LGUJC3lm9wUBg3Ud6A==}
+  '@marp-team/marp-core@4.2.0':
+    resolution: {integrity: sha512-AoqRk9g6kF44OhdgV2eUsc0ciyxkI3IM/S4ntV+aHy59NSTcwPEHrbtAzqe+q2PK/trmQX233/0plusNZPoF+Q==}
     engines: {node: '>=18'}
 
   '@marp-team/marpit-svg-polyfill@2.1.0':
@@ -1142,8 +1142,8 @@ packages:
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
-  katex@0.16.22:
-    resolution: {integrity: sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==}
+  katex@0.16.25:
+    resolution: {integrity: sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q==}
     hasBin: true
 
   keyv@5.5.0:
@@ -1488,10 +1488,6 @@ packages:
   postcss-selector-parser@7.1.0:
     resolution: {integrity: sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==}
     engines: {node: '>=4'}
-
-  postcss@8.5.3:
-    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
-    engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
@@ -2100,7 +2096,7 @@ snapshots:
 
   '@marp-team/marp-cli@4.2.3':
     dependencies:
-      '@marp-team/marp-core': 4.1.0
+      '@marp-team/marp-core': 4.2.0
       '@marp-team/marpit': 3.2.0
       chokidar: 4.0.3
       cosmiconfig: 9.0.0
@@ -2115,14 +2111,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@marp-team/marp-core@4.1.0':
+  '@marp-team/marp-core@4.2.0':
     dependencies:
       '@marp-team/marpit': 3.2.0
       '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@3.2.0)
       highlight.js: 11.11.1
-      katex: 0.16.22
+      katex: 0.16.25
       mathjax-full: 3.2.2
-      postcss: 8.5.3
       postcss-selector-parser: 7.1.0
       xss: 1.0.15
 
@@ -3101,7 +3096,7 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  katex@0.16.22:
+  katex@0.16.25:
     dependencies:
       commander: 8.3.0
 
@@ -3489,12 +3484,6 @@ snapshots:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-
-  postcss@8.5.3:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.6:
     dependencies:
