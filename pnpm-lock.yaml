@@ -24,8 +24,8 @@ importers:
         specifier: 1.143.0
         version: 1.143.0
       '@textlint/markdown-to-ast':
-        specifier: 15.4.0
-        version: 15.4.0
+        specifier: 15.4.1
+        version: 15.4.1
       '@types/debug':
         specifier: 4.1.12
         version: 4.1.12
@@ -325,6 +325,9 @@ packages:
   '@textlint/ast-node-types@15.4.0':
     resolution: {integrity: sha512-IqY8i7IOGuvy05wZxISB7Me1ZyrvhaQGgx6DavfQjH3cfwpPFdDbDYmMXMuSv2xLS1kDB1kYKBV7fL2Vi16lRA==}
 
+  '@textlint/ast-node-types@15.4.1':
+    resolution: {integrity: sha512-XifMpBMdo0E1Fuh85YdcYAgy+okNg9WKBzIPIO4JUDnSWUVFihnogrM4cjDapeHkgzSgulwR8oJVJ17eyxI1bA==}
+
   '@textlint/ast-tester@15.4.0':
     resolution: {integrity: sha512-R5Wk0FAlEOzBm5WtUUYYYHmHw3quAIbKHB5mLYFVpMew6vNfdIItVxnBLgEGiLBNn3r93D7BniUxbi4itM2HUA==}
 
@@ -348,6 +351,9 @@ packages:
 
   '@textlint/markdown-to-ast@15.4.0':
     resolution: {integrity: sha512-UnSkL7+6IfOuO9odJZyJdvX3QoO65lFNdR3purldFRWQ6fJ0TY/hshm7y+Hc0TJV2RlwpsSSM1jX32u/FHVBlg==}
+
+  '@textlint/markdown-to-ast@15.4.1':
+    resolution: {integrity: sha512-b6+MNADWtXz8c2CP7sWOBbS1YGaZ51h8Ws9efLAT/kltOcGg4nGvIK2Vgs8vmTePcl8kIRfR02bllk2Lc82yyg==}
 
   '@textlint/module-interop@15.4.0':
     resolution: {integrity: sha512-uGf+SFIfzOLCbZI0gp+2NLsrkSArsvEWulPP6lJuKp7yRHadmy7Xf/YHORe46qhNyyxc8PiAfiixHJSaHGUrGg==}
@@ -2182,6 +2188,8 @@ snapshots:
 
   '@textlint/ast-node-types@15.4.0': {}
 
+  '@textlint/ast-node-types@15.4.1': {}
+
   '@textlint/ast-tester@15.4.0':
     dependencies:
       '@textlint/ast-node-types': 15.4.0
@@ -2258,6 +2266,21 @@ snapshots:
   '@textlint/markdown-to-ast@15.4.0':
     dependencies:
       '@textlint/ast-node-types': 15.4.0
+      debug: 4.4.3
+      mdast-util-gfm-autolink-literal: 0.1.3
+      neotraverse: 0.6.18
+      remark-footnotes: 3.0.0
+      remark-frontmatter: 3.0.0
+      remark-gfm: 1.0.0
+      remark-parse: 9.0.0
+      structured-source: 4.0.0
+      unified: 9.2.2
+    transitivePeerDependencies:
+      - supports-color
+
+  '@textlint/markdown-to-ast@15.4.1':
+    dependencies:
+      '@textlint/ast-node-types': 15.4.1
       debug: 4.4.3
       mdast-util-gfm-autolink-literal: 0.1.3
       neotraverse: 0.6.18
