@@ -15,8 +15,8 @@ importers:
         specifier: 4.2.0
         version: 4.2.0
       '@marp-team/marpit':
-        specifier: 3.2.0
-        version: 3.2.0
+        specifier: 3.2.1
+        version: 3.2.1
       '@newdash/newdash':
         specifier: 5.23.1
         version: 5.23.1
@@ -46,7 +46,7 @@ importers:
         version: 3.0.2
       markdown-it-html5-media:
         specifier: ^0.8.0
-        version: 0.8.0(markdown-it@14.1.0)
+        version: 0.8.0(markdown-it@14.1.1)
       mkdirp:
         specifier: 3.0.1
         version: 3.0.1
@@ -289,8 +289,8 @@ packages:
       '@marp-team/marpit':
         optional: true
 
-  '@marp-team/marpit@3.2.0':
-    resolution: {integrity: sha512-DNCbwkAKugzCtiHJg/7DciIRwnKwAI2QH3VWWC1cVxoBBQTPnH5D9HcWqpDdduUqnCuW2PY78afVo+QlaInDdQ==}
+  '@marp-team/marpit@3.2.1':
+    resolution: {integrity: sha512-MflN1movsh8PXJbM9otjJOtlcB0vSrvw5PgXs2PDguVYVzKQmGpiy9QHHKq0rryrgaSp376TdJWBP7mXHHAG8w==}
     engines: {node: '>=18'}
 
   '@modelcontextprotocol/sdk@1.26.0':
@@ -1164,10 +1164,6 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
-    hasBin: true
-
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
@@ -1249,8 +1245,8 @@ packages:
     peerDependencies:
       markdown-it: '>=13 <15'
 
-  markdown-it@14.1.0:
-    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+  markdown-it@14.1.1:
+    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
     hasBin: true
 
   markdown-table@2.0.0:
@@ -2164,7 +2160,7 @@ snapshots:
   '@marp-team/marp-cli@4.2.3':
     dependencies:
       '@marp-team/marp-core': 4.2.0
-      '@marp-team/marpit': 3.2.0
+      '@marp-team/marpit': 3.2.1
       chokidar: 4.0.3
       cosmiconfig: 9.0.0
       puppeteer-core: 24.16.0
@@ -2180,25 +2176,25 @@ snapshots:
 
   '@marp-team/marp-core@4.2.0':
     dependencies:
-      '@marp-team/marpit': 3.2.0
-      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@3.2.0)
+      '@marp-team/marpit': 3.2.1
+      '@marp-team/marpit-svg-polyfill': 2.1.0(@marp-team/marpit@3.2.1)
       highlight.js: 11.11.1
       katex: 0.16.25
       mathjax-full: 3.2.2
       postcss-selector-parser: 7.1.0
       xss: 1.0.15
 
-  '@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@3.2.0)':
+  '@marp-team/marpit-svg-polyfill@2.1.0(@marp-team/marpit@3.2.1)':
     optionalDependencies:
-      '@marp-team/marpit': 3.2.0
+      '@marp-team/marpit': 3.2.1
 
-  '@marp-team/marpit@3.2.0':
+  '@marp-team/marpit@3.2.1':
     dependencies:
       '@csstools/postcss-is-pseudo-class': 5.0.3(postcss@8.5.6)
       cssesc: 3.0.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       lodash.kebabcase: 4.1.1
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
       markdown-it-front-matter: 0.2.4
       postcss: 8.5.6
       postcss-nesting: 13.0.2(postcss@8.5.6)
@@ -2652,7 +2648,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       parse-json: 5.2.0
 
   cross-spawn@7.0.6:
@@ -3178,10 +3174,6 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@4.1.0:
-    dependencies:
-      argparse: 2.0.1
-
   js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
@@ -3245,11 +3237,11 @@ snapshots:
 
   markdown-it-front-matter@0.2.4: {}
 
-  markdown-it-html5-media@0.8.0(markdown-it@14.1.0):
+  markdown-it-html5-media@0.8.0(markdown-it@14.1.1):
     dependencies:
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
 
-  markdown-it@14.1.0:
+  markdown-it@14.1.1:
     dependencies:
       argparse: 2.0.1
       entities: 4.5.0
