@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@marp-team/marp-cli':
-        specifier: 4.2.3
-        version: 4.2.3
+        specifier: 4.3.0
+        version: 4.3.0
       '@marp-team/marp-core':
         specifier: 4.3.0
         version: 4.3.0
@@ -271,8 +271,8 @@ packages:
   '@keyv/serialize@1.1.0':
     resolution: {integrity: sha512-RlDgexML7Z63Q8BSaqhXdCYNBy/JQnqYIwxofUrNLGCblOMHp+xux2Q8nLMLlPpgHQPoU0Do8Z6btCpRBEqZ8g==}
 
-  '@marp-team/marp-cli@4.2.3':
-    resolution: {integrity: sha512-yfEIkF7mlumg8CVV5m/UkLEDkW/ayM/SD6Bo8fbAvdscBQ/l9D44/aNFJsiqgNtjfktzpvRqjcBXNhWD0YTq5Q==}
+  '@marp-team/marp-cli@4.3.0':
+    resolution: {integrity: sha512-Ywqjk9eIV2pubzua7946JrvL8zk7G/74PvbsT/hxDjWJ7ox5gXL4PqLyF4KcvxQgtYT/WbkwDnNge4h+uNNy0g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -327,8 +327,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@puppeteer/browsers@2.10.6':
-    resolution: {integrity: sha512-pHUn6ZRt39bP3698HFQlu2ZHCkS/lPcpv7fVQcGBSzNNygw171UXAKrCUhy+TEMw4lEttOKDgNpb04hwUAJeiQ==}
+  '@puppeteer/browsers@2.13.0':
+    resolution: {integrity: sha512-46BZJYJjc/WwmKjsvDFykHtXrtomsCIrwYQPOP7VfMJoZY2bsDF9oROBABR3paDjDcmkUye1Pb1BqdcdiipaWA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -580,8 +580,8 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
-  chromium-bidi@7.2.0:
-    resolution: {integrity: sha512-gREyhyBstermK+0RbcJLbFhcQctg92AGgDe/h/taMJEOLRdtSswBAO9KmvltFSQWgM2LrwWu5SIuEUbdm3JsyQ==}
+  chromium-bidi@14.0.0:
+    resolution: {integrity: sha512-9gYlLtS6tStdRWzrtXaTMnqcM4dudNegMXJxkR0I/CXObHalYeYcAMPrL19eroNZHtJ8DQmu1E+ZNOYu/IXMXw==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -654,8 +654,8 @@ packages:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
     engines: {node: '>= 0.10'}
 
-  cosmiconfig@9.0.0:
-    resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
+  cosmiconfig@9.0.1:
+    resolution: {integrity: sha512-hr4ihw+DBqcvrsEDioRO31Z17x71pUYoNe/4h6Z0wB72p7MU7/9gH8Q3s12NFhHPfYBBOV3qyfUxmr/Yn3shnQ==}
     engines: {node: '>=14'}
     peerDependencies:
       typescript: '>=4.9.5'
@@ -718,8 +718,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  devtools-protocol@0.0.1475386:
-    resolution: {integrity: sha512-RQ809ykTfJ+dgj9bftdeL2vRVxASAuGU+I9LEx9Ij5TXU5HrgAQVmzi72VA+mkzscE12uzlRv5/tWWv9R9J1SA==}
+  devtools-protocol@0.0.1581282:
+    resolution: {integrity: sha512-nv7iKtNZQshSW2hKzYNr46nM/Cfh5SEvE2oV0/SEGgc9XupIY5ggf84Cz8eJIkBce7S3bmTAauFD6aysMpnqsQ==}
 
   diff@8.0.3:
     resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
@@ -1017,8 +1017,8 @@ packages:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  http-errors@1.6.3:
-    resolution: {integrity: sha512-lks+lVC8dgGyh97jxvxeYTWQFvh4uw4yC12gVl63Cg30sjPX4wuGcdkICVXDAESr6OJGjqGA8Iz5mkeN6zlD7A==}
+  http-errors@1.8.1:
+    resolution: {integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==}
     engines: {node: '>= 0.6'}
 
   http-errors@2.0.0:
@@ -1056,9 +1056,6 @@ packages:
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-
-  inherits@2.0.3:
-    resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -1589,8 +1586,8 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.16.0:
-    resolution: {integrity: sha512-tZ0tJiOYaDGTRzzr2giDpf8O/55JsoqkrafS1Xu4H6S8oP4eeL6RbZzY9OzjShSf5EQvx/zAc55QKpDqzXos/Q==}
+  puppeteer-core@24.39.1:
+    resolution: {integrity: sha512-AMqQIKoEhPS6CilDzw0Gd1brLri3emkC+1N2J6ZCCuY1Cglo56M63S0jOeBZDQlemOiRd686MYVMl9ELJBzN3A==}
     engines: {node: '>=18'}
 
   qs@6.14.0:
@@ -1705,12 +1702,17 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   send@1.2.0:
     resolution: {integrity: sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==}
     engines: {node: '>= 18'}
 
-  serve-index@1.9.1:
-    resolution: {integrity: sha512-pXHfKNP4qujrtteMrSBb0rc8HJ9Ms/GrXwcUtUtD5s4ewDJI8bT3Cz2zTVRMKtri49pLx2e0Ya8ziP5Ya2pZZw==}
+  serve-index@1.9.2:
+    resolution: {integrity: sha512-KDj11HScOaLmrPxl70KYNW1PksP4Nb/CLL2yvC+Qd2kHMPEEpfc4Re2e4FOay+bC/+XQl/7zAcWON3JVo5v3KQ==}
     engines: {node: '>= 0.8.0'}
 
   serve-static@2.2.0:
@@ -1719,9 +1721,6 @@ packages:
 
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
-
-  setprototypeof@1.1.0:
-    resolution: {integrity: sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==}
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
@@ -1852,8 +1851,8 @@ packages:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
-  tar-fs@3.1.0:
-    resolution: {integrity: sha512-5Mty5y/sOF1YWj1J6GiBodjlDc05CUR8PKXrsnFAiSG0xA+GHeWLovaZPYUDXkH/1iKRf2+M5+OrRgzC7O9b7w==}
+  tar-fs@3.1.2:
+    resolution: {integrity: sha512-QGxxTxxyleAdyM3kpFs14ymbYmNFrfY+pHj7Z8FgtbZ7w2//VAgLMac7sT6nRpIHjppXO2AwwEOg0bPFVRcmXw==}
 
   tar-stream@3.1.7:
     resolution: {integrity: sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ==}
@@ -1899,8 +1898,8 @@ packages:
     resolution: {integrity: sha512-OZs6gsjF4vMp32qrCbiVSkrFmXtG/AZhY3t0iAMrMBiAZyV9oALtXO8hsrHbMXF9x6L3grlFuwW2oAz7cav+Gw==}
     engines: {node: '>= 0.6'}
 
-  typed-query-selector@2.12.0:
-    resolution: {integrity: sha512-SbklCd1F0EiZOyPiW192rrHZzZ5sBijB6xM+cpmrwDqObvdtunOHHIk9fCGsoK5JVIYXoyEp4iEdE3upFH3PAg==}
+  typed-query-selector@2.12.1:
+    resolution: {integrity: sha512-uzR+FzI8qrUEIu96oaeBJmd9E7CFEiQ3goA5qCVgc4s5llSubcfGHq9yUstZx/k4s9dXHVKsE35YWoFyvEqEHA==}
 
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
@@ -1948,6 +1947,9 @@ packages:
   vfile@4.2.1:
     resolution: {integrity: sha512-O6AE4OskCG5S1emQ/4gl8zK586RqA3srz3nfK/Viy0UPToBc5Trp9BVFb1u0CjsKrAWwnpr4ifM/KBXPWwJbCA==}
 
+  webdriver-bidi-protocol@0.4.1:
+    resolution: {integrity: sha512-ARrjNjtWRRs2w4Tk7nqrf2gBI0QXWuOmMCx2hU+1jUt6d00MjMxURrhxhGbrsoiZKJrhTSTzbIrc554iKI10qw==}
+
   which-module@2.0.1:
     resolution: {integrity: sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==}
 
@@ -1978,8 +1980,8 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  ws@8.18.3:
-    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
+  ws@8.19.0:
+    resolution: {integrity: sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2161,16 +2163,16 @@ snapshots:
 
   '@keyv/serialize@1.1.0': {}
 
-  '@marp-team/marp-cli@4.2.3':
+  '@marp-team/marp-cli@4.3.0':
     dependencies:
       '@marp-team/marp-core': 4.3.0
       '@marp-team/marpit': 3.2.1
       chokidar: 4.0.3
-      cosmiconfig: 9.0.0
-      puppeteer-core: 24.16.0
-      serve-index: 1.9.1
+      cosmiconfig: 9.0.1
+      puppeteer-core: 24.39.1
+      serve-index: 1.9.2
       tmp: 0.2.5
-      ws: 8.18.3
+      ws: 8.19.0
       yargs: 17.7.2
     transitivePeerDependencies:
       - bufferutil
@@ -2246,14 +2248,14 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@puppeteer/browsers@2.10.6':
+  '@puppeteer/browsers@2.13.0':
     dependencies:
       debug: 4.4.3
       extract-zip: 2.0.1
       progress: 2.0.3
       proxy-agent: 6.5.0
-      semver: 7.7.2
-      tar-fs: 3.1.0
+      semver: 7.7.4
+      tar-fs: 3.1.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - supports-color
@@ -2504,7 +2506,7 @@ snapshots:
       bytes: 3.1.2
       content-type: 1.0.5
       debug: 4.4.3
-      http-errors: 2.0.0
+      http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
       qs: 6.15.0
@@ -2580,9 +2582,9 @@ snapshots:
     dependencies:
       readdirp: 4.0.2
 
-  chromium-bidi@7.2.0(devtools-protocol@0.0.1475386):
+  chromium-bidi@14.0.0(devtools-protocol@0.0.1581282):
     dependencies:
-      devtools-protocol: 0.0.1475386
+      devtools-protocol: 0.0.1581282
       mitt: 3.0.1
       zod: 3.25.76
 
@@ -2648,7 +2650,7 @@ snapshots:
       object-assign: 4.1.1
       vary: 1.1.2
 
-  cosmiconfig@9.0.0:
+  cosmiconfig@9.0.1:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
@@ -2691,7 +2693,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  devtools-protocol@0.0.1475386: {}
+  devtools-protocol@0.0.1581282: {}
 
   diff@8.0.3: {}
 
@@ -2819,7 +2821,7 @@ snapshots:
       etag: 1.8.1
       finalhandler: 2.1.0
       fresh: 2.0.0
-      http-errors: 2.0.0
+      http-errors: 2.0.1
       merge-descriptors: 2.0.0
       mime-types: 3.0.1
       on-finished: 2.4.1
@@ -3039,12 +3041,13 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
-  http-errors@1.6.3:
+  http-errors@1.8.1:
     dependencies:
       depd: 1.1.2
-      inherits: 2.0.3
-      setprototypeof: 1.1.0
+      inherits: 2.0.4
+      setprototypeof: 1.2.0
       statuses: 1.5.0
+      toidentifier: 1.0.1
 
   http-errors@2.0.0:
     dependencies:
@@ -3095,8 +3098,6 @@ snapshots:
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
-
-  inherits@2.0.3: {}
 
   inherits@2.0.4: {}
 
@@ -3648,14 +3649,15 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
-  puppeteer-core@24.16.0:
+  puppeteer-core@24.39.1:
     dependencies:
-      '@puppeteer/browsers': 2.10.6
-      chromium-bidi: 7.2.0(devtools-protocol@0.0.1475386)
+      '@puppeteer/browsers': 2.13.0
+      chromium-bidi: 14.0.0(devtools-protocol@0.0.1581282)
       debug: 4.4.3
-      devtools-protocol: 0.0.1475386
-      typed-query-selector: 2.12.0
-      ws: 8.18.3
+      devtools-protocol: 0.0.1581282
+      typed-query-selector: 2.12.1
+      webdriver-bidi-protocol: 0.4.1
+      ws: 8.19.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3789,6 +3791,8 @@ snapshots:
 
   semver@7.7.2: {}
 
+  semver@7.7.4: {}
+
   send@1.2.0:
     dependencies:
       debug: 4.4.3
@@ -3796,7 +3800,7 @@ snapshots:
       escape-html: 1.0.3
       etag: 1.8.1
       fresh: 2.0.0
-      http-errors: 2.0.0
+      http-errors: 2.0.1
       mime-types: 3.0.1
       ms: 2.1.3
       on-finished: 2.4.1
@@ -3805,13 +3809,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-index@1.9.1:
+  serve-index@1.9.2:
     dependencies:
       accepts: 1.3.8
       batch: 0.6.1
       debug: 2.6.9
       escape-html: 1.0.3
-      http-errors: 1.6.3
+      http-errors: 1.8.1
       mime-types: 2.1.35
       parseurl: 1.3.3
     transitivePeerDependencies:
@@ -3827,8 +3831,6 @@ snapshots:
       - supports-color
 
   set-blocking@2.0.0: {}
-
-  setprototypeof@1.1.0: {}
 
   setprototypeof@1.2.0: {}
 
@@ -3978,7 +3980,7 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  tar-fs@3.1.0:
+  tar-fs@3.1.2:
     dependencies:
       pump: 3.0.0
       tar-stream: 3.1.7
@@ -4052,7 +4054,7 @@ snapshots:
       media-typer: 1.1.0
       mime-types: 3.0.1
 
-  typed-query-selector@2.12.0: {}
+  typed-query-selector@2.12.1: {}
 
   uc.micro@2.1.0: {}
 
@@ -4107,6 +4109,8 @@ snapshots:
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
 
+  webdriver-bidi-protocol@0.4.1: {}
+
   which-module@2.0.1: {}
 
   which@2.0.2:
@@ -4137,7 +4141,7 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@8.18.3: {}
+  ws@8.19.0: {}
 
   xmldom-sre@0.1.31: {}
 
