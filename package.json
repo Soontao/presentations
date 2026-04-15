@@ -39,7 +39,7 @@
     "@marp-team/marp-core": "4.3.0",
     "@marp-team/marpit": "3.2.1",
     "@newdash/newdash": "5.23.1",
-    "@openui5/ts-types": "1.146.0",
+    "@openui5/ts-types": "1.147.0",
     "@textlint/markdown-to-ast": "15.5.4",
     "@types/debug": "4.1.13",
     "@types/markdown-it": "14.1.2",
